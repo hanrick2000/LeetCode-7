@@ -28,7 +28,7 @@ public:
         
         vector<int> res;
 
-        while(p < q) {
+        while(p < q) {  //two pointer 方法
             
             if (dic[p].first + dic[q].first<target) p++;
             else if(dic[p].first + dic[q].first == target) {
