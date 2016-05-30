@@ -1,4 +1,6 @@
-//该方法把nums 变成  pair(value, index), 然后对value 进行排序，就可以保存index。 然后用two pointer 做法 返回相应的index即可
+//该方法把nums 变成  pair(value, index), 然后对value 进行排序，就可以保存index。 然后用two pointer 做法 返回相应的index即可  
+
+//  时间  O(nlg(n)) 空间O(n) 
 
 bool compare(const pair<int, unsigned int> &a, const pair<int, unsigned int> &b) {
     return a.first<b.first;
