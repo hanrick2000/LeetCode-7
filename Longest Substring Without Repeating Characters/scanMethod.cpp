@@ -1,8 +1,8 @@
+//此方法用指针p线性扫描一边  用hash记录每一个字符即出线的index，然后遇到重复的，p回退到重复位置，然后继续扫描，当p扫倒和末尾差距小于当前最大值就可以剪枝。
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        
-        // unordered_map<char, int> dic;
         
         int dic[128]={0};
         
@@ -22,7 +22,6 @@ public:
                 fill_n(dic, 128, 0);
                 if(s.size()-1<=max+i) break;
             }
-            
         }
         
         max = max>cur?max:cur;
