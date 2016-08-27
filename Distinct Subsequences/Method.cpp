@@ -13,6 +13,8 @@
 // opt[i][j] = if s[i-1] == t[j-1] (opt[i-1][j]+opt[i-1][j-1]) else opt[i-1][j]  因为如果最后一个字符一样，那么这个s的这个字符可以选择匹配t的最后这个字符，种类数等同于opt[i-1][j-1],也可以不匹配，种类数等同于opt[i-1][j]. 如果一样，只能不必配，等同于opt[i-1][j].然后做好base case.
 
 //当然也可以每一次只保留 opt[i-1]和opt[i], 只用O(2*n)空间，但每一次得重新复制数组。算法意义并不是特别大／
+//时间复杂度O(mn) 空间原始 O(mn) 改进可以到O(2n)
+
 
 class Solution {
 public:
@@ -42,6 +44,34 @@ public:
                 }
 
             }
+        }
+        
+        return opt.back().back();
+        
+        
+        
+    }
+    
+    int numDistinct(string s, string t) {//空间改进版
+        
+        vector<vector<int>> opt(2,vector<int>(t.size()+1));
+        
+        
+        for(int i = 0; i < opt.size(); ++i) {
+            opt[i][0] = 1;
+        }
+        
+
+        
+        for(int i = 1; i <= s.size(); ++i) {
+            for(int j = 1; j < opt[0].size(); ++j) {
+                opt[1][j] = opt[0][j];
+                if(s[i-1] == t[j-1]) {
+                    opt[1][j] += opt[0][j-1];
+                }
+
+            }
+            opt[0] = opt[1];
         }
         
         return opt.back().back();
