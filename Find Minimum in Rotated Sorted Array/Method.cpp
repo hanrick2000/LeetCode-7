@@ -37,3 +37,33 @@ public:
 
     }
 };
+
+
+//附上迭代版本：
+class Solution {
+public:
+
+    int findMin(vector<int>& nums) {
+        
+        if(nums.size()==1) return nums[0];
+        
+        int a = 0, b = nums.size()-1;
+        
+        while(b > a + 1) {
+            int c = (a+b)/2;
+            if(nums[a] > nums[c]&&nums[c]<nums[b]) {
+                b = c;
+            }
+            
+            else if(nums[a]<nums[c]&&nums[c]>nums[b]) {
+                a = c;
+            }
+            else {
+                return nums[a];
+            }
+        }
+        
+        return min(nums[a],nums[b]);
+        
+    }
+};
