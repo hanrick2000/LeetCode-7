@@ -4,6 +4,7 @@
 //
 //For example, the numbers "69", "88", and "818" are all strobogrammatic.
 
+傻逼题，和palindrom 很像
 
 class Solution {
 public:
