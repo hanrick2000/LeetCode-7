@@ -31,3 +31,30 @@ public:
         
     }
 };
+
+
+//总有大神会这种逆天的iterative : 很难考虑齐全
+
+vector<int> lexicalOrder(int n) {
+        
+        vector<int> res(n);
+        int cur = 1, i=0;
+     
+        for(int i = 0; i < n; ++i) {
+            res[i] = cur;
+            if(cur*10 <= n) {
+                cur*=10;
+            }
+            else {   //
+                if (cur == n) 
+                    cur /= 10;
+                cur += 1;
+                while (cur % 10 == 0)
+                    cur /= 10;
+            }
+            
+        }
+    
+        return res;
+        
+    }
