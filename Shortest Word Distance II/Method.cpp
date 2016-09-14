@@ -65,36 +65,16 @@ public:
         
         while(p < mymap[word1].size()&&q<mymap[word2].size()) {
             
+            mini = min(mini, abs(mymap[word1][p] - mymap[word2][q]));
+            
             if(mymap[word1][p] <  mymap[word2][q]) {
-                lastP = mymap[word1][p++];
-                
-                if(lastQ!=-1) {
-                    mini = min(mini,lastP-lastQ);
-                }
+                ++p;
             }
             else {
-                lastQ = mymap[word2][q++];
-                
-                if(lastP!=-1) {
-                    mini = min(mini,lastQ-lastP);
-                }
+                ++q;
             }
             
         }
-        
-         if(p < mymap[word1].size()) {
-             lastP = mymap[word1][p];
-             if(lastQ!=-1) {
-                 mini = min(mini,lastP-lastQ);
-             }
-         }
-        
-         else {
-             lastQ = mymap[word2][q];
-             if(lastP!=-1) {
-                 mini = min(mini,lastQ-lastP);
-             }
-         }
         
         return mini;
     }

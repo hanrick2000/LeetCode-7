@@ -18,7 +18,6 @@ public:
         
     }
     
-
     int minMeetingRooms(vector<Interval>& intervals) {
         
         sort(intervals.begin(), intervals.end(), compare);

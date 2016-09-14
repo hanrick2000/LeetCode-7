@@ -22,9 +22,6 @@ class Queue {
     stack<int> stack2;
     
 public:
-    
-
-    
 
     // Push element x to the back of queue.
     void push(int x) {

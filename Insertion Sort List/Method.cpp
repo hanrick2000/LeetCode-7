@@ -1,6 +1,6 @@
 //Sort a linked list using insertion sort.
 
-控制一个指针p从头到尾，循环内控制一个指针q从头到p,如果q的值大于p的值，就将p插入到q.
+控制一个指针p从头到尾，循环内控制一个指针q从头到p,如果q的值大于p的值，就将p插入到q之前.
 
 
 /**

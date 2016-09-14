@@ -10,7 +10,7 @@
 //     2   3
 //Return 6.
 
-这题思路也很明显，递归遍历左右子树，每一次递归遍历，都要计算出一条从左子树经过根经过右子树的最大值，更新maxi,而也要向parent节点返回一条经过root但是不能有分叉的path的最大值，及三种可能，root, root->root->left, root->root->right. 可以通过修改根节点的val来向parent提供。
+//这题思路也很明显，递归遍历左右子树，每一次递归遍历，都要计算出一条从左子树经过根经过右子树的最大值，更新maxi,而也要向parent节点返回一条经过root但是不能有分叉的path的最大值，及三种可能，root, root->root->left, root->root->right. 可以通过修改根节点的val来向parent提供。
 
 
 /**
