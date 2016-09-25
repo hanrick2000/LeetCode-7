@@ -43,3 +43,34 @@ public:
         return res;
     }
 };
+
+
+排列组合数学，秒了
+    
+class Solution {
+public:
+
+    int func(int k) {
+        
+        int res = 9, b = 9;
+        
+        while(--k) {
+            res*=(b--);
+        }
+        
+        return res; 
+    }
+
+    int countNumbersWithUniqueDigits(int n) {
+        
+        int len = min(n, 10);
+        int res = 1;
+        
+        for(int i = 1; i <= len; ++i) {
+    
+            res += func(i);
+        }
+        
+        return res;    
+    }
+};
