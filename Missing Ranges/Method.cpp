@@ -47,4 +47,38 @@ public:
         
         return res;
     }
+    
+    string merge(long long lower, long long upper, long long a, long long b) {
+        ++a;
+        --b;
+        if(a > b) return "";
+        
+        int left = max(a, lower);
+        int right = min(b, upper);
+        
+        if(left > right) return "";
+        if(left == right) return to_string(left);
+        return to_string(left) + "->" + to_string(right);
+        
+    }
+    
+
+    vector<string> findMissingRanges(vector<int>& nums, int lower, int upper) {
+        vector<string> res;
+        
+        if(nums.size() && nums[0] > lower || nums.empty()) {
+            nums.insert(nums.begin(), lower-1);
+        }
+        
+        if(nums.size()&& nums[0] < upper || nums.empty()) {
+            nums.push_back(upper+1);
+        }
+        
+        for(int i = 0; i < nums.size()-1; ++i) {
+            string tmp = merge(lower, upper, nums[i], nums[i+1]);
+            if(tmp!="") res.push_back(tmp);
+        }
+        
+        return res;
+    }
 };

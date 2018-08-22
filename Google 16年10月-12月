@@ -1,0 +1,2014 @@
+
+应该是个白人小哥，听起来像是英国口音。题目：is_same_permutation(a, b)
+    给两个list，看它们是不是permutations of each other.
+求过。。
+
+
+
+1. 给一堆选票， 选票包含候选人名字，时间stamp，求出给定时间内得票最多的候选人（return 任一）-google 1point3acres
+2. 给一堆选票， 求出给定时间内的得票最多的一堆候选人（return 全部）. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+3. 给一堆选票，求出给定时间内前K高的一堆候选人
+4. 给一堆根据票数多少排序的候选人list, 给一堆选票， 求出哪个时间内可以从这堆选票中得出这堆给你的候选人的list.
+
+
+美国小哥上来就说你关注大选了吧，我们来做一道和投票有关的题
+其实是一道老题
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+给一个List<Vote>，t, k. 1point 3acres 璁哄潧
+实现一个方法，返回时间 t 以前所有投票中得票排前 k 的候选人id: List of candidateIds
+public static List<Long> getTopKCandidates(List<Vote> votes, int k, long t)
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+class Vote{
+     long candidateId;
+     long timestamp;
+}
+
+(candiateID, timestamp)
+(500, 4000)
+(600, 5000).鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+(600, 3000)
+(500, 8000)
+(300, 2000)
+(300, 1000)
+k = 2
+t = 6000
+
+return (300, 500)
+
+求RP啊求RP. from: 1point3acres.com/bbs 
+
+
+
+
+
+补充内容 (2016-11-18 11:25):
+Title 写错了，应该是before time t
+
+
+
+在职跳槽，三年不知名非IT公司经验。
+
+NDA，不具体说题目，只说一下我觉得有趣的几个词语。. 1point 3acres 璁哄潧
+
+店面：
+似二二，伊似。
+
+昂赛：
+二似久，三期久，似二二，还有俩树和哈希表的问题。
+
+Timeline:
+内推 --1天--> 店面 --6天--> 通知onsite ----> onsite --8天--> 送HC --1天--> 通知挂。
+
+总结：
+1. 没有系统设计.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+2. 问的问题很杂而且很灵活
+3. LC新题带锁题最好刷一刷
+
+滚去继续刷题了.1point3acres缃�
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+. From 1point 3acres bbs
+补充内容 (2016-11-17 03:42):. more info on 1point3acres.com
+Timeline有点问题，应该是
+内推 --1天--> Recruiter联系 --8天--> 店面 --6天--> 通知onsite ----> onsite --8天--> 送HC --1天--> 通知挂。
+
+补充内容 (2016-11-17 03:45):
+昂赛的四二二应为四二五
+
+#在这里快速回复#
+ post_newreply
+收藏收藏2
+ 
+评分评分
+ 
+转播转播
+ 
+分享分享
+ 
+分享淘帖 
+好苗好苗 
+杂草杂草
+被近8000人好评的Web开发课程，projects可以写进求职简历！
+
+回复 使用道具 举报
+    
+一亩三分地留学社区：官方iOS手机应用
+
+0
+精华	
+8
+主题	
+0
+学分
+中级农民-加分请看右边栏-多参与|分享|记录|反馈
+Rank: 1
+积分177
+收听TA 发消息	
+推荐
+ woshigtc 发表于 前天 12:24 | 只看该作者
+这方式很清真
+经典编程面试书籍
+
+Cracking the Coding Interview: 189 Programming Questions and Solutions
+$26.79$39.95
+ (279)
+
+Programming Interviews Exposed: Secrets to Landing Your Next Job
+$16.83$29.99
+ (94)
+
+Data Structures and Algorithms Made Easy: Data Structure and Algorithm…
+$35.89$44.99
+ (340)
+
+Head First Java, 2nd Edition
+$29.91$44.95
+ (572)
+All
+
+Search Amazon
+ Go
+Ads by Amazon
+回复 支持 1 反对 0 使用道具 评分 举报
+  去instant查新鲜面经！
+
+0
+精华	
+8
+主题	
+0
+学分
+中级农民-加分请看右边栏-多参与|分享|记录|反馈
+Rank: 1
+积分419
+收听TA 发消息	
+板凳
+ sadfcbasy 发表于 昨天 12:58 | 只看该作者
+话说楼主跳槽的时候google的hr还要过你当初毕业时候的成绩单么？或者reference?
+一亩三分地-美国就业求职培训开班了！
+回复 支持 反对 使用道具 评分 举报
+
+0
+精华	
+18
+主题	
+5
+学分
+高级农民
+Rank: 3Rank: 3
+积分2189
+收听TA 发消息	
+地板
+ Meetyourmaster 发表于 昨天 13:35 | 只看该作者
+请问lz timeline包不包括周末..
+被近8000人好评的Web开发课程，projects可以写进求职简历！
+
+回复 支持 反对 使用道具 评分 举报
+
+0
+精华	
+4
+主题	
+0
+学分
+中级农民-加分请看右边栏-多参与|分享|记录|反馈
+Rank: 1
+积分215
+f11ee南部
+收听TA 发消息	
+地下室
+  楼主| Nirvason 发表于 昨天 21:39 | 只看该作者
+Meetyourmaster 发表于 2016-11-19 13:35
+请问lz timeline包不包括周末..
+
+包括的，Calendar days
+回复 支持 反对 使用道具 评分 举报
+ 
+0
+精华	
+4
+主题	
+0
+学分
+中级农民-加分请看右边栏-多参与|分享|记录|反馈
+Rank: 1
+积分215
+f11ee南部
+收听TA 发消息	
+下水道
+  楼主| Nirvason 发表于 昨天 21:40 | 只看该作者
+sadfcbasy 发表于 2016-11-19 12:58
+话说楼主跳槽的时候google的hr还要过你当初毕业时候的成绩单么？或者reference?
+
+没有要成绩单，问我有多少认识的人在Google，要了他们的联系方式
+一亩三分地-美国就业求职培训开班了！
+回复 支持 反对 使用道具 评分 举报
+返回列表发新帖回复
+
+高级模式
+BColorImageLinkQuoteCodeSmilies@朋友|
+
+一亩三分地严打"顶""好贴""收藏了"之类的垃圾回复帖！被警告三次，系统会自动封杀ID！
+
+想支持楼主，请点击帖子下方的"好苗""分享""收藏"键，酌情给楼主加大米（系统不扣你自己的分）。
+积分不够看不了帖子，请参考论坛导航里的"帮助"，"新手提纲"里有攒积分指南
+本版积分规则发表回复 回帖并转播 回帖后跳转到最后一页
+
+
+
+
+这是二面了，本次店面的主题——二叉树的遍历之旅
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+听着像国人大哥，人很不错，聊了5分钟简历就进入正题. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+1. 给了一棵树，让写出前序，中序，后序遍历的结果
+2. 前序遍历recursive版
+3. 前序遍历iterative版
+4. 后序遍历iterative版，这个写的有点纠结，写完50+分钟过去了，就没test
+
+还是挺幸运的，祝大家都能找工作顺利吧
+
+
+第一题：Binary Search Tree每个node都是int, 要return 一个所有node的sorted array. 用DFS/recursion做，O(N)时间O(N)空间。N是树里节点的个数。
+第二题: 已知k个sorted array of int, return 一个 sorted array. 其中每个array的average size是N. 用Heap(priority queue)做，O(Nklogk)时间O(Nk)空间。
+
+
+
+
+昨天下午面的谷歌，找工作的第一个大boss。面试官是一个三姐，有点口音。先是让我介绍一个自己的一个项目，然后问我知不知道“后缀表达式”，我开始不认识那几个单词，但是后来她解释了一下，我就说“哦哦，我知道，以前本科大二的时候讲过这个，我懂”。然后她问我知不知道二叉树，我说知道啊。她又问那你知道怎么遍历它们吗？我说有三种遍历，然后解释了一下每种遍历。
+
+然后她就在google doc上简单画了一棵二叉树，让我分别写出三种遍历的序列。我就写了一下，顺便解释是怎么来的。
+
+然后她又问我，那如果只知道其中两个遍历序列，如何复原原来的二叉树呢？我就以先序遍历和中序遍历序列举例说，应该怎么样怎么样，blablabla...
+
+解释完了，她说好，那你写一下实现的代码吧，我就开始写了。思路清晰，但是写的比较慢，也有点不太习惯google doc这样写代码的氛围吧。写完以后，自己大致看了一下，说我写完了，要解释一下代码吗（但是我写的时候，在关键部分都有跟她说过这是干啥的），于是她就说不用了。
+
+最后问了我一下时间复杂度和空间复杂度。然后问我有没有问题问她，我想了想也没啥问题，就说没有，就结束了。虽然都答上来了（今天想想程序可能还有一点小bug），但是有种强烈的预感，这个三姐会挂我。算了，anyway，继续准备其他的面试吧。发在这里攒人品，祝大家找工作好运！加油～
+
+
+
+
+timeline: 10.25联系hr－10.31hr聊天并完成oa－11.1通知电面－11.15电面－11.16通知onsite
+
+非常好运！电面总共不到40min，特别特别特别简单。。。
+1. 设计数据结构存一堆int，写存的时空复杂度，还有搜索一个数在不在的时间。。
+2. 就是dfs或bfs遍历一堆node。。。多用一个hashset存已经访问过的点。。
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+完事了。。。-google 1point3acres
+今天用别的offer催了一下hr，很快就给反馈可以onsite了！感恩感谢！！. 1point3acres.com/bbs
+
+虽然感觉并不能带来什么帮助。。还是发下攒个人品，求dropbox onsite后的加面和yahoo以及google onsite好运啊
+
+
+
+一个美国小哥，上来完全没有自我介绍，直接问了我一连串关于abstract，interface 的问题，磕磕绊绊答上来了。. more info on 1point3acres.com
+然后就给题，具体题目记不清了，反正就是要用abstract class。 题目一出来我就惊呆了，abstract怎么拼我都快忘了居然还让我写代码？ 小哥给了很多hint，但最后还是没写出来。. visit 1point3acres.com for more.
+这个时候就剩下十分钟了，问我一个很大的文件该怎么去重，我说用hash呗，小哥说可是这文件很大很大呀，我又蒙了，心想难道这是不让我用hash？ 于是开始漫无边际的扯其他的，后来小哥hint了一下还是可以用hash的，遂想到可以只保存key。但是完全没时间写代码了。瞎扯两句结束。
+
+总结：
+1.我基础知识果然还是太不扎实
+2.心态不够好，一看到要考我不会的abstract就整个人懵了，导致后来hash这么简单的问题也磕磕绊绊才答上来。
+
+
+刚结束的电话面试, 感觉有点悬.
+
+1. check two binary tree are similar
+. visit 1point3acres.com for more.
+       5
+   2      4
+1   3   null   6. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+      5
+  2       4
+3   1  6    null
+复制代码
+即root要相等, left/right可以交换. "交换"可以进行多次.
+
+首先想到的就是recursion遍历, 相等则继续比较, 不相等就交换着比较.
+
+public boolean helper(root1, root2){. more info on 1point3acres.com
+    if(root1==null || root2==null) return true;
+    if(!(root1!=null && root2!=null && root1.val==root2.val)) return false;
+    return (helper(root1.left, root2.right) && helper(root1.right, root2.left)) || (helper(root1.right, root2.right) && helper(root1.left, root.left));  
+}
+复制代码
+对面一直在纠结空指针怎么办, 然后我说前两个if就能排除空指针的可能性, 然后他举了几个例子, 觉得没问题, 就问了复杂度. 这里我先说复杂度是O(2*N), 然后感觉不对, 毕竟涉及到recursion, 赶紧改口说应该是O(N^2). 对方说不对, 说可以用数学的方法证明, 我说哦, 那就是 master theorem, 他说对, 不过也没继续问.
+
+这时已经过去33分钟了, 他说那我们问一个简单题吧, 俩list, 交叉打印. . from: 1point3acres.com/bbs 
+我说如果只有2个, 可以two pointer, 如果有多个可以用queue装多个, 他说两个就好. 然后5分钟写完了..鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+这时已经过去了40分钟, 我问了俩问题, 然后就结束了. 感觉第一题做得不好, 估计要跪, 求onsite. 
+
+
+
+昨天刚面完google，估计是跪了。三哥面试，题目从没见过，粘在下面了，各位自己看。上来读完题以后根本不明白他要我干什么，用了两个例子跟他确认好以后，感觉用queue很简单的就能做出来，但是显然不是他想要的。先写了代码，然后他问我有没有听说过circular buffer，这你妈日了狗，我上哪知道这个去。然后他就开始给我讲这个用circular buffer怎么做，最后follow up，问你知不知道constructor前面的explicit 是什么意思。日了狗了。
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+Linear regression 
+The system is receiving pairs of inputs, (xi, yi), at a relatively high rate, e.g. one pair every 10 millisecond, and we like to model the relation between xi and yi. A linear model needs to be fitted over last N pairs. For each input pair (xi, yi), estimate bi as a model for y = b x  over the last N pairs, (xi-k, yi-k), k = 0,..., N-1. 
+. From 1point 3acres bbs
+
+Hint: Try to recognize a module that can be used for computing different terms. Implement that, and use it within your answer.
+
+
+b =(1/N j=1Nxjyj)  -  x  y(1/N j=1Nxj2 ) -  x2
+. visit 1point3acres.com for more.
+
+x=1Nj=1Nxj          y=1Nj=1Nyj
+
+
+Class MovingLinearRegressor {
+public:
+  explicit MovingLinearRegressor(int N);
+
+
+  // Returns |b|, for every new pair.
+  float Update(float new_x, float new_y) ;
+};
+. from: 1point3acres.com/bbs 
+
+( , ), ( , ), ( , ), …, ( , ), ( , ), ( , ) 
+                         <------------------
+                           Last N pairs.
+
+
+
+上周四面的，求onsite。好像是个白人小哥，不确定。各种介绍都没有直接做题。
+1. LC 226 invert binary tree. from: 1point3acres.com/bbs 
+然后问各种test case，说了一堆不是他想要的，然后他问我如果有cycle怎么办。。。如果有cycle我的代码能work吗，我是用recursion写的，当时一下子懵了，还说可能可以吧。。。。小哥说是不行的，然后和我解释。
+接着就是写个函数判断binary tree里面有没有cycle, 我用visit set 做的
+2. LC91 decode ways
+用DP写好后让优化成O(1) space的，分析复杂度。. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+3. decode ways的follow up吧，让输出所有的数字，我是用backtracking做的，然后让分析复杂度。
+做完大概40分钟左右然后就是问问题。
+
+
+
+听说面完到地里来报个面经拿到onsite的概率会变大？面完就来分享了（之前快码完了结果不小心页面被关了，再次码完分享，只求onsite）
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+约的美东下午2点，准时来了LA的电话，3分钟相互寒暄之后直接上题。. more info on 1point3acres.com
+
+1.Given a text file, remove all the duplicate lines, maintaining the order such that the first occurrences of the lines stay in the same order.
+照例先问file size,能不能用extra space。小哥说take it easy你开心就好 ，于是用hashset解决，我问能不能把input简化成int[] array存hashcode,小哥先问了how to hash和conflict的问题，然后问存hashcode的话本来的出现顺序如何维护，我说加个map。小哥同意，于是1分钟码完，中间出个小bug,因为用的hashset,小哥问顺序如何维护，我说那就linkedhashset,他同意。
+follow up就是常规的file size大到内存放不下怎么办，我就说split into small pieces然后sorting去重，然后external sort。本来以为他会问我怎么external sort,结果他一直在质疑我用sorting去重的方法出现顺序没法保证，我花了5分钟run case才跟他说清楚（感觉他是故意装傻),此时时间已经过去20分钟。
+
+2.trapping rain water,照例跟他确认了问题和输入输出后先说了个O(N^2)的解法，小哥没听懂，我又跟他run case,但这题光有图不能指说起来真的很难说清楚，35分钟的时候他终于同意我的解法，我看时间不多了想抓紧码掉。他说不急，咱们先优化下，于是我说用单调栈实现O(N), 他说O(N)的确不错，但不需要用stack, 我又赶紧翻开笔记说了个记录level的方法，小哥说也不是他想要的。最后给了hint说只需要记录leftmost和rightmost, curBar存多少水只只取决min(leftmost, rightmost), 我心想这不还是单调栈嘛。。但嘴上只能说wo, so cool!那我来实现下吧，小哥说不用了，我知道你想出来了就行，下面问我问题吧。
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+本来心想45分钟电面就写一个10行不到的代码，还出了个bug,第二题也没想出最优解，估计是挂了，于是随便问了个问题，what do think is the most important quality to be a great SDE in Google? 结果这小哥陷入了沉思，跟我分析了5分钟，说了balance between get something work and get something clean, 总体就是entry level先把活干了避免layoff, 升上去了或者活有余力再想优化。我一看他居然还聊hi了就赶紧follow up一下问他，所以你觉得对entry level来说ddl比quality更重要咯？他又跟我讲起了他自己的故事，中间不断跟我讲段子，有的没听懂，听懂的我就抖个机灵也跟他讲段子，一来二去时间已经到了3:15, 持续了半个小时的欢声笑语后突然出现了5秒钟的冷场，我当时心里再想:你是不是要跟我say goodbye了？但猜他在想：哥今天开心，再问再问再问。于是我就说感觉今天表现不是很好，最后一题没想出最优解（潜台词其实是，大哥我都陪您hi了这么久了，您能放我过吗），结果他还是不置可否，说大概1周出结果。大概3:20那边挂了电话。
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+总结下：
+lz运气挺好了，遇到两个这么简单的题，比起最近G家电面的画风真是很幸运了，但是lz自身实力有限，trapping rain water的确只会那两种解法，挂了我也认了，毕竟白人小哥从头到尾套路太深，真的不知道他是想故意放水还是来个十动然拒。。接下来刷题一定要多想solution, 多想follow up。
+
+不求大米，只求好运，给个onsite吧！
+
+
+
+补充内容 (2016-11-10 03:56):
+今天中午收到hr电话给onsite了，感谢白人小哥放水. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+补充内容 (2016-11-10 03:58):
+打算预约12.15左右的onsite, 如果有12月onsite狗家的同学欢迎加微信sunyu566376一起准备面经题
+
+
+
+花了十分钟讨论了下以前的项目，然后就开始做题，LC296。. 1point 3acres 璁哄潧
+
+我lc就刷了一遍不过这题当时想了蛮久所以有点模糊印象，卡了一点，慌乱中还把median写成了mean的求法，跪点一。做完题差不多花了25分钟。follow up问最多有几个答案，我开始答两个，后来在被多方提醒下figure out出原来是两个median之间的range那么多，跪点二。后来时间不够问我怎么找一个数组的中位数（因为这道题我用的nth_element做），我在慌乱下给了个priority queue的O(nlogn)的解法，跪点三。看了下其他面经都做了两到三题，跪点4。。。
+
+所以，大家帮我看看是不是跪了？顺便求人品，过几天fb店面
+
+
+补充内容 (2016-11-19 06:48):
+今天拿到了昂賽，但是谷歌的妹子跟我說他們今年junior level的碼農快招滿了想讓我明年去，我：？？？？不過我還在和他們協商中。。。
+
+
+
+
+http://www.lydsy.com/JudgeOnline/problem.php?id=1090
+
+
+
+1. leetcode 394 
+2.  第一题反过来，要求压缩到最短。
+     e.g  
+aaabcbc 压缩成 3[a]2[bc]
+axxxxaxxxxaxxxx 压缩成 3[a3[x]]    这个没做出来，现在还是不会。
+    求大神解答一下。
+    
+    
+    
+下午两轮加面
+第一轮
+关于摩儿丝扣得. 鍥磋鎴戜滑@1point 3 acres
+地里面经应该有吧
+
+
+
+ Three coke machines. Each one has two values min & max   , which means if you get coke from this machine it will load you a random volume in the range [min, max]. Given a cup size n and minimum soda volume m, show if it's possible to make it from these machines. 
+ 
+ 
+ Say each machine will load volume Ri, and load from machine i for ai times, where ai >=0 and is integral number.
+The total load will be the sum of Ri*ai, which >= m and = m, and sum[ai*MAXi] <= n.
+
+
+Use DFS to solve this problem.
+
+
+
+
+1. 一棵树，如果sub tree的和为0那么去掉这个subtree
+2. 两个list A和B，求A-B和B-A
+
+
+
+
+地里第一帖贡献给了狗家， 下午刚刚面完，烙印面试官判断等差数列。。数组壹：{[size=13.3333px]7 4 2 2}
+数组贰：
+[size=13.3333px]2 3
+1 4
+[size=13.3333px]3 4
+输出： 
+[size=13.3333px]Y
+[size=13.3333px]N
+Y题目很简单但是我道行太浅没反应过来直接暴力O(mn)解决。。. more info on 1point3acres.com
+老银说O(m+n)可以解决。。捂脸继续刷题吧。。
+
+
+补充内容 (2016-11-2 12:14):
+数组壹：{7，4，2，2}
+数组贰：{{2，3}，{1，4}, {3，4}}代表数组壹的index
+输出就是判断结果： Y, N, Y
+
+
+
+
+
+发面经求onsite貌似很有用，面了2个狗家电面，来求Onsite.
+
+一面：
+1. 给n个集合比如{a, b}, {1}, {x, y}. 从每个集合里面去一个数组成新的集合，输出所有这种集合，比如例子就是：{{a, 1, x}, {a,1,y}, {b,1,x}, {b,1,y}}..1point3acres缃�
+2. 写完后开始聊多线程，聊完就说你写个死锁吧，然后就写了2个线程和2个锁来读写文件的死锁情况，他也很满意，然后问怎么解死锁，我说用一个锁就是了。
+
+以为面得很好，结果一周后hr打电话通知二面！感觉被三哥黑了！！
+-google 1point3acres
+二面:
+又是一个三哥！全程没说任何闲话都在做题。. 鍥磋鎴戜滑@1point 3 acres
+1. 给你n个coins和一个value比如1000，输出这些coins能组成多少种value小于1000， 每种coin可以用无限次。直接完全背包秒杀了。
+2. 给你1,000,000个数，求有多少个pair的和小于给定的数K, 直接排序加二分做的。follow up: 找三个数怎么办，我没多想就说对于排序后对每个数做一遍前面的问题。
+以为没有了，说完test case还有15分钟的样子，结果就来第三题了：
+3. 给你两个string s和t, 问s是否能删除小于N个字符，使得结果是t的一个子串，比如 "book, aook", N = 1, return true;. From 1point 3acres bbs
+看完直接懵了，因为最近做two points太多了，就朝那个方向想，一直想去用O(N)，最后他说不行，我也发现不行，然后45分钟一到，直接就说拜拜了。
+第三个题真的太紧张了，下来一想就是一个二维的dp也不难。
+
+求人品吧，3天了都还没消息。
+
+
+补充内容 (2016-11-10 02:44):
+电面8天后终于收到Onsite通知，人品还是有点好
+
+
+据说发面经有助于拿onsite，我就不要脸接着po了
+三道题，第一道判断n趋近无穷的时候n^1000000, e^n, n^n, n!那个大
+第二道给一段代码判断程序最终结果，一开始想复杂了，后来想出来就是个求一个数的因子个数. 1point3acres.com/bbs
+第三题给一组公司人员的名字，id和上司id，输出层级关系（构建一棵树然后打印，秒掉）.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+前两道答得不太流利，希望国人姐姐高抬贵手
+
+
+贡献两则谷歌家面经。其实第一次觉得自己面的还不错，题目也不难，但还是被要求加面。. 1point3acres.com/bbs
+11月1号第一次面试，貌似是一个美国大哥。先让我聊了聊实习的project，然后上题目，第一题是给一个String[] of integer和int k(subset的大小), 比如[9,15,3,14]和3, return一个subset，使得subset里面的最大值减最小值是所有subset里面最小的。所以这个例子返回[9,14,15], subset里面的数字不用按照input里的顺序。第二题是Leetcode reconstruct itinerary的简单版本。觉得自己答得还不错，结果被通知加面。
+今天第二次面试，晚了10分钟打过来，因为小哥说他忘了带手机……目测美国小哥一枚，题目巨简单无比，让我怀疑这是不是谷歌的面试。第一题让自己定义一个double linked list，node的value是String. 然后写一个function, 给一个head和一个Set<String>, remove list里面value等于set里word的node。第二题是BST，给一个low bound和high bound, return list of nodes，这些nodes的值在low bound和high bound之间。用iterative和recursion两种方法写。
+两次面试题目都无比简单，不知道这次小哥会不会让我过，感觉也是挺心累的
+
+
+只有一道题， 当时三哥冷淡得我都绝望了，没想到居然给了onsite
+题目：一个int[] A, 输出不相邻的elements组成的最大的sum
+楼主记错了约好的时间，电话打来的时候一脸懵逼，找google doc找了5分钟.1point3acres缃�
+然后无比傻逼的写了O（N^2）的dp解法
+被要求improve，用heap写了个NlgN的，没错，这时候我还没有发现它是house robber
+冷淡的面试官忍无可忍说要O（n），恍然大悟写了
+此时，已过去40分钟……
+follow up：A中有负数
+
+祝大家好运啊，面试官冷淡你就多讲几句，我的所有test case都是自己写，面试官confirm这样的～
+
+
+第一次电面是一个拒镇旋转的问题，以及给定一个拒镇判定是否是从N个给定拒镇中的某一个旋转得出的。。。
+然后，加面了。。。
+
+加面是这样的，
+
+1 给定一个字符串，只有两种字符，左右括号，写一段代码统计有多少种配对方案
+2.从map reduce开始讨论了一些和大数据处理有关的问题
+
+感觉G家喜欢问map reduce，楼主没特别准备过，估计要挂
+
+
+
+
+不久前湾区来的天竺哥的电话，口音特别重交流挺痛苦的直接上题： 给一组objects， 每个对象2个属性分别是id和父id。要求给这组objects排序保证所有父id都排在id的前面，如
+给的是：1->10, 2->20, 3->30, 10->200, 20->100
+排好应该得到：3->30, 10->200, 20->100, 1->10, 2->20
+因为10是1的父id，所以10->200一定要在1->10的前面，如果没有父id关系的话就按id排就好了. visit 1point3acres.com for more.
+函数是. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+List<Object> sortObject(List<Object> objects){}. Waral 鍗氬鏈夋洿澶氭枃绔�,
+. more info on 1point3acres.com
+
+另外父id一定比id大且给的数组元素不重复
+
+lz当时第一反应就是感觉这是图的题，但是往托普排序上想方向错了，天竺哥也一直憋着，我说了大概托普排序的思路就让我实现，完了再拿出各种case告诉我是错的，还有XXXX没排对。
+lz后面发现这题可以用并查集+mergesort解。哎，看来还是要多多修炼。希望有大神有更好的解法. 
+
+
+
+判断toeplitz maxtrix, follow up 是矩阵很大怎么办。。听面试官的介绍应该要问很多题的。。可能时间不够或是我太水了吧。。. 1point 3acres 璁哄潧
+面试官貌似在机场，各种噪声，电话还莫名断了好几次，上来发现我俩进的还不是一个google doc耽误了好久好久。。
+求onsite。。求大米。
+
+
+第一轮电面点这里。求人品求Onsite！！
+
+楼主比较弱鸡只面了一道题。听口音是一位美国小哥，上来先非常激情地介绍了5分钟他自己的team，然后5分钟聊简历。接下来是technical code：. From 1point 3acres bbs
+. 1point3acres.com/bbs
+input是一组string, 找到这里面的由相同字母组成的单词组成一组并输出。比如bat 和abt，但是a 和aa这样字母个数不一样的不算。. 1point3acres.com/bbs
+例子： input[could, bat, dog, said, tab, cloud] output: [[could, cloud], [bat, tab], [dog], [said]]
+
+
+我第一个想法是建一个trie，后来说着说着觉得这道题不关注字母顺序所以没什么用。
+第二个想法就是建一个字典，然后遍历input，把每个word排序后作为key，word append到value里。 再遍历字典输出。小哥说sounds good然后就开始写，写完后发现他全选了代码，感觉可能是复制到ide去跑test case了？
+.1point3acres缃�
+然后小哥就问我怎么Handle input 里有重复的情况， 比如input[could, bat, dog, said, tab, cloud, bat]，output就应该是[[could, cloud], [bat, tab, bat], [dog], [said]]. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+我就又加了一个dict来记录出现次数，当append到result里时按次数加进去。
+
+
+然后小哥就问我假如有punctuation能不能handle，我看了一下说能。
+
+接下来我问有没有可能会有大写字母的，比如Could，说有可能。我又改了一下代码。
+
+接下来问了个follow up，说有没有可能在多台machine上同时处理这program。我按照MapReduce胡扯了一通，差不多还有5分钟。小哥让问了点问题结束。
+
+祝大家找工作顺利！求人品求onsite!
+
+
+1. 给一个数组，找到比左右邻居都大的element。比如[1,2,3,4,3,5,6,7]，返回4
+看到这道题，内心无数黑人问号脸……
+
+2. 设计一个Iterator类，构造器input是一个Integer的Iterator,  next()返回里面的下一个负数，hasNext()返回是否还有负数……
+这道题也很简单，但我当时过于紧张，把剩余的时间都花在了这道题上……
+
+这种难度的题是不是至少要做3道才算合格，好机会没太把握好
+
+
+
+补充内容 (2016-11-10 10:58):
+刚收到二面通知，森森滴感觉被放水
+
+
+八月收到了一个recuiter的邮件，因为没有准备，一直拖到了11/2号面试。. visit 1point3acres.com for more.
+一上来先花了十五分钟再聊经历，剩下的30分钟就是全程懵逼的coding test。
+首先题目讲解了五分钟，说的是有很多sorted data streams， 其中有disk的数据， memory的数据，还有network的数据，然后让设计interface，返回sorted data stream（在disk中）。看到题目后瞬间懵逼，然后就merge sort开始编，最后返回了路径。中途不知道各种怎么call，然后就整了一堆不知名函数。
+最后又问有N个elements， K个data streams，问complexity。我问能不能fit it memory，毕竟写数据到disk的花费还是很高的，他说does not matter。我就日了狗了。最后说NlogK。 他说他能不能更好，我想了半天胡诌了一遍说可能，看数据格式，但一般来说是NlogK是最好的。他说I agree。 你都agree了问那么多干嘛。
+感觉狗家就这么悲剧了。
+
+
+
+非中印小哥，一上来，通话质量极差，我直接让对面在google docs上打题，就这样电话中间还断了。。。
+
+1. 实现浮点数数组求平均值，明显不可能加和这么简单，多问了一句是否保证不溢出，果然不保证，于是保存当前平均值，记录count，用加权的方式做的，感觉没问题，但是他还是说有问题，让我看，我没看出来，就过了。。。
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+2. 第二题是字符串判断是否由重复字符串组成，感觉leetcode做过，可我属于一面试就极紧张的，脑子一片空白，问最直接的暴力算法行不行，他说先实现最好，我觉给了个暴力算法直接不同长度试，然后还有10分钟让我优化，想了个DP的方法不知道对不对，repeat数组存当前字符结尾的重复字符串的长度。。
+
+写完代码他说我觉得很clear了，时间到了，你有什么想问我的吗？问了自己比较关心的，你认为在狗狗一个好的SDE最重要的是什么素质？他说要能够搞清楚自己应该做什么的能力，还有沟通能力，当然smart也很重要。
+
+虽然刷了2遍leetcode。。。但是心理素质差，一面试就慌，脑子空白，不抱希望了，发个面经攒人品希望上周亚麻群面能过就好。。。. 鍥磋鎴戜滑@1point 3 acres
+
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+补充内容 (2016-11-1 04:37):
+DP算法最后证明不对，欢迎各位大神提供思路。
+
+
+http://stackoverflow.com/questions/10767284/finding-the-first-duplicate-in-an-int-array-java
+
+面试官说了，空间复杂度需要是O(1), 时间复杂度优于 O(n2)
+
+
+听口音是个白人大哥, 上来介绍了下自己, 对我没有丝毫兴趣, 然后开始做题. visit 1point3acres.com for more.
+第一道设计一个iterator, 输入一个数组[3,8,1,9,2,12]. 鍥磋鎴戜滑@1point 3 acres
+每次调用next()得到8,8,8,9,12,12. 1point 3acres 璁哄潧
+问了半天才明白就是偶数index表示重复次数, 奇数index是要输出的数字. 1point 3acres 璁哄潧
+
+第二题3Sum smaller
+
+第三题median data stream, follow up: 如果heap的size是固定的, 但是有很多input怎么办. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+题其实不难, 所以还是要看运气...
+攒人品求onsite求offer!.
+
+
+10/25 google 电面，
+
+中国小哥电面，人非常的nice，题目超乎想象的简单。
+
+第一题，从文件中读出字符串，输出字符串，但是重复的字符串只输出一次。
+             我的解释（1） Hashset （2） sort （3）create trie， google的电面总是想的很复杂，说了trie，并且说了trie比hashSet省空间，但是小哥没有让接着说。做了第一solution的代码，好简单，不敢相信。
+              follow up  文件非常大，不能load 到memory 怎么办。 我的solution，大的文件切成若干小块，把小块load到memory，sort，再写回disk。然后再用priorityQueue merge sort各个小块。重复的skip
+              小哥表示对这个方案满意
+
+第二题  给一个数组，里面有正负数，让找到不相邻的两个数，他们的和最大，输出最大和。
+            dp解决，很简单。
+. 1point3acres.com/bbs
+题目超乎想象的简单，第二天通知onsite
+
+
+一个很怪的印度小哥面的，迟到10分钟， 自我介绍没有，简历没问。1) override default equals for class B. Base check of field equality
+class A {. From 1point 3acres bbs
+public final int va;
+public A(int va) {this.va = va}
+}
+class B extends A {
+public final String vb;
+public B(int va, String vb) { super(va), this.vb = vb}. 1point3acres.com/bbs
+}
+
+2 给 list和tagert 找list中最接近tagert的数。
+直接写了二分。。。很怪是说小哥 “看不懂” 我写的二分。一直让我run test。run了有20分钟，并没有发现bug。最后沉默5分钟，拉回去看我写while代码，说明白了。-google 1point3acres
+
+为什么这么简单，这是要黑我吗，面试之路好坎坷。
+
+
+
+
+G拖了快半月给了onsite。。。两轮
+一轮是美国小白 design a subscribe/broadcast library (Java)
+二轮国人大叔 find the first unique character in a string(all lower case). house robber II. 1point3acres.com/bbs
+
+求大米，求rp……
+
+
+45分钟：
+1. 设计题： 叫你设计一个logging system （包括log的数据结构）, 如何guarantee unique entry。
+完全懵逼，说了hash但是又被问如果只有一台机器处理log,hash size不够怎么办，卒
+2. 编程题：在一个 [1,2,3,4,5,6,...,n]的array里 请找出 所有set1,set2, such that set1 == set2.
+完全懵逼，最后被告知要用segment tree,卒
+
+原来以为gg了，但三个星期后被通知要加面
+
+45分钟：
+1.编程题： 给2个Set A, B, 请找出 set1: elements that are only in A, set2: elements that are only in B 
+例子： Set A = [1,2,3],  Set B = [1,4,5], set1 = [2,3] ,set2 = [4,5]
+一开始用遍历，但后来呗提醒可以用hash table， 总共花了大概30分钟
+2.概念题： How does python manage memory？ (因为我编程题都是用python写的). more info on 1point3acres.com
+我说我只知道用到了C，然后被告知python 用到了 reference count
+
+2天后收到onsite。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+可以看出两次面试难度天壤之别，过面试真的是一半靠运气, 同学们加油！
+
+前几天面的电面，国人大哥，一接电话安心了一半。没有问任何简历上来直接做题
+给了list of message， 每message有一个parentID， ID 和content。 要求输入list of message按照先parent后children的顺序， 给定root message的parentID是固定的字符串。其实就是topological sort。 写完了之后简单跑了testcase问了时间复杂度就完了。
+
+下午刚面的狗狗，本身没啥实力紧张的不行，挂了电话回过神来马上来地里发帖。
+一个听不出来口音的女面试官，虽然上来就做题一句寒暄话都没有，但是总的说人挺nice的
+就面了两道题。。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+1. lc的原题 检查一个String 是不是Palindrome
+她问我知不知道palindrome，我当然得说不知道，说听到过这个，好像是首尾都一样就是palindrome，然后问清楚了大小写，是不是只有英文字，就开始写code。
+然后嘴跑了5个小test cases, 她挺满意就继续了
+2.第二题 是给一个二维数组，里面有白黑两种颜色的格子，看白格子能不能全部连接上（0 代表 白格子，1 黑格子）
+比如 0 1 1        
+        1 1 0.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+就是错误的，因为白格子被区分开了    .1point3acres缃�
+
+再比如 0 0 0
+           1 1 0
+是正确的，因为白格子是连在一起的 
+.1point3acres缃�
+第一时间觉得在哪看到过，地里的面经还是哪里，但是记不起来了。。然后说了下（o(n^2)）DFS的解法，她说可行但不太效率，说是o(n)可以解决. Waral 鍗氬鏈夋洿澶氭枃绔�,
+想了5分钟没想出来，她让我先写（应该是觉得我想不出来On解法了。。），然后改进。
+写完了后，中间有点小bug我马上发现改回来了。也没让我嘴跑程序，可能是时间不够了。
+. 1point 3acres 璁哄潧
+最后5分钟问了她几个问题
+哪个team: chrome
+几年了： 9 years
+那有中餐吗，好吃吗：好吃，每天有人排队. 1point3acres.com/bbs
+vending machine 的电子产品是真的可以随便拿吗： 她说了一大堆，我也没听明白。。
+. 鍥磋鎴戜滑@1point 3 acres
+求大米求过电面求Offer
+
+
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+补充内容 (2016-9-15 06:16):
+接到HR电话说过了。要去Onsite了。。 求好运
+
+
+
+
+
+刚挂了电话，来分享求米 国人大哥，人非常nice，最后还给我提了好多建议。不知道大哥能不能看到这个帖子，感谢感谢！ 
+
+问了两题
+. visit 1point3acres.com for more.
+
+#1 leetcode原题，单向链表，l1->l2->l3->...->ln，变成：l1->ln->l2->ln-1->l3->... 
+
+
+我先说用array存下来，然后重建链表，分析一下时间空间复杂度。然后直接说了最优算法。 全部写完大概二十多分钟。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+
+#2 一个matrix存了好多数，支持两种操作 
+update(i, j, v)：更新坐标为[i,j]的元素 
+sum(x1, y1, x2, y2)：把[x1, y1]和[x2, y2]所确定的矩形空间所包含的数求和（x1<=x2, y1<=y2） 
+
+
+有三种情形，（1）update很多，（2）sum很多，（3）都很多。可以预处理，在三种情形下怎么设计。
+这题不用coding，只要讲思路。 最后问了一下工作内容，还有谷歌不同location的工作和薪资差别
+
+
+感谢地里帮我内推的同学
+
+. 鍥磋鎴戜滑@1point 3 acres
+
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+
+结果还没出，但问的两题都比较顺利。不知道OA会不会被考虑进来，我OA做的不好。。。
+
+
+
+
+最后啰嗦一句，instant经常服务器出错啊，我这篇帖子发了三遍还没发出来
+
+
+刚刚面完，热乎乎的面经回报地里，面我的好像是个国人大哥，人相当好
+两道题：
+1. Leetcode 163
+2. 找到一个binary tree中最深的node，(如果有多个最大深度node，返回最左边的node)，我一开始用了recursive的解法，后来的follow-up是使用iterative怎么解，应该是用BFS，等到queue里面只剩下一个node并且这个node没有left child 和right child的时候，返回这个node。. 1point3acres.com/bbs
+因为有我有competing offer，好像可以跳过二面onsite，不过结果还没出来，仅供大家作为参考。
+
+
+
+我朋友今天面的，真是醉了，题是Given a binary tree, find the path which nodes sum to a given value. The path can start from and end with any nodes
+做过CC150的肯定觉得这个是那上面的原题，但你仔细看CC150的解法，它的最后的答案还是从上到下的这种PATH，也就是从某个祖先（虽然不是ROOT），到某个后代节点
+
+但这个面试官让我朋友做的是真正的可以从任何点开始和结束，也就是说，可以是一个节点，一直网上爬到某个祖先的然后再拐到另外一个孩子往下爬到某个后代这种路径 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+我朋友说他完全不会，讨论了45分钟还没讨论出正确算法，估计跪了
+
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+补充内容 (2016-10-8 11:06):
+发现G家面试真是要看RP，很容易碰到各种难偏怪
+
+
+re-order a string so that no adjecent characters are the same.e.g. caat --> cata or acat or acta....
+
+跪在Follow up
+Time limitation: O(n)
+
+
+
+
+第一题：1234…...87346374632correct order: [1, 2, 3, 4, … , 5, 3, 2]
+reverse:       [2, 3, 5, 4, … , 3, 2, 1]
+public class BigInt{. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+public int [] internal;
+} 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+. more info on 1point3acres.com
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+static BigInt addAll(List<BigInt> nums); // Should return num
+
+第二题：
+zigzag iterator follow up
+
+interface Iterator {
+  Object next();.1point3acres缃�
+  boolean hasNext();
+}
+
+
+[a1 a2 a3 …]. from: 1point3acres.com/bbs 
+[b1 b2 b3 …]. visit 1point3acres.com for more.
+[c1 c2 c3 …].鏈枃鍘熷垱鑷�1point3acres璁哄潧
+-->  a1  b1  c1  a2  b2  c2 ...
+
+. 鍥磋鎴戜滑@1point 3 acres
+
+可以加分吧。。。
+
+
+问了hash是啥，然后一堆java的概念. 题目是给一个expression tree，leaf node都是数字，其他的node有符号+ - * /，最后要你print出来这个表达式，最好的情况是如果有加号减号要括起来，乘法除法不用扩，比如tree看起来这样           *
+     +       -
+8      3    5   4
+print（8+3）* （5-4），最后是问了java和Python的区别
+
+
+
+好像是个美国小哥，叫Micheal, 上来直接贴题：
+第一题： 给出一个dictionary，给出一个list里面包含首字母， output：在dictionary中找到的以list中首字母开头的最长的单词。例如：dict: {"hello", "hi", "lot", "laugh", "me"}, list:{"h, l"}; output: {"hello", "laugh"}dier
+第二题：直接贴图片了，反正我是没想到啥好方法。。忽略图片里的那个deny access...实在是截屏截晚了，大家凑活看吧～
+楼主肯定是又跪了。。so sad...
+
+就是sentence fitting
+
+补充内容 (2016-10-7 02:41):. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+第二题output：2
+
+
+一小时前刚面的，看地里没有这题，就放上来了，供其他人参考， google SETI组直接上来问问题，就一道. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+Given a page of website, count the number of unique reachable pages.. visit 1point3acres.com for more.
+
+例子： '+'代表算   '-'代表不算
++google.com
+    /link to 
++google.com/a 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+   /link to 
++goole.com/b
+  /link to -------------------/link to ----------------------------link to. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+-external.com             +news.google.com/             -newsgoogle.com/
+
+
+
+给了一个api, already implemented. visit 1point3acres.com for more.
+vector<string> parseLink(const string &url)
+e.g. parseLink(''google.com/b")  return {"external.com", "new.google.com", "newsgoogle.com"}
+
+implement this one
+//e.g. crawl("google.com") return 4
+int crawl(const string &url);
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+基本上对于给的url， 用parseLink找到所有的链接， 在返回的所有的链接里逐个跟url比较，看看算不算合法的链接， 然后再recursive call crawl（”链接“）这个function， 注意要求是unique的
+
+一开始想用trie找到链接里的prefix跟url相同的，然后他就给我举了+news.google.com/ 和 -newsgoogle.com/ 的例子， 见我实现起来比较困难，又给我一个已经实现的api
+
+bool sameSite(const string &url1, const string &url2);
+//return true if the two URLs are part of the same site.
+// e.g. sameSite("google.com", "google.com/a") return true.1point3acres缃�
+
+然后问那些test case, cyclic webpages要包含， 例如：faceboo.com --> facebook.com/login  --> facebook.com 
+
+最后我问了1个问题：
+这个组做的东西主要是内部使用还是外部使用？. visit 1point3acres.com for more.
+跟地里看到的帖子差不多，基本上都是内部使用
+
+估计跪掉了，发出来让其他小伙伴参考吧
+
+
+热乎乎的面经 赞人品 求onsite!给一个整数，求大于这个数的最小回文数。
+
+一开始没想到最优解，先让我写了一个暴力解，然后我直接问了是不是还有更优解才告诉我有。剩下的时间写了最优解跑了一个例子就结束了。。。
+
+
+攒rp~ 来汇报一个google 电面题目find the longest consecutive sequence in an unsorted array.
+注意要用最优解。
+
+
+刚刚结束的Google，感觉有点虚，leetcode gg tag的136道题，刷了120道，结果就面到了剩下的那16道题中的Evaluate Division……哭瞎了，最后超了10分钟，只做完了这一道题，看地里都是两道题，不知道会不会过，求onsite 啊，手里都没面试了
+
+
+
+就面了两道题目，第一道就是一个数组找大小，找到第k个大的数，很简单
+第二个就是需要一个tree的设计题目，设计如何构造一个tree才能满足一些操作
+
+
+
+感觉g家果然是人人都不同啊。简历只字未提，一上来问了一堆数据结构， 编程语言的基础知识, 然后才开始做题。
+1. 提供一个contains（string）方法用以查找input字符串是否存在于字典中。要求实现一个方接受一个字符串作为input， 输出所有由这个字符串拆分成的两个子字符串组合，要求两个字符串必须都包含的字典中。 .1point3acres缃�
+dic{aa, ab, star, b, a}. Waral 鍗氬鏈夋洿澶氭枃绔�,
+input: aab .鏈枃鍘熷垱鑷�1point3acres璁哄潧
+output: {(a, ab), {ab, b}}
+
+2. 假如input字符串可以任意拆分成n个子字符串，输出所有的可能。
+dic{aa, ab, star, b, a}
+input: aab 
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+output:{(a, a, b), (aa, b), (a, ab)}
+
+面试官没有口音，人很和善。题目不难，只是发现电面时的紧张气氛还是和平时大不一样的，可能还是刷题火候不够。
+发面经回馈地理，顺便攒攒人品。祝大家都offer多多！
+
+
+
+
+楼主10分钟前刚刚结束的电面。
+接电话是一位口音很好的美国大叔，上来聊简历约10分钟，聊得很好楼主觉得很顺利。
+接下来就悲伤了！！楼主自己犯傻没有开google doc！！
+
+第一题是一道maze题，然后大叔跟我说在这个maze上怎么怎么操作就能出结果我听得一脸懵逼。反复交流了10分钟后我只好说确实不明白这么visual 的问题，大叔非常耐心说下一题。
+第二题是 fibonacci方程f（），想获得f(5)，一共需要call几次f（）一步一步做就好。. visit 1point3acres.com for more.
+第三题是给了一个简单地api，里面有1. __init__（URL)：连接到这个url，连接后会获得相应table 2. get(key)获得这个key对应的string 3. set（key,value)在这个table里set key的value。 然后给了个run(phone_url, address_url, key)就是用phone_url， address_url连接到这个api，然后分别获得这个key对应的value: phone, address， 返回一个“key:phone:address” 问怎么优化。 楼主到这会还没有意思到题目在docs上，所以似懂非懂在瞎扯，直到大叔问我有没有在看着docs我才想起来。。然后答得是用multithread，大叔说很好，但用户还是觉得慢。我说慢可能是因为在__init__里假如fail的话就会一次一次reconnect，应该在每个thread里加timer，假如说__init__（）超过2s就直接返回fail。 大叔说correct，然后就是让我问他问题结束。
+
+大叔很耐心一次一次给我描述第一题，全程应该主要是第一次需要写code，楼主还直接跳过了。。肯定是跪了。祝大家申请顺利. 鐗涗汉浜戦泦,涓
+
+
+
+
+今天处女面给了Google，感觉已然半跪了。。。
+职位Infrastructure&Tools，听说不难，果然不难啊！！题目很简单，很简单，给后来者打气~
+（白人 黑人问号）小哥面的，人很nice，工程师所以态度略冷，但是我做题和思考的时候都没有打扰，循循善诱，我的小福气吖~
+
+面试流程：. Waral 鍗氬鏈夋洿澶氭枃绔�,
+1. Talk about what you're currently working on -- 一顿扯
+2. 听说你C++不错诶，你简历上也有Java和Python，给我聊聊C++和Java的区别 -- 一顿胡扯，估计可能跪在这里了
+3. 题目面试：
+   A. 给你一个Sudoku Grid，设计接口并且实现一个方法，检查里面的解是否合法。
+   B. Follow up: 如果是N*N的Grid，如何扩展你的程序。
+   C. Follow up's follow up: 如果是N*N的Grid，如何check这个grid的长宽是否合法。. 1point3acres.com/bbs
+   D. 写一个Template function，接受两个Container和一个返回bool的函数作为输入，输出一个merge后的Container。
+
+半跪经：
+A. 这道题很简单才对啊……小哥说你怎么test你的程序，我扯了一大堆，然后说用户的什么输入会fail掉你的程序，我硬硬没检查输入的size啊，最后还是在小哥提醒下想起写最开始的尺寸检查。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+B. 我说可以设计一个类，存储block的数目以及grid尺寸。
+C. 说实话真不会。。。我说的检查height == width, 并且单边长n是个perfect square number满足 n % sqrt(n) == 0。大神求解答。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+D. 厉害了我的（谷）歌！考到语言特性了，几辈子没写template function和函参了。上网现搜先学，最后函参应该写错了。。。
+
+关于D，其实暴露了自己的口语和听力缺点，小哥说了几遍我都没听懂，小哥有点不耐烦了，给我说你就假设是两个任意数据类型的vector，给你一个bool返回值的function来实现min(x, y)，你返回一个merge后的container。小哥还提了一嘴，假设两个vector都是sorted的。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+教训：
+1. 谷歌最近很多follow up的样子，第一次写就要尽量generic，比如我写的 for (int i = 0; i < 3; ++i) 小哥就明显不满意。
+2. 数据的输入一定要检查啊~~一定要检查！一定要检查！一定要检查！！
+
+贴新鲜的代码（面完之后心好累就没看，可能有大bug，只是给大家看个思路，找到bug记得告诉我……）：
+A.. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+ 
+
+
+B. 凭记忆。。。
+template <typename T>
+vector<T> merge (const vector<T> &A, const vector<T> &B, (bool *)f) {
+     int idxa = 0, idxb = 0;
+     vector<T> res;
+
+     while (idxa < A.size() && idxb < B.size()) {
+          if (f(A[idxa], B[idxb])) res.push_back(A[idxa++]);
+          else res.push_back(B[idxb++]);
+     }
+     while (idxa < A.size()) res.push_back(A[idxa++]);. from: 1point3acres.com/bbs 
+     while (idxb < B.size()) res.push_back(B[idxb++]);
+     return std::move(res);
+}
+
+期待能去onsite呀~~上面的函参应该是错的，大家面之前补一补语言特性吧！
+大家加油呀！
+
+
+
+Stream of characters from a socket. Create structured frames out of that stream.
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+Start character is 0x12
+End character is 0x13
+Escape character is 0x14
+
+0x12, 0xDE, 0xAD, 0xBE, 0xEF, 0x13 => 0xDEADBEEF
+0x12, 0x14, 0x12, 0x14, 0x13, 0x13 => 0x12, 0x13 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+0x12, 0xDE, 0xAD, 0x13, 0x12, 0x14, 0x14, 0x13…… => [[0xDE, 0xAD], [0x14], ….]
+
+Structured frame = [0x13] => Stream = [0x12, 0x14, 0x13, 0x13]
+[0x12, 0x14, 0x14, 0x13] => Frame = [0x14]
+.1point3acres缃�
+
+挂了。。。根本不理解题意。。交流题意花了太长时间。。。
+
+
+
+贡献一个G家新鲜的电面面经。面试官是个美国人，很nice，迟到了10分钟，说是因为一开始用的电话是坏的，又临时换了一个会议室的电话再打。。一开始先问了我之前的博士题目，我大概找了一个项目说了一下，过去了大概10分钟吧。然后就开始做题，一共本该是45分钟，但是我们挂电话的时候已经比原定结束时间晚了15分钟。也就是整个talk的时间大概是50分钟吧。。
+
+我的题挺基本挺简单的：
+给一个2D的grid, grid上面每一个element是一个character. 然后给一个input的单词，找出在这个2维grid里面所有可能match这个单词的path的集合。
+input: 2D grid, string word-google 1point3acres
+output: 所有单词的path的集合
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+我开始问基本问题，可以向哪些方向移动？ 他说可以简单假设上下左右。 返回的是路径，那需要怎么表示？我问用pair<i,j> 可以吗？他说，that's a good strategy. 
+
+然后说了一下大概的思路，用DFS，然后就开始写code.. 1point 3acres 璁哄潧
+我写的时候还怕太安静，偶尔还说一下我在做什么，他整个过程安静，也没有一直跟我说话。
+. 1point3acres.com/bbs
+写了一会，给他看我完成的版本，他看了一会，然后问，在我的DFS子函数里面，输入的变量，比如 vector<vector<int>> & Vst, 为什么要用derefence符号“&”。然后我的子函数的code里面，为什么要把Vst[i][j]设为1，做DFS， 然后再把Vst[i][j]改回0. 然后问了一下 vector<vector<int>> & Vst 和vector<vector<int>>  Vst 的区别
+
+第二个follow up，就是问复杂度，我一开始有点蒙，跟他说我想一下，他说好的你慢慢想，也没有一直问我跟我说话. 假设二维数组一共有A个element，单词长度是B， 我一开始觉得是O(A^B), 后来又好好想了想，写出来应该是 O（4*3^(B-1)*A)，他很惊讶，说我说的是对的，他要是自己想的话，会直接说O(4^B*A), 然后我笑了笑说仔细想想是有个小trick在里面的，不过我们讨论的很开心。
+
+这时候时间已经超了，他还问我，这个题如果不用DFS，还可以用什么方法做？不要求我写整个代码，说说思路，我说可以用BFS，但是一个global的visited数组不会work，要用特殊方法记录每一个path之前已经访问过的信息。他说好，时间到了，我们就到这里吧。
+
+总的来说题目做出来了，follow up也答得差不多，没有非常快的给出答案，但是在讨论和自己想了想之后，还是能答对的。面试官非常nice，这个要非常谢谢他。. 鍥磋鎴戜滑@1point 3 acres
+昨天上午面的，今天早晨一大早收到recruiter电话，还以为是要挂了，结果他说feedback非常好，要move forward to onsite。继续努力拼一拼，lz不是纯cs编程出身，所以求更多Bless..
+
+
+面试官：名字忘了lol，应该是白人，有点欧洲口音。运气比较好他挺热情的，在search组。
+聊天：先问了我Java有什么Project，因为我简历上写Java experienced。
+         我一下蒙逼，都是学校里很久以前的Project，随便说了一个大一做的 A＊search。
+         他还细细的问了，我基本打哈哈过去了，还好他没追问，不然很糗都不记得了。
+         中间他提了Java OOP，我赶紧把话题转移到了OOP，说什么Class，Abstract Class，Interface之类的；果不其然，他问了我Abstract Class，之前准备过就扯了一扯。
+
+
+问题：一开始recruiter说45分钟有2-3题，我吓尿了，所以答题前问了一下。他说没个人都不一样，他问一题，然后follow up。
+         题目是Reverse Vowels in String。我在leetcode做过这题，就故意迟钝了一下，说了一下最优解，然后他说ok，我就慢悠悠的写了，免得很尴尬。-google 1point3acres
+. more info on 1point3acres.com
+
+         ［感觉这样不是特别好，一下子就写最优解，还好他疑心不重］
+
+Test：写完我就Walk through了一下examples，他问我time，能不能优化。我说不行，O(n)最好了
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+Follow up：如果这个String 很长，是一本书，你没法放到memory，怎么破？他说idea就可以，除非你无敌，一定要写code
+                我有点懵again，然后就一直交流，找出了一个可行的办法。
+               ［有空我来update怎么做，马上要上课了，有兴趣的同学可以想一下］
+
+写完聊天：问他最近做了什么Project，他说让我搜索polar bear，右边的卡片里面又个Did You Know 部分，就是他做的。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+                我问他怎么选择这个fact的，什么算法，他说不告诉你，很复杂，而且保密。我就好吧哈哈哈
+                之后还给我安利了一下Google很棒，有很多大神，你想知道什么都可以问。
+
+希望能帮到大家，给自己攒一点人品，拿到onsite...
+
+
+昨天发的面经貌似没发上来…… 再来发一遍吧，希望没发重复什么的- - 攒攒人品Orz 
+面的狗家店面。 上来一听是三姐面的，心凉了一截。 上来先问学校和工作在哪（LZ五月份毕业现在在一个公司做intern），说的有点磕磕绊绊（还沉浸在遇到三姐的悲伤中，话说面之前拜了好久只求不要遇到三哥三姐） 
+题目是给一段程序，返回里面所有comments …… 
+. 鍥磋鎴戜滑@1point 3 acres
+问了半天才确定意思是输入一段String返回list of comments List 两种类型的comments：//  和  /* */ 
+楼主就说遍历一遍里面字符，找  //...\n 和 /*...*/ 中间的所有char加入list, 复杂度O(n) 
+三姐说好，直接先问有哪些test case.... 给了几个开始写code 三姐全程不发话。。。
+写完以后问我 如果有// 在 " " 里面算不算comment。发现自己没有考虑到，赶紧加上。 
+然后开始口头过test case, 三姐依然全程不说话 （紧张*N） 过完test case后问如何优化。。。楼主蒙蔽，只好说时间上应该不好优化了，只遍历一遍已经最快O(n) 了 
+三姐评价了两句（没听懂）然后也就没继续问 最后问用了什么数据结构 ………… 这还能有什么数据结构啊。。。 战战兢兢的说了用了 linked list ..... 然后勉强说还有pointer （楼主用的是java），解释说两个指针一个遍历，另一个指着前一个comment 符号 (// 或 /*) 一旦遍历到的和前面的匹配就加入list of answer 
+综合感觉题目并不难，应该是看楼主本科放水了吧。写起来没有什么不顺，就是少考虑了字符串的情况，点了一下就补上了。
+求攒人品！！！！
+求Onsite!!!!!
+
+
+面試官準時到, 口音聽起來像白男說總共時間45mins, 最後留5mins 問問題
+
+稍微介紹一下自己就開始了 (5 mins past). more info on 1point3acres.com
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+You are given a binary tree of N nodes. While it is mostly alright, 
+there is one extra edge that violates the tree property. Your job is to find it and eliminate it.. visit 1point3acres.com for more.
+
+
+一開始慌了, 根本沒想過tree 還有連錯的; 問了下不是invalid btree. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+於是花了兩分鐘搞清楚
+
+      p.1point3acres缃�
+     / \  
+   a     b. From 1point 3acres bbs
+  /  \ /   \
+k    c     d  
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+這樣一畫就很清楚了;  錯的edge 會有兩個parent, 所以只要建一個hashmap, key child, value parent-google 1point3acres
+然後treverse tree, 中間一直maintain map,  contains key 就找到了
+
+public Map <Node, Node> m = new HashMap<>();
+
+Void findWrong(Node n) {
+        if (n == null) return;
+        if (n.left != null) {.1point3acres缃�
+           Node tmp = m.get(n.left);
+        if (tmp == null) {        
+           m.put(n.left, n);. 1point3acres.com/bbs
+        } else {
+           n.left = null;
+        return;
+        }
+
+        if (n.right != null) {
+           Node tmp = m.get(n. right);
+        if (tmp == null) {        
+           m.put(n. right, n);
+        } else {
+           n. right = null;
+        return;
+        }. Waral 鍗氬鏈夋洿澶氭枃绔�,
+   findWrong(n.left);
+   findWrong(n.right);}
+}
+
+. from: 1point3acres.com/bbs 
+中間我找wrong edge 找的太高興了, 以為是找到return 就好, 提醒一下說是要delete, 也就把找到的node = null
+
+每隔個3-5 mins 我就會刺探一下問說我這樣對不對啊 回答都是可以啊
+
+面官也沒說什麼, 就說要問follow up, 到現在時間過 20 mins-google 1point3acres
+
+follow up:
+Given the same problem, 1 edge is wrong, which left one node isolated, how do you fix it?
+
+我又聽不懂了 又花了兩分鐘畫了這個.1point3acres缃�
+      p
+     / \  
+   a     b. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+  /  \ /   \
+k    c     d    y. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+
+要把 ac 或 bc delete 掉, 然後連 ay or by 
+
+一個node isolated 你tree 裡根本看不到啊,  一個看不到的node 你怎麼連啊
+面官說你可以改 input, 我就說那我的input 改成hash map key child, value parent. 鍥磋鎴戜滑@1point 3 acres
+我的algo 基本沒錯, 只要先找到落單的node 就好了 (find map node without parent)
+然後用之前的algo 去treverse, 找到不設null 改聯到落單node 
+
+我好激動啊, 批哩啪拉的把整個流程講了一遍, 面官說 fine 然後我開始寫
+寫到最後時間不夠我就把該改的地方又講了一遍 面官也沒說啥
+
+問問題我問:
+g家近年上go, angular, swift, 倒是jvm 沒怎麼新動作, 現在外面 cotlin, scala, clojure 好火熱啊
+你說g怎麼沒動作啊 
+
+面官吱吱嗚嗚地說go 不錯啊 根本沒回答我
+然後就結束了
+
+我以為我第一道做出來了 第二道題目出得有點怪 面官也沒搞清楚 應該會算我過吧
+隔兩天打電話來拒了我 也沒說原因
+
+可以幫我看看我哪裡做不好嗎, 搞不好我第一部分錯了也不知道
+
+謝謝!
+
+
+刚才刚电面完，首先感谢一下 @yzl232的给力内推。听口音像是个美国小哥，话不多。
+问了三道题，都挺水的。
+
+
+第一道是给两个interval，查是不是overlap的，
+看见上一道，我感觉follow up 应该会是merge 多个interval什么的，
+结果第二道就变成了查找最长递增连续序列。
+用dp解决后，第三道是在一个树结构里查找最长递增连续序列，我用DFS找的。. visit 1point3acres.com for more.
+
+三道题做完才半小时，结果他没题问了，我让他再出一道，他也不出， 又谈了谈简历就挂了。
+.1point3acres缃�
+答这三道水题，不知道到底算过还是不过，但是还是攒人品，求on site。
+
+
+45分钟电面一共两题。
+第一题：高精度加法，用数组代替单独的整数
+第二题：删除二叉树一些节点，返回剩下的森林。我的解法是用dfs遍历整个树，遇到需要删除的节点就删除，将子结点作为新的数的树根，父节点指向该节点的指针设为NULL。
+
+
+
+国人姐姐，非常nice。
+
+一道题，题目是： 3SumSmaller的变种，leet里面是求count，面试是求出每个解。估计follow up是去除重复
+
+估计gg，发帖攒人品把。
+
+
+emale interviewer, very nice
+go straight to coding:
+top 4 LEDs  is binary for hours
+bottom 6 LEDs for minutes
+
+_ _ _ _ = hours
+_ _ _ _ _ _ = minutes
+
+0001
+000011. 1point3acres.com/bbs
+1:03
+3 LEDs to be lit up?
+
+1) find total number of combinations for 3 LEDs lit up
+2) follow up: return all the actual combinations of hours: minues
+I got stuck on the follow up part...hopefully I'll pass...:)
+
+TAG外的leetcode:
+14
+422
+course schedule 
+subset
+LC 226 invert binary tree
+LC91 decode ways  输出所有数字
+lc 42
+lc 296
+LC 215
+lc 394
+lc 459
+143. Reorder List
+163. Missing Ranges
+lc 358
+lc 425
+lc 128
+399. Evaluate Division
+lc 300
+lc 298.
+
+
+
+一棵树，如果sub tree的和为0那么去掉这个subtree.
+
+
+void remove(TreeNode* root) {
+	if(!root) return;
+
+	remove(root->left);
+	remove(root->right);
+
+	delete(root);
+}
+
+int func(TreeNode* root) {
+
+	if(!root) return 0;
+
+	int left = func(root->left);
+	int right = func(root->right);
+
+	if(!left) {
+		remove(root->left);
+		root->left = NULL;
+	}
+
+	if(!right) {
+		remove(root->right);
+		root->right = NULL;
+	}
+
+	return root->val + left + right;
+}
+
+void f (TreeNode* root){
+
+	TreeNode t(0);
+	t->right = root;
+
+	func(t);
+	return t->right;
+}
+
+给两个list，看它们是不是permutations of each other.
+
+bool isPermutations(ListNode* a, ListNode* b) {
+	// 注意万一输入有环会死，确保到底是不是有环
+
+	if(hasCycle())  throw exception();
+
+	unordered_map<int,int> cntMap;
+
+	while(a) {
+		++cntMap[a->val];
+		a = a->next;
+	}
+
+	while(b) {
+		--cntMap[b->val];
+		b = b->next;
+	}
+
+	for (auto it = cntMap.begin(); it!=cntMap.end(); ++it) {
+		if (it->second) {
+			return false;
+		}
+	}
+	return true;
+}
+
+给一个类
+
+class Vote{
+     long candidateId;
+     long timestamp;
+};
+
+
+
+返回时间 t 以前所有投票中得票排前 k 的候选人id
+
+struct cmp {
+    bool operator() (const pair<int,int> &a, const pair<int,int> &b) {      
+        return a.first > b.first;
+    }
+};
+
+//需要澄清的地方，  如果在时间t前为0的candidate要不要展现出来，  如果打平怎么办，
+一下版本是不出现0的人，如果打平且数目超过k，随机选一部分，不超过k
+
+vector<long> getTopKCandidates(vector<Vote> votes, int k, long t) {
+
+	unordered_map<long,int> cntMap;
+
+	for(Vote &v: votes) {
+		if(v.timestamp < t) ++cntMap[v.candidateId];
+	}
+
+	vector<long> res;
+
+	priority_queue<pair<int, long>, vector<pair<int,long>>, cmp> myque;
+
+	for(auto it = cntMap.begin(); it!=cntMap.end(); ++it) {
+		if(myque.size() < k)  {
+			myque.push({it->first, it->second});
+		} else {
+			if(myque.top().second < it->second) {
+				myque.pop();
+				myque.push({it->first, it->second});
+			}
+		}
+	}
+
+	while(myque.size()) {
+		res.push_back(myque.top().first);
+		myque.pop();
+	}
+	return res;
+}
+
+
+4. 给一堆根据票数多少排序的候选人list, 给一堆选票， 求出哪个时间内可以从这堆选票中得出这堆给你的候选人的list.
+
+
+思路：把选票按照时间顺序排序，然后按照时间节点，计算出每一个时间节点，每一个候选人的排票。然后遍历所有的时间节点，
+比较这堆时间内的得票排名是不是和list一样。  复杂度O(n^2k)
+
+但是感觉问的时间段应该是0 - stamp,  并不是 stamp1 - stamp2.  所以每一个时间段内  我们看看每一个候选人的选票是不是
+符合这个顺序list. O(n * k) 如果票按时间排序得 + O(nlog n)
+vector<long> func(vector<Vote> &vote, list<long> candidate) {
+	sort(vote.begin(), vote.end(),cmp); //按照时间升序排序。
+	vote.push_back({-1,-1});
+	unordered_map<long, int> cntMap;
+
+	for(int i = 1; i < vote.size(); ++i) {
+		if(i > 0 && vote[i].timestamp != vote[i-1.timestamp]) {
+			cmp(candidate, cntMap);
+			++cntMap[vote[i].candidateId];
+		} else {
+			++cntMap[vote[i].candidateId];
+		}
+
+	}
+}
+
+
+前序遍历：
+vector<int> preorder(TreeNode* root) {
+	if(!root) return {};
+
+	vector<int> res;
+	stack<TreeNode*> mystack;
+	mystack.push_back(root);
+	while(!mystack.empty()) {
+		TreeNode* p = mystack.top();
+		mystack.pop();
+
+		res.push_back(p->val);
+		if(p->right) {
+			mystack.push(p->right);
+		}
+		if(p->left) {
+			mystack.push(p->left);
+		}
+	}
+
+	return res;
+}
+
+中序遍历：
+vector<int> inorder(TreeNode* root) {
+	stack<TreeNode*> mystack;
+	vector<int> res;
+
+	while(root || !mystack.empty()) {
+		while(root) {
+			mystack.push(root);
+			root = root->left;
+		}
+
+		root = mystack.top();
+		mystack.pop();
+
+		res.push_back(root->val);
+		root = root->right;
+	}
+
+	return res;
+}
+
+后序遍历：
+
+    vector<int> postorderTraversal(TreeNode* root) {
+        if(!root) return {};
+    	stack<TreeNode*> mystack;
+    	vector<int> res;
+    	TreeNode* pre = NULL;
+    	mystack.push(root);
+    
+    	while(!mystack.empty()) {
+    		root = mystack.top();
+    		if(!root->left && !root->right || pre && (pre == root->left || pre == root->right)) {
+    			res.push_back(root->val);
+    			pre = root;  //这句很容易忘
+    			mystack.pop();
+    		} else {    //else 很容易忘
+        		if(root->right) {   //先右
+        			mystack.push(root->right);
+        		}
+        		if(root->left) {
+        			mystack.push(root->left);
+        		}
+    		}
+    
+    	}
+    	return res;
+    }
+}
+
+
+BFS访问无向图：
+
+vector<int> BFS(Node *node, unordered_map<Node,unordered_set<Node>> &edges) {
+
+	unordered_set<Node> visited;
+
+	queue<Node> myque;
+	vector<int> res;
+	myque.push(node);
+	visited.insert(node);
+
+	while(!myque.empty()) {
+		Node v = myque.front();
+		myque.pop();
+		res.push_back(v.val);
+		for (Node &n: edges[node]) {
+			if(visited.count(n)) continue;
+			visited.insert(n);
+			myque.push(n);
+		}
+	}
+	return res;
+}
+
+DFS 访问无向图：
+vector<int> DFS(Node *node, unordered_map<Node, unordered_set<Node>> &edges, unordered_set<Node> &visited) {
+
+	visited.insert(visited);
+	res.push_back(node->val);
+
+	for (Node &n: edges[node]) {
+		if(visited.count(n)) continue;
+		visited.insert(n);
+		DFS(n, edges, visited);
+	}
+
+}
+
+check two binary tree are similar, root 
+
+bool isSimilar(TreeNode* p, TreeNode *q) {
+	if(!p) return !q;
+	if(!q) return !p;
+	if(p->val != q->val) return false;
+	return isSimilar(p->left, q->left) && isSimilar(p->right, q->right) || isSimilar(p->left, q->right) && isSimilar(p->right, q->left);
+}
+
+class circularArray {
+
+	int* arr;
+	int front;
+	int tail;
+	int len;
+
+public: 
+	circularArray(int k): front(-1), tail(-1), len(k) {
+		arr = new int [k];
+	}
+
+	~circularArray() {
+		delete[] arr;
+	}
+
+	void push(int x) {
+		if(isFull()) return;
+
+		if(isEmpty()) {
+			front = tail = 0;
+			arr[tail] = x;
+		} else {
+			tail = (tail+1)%len;
+			arr[tail] = x;
+		}
+
+	}
+
+	void pop() {
+		if(isEmpty()) return;
+
+		front = (front+1)%len;
+
+		if(front == tail) tail = front = -1;
+	}
+
+	int getTop() {
+		if (isEmpty()) return INT_MAX;
+		return arr[front];
+	}
+
+	bool isEmpty() {
+		return front == -1;
+	}
+
+	bool isFull() {
+		return (tail+1)%len == front;
+	}
+
+	int getLen() {
+		if(isEmpty()) return 0;
+		return (tail - front + 1 + len)%len;
+	}
+
+};
+
+void circularArray::push(int x) {
+
+}
+
+
+去重一个TXT 文本。 之前的相对顺序不能变；
+
+
+vector<string> func(vector<string> &f) {
+
+	unordered_set<string> myset;
+	vector<string> res;
+	for(string &s: f) {
+		if (!myset.count(s)) {
+			res.push_back(s);
+			myset.insert(s);
+		} 
+	}
+	return res;
+
+}
+
+follow-up 文件很大怎么办： 可以将文件分成小份，假设100，那么我们之前的string 可以按照hashcode % 100, 来分别放进不同的文件里， 并且附上原来的行号。
+每一个文件里面把string去重。 然后再按照行号排序，最后对100个文件  按照  行号，K-way merge, 输出string。
+{
+	f = fopen('.txt') ;
+
+	for line in f.read(): 
+		index = hash(line) % 100
+		f1 = fopen(to_string(index) + '.txt')
+		f1.append(line);
+
+
+
+
+
+	for i in range(100):
+		func1(to_string(i) + '.txt') // 去重
+}
+ 
+如果只要去重，不需要按照原来次序，还有另外一种思路：对文件的每一行计算hash值，按照hash值把该行内容放到某个小文件中，
+假设需要分词100个小文件，则可以按照（hash % 100）来分发文件内容，然后在小文件中实现去重就可以了。
+
+
+
+扫一遍文件，对每一行计算一个MD5或者SHA-1值，在内存构建trie树。鉴于数据量很大，生成的MD5值应该存在许多前缀，
+所以采用trie可以节省空间（如果想进一步节省空间，可以采用三向单词查找树，比trie分支更少），而且trie树的深度不会超过MD5值的长度，
+几十而已，每次查找或者插入MD5值都是个时间复杂度为常数的操作。向trie添加某个MD5值时如果发现该值已经存在，则抛弃目前扫描的行；如果不存在，
+则把MD5值插入trie树，把当前扫描行写入结果文件（这个文件保存所有不重复的行）。
+这样，扫描一遍文件就能实现去重。
+
+建立数据库也是一个选择。
+
+
+
+
+2. 两个list A和B，求A-B和B-A
+
+求A-B. 
+void func(vector<int> &A, vector<int> &B) {
+
+	unordered_map<int,int> mapa, mapb;
+
+	for(int &a: A) {
+		++mapa[a];
+	}
+
+	for(int &b: B) {
+		--mapa[a];
+	}
+
+	vector<int> res;
+
+	for(int &a:A) {
+		if(mapa[a]-- > 0) res.push_back(a);
+	}
+	return res;
+}
+
+判断等差数列。
+dp[i] 表示以dp为结尾的最长等差数列。  
+
+
+
+vector<bool> func(vector<int> &nums, vector<pair<int,int>> &index) {
+
+	vector<int> dp(nums.size(),2);
+	d[0] = 1;
+	int delta = nums[1] - nums[0] +1; //防止溢出
+	for(int i = 1; i < nums.size(); ++i) {
+		if(nums[i] - nums[i-1] == delta) ++dp[i];
+		else {
+			delta = nums[i] - nums[i-1];
+		}
+	}
+	vector<char> res;
+	for(int i = 0; i < index.size(); ++i) {
+		if(dp[index[i].second-1] > index[i].second - index[i].first) res.push_back('Y');
+		else res.push_back('N');
+	}
+	return res;
+}
+
+1. 给n个集合比如{a, b}, {1}, {x, y}. 从每个集合里面去一个数组成新的集合，输出所有这种集合，比如例子就是：{{a, 1, x}, {a,1,y}, {b,1,x}, {b,1,y}}.
+2. 写完后开始聊多线程，聊完就说你写个死锁吧，然后就写了2个线程和2个锁来读写文件的死锁情况，他也很满意，然后问怎么解死锁，我说用一个锁就是了。
+
+
+void dfs(vector<vector<int>> &res, int depth, vector<int> &cur, vector<vector<int>> &list) {
+
+	if(depth == list.size()) {
+		res.push_back(cur);
+		return;
+	}
+
+	for(int i = depth; i < list[depth].size(); ++i) {
+		cur.push_back(list[depth][i]);
+		dfs(res, i+1, cur, list);
+		cur.pop_back();
+	}	
+
+}
+
+
+vector<vector<int>> func(vector<vector<int>> &list) {
+
+	vector<vector<int>> res;
+	vector<int> cur;
+	dfs(res, 0, cur, list);
+
+	return res;
+}
+
+给你n个coins和一个value比如1000，输出这些coins能组成多少种value小于1000， 每种coin可以用无限次
+int func (vector<int> coins, int value) {
+
+	vector<bool> dp(value, false);
+	dp[0] = true;
+
+
+	for(int i = 1; i < value; ++i) {
+		for(int coin: coins) {
+			if(coin < i) continue;
+			dp[i] = dp[i] || dp[i-coin];
+		}
+	}
+	int count = 0;
+	for(int i = 0; i < value; ++i) {
+		if(dp[i]) ++count;
+	}
+	return count;
+} 
+
+
+int 2sumSmaller(vector<int> &nums, int k)  {
+	sort(nums.begin(), nums.end());
+
+	int p = 0, q = nums.size() -1, cnt = 0;
+
+	while(p < q) {
+
+		if(nums[p] + nums[q] < k) {
+			cnt += q - p;
+			++p;
+		}
+
+		else {
+			--q;
+		}
+	}
+
+	return cnt;
+}
+
+
+3. 给你两个string s和t, 问s是否能删除小于N个字符，使得结果是t的一个子串，比如 "book, aook", N = 1, return true;
+
+
+第三题给一组公司人员的名字，id和上司id，输出层级关系
+struct Node {
+
+	string name;
+	unsigned int id;
+	unsigned int parentId;
+	Node() {}
+};
+
+void func(vector<Node> list) {
+
+	unordered_map<unsigned int, unordered_set<unsigned int>> edge;    // p->d 表示  p是parent; 
+	unordered_map<unsigned int, bool> hasParent;
+	for(Node &n: list) {
+		edge[list.parentId].insert(list.id);
+		edge[list.id] = false;
+	}
+
+	unsigned int root = 0;
+	for(auto it = hasParent.begin(); it!=hasParent.end(); ++it) {
+		if(it->second == 0) {
+			root = it->second;
+			break;
+		}
+	}
+
+	queue<unsigned int> myque;
+	vector<vector<unsigned int>> res;
+	// int level = 0;
+
+	while(!myque.empty()) {
+
+		int len = myque.size();
+		vector<unsigned int> level;
+
+		for(int i = 0; i < len; ++i) {
+			int tmp = myque.front();
+			myque.pop();
+			level.push_back(tmp);
+			for(unsigned int neib & edge[tmp]) {
+				myque.push(neib);
+			}
+		}
+		res.push_back(tmp);
+	}
+	return res;
+}
+
+
+
+// 第一题是给一个String[] of integer和int k(subset的大小), 比如[9,15,3,14]和3, return一个subset，
+// 使得subset里面的最大值减最小值是所有subset里面最小的。
+
+vector<int> func(int k) {
+
+	vector<int> res;
+	int min = INT_MAX, index = -1;
+	sort(res.begin(), res.end());
+	for(int i = 0; i + k - 1 < res.size(); ++i) {
+		if(res[i+k-1] - res[i] < min) {
+			min = res[i+k-1] - res[i];
+			index = i;
+		}
+	}
+
+	if(i! == -1) return vector<int> (res.begin() + i, res.begin() + i + k - 1);
+
+	return {};
+
+}
+
+
+struct Node {
+	string val;
+	Node* prev;
+	Node* next;
+	Node(string, Node*, Node*) {}
+};
+
+
+
+
+Node* func (Node* head, set<string> &s) {
+
+	Node dummy("", NULL, head);
+	Node* pre = dummy, p = pre->next;
+
+	while(p)  {
+
+		if(s.count(p->val)) {
+			pre->next = p->next;
+			p->next->pre = pre;
+			delete p;
+			p = pre->next;
+		} else {
+
+			pre = p;
+			p = p->next;
+		}
+	}
+	return dummy->next;
+}
+
+第二题是BST，给一个low bound和high bound, return list of nodes，这些nodes的值在low bound和high bound之间。
+void dfs(TreeNode* root, int lower, int upper, vector<int> &res) {
+	if(!root) return;
+	if(root->val < lower) {
+		dfs(root->right, lower, upper, res);
+	}
+	else if(root->val > upper) {
+		dfs(root->left, lower, upper, res);
+	}
+	else {
+		res.push_back(root->val);
+		dfs(root->right, lower, upper, res);
+		dfs(root->left, lower, upper, res);
+	}
+	return;
+}
+
+vector<int> func(treeNode* root, int lower, int upper) {
+
+	vector<int> res;
+	dfs(root, int lower, int upper, res);
+
+	return res;
+}
+
+vector<int> func(treeNode* root, int lower, int upper) {
+
+	if(!root) return {};
+	vector<int> res;
+
+	queue<treeNode> myque;
+
+	myque.push(root);
+
+
+	while(myque.size()) {
+
+		TreeNode* t = myque.front();
+		myque.pop();
+
+		if(t->val<=upper && t->val >= lower) {
+			res.push_back(t);
+		}
+		if(root->val>=lower && t->left) {
+			myque.push(root->left);
+		}
+		if(root->val<=upper && t->right) {
+			myque.push(root->right);
+		}
+	}
+	return res;
+
+}
+
+[3,8,1,9,2,12]
+class iterator {
+	int cnt;
+	vector<int>::iterator p, end;
+	iterator(vector<int> &num): p(num.begin()), end(num.end()), cnt(0) {
+		if(hasNext()) {
+			cnt = *p;
+			++p;
+		}
+	}
+	bool hasNext() {
+		return p!=end;
+	}
+
+	int next() {
+		if(cnt--) return *p;
+
+		if (hasNext())	{
+			cnt = *(++p);
+			++p;
+		}
+	}
+};
+
+
+
+给一个数组，里面有正负数，让找到不相邻的两个数，他们的和最大，输出最大和。
+
+
+int func(vector<int> &nums) {
+
+	if(res.size() < 3) {
+		return 0;
+	}
+
+	int pre = nums[0]; // 和nums[i] 不相邻的最大元素， 
+	int res = INT_MIN; // 全局最大值；
+
+	for(int i = 2; i < nums.size(); ++i) {
+		if(nums[i] + pre > res) {
+			res = nums[i] + pre;
+		}
+		if(nums[i-1] > pre) {
+			pre = nums[i-1];
+		}
+	}
+
+	return res;
+
+}
+
+Given a binary tree, find the path which nodes sum to a given value. The path can start from and end with any nodes
+
+
+
+
+找下一个 palindrome 数。
+
+int minPalindrome(int num) {
+
+	string s = to_string(num);
+	int len = s.size();
+	string pre = s.substr(0,len/2);
+	string rev = pre; reverse(rev.begin(), rev.end());
+	if (!(len&1)) {
+		if(stoi(rev) > stoi(s.substr(len/2))) return stoi(pre + rev);
+		
+		string newpre = next(pre);
+		string newrev = newpre; reverse(newrev.begin(), newrev.end());
+		return stoi(newpre + newrev);
+	}
+
+	if(stoi(rev) > stoi(s.substr(len/2+1))) {
+		return stoi(pre + s[len/2] + rev);
+	}
+
+	string newpre = next(pre+s[len/2]);
+	string newrev = newpre; 
+	newrev.pop_back(); reverse(newrev.begin(), newrev.end());
+	return newpre + newrev;
+}
+
+
+string next(string s) {
+	return to_string(stoi(s)+1);
+}
+
+
+
+
+
+vector<vector<int>> func(vector<int> &stream) {
+
+
+	bool isescape = false;
+	vector<vector<int>> res;
+	vector<int> frame;
+	for(int i = 0; i < stream.size(); ++i) {
+		
+		if(!isescape) {
+			if(stream[i] == 0x12) {
+				frame = {};
+			}
+			else if(stream[i] == 0x13) {
+				res.push_back(frame);
+			}
+			else if(stream[i] == 0x14) {
+				isescape = true;
+			}
+			else {
+				frame.push_back(stream[i]);
+			} 
+		}
+
+		else {
+			frame.push_back(stream[i]);
+			isescape = false;
+		}
+	}
+	return res;
+}
+
+
+
+bool dfs(unordered_set<int> &l, root, vector<TreeNode*> &res) {
+	if(!root) return false;
+	bool left = dfs(root->left, root, res);
+	bool right = dfs(root->right, root, res);
+
+	if(left) {
+		delete root->left;
+		root->left = NULL;
+	}
+
+	if(right) {
+		delete l->right;
+		root->right = NULL;
+	}
+
+	if(l.count(root)) {
+		if (root->right) {
+			res.push_back(root->right);
+		}
+		if (root->left) {
+			res.push_back(root->left);
+		}
+		return true;
+	}
+	return false;
+}
+
+
+
+vector<TreeNode*> func(vector<TreeNode*> &list, TreeNode* root) {
+
+	unordered_set<int> l;
+	for(treeNode* node: list) l.insert(node);
+
+	vector<TreeNode*> res;
+	TreeNode p;
+	p.right = root;
+	dfs(p, root, res);
+	if(p.right) res.push(p.right);
+	return res;
+
+}

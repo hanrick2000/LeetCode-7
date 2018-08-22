@@ -48,4 +48,52 @@ public:
         
         return res;
     }
+    
+    下面是bfs的做法。。
+    
+    void bfs(vector<vector<char>>& grid, int i, int j) {
+       
+        queue<pair<int,int>> myque;
+        myque.push({i,j});
+        grid[i][j] = '0';
+        
+        while(myque.size()) {
+            pair<int,int> tmp = myque.front();
+            myque.pop();
+            int i1 = tmp.first, j1 = tmp.second;
+            
+            if(i1 > 0 && grid[i1-1][j1] == '1') {
+                myque.push({i1-1, j1});
+                grid[i1-1][j1] = '0';
+            }
+            if(i1 < grid.size()-1 && grid[i1+1][j1] == '1') {
+                myque.push({i1+1, j1});
+                grid[i1+1][j1] = '0';
+            }
+            if(j1 > 0 && grid[i1][j1-1] == '1') {
+                myque.push({i1,j1-1});
+                grid[i1][j1-1] = '0';
+            }
+            if(j1 < grid[0].size()-1 && grid[i1][j1+1] == '1') {
+                myque.push({i1,j1+1});
+                grid[i1][j1+1] = '0';
+            }
+        }
+
+        return;
+    }
+
+    int numIslands(vector<vector<char>>& grid) {
+        if(!grid.size() || !grid[0].size()) return 0;
+        int res = 0;
+        for(int i = 0; i < grid.size(); ++i) {
+            for(int j = 0; j < grid[0].size(); ++j) {
+                if(grid[i][j] == '1') {
+                    bfs(grid, i,j);
+                    ++res;
+                }
+            }
+        }
+        return res;
+    }
 };

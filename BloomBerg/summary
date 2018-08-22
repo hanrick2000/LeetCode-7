@@ -1,0 +1,463 @@
+NYC的B家了，报销只给100刀就不说了 上来两轮， 第一轮： 1.烙印面试官 给你一串数，要求每时每刻输出top10 largest number，容易吧？ 二分查找维持一个有序的数组即可。面试官的意思应该是heap啥的，这个我没get他的点，但现在想来每一次插入新值都是O(log(n))啊。。。 2. [1,2,3,4,5,6,0,0,0,4,4,0,9]这样一个数组，要求把非0元素移动到最左边 我直接两个idx从左往右，马上解决了。。。白人面试官说这是最优解，然后就是闲聊拉。。。。 第二轮： 写一个多项式的类。。。。要求得出一阶导数的参数。 题目速度秒了。。。 然后就被赶出来，没有然后了。。。。 
+
+
+
+
+
+
+
+
+印度面试官，让我自我介绍了背景 题目：PlusOne，给一个array，return array follow up：PlusDigit，就是不是加一，而是加0-9中的一个数 int[] (int[] num, int digit) follow up: 代码太复杂，如果最后结果有溢出，还需要重新创建一个array，有没有一种方法不用创建新的array，我卡了一会，在他的提示下才明白是想让我换种数据结构做，我改成了ArrayList，改好了以后问为什么ArrayList, ArrayList有什么好处。 又问了基本概念： 1, 说一下查询比较快的数据结构，答hashtable，bst 2，解释一下hashtable和bst是什么，各自有什么好处 3，解释一下在什么情况下用bst而不是hashtable，在这卡住了，一着急只想着时间复杂度了，但是bst时间复杂度肯定比不过hashtable，挂了电话想起来很重要的一点是bst是有序排列... 这么简单的题目写得磕磕绊绊，估计要挂 最后还剩五分钟，问我有什么问题，就随意问了两个 1. whats daily work life like, blablalba 2. training program, 有工作经验的master只需要一周，newbie需要3个月 
+
+
+1. Unsigned int 变量付给array.size()， 然后循环打印数组元素， code里找错。 2. Give target and sorted array {1,2,2,2,4,5}, find target index. 3. Find top K frequency words in words list. 
+
+
+（懒得找自己一面的帖子了，直接发个新的） 亲切的三哥，口音很淡。交流很通畅。 由于迟到了5分钟，特别表示歉意。 然后就来了面经原题 两个LinkedList 代表两个integer 然后在不reverse，不转成String或int的情况下做相加操作 返回新的LinkedList 前面发面经的同学已经交代了用stack 可能是完成的速度比他预计的快。 就又出了一道简单设计题：电梯 只有一架电梯。 只用设计数据结构。 提到用treemap来插入来自其他楼层的请求。 他就很高兴了。 设计没写代码。 然后问了他工作和生活是多么美好。 
+
+链接: https://instant.1point3acres.com/thread/189354
+来源: 一亩三分地
+
+
+昨天收到两个Bloomberg的电面，其中一个感觉有些坑，题目难度都还OK。直接上题： 第一个电面: 1. 贴上来一个题目让改错： // 错误1 char test; int elementSize = sizeof(test); // 明显要写成 sizeof(test)/sizeof(test)； // 错误2，这个经过他提示在发现= = || class Base{} class Child:Base{ini a}; void visit(Base* arr, int len) { for (int i = 0; i < len; i++) { Base a = arr; // 如果Pass进来的是Child实例，内存地址会有问题 } } 2. 让我实现vector class 要求实现push_back, , size() 我用一个malloc的数组，如果size到了threshold，就double 要求好多细节，copy constructor, = operator, destructor, 这个vector作为function argument pass的时候会有什么问题 还让我写个程序，用这个vector，让stack爆掉 O_o，这个无能了… 3. 实现一个函数，打印100000到999999所有前三位Sum等于后三位Sum的数 5分钟不到Bug Free实现出来，于是说怎么优化，我说计算三位数Sum的SubRoutine可以cache结果到hashmap，下次遇到一样的不用再算，他似乎不满意。 问我现在的算法复杂度，我说O(n) （n个数字， 每个数字要遍历6次digit，6n），他说还能优化，我问有LogN?他死活不说…我想过用BST，似乎不行。大家想想有啥办法？ 第二个电面： 面试官上来问我名字，然后发现自己简历拿错了。说自己题目都准备错了，当场调出我简历现读，汗 O_o 1. 给我说下C++里map的实现，unordered_map和map有什么区别，里面的实现有什么区别 2. 然后来了一道坑题，键盘敲打了半天画出了一个图，还不停的自语：我恨这个键盘…。 然后解释了半天他要我求的问题，搞了半天我感觉就是要我求最大深度及最小到Leaf深度的绝对值差，我问了一下是不是这个意思，他说这样就可以做…大哥，那你就直说吧。虽然都是LC原题，已经被搞慌了，GetMinDepth写得磕磕碰碰，都能被他抓出Bug，唉，心理素质有待提高啊。 然后他让我One Pass做完，我说Traverse，写了一遍居然有严重愚昧Bug，指出后改正。这种错误在平时刷题的时候都不会出现的，总结来说还是心态！脑子里面没有具体想好，不要轻易开写！ 面试60分钟，45分钟就结束了。 希望对大家有用！ 大伙可以看看这个6位数题，有啥好办法吗？看不了地里的包裹贴，另求积分，求大米。。。
+
+链接: https://instant.1point3acres.com/thread/184064
+来源: 一亩三分地
+
+
+
+小哥 上来 让自己介绍一下 自己的有趣项目 然后问了为什么要B家 OK 开始面试 1. reverse int 要求不能变成string, 我问了很多corner case 他也回答了（我之前虽然没有做过，但是看过） 很快解决啦 2. 不要求code, 问我找5个array的insection, 那有set的函数,直接用。 好了他说不行。那我说算了 (我这里竟然不自觉的把他变成了sorted 脑子一时糊涂) array 5个pointer， 慢慢移动嘛. 他说 那能不能hashmap， 我说 也没有问题呀 key是integer, value是count就好啦 看看谁是5. 这一题我先挖了很多坑给他， 比如说有没有重复 ———– 为什么别人2道， 我4道？莫非比较快？ 不怕 我们次数多！ 3. 找pair 看能不能形成0， 2sum嘛， 来就杀，用的hashset 4. 构建一个webservice, 两个func, 一个get,一个set, 用来查看一个单词什么意思。那就开始侃大山了， 问了scale和要求， 搞个database， 万一down了怎么办，弄个backup. 问什么时候做backup比较好， 是等第二个成功后返回， 还是说第一个成功后直接返回用户， 我说 第一个成功就返回吧，万一第二个死了 那用户就要等很久了。 还可以通过第一个字母设置26个database，万一死了一个还有一个 别的可以用 小弟读的是北美第一坑 生物专业 跪求转CS，谢谢！ 希望可以onsite， 这都不能过 我也没有什么话好说了 求LZ改名字 补充内容 (2016-7-19 20:46): 已经onsite 
+
+链接: https://instant.1point3acres.com/thread/186746
+来源: 一亩三分地
+
+
+这是我在US的第一次电面，Bloomberg的C++职位。本来也就是准备拿来试手的，之前也没做过什么准备。结果可想而知，虽然猎头还没告诉我最终结果，但估计是挂了。 实在不适应这种别看盯着看你写代码的感觉，加上背景嘈杂，完全没法concentrate。事后想想题目真没什么难的。看来以后得多锻炼 1. Max sum path in two array with common element. 事后我搜索了一下大概类似这题。 http://www.geeksforgeeks.org/maximum-sum-path-across-two-arrays/ 我基本上已经做出来了，但是有个bug怎么也解不出来，当时心里那个急啊，脑子完全stuck住了。导致第二题也答得很不好。 2. 就是设计一个lottery的class，随便你用什么数据结构，要求时间复杂度尽量小，空间unlimited。 class Lottery{ addPlayer(string); removePlayer(string) int drawwinner() //return 5 random players }; 不管怎么样也是跨出了第一步，继续加油！！！！！！！！ 
+
+链接: https://instant.1point3acres.com/thread/189138
+来源: 一亩三分地
+
+
+
+刚接起电话的时候听着像个美国小哥，到后面开始做题的时候小哥的烙印口音就憋不住了。。。。 一开始是介绍自己，然后就自己挑一个自己做过的最有意思的项目说说，然后讲讲这个项目最有挑战性的地方。 说完之后就直接上codepair做题。之前还以为用codepair是要自己写test case跑，结果是自己用嘴跑一遍test case就可以了。楼主碰到的都是新题， 第一题是给了一串0,1,0,1,1,1,1,1,0,0,0,1.......的数组， 然后给了一个K， 表示最多可以翻转K个0，从0翻转到1。问题是最长的连续的1序列有多长。楼主一开始说了暴力解法，但是觉得肯定有更优，就想了一会，实在没想出来就跟小哥要了下hint，他说到一半我就想到解法了（好像跟他的hint没啥关系的解法？）。楼主用的sliding window的做的， 大概和这道题类似：https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/，小哥说相信这个能work，就继续下一题了。 第二题是给了一个数组， 1, 2, 3, 4, 5, 6, 7, 8 1, 4, 7, 9,12,14,15,20 第一排是index，也是一笔交易中卖出的股票数量，第二排是对应的收益，比如说我第一笔交易卖了三只股票，那么收益就是7。可以选择任意的卖法，比如一只一只的卖，或者也可以一次性卖8只。题目要求求得最大收益。楼主用的recursive的解法，如果一共有8只股票，这一次卖了两只之后，下一层的问题就是一共有6只，求最大收益。用一个global variable存最大收益，碰到大的就更新。小哥好像不是很明白我的解法（为什么不明白啊？！），和他解释了一通之后还是没有完全确信， 之后他就问了一下时间复杂度。面完之后和朋友讨论才知道还可以用dp做。 第二天早上就收到拒信了，不知道是被烙印黑了还是楼主的问题，让楼主哭会
+
+链接: https://instant.1point3acres.com/thread/183692
+来源: 一亩三分地
+
+
+
+刚刚放下电话～听口音应该是白人小哥～上来都是扯简历10分钟～然后出题： 1. 给一个数组，返回有多少个数出现重复，例子： -> 返回1，因为只有2一个数重复了 -> 返回2，因为7和8都有重复 -> 返回0，因为没有重复的数 2. 让我写一个boolean方法，输入一个值和树根，要求删除binary search tree(每个节点的值都是不同的)里面具有这个值的叶子节点，注意是叶子才能删除，要是找到一个节点是这个值但不是叶子不能删除 求onsite！！！求各位富豪来点米，之前用得有点狠…祝各位都是offer收割机！！！
+
+链接: https://instant.1point3acres.com/thread/186674
+来源: 一亩三分地
+
+
+
+BB面经，本人的第一次电面，三哥，一直很担心听力和口语，又碰上三哥，虽然稍微有点影响交流，让对方重复了总共四五次吧，但是感觉英语不会成为主要问题，给大家英语差的给点信心，哈哈。三哥说他Java不熟，估计这影响也不大。 先上来聊简历，然后聊到了设计模式，singleton，于是三哥就让我手写一个，虽然看多次，但是实战是第一次写，只能说是勉勉强强。 然后就让来了一个replace空格（用数字来取代，比如5个就是5#），要求in place。这算法都是瞬秒，实现完了三哥就让写一个main函数测测，然后我写完一run，10几个编译错误，原来hackerrank要用个名字叫Solution的class，然后打印的时候又搞了点小bug,写例子的typo啥的。 感想，面的还是比较全面，哥其实只会算法，哈哈，其他聊简历、测试都没太多加分地方。最后三个让我问问题，我说你喜欢跟啥样人一起工作，他就说smart什么的，我就说那你觉得我够smart吗，三哥给出肯定的回答。最后他说他们的人会在a few days联系我云云， 不晓得真的会不会onsite，就当存经验值了。 祝所有人都一切顺利，早日大包裹，顺便还是求点大米，哈哈，实在是穷。 
+
+链接: https://instant.1point3acres.com/thread/185026
+来源: 一亩三分地
+
+
+
+海投然后很快收到面试邀请,面试是在hackerrank上.面试官是听口音应该是白人小哥,开始先介绍说之前在好多IT公司干过,现在在BB干了3年多了. 然后问简历,说你觉得印象最深的是什么项目,blablabla介绍了一通.完了又问还有什么项目比较重要吗?又blabla介绍了一通.问,你会机器学习吗?我说会,做过一些project.他说很好,我以前也是高机器学习的.然后说我们开始做题吧~ 第一题是:给一个n,打印出长宽为n的X形. 比如n=3 X X X X X n=4 X X XX XX X X 写完后要求写几个test case然后讲一遍 第二题是地里面出现过的马拉松题目,从起点到终点有n个sensor.然后给出按时间顺序的消息队列,元素是(sensorId,runnerId),实现一个方法返回topK runner. 求过求加米！ 
+
+链接: https://instant.1point3acres.com/thread/189712
+来源: 一亩三分地
+
+
+
+一位语速有点快的和蔼三哥，有点吃力。很想让我写c++，硬是被我拽着写了java 先聊背景 1. int to String 把正负号，负数数最小值越界强调了下 居然忘接了StringBuilder的插入是要下标的。 三哥好眼力一眼点出。我还傻愣地以为没错。强行调试，结果真的报错。修改了就运行了。 2. 设计数据结构来存大量 stock 先不提要求，就直接hashtable 存 然后提出各种特别需要。设计与之相关数据结构和函数方法。 比方： a.要取出下午两点1400到下午三点1500间的所有名字叫xxx的股票价格按顺序 b.要求从storage里取出平均价格最高的十个股票 c. 要取出名叫xxx股票的最近十个价格。（在三哥的提示下用Queue） 不写代码纯侃，聊各种trade off。 3. 看还有时间就意思了一下two sum 三哥一个劲说你写伪代码就行了 强本来都准备要你写C++的。 不知道能不能过。 总的来讲这位三哥很和蔼，很客，思维敏捷。 写完题聊了下他们组的产品，他干了快五年，说BB比周围对冲基金公司的码农轻松。 
+
+链接: https://instant.1point3acres.com/thread/188677
+来源: 一亩三分地
+
+
+
+
+1月初的onsite，两轮游，结果大家懂得。其实题都不难，确实是楼主没做好。。 第一轮： 先聊了一段时间简历，面试官对我简历上的elastic search很感兴趣。 1. Populating Next Righ... 2. Largest Rectangle in... 第二轮： 1. Number Of Islands. 楼主用了dfs，还建了一个矩阵来存储每一个点有没有被访问过。 算法是两层for循环来遍历每一个点，如果这个点没被访问过就访问它。 这里和面试官发生了争执，面试官觉得dfs的函数最坏情况的时间复杂度是O(n^2), 两层for循环是O(n^2)，所以时间复杂度是O(n^4). 我的意思是明明每个点只访问一遍，所以时间复杂度应该是O(n^2)，后来我就听了面试官的说我的算法时间复杂度是O(n^4)了。。。 2. Copy List with Rando... 出题之后面试官一直问我做过没有。。 面试官说这道题很tricky，你想不到写O(n)的解法的，你就写一个O(n^2)的解法。。。 总体感觉是bloomberg题其实不难，都是lc上的，但是考的很基础，很细，如果光会做题，不能举一反三的话肯定要跪。所以我就跪了。。
+
+链接: https://instant.1point3acres.com/thread/160645
+来源: 一亩三分地
+
+
+
+昨天刚面的，三轮游了。。。前两轮感觉还不错，题也都做出来了，感觉跪在第三轮了。。。 第一轮一个国人大哥和一个美国小哥 考了个类似unique path II的题，从（0,0）走到右下角（m,n），只能向下或者向右走。不同之处是grid里面有一个点（x, y）, 要求路径必须经过这个点，问有多少种走法。一开始说要写代码，楼主说这题可以dp，也可以用排列组合公式算。于是只要在纸上写了写公式。然后follow up要求输出所有路径。楼主写了个dfs的解法。 第二轮一个三哥和一个白人小哥 三哥问我都会什么data structure，然后出了道水题。 假设不断收到（股票名字，股价）这样pair，要求设计个数据结构，当query股票名字时返回最近一次的股价，楼主说HashMap。 接着follow up，要求输出avg，min，max，三个变量搞定。 再接着要求股价波动最大的10支股票，maxHeap或者minHeap解决。 最后要求字典序输出所有的（股票，股价）pair。 楼主一开始说写个comparator排序，三哥说太慢，这个要O(n^2)时间 说用trie，说这个要O（nlgn）时间，还是太慢，能不能给个O（n）时间的 于是在提示下想到doubly linkedlist，不过这样插入时需要比较股价，速度就慢了，三哥表示可以接受。 白人小哥出了道validate parenthesis，一个stack给秒了，然后follow up问规定single quote也可以配对怎么办，答曰看栈顶元素，如果不是quote，那就假设当前quote是open quote，否则就假设当前quote是close quote，弹出并消掉。 第三轮一个华裔manager 一上来一堆behavior question，问了问实习经历，然后问有没有return offer，以及为啥没拿到return offer。。。这个没答好，也没想到onsite问这个。。。 然后出了道很水的move zeroes，感觉要把我挂掉的前奏。。。 本来以为还有一轮和HR扯淡的，结果没有. 最后等了20来分钟，等来了recruiter。。。于是被赶出了building。。。 补充内容 (2016-1-15 02:06): 忘了写，第一轮也有两个list表示的大整数相加这道题
+
+链接: https://instant.1point3acres.com/thread/153323
+来源: 一亩三分地
+
+
+
+第一轮：小白+烙印。1. 层序遍历二叉树并输出。 followup：层序输出path sum为奇/偶的节点（不能更改节点的结构） 第二轮：国人+老白。 1.给一个string，输出所有只出现一次的字符。followup1: 按原序输出. followup2：只需用set，不许用hashmap 2. h-index， leetcode原题。两种解法都说了 第三轮：白妞 HR。 本来以为前两轮挂了，hr要送我走了，结果说Sr manager 在开会，所以先来一轮behavior面。主要就是culture match吧。 第四轮：老白 Sr manager. 股票预警系统设计。 输入有两个： 1. 实时传入的股票价格 pair 2. 用户设定的预警价格及趋势。 比如 User1 设置 （AMZ, 100, up）表示amz这只股票在达到100 且上升的时候通知我。User2设置（AMZ,100, DOWN） 表示 amz股票达到100且下降时通知我。 这轮答得不是很好，所有的设计都是按静态数据处理的，不能很好的预测股票趋势。1个小时基本上没有给出期望的设计。最后Sr Manager告诉我这是他们现在在做的东西，他的team给出的集中solution，他也不是特别满意。所以现在还没有确定的答案。回来之后想了 想，觉得这个单一系统是无法实现价格预测的。因为在你股票价格达到100的时候，你无法预测他是要跌破100还是要涨破100. 总结：拖了我2周才给拒信，心情别提有多郁闷了。 
+
+链接: https://instant.1point3acres.com/thread/186492
+来源: 一亩三分地
+
+
+楼主第一次onsite， 发一下面经回报地里攒人品。 感觉个人的面试流程比较奇怪，onsite只有一轮tech 和另外一轮和这边的software developer culture fit 扯淡什么的。。 第一轮： 聊了聊简历然后做题。感觉都是easy到medium难度的，比较简单。 第一题： tree上判断是否存在root 到leaf的路径， 使每个节点的val的和等于target。 （val > 0). 楼主犯蠢在答复杂度的时候卡了一下然后经提示ok。 follow up: 如果存在val 为negative的节点怎么办。 第二题： unique path 变形， 给一个二维矩阵由0，1 组成 ,只能move right or down， 求从 (0,0) 到(i，j)点路径上经过点最大的1的个数。 follow up 1 : 如果有正数组成， 求最长路径。 follow up 2: 如果换成character，依旧 只能right or down并给一个字典，求在这个矩阵中能找到的最长的字符串长度。 答： 2个dp矩阵分别记local 和max,搜索用trie. 时间差不多了就没写代码也没有继续问下去。 感觉有可能是招够人了。祝好运吧 
+
+链接: https://instant.1point3acres.com/thread/183618
+来源: 一亩三分地
+
+
+过了两周，想想还是发一下跪经回馈一下地里。。。楼主第一次onsite有点紧张，导致第一题没做出来，直接跪了。。。 第一轮： 国人大哥+疑似韩国cmu校友小哥 首先cmu小哥先问了一下简历上一个他也上过的神课的project，然后出题，题目是普通二叉树以in-order的顺序转化为双向链表，要求in place，即直接将左右指针用作链表的前后指针且不用new一个新的节点出来，非常类似下面这个链接的题目(tree to circular doubly linked list)： https://www.youtube.... 只是楼主的题是头节点的前指针和尾节点的后指针都指向null。。。不难，但太紧张没做出来 然后，国人大哥看时间不多了，就出了一题地里都有的病毒文件复制题： // virus program generate-100MB(); while (true) { sleep-1-min(); clone(); // clone program it self. } If I click this virus program 1 time, it will take 10 minutes to fill the disk. My question is if I click the virus program twice, how long it will take to fill the disk? 答案：9分钟。One click: 0 min —> 1file, 1 min —> 2 files, 2 min —> 4 files, …, 10 min —> 1024 files. Two click: 0min —> 2 files, 1 min —> 4files, …, 9 min 1024 files. 第二轮： 看到只来了一个白人小哥就知道不妙了，果然只问了一下fibonacci数列的递归和迭代版本，分析了一下优劣就完了。。。直接领我出去了。。。 过了一个周末就收到拒信。。。哎，第一次onsite，当交点学费吧。。。 希望大家和我都会offer满满吧！求点大米，之前花得有点狠。。。谢谢大家！
+
+链接: https://instant.1point3acres.com/thread/184865
+来源: 一亩三分地
+
+
+第一轮电面：two sum 和 next right node（lc116） two sum要求用sort后两个指针做，follow up是有重复的怎么做，不能用contains这种方法去重，要用指针过滤掉。 第二轮电面：text justification和merge intervals，都有些小变化，但是刷过应该没问题。merge intervals其实是要安排一个party，给一个party时间和所有人的schedule，让你给party安排一个最早的时间。 onsite（6月3号）： 邮件上说有2轮，然后看看其他人时间安排再定接下来的情况，就是2轮不行就滚蛋的节奏，抱着2轮之后让滚蛋被羞辱的思想准备就去了。。。 第一轮：2人，技术面，一个是链表求最后第k个node，要用快慢指针，快的先走k步，然后快慢一起走。一开始不是这么做的，但是也可以，后来人家问2个指针怎么做，然后照着他思路说了一下。第二个就是LRU cache，好像以前的面经提到过。先是让你实现有股票id，然后取price（用map）。然后加要求，说要取最近的10个（用list存map的value），然后是再这个基础上还要知道最大最小值（map的value变成一个object，包括最大最小值和list），最后是怎么空间有限，怎么办（没直接提LRU，但就是LRU的方法）。 第二轮：2人，技术面，有event大概是有id，desc，和timestamp，要实现getEventById和getEventByRange（startTime， endTime， order（desc | asc））。我是做了一个map实现getbyId，getByRange，是用二叉树做，找start和end的node，然后把之间的node都求出来。然后说不同event有相同的timestamp怎么办，我说都放在一个node里，感觉这个答得一般般。心想可能要滚蛋了，结果面完等了一会，有人来领着吃饭，心里好过多了，带吃饭的有一个是第一轮面试我的人，聊得还挺开心的。 第三轮：1人，是manager，随便扯了扯蛋，大概半小时，然后问了一个brain teaser，是约瑟夫难题，链接：作者需要拥有至少50积分以显示此链接.。 说答不答出来不重要，主要看看互动，怎么解决问题，扯了15分钟，基础上就照他思路走，他说啥是啥那种。 第四轮：HR来问常规问题，为什么离职，想做什么，对工作要求最重要的3项，觉得人生最大成就是什么这种屁话。然后说你可以滚了，本来还有一个大boss，但他今天不在，下周给你打电话。 回来以后约了周二（6月7号），大头基本上问的hr相关的问题，问什么离职，喜不喜欢bloomberg的culture，这几年的career goal之类的。面完一直没消息，心想估计挂了，因为那个大头是印度人，老是看见被印度人黑的帖子，觉得可能这次轮到自己头上了，很郁闷但也没办法了啊，做了一天的自我安慰和心理建设。然后昨天打电话来说给offer了，还挺开心的。 面试了几个月，看了很多面经，现在回馈本版。。。
+
+链接: https://instant.1point3acres.com/thread/180738
+来源: 一亩三分地
+
+
+3点开始的，像是白人小哥。上来介绍简历的project，然后开始coding. 就一道题：计算每个二叉树的从root到每个叶子的每条path的sum，找sum最小的那个path，输出这个path。 很简单吧。DFS遍历一下，用一个int叫min的来记录一下最小sum，minPath来记录最小的那个path就行了。 当时楼主很晕，居然把 min 放在了 dfs的参数中，明明必须要是全局变量才 work啊。。 然后对方说怎么优化，我说没法优化啊，dfs嘛，O(n)复杂度啊，没法再少了。 结果对方说，可以再遍历中，若发现当前 sum已经大于min了，那么立即停止向下的遍历。恩，有道理啊。。。 然后对方说，这样没有问题吧。我说如果没有负数的话，就没问题。 对方又问我怎么保证没有负数，我说在 TreeNode 的 constructor里写上 public TreeNode(int val){ this.val = Math.abs(val); } 对方说能不能写个 throw exception。我当时就懵了，大概意思知道，忘了syntax。。。然后对方帮我写上去了。。 对方带着我一步步走我的程序，哎，时间过得很快。一道题做完就到时间了。。 被这么简单的一道题虐了。。希望能去onsite啊。。求人品~~ 
+
+链接: https://instant.1point3acres.com/thread/173098
+来源: 一亩三分地
+
+
+
+刚刚面完，只写了一道题。貌似还没有写对肯定是跪了啊 之前看地里的电面 面经都挺简单的啊，说好的twosum呢呢呢呢 趁着fresh memory， 赶紧回忆题目回报地里 B家貌似最开始都会问个简历上的project，然后问几个基本的java，pyhton问题，thread啊什么的 然后就开始写算法了： 0 1 2 3 4 0 3 0 1 7 0 3 0 1 7 0 3 3 1 7 如果start在【2, 1】点，那么我们target就是3， 那么就找所有能reach的3做成的图形的边数。 比如这个就是返回10. 大家加油！ 我去哭一会儿 
+
+链接: https://instant.1point3acres.com/thread/180246
+来源: 一亩三分地
+
+
+第一题stock i 面试官一直在问怎么测试你这个代码是对的 我就举了各种例子改怎么测 面试官自己说那你测测这个看对吗 然后我就测了一下是对的。。 面试官感觉 竟然是对的。。 感觉面试官在托我 一直不让我做第二题 因为这题很简单 但是他就是让我反复的测啊测啊测啊 ps:面试官全程说话听不太清楚 感觉和没睡醒一样 开始聊天的时候就觉得他对我没什么兴趣 然后第二题 add linkedlist 我说reverse 相加 他说不能reverse 那我说先把list 里面的数 可以用string的类型存起来 然后再一位一位相加 他说还有没有别的办法。。。。。中间我说我能不能我先implemet一种办法 别留着空的 他说不行 再想 他说那你用什么数据结构寸linkedlist 我说queue 之后我说stack这个题可以做 之后我就说stack不一定比reverse好呀 复杂度没有改变还要费space 面试官 然后说我们时间用完了 这题从给出来到结束就只有10min了 我不知道这种情况要 和hr说 因为面试官一直拖着不让我写 一定得写到面试官想的解法嘛？ 每个人看问题的角度不能不同吗？ 
+
+链接: https://instant.1point3acres.com/thread/187938
+来源: 一亩三分地
+
+
+先介绍了一下项目经验，然后问了一下numberOfPaths经典题，要求优化，然后又问了一下missing lement(leetcode经典题)，还有followup的优化 
+
+链接: https://instant.1point3acres.com/thread/169820
+来源: 一亩三分地
+
+怀着极其沉重的心情发这条面经。。。interviewer： 印度小哥，冷漠，口语还行 1. why BBG？interesting project 2. 只有一道题 其实和flatten tree一样不过是linkedList 每个node都有一个next和一个down 1->2->3->4->5 ｜ 6->7->8 | 9 要flatten变成126978345 楼主第一次面试吓尿了。。用的DFS stack找的，中间解释的磕磕巴巴。。。 然后分析time space 然后他说能不能用o（1）的space 然后我想了半天，他提醒了说用recursive的方法，他问recursive有什么弊端，解释了几句。 然后就问问题了，也没让我写代码。。。 他迟到了15分钟，然后又提前结束了，总共面了30 分钟。。。 挂不挂到是无所谓，但是作为第一次面试经历太糟糕了。。。觉得自己好挫啊，稍微遇到一点变动的题目就吓得要死。。。 
+
+链接: https://instant.1point3acres.com/thread/168846
+来源: 一亩三分地
+
+
+前几天的电面，主要侧重C++的实现，没有什么算法 1. 非常简单的实现题， 对于1-n个数字，如果是3或者5的倍数，则替换成aaa或者bbb，两者的共同倍数则为ccc。 2. 合并两个不等长度的字符串，用index和iterator分别实现。 3. 设计模式中的TRCP
+
+链接: https://instant.1point3acres.com/thread/188767
+来源: 一亩三分地
+
+Phone，一轮。 第一题，给一个数字n，按字典序输出1-n的所有数字，要求尽可能优化时空复杂度。 例如，n=11 Output：1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9 第二题，BST上面的Two Sum：一颗二叉搜索树，给一个target，求树里面和为target的任意一个pair。 Onsite 第一轮： 设计国际象棋，设计一个函数使得query(int row, int col) 可以表示在(row, col)的棋子可以吃掉那些棋子。 第二轮： 1. 一个String，求里面第一个出现的Unique Char 2. 约瑟夫问题 3. Invert Binary Tree LC226 第三轮： HR扯淡 第四轮： Manager就我的Project提出的一些Design方面的问题。 Onsite第一轮表现的不好，没玩过国际象棋，现问的规则。。。 发帖攒RP，祝大家都能拿到满意的Offer！ 
+
+链接: https://instant.1point3acres.com/thread/179195
+来源: 一亩三分地
+
+
+
+发个昨天的面经攒人品面我的听口音是个白人小哥，有耐心且各种提示 上来先自我介绍，为什么EE转CS找工作，然后就开始coding只做了一道题，merge K sorted list变种，给的输入没有next可用，只提供pop（）和isEmpety()这两个method 先给暴力方法，全部数据加到一个minheap里，复杂度太高，在小哥的一再提示下想了个改进方法，把每个list的头和list本身定义成一个pair存进去，这样就能用minheap标准的那种方法做 后来结束才想起来好像也可以直接divide&conquer做出来 面完以为跪了，小哥应该是准备了两道题，可能因为跟小哥交流的还可以放了我一马，onsite求给力呀 
+
+链接: https://instant.1point3acres.com/thread/184150
+来源: 一亩三分地
+
+
+之前受到了地里太多人的帮助，现在拿到了BB的offer来回馈论坛，给接下来的面试攒人品 Timeline：7.7内推 -> 7.14HR联系 -> 7.28电面被鸽 ->8.4电面 -> 8.9拿到onsite ->8.17onsite ->8.18拿到offer 总体来说运气很好，题目都是easy和medium，觉得重要的是有效的沟通，对于简单题要快速的讲清楚自己的想法。题目简单不需要先给暴力解法，直接上可行解。然后从简单的题目会延伸出系统设计和OOD，这个才是他们想考察的点。另外就是why BB一定要好好准备，每一轮我都回答了一次，对BB这个公司要有基本的了解，比如有哪些产品，什么时候搞了个大新闻，通过了前两轮可能被问到。 第一轮：上来3个人面窝我一个 =口= 白人大哥+没有口音的印度小哥+shadow的亚裔面孔小哥 先是自我介绍+简历+WhyBB，然后白人大哥出题： LC49 group anagram变种，给你一个dict，输入是一个单词，输出字典里所有与此单词有相同anagram的词 给的HashMap的解法，只要把dict里每一个key都sort一下，互为anagram的存进map里的同一个key下面，然后又单词输入直接找hashmap就行 Follow up：你的dict非常大内存存不下怎么办？ 答：按字母顺序分别存在不同机器上，比如1号只存以A开头的，2号只存以B开头的 Follow up：这个系统可能的问题和解决？ 答：机器使用不均衡，可能A开头的有一万个词，B开头的只有10个词 解决：建立另外一个map，用来标记以某个字母开头的词存在哪个机器里，这样就可能让每个机器存的词尽可能一样 然后印度小哥出题： Lc 54 spiral matrix，就按lc上的答案转着圈打印出来 follow up：你看你这一轮有4个for循环，重复代码太多了，怎么解决 答：做成工厂模式，分别有向上打印，向下打印，向左打印，向右打印四种情况，然后讨论了要传入哪些参数。继续问：你觉得是把这四种情况直接放到一个方法里好还是分开放好，这里楼主傻逼了说放到一起从外面看简洁=口= 印度小哥马上提示：那我现在不顺时针打印了要逆时针你怎么办？马上反应过来应该分开放，因为这样如果变方向只用改变调用四种情况的顺序就好，然后问问题环节 第一轮结束： 第二轮：又是三个人=口= 白人小哥+白人geek男+亚裔面孔shadow小哥 又是自我介绍+简历+whybb，然后geek男出题： 题目是http://www.1point3ac...里面的round2原题 一毛一样 楼主直接用的for循环做出来了，对于每一个node 先用stack打印在他上面的部分，然后打印本身，打印在他下面的部分（这里楼主又傻逼了一开始为了对称用了queue，结果被指出不需要用queue），然后去打印这个node的next followup： 设计一下testcase 就是各种地方是null的情况考虑到就行 然后白人小哥出题：系统设计，搜索引擎，输入一个prefix，他会给你推荐以这个prefix开头的最热门的top 5搜索词。跟小哥讨论了一下，决定用tire + heap做，tire存出现过的搜索词和这个词的被搜索次数，heap存以某个prefix开头的（word，count）的pair，而且只用存top 5. 我设计的tirenode 是有 node【26】的array存是否能向下继续搜索，于是小哥提出follw up：那我不限制搜索内容是a-z，按你的设计不是要存node【256】，太多了，开始没理解小哥的意思，扯了半天，发现小哥的意识是让我把node【26】改成一个Set，这样有新的放进去就好，然后提问环节 本轮结束 第三轮：HR姐姐 全是behavior：why bb？你对BB有哪些了解？未来5年的职业目标？你比其他候选者强在哪？给我用我能听懂的语言讲讲你这个项目?你做的时候碰到了哪些困难？你找工作最看重公司哪些品质？你最希望提升自己的哪三个品质？到这个时候已经快2点了楼主什么都没吃，答的意识模糊 第四轮：Manager 居然是个中国大哥，很关键好吧 上来愉快的鄙视了楼主背景太弱，然后问了一个project，难点在哪？详细讨论了如果要做成一个业界第一的app应该有哪些功能，实现这些功能是否可行？基本上就是瞎扯，但是要扯得全面。 然后问完问题大哥就把我送出去了 总体来说面试体验很好，面试官比较友好，包括印度小哥，没有人为难我。 祝大家求职顺利，拿到满意的offer =w=
+
+链接: https://instant.1point3acres.com/thread/185208
+来源: 一亩三分地
+
+
+
+2016 5月5日 Bloomberg onsite面经，回馈地里，攒人品求offer。 一开始大家都在大厅的圆沙发上等着，人到齐了以后一个叫Kate的HR带我们tour了公司的building，公司还是很高大上的，全部玻璃墙，环形电梯，fish tank，Kate身材性感妖娆，赏心悦目。 面了四轮，我感觉大家都很有趣蛮亲切的，即使一个一本正经的白人大叔，表面上看上去有点可怕，交流了以后才发现其实也是蛮没有架子的，不同意你的说法也不会一棍子打死，会和你争论， 最后还承认楼主的想法有道理。 第一轮： 一个白人大叔 + 一个年轻的manager + 一个刚工作不久的很有geek feel的员工， 1 vs 3 1.1 find the intersection of two arrays. 提供的array里面会有重复的元素，重复的元素只能算一个 楼主用了两个set解决， set1中加入array1的元素， 完事后遍历array2， 将共有的元素加入set2中。 followu: 如果是K个array求intersect该如何求？ 答：也是利用上面的方法，用k-1次循环， 每次比较相邻的两个数组，最终求出交集。 1.2 graph : 需要小哥的图才比较好说清楚，说有一个朋友圈系统，每个用户有一个list纪录他的所有的direct friend，每个direct friend和这个用户的亲密度为weight(正整数)，假定给出一个user作为 出发点，寻找所有离该出发点的distance小于一个数（每跨过一层关系distance+=1），并且路程上weight相加又大于一个数的所有朋友。 答：楼主用的DFS搜索，写了一个recursive的函数，用一个hashmap去纪录所有遍历过的node和与该node相关联的信息，如果遍历到distance > distThreshold则停止遍历。 要注意：一个node，加入在这个hashmap里面能够查找的出来，说明已经有一条路径经过这个node了，这时候你要比较是不是新的distance < 原有的distance 和 是不是 新的weightsum > 原有的weightsum， 如是，则替换掉hashmap里面与该node关联的信息。 Time complexsity O( pow(k, distanceThreshold) ) k平均每个node的direct friends个数。 1.3小哥想出min stack,楼主说做过了。然后小哥出了一道number of islands。 follow up：如何才能在DFS里面省去boundary check,楼主是问了半天才明白是什么意思。 答。 可以在matrix周围扩展出一圈 “0”，这样边界因为都是海洋所以会自动跳过DFS的recursive section。这个问题有点刁钻哈 第二轮： 国人姐姐和白人大叔manager 2.1 国人姐姐：inplace sort an array with empty space.要求O(n) time, constant space. 比如有一个array数字的范围是, n为array的size。'X'代表数组中empty的space，要求算法用那个empty space做一个sorting。 答：从头向后遍历数组，如果array != i, 则 swap(array, array[array]), 这个swap记得用empty space， 完成后empty space的位置变成了i, 要记录下来下一个循环再调用。 2.2 白人大叔： 考察了C++的基本概念， pass by reference/value, copy constructor/destructor, protected/private/public, smart pointer etc.他给了一个应用题，但是如果上面的概念都清楚的话应该没问题的。 HR面： 往海里吹了 Manager面： Chat部门的大manager，白人，本科毕业就来了BB， 12年经验。 没有技术问题，纯吹水。culture fit啊，独立学习精神和继续学习的能力啊。。
+
+链接: https://instant.1point3acres.com/thread/177874
+来源: 一亩三分地
+
+
+新鲜电面面经如下： 1. 找一个string的distinct substring数量，follow up如果这个string有100,000个char咋办？ 2. 给如下一个Table, 用mysql query找出所有前一天温度比当天高的日子有哪些 DayId(INT) | Date(DATE) | Temp(INT) 1|2/1|10 2|2/2|25 3|2/3|20 4|2/4|30 比如上面这个例子，返回2和4就行啦
+
+链接: https://instant.1point3acres.com/thread/118137
+来源: 一亩三分地
+
+
+刚电面完，我也是醉了。印度小哥，电话那头杂音不说，题目由于codepair connection error，直接口述：有一堆飞机票，每张票三个信息（起点，终点，起飞时间，到达时间），打印出可以从目的地飞到终点的所有机票组合的sequence。 好吧，听完题目我给他说了算法， 用DFS就好了，但是要注意起飞时间和到达时间的判断。建一个2D list存结果，当成功找到目的地，就把当前机票组合添加到里面。 然后他说你开始写吧。我就写，我问他你输入是什么样的？是不是String数组，他说你自己figure out吧，我就写了个string数组存input，用comma分割三项信息，小哥说，你为什么不先定义strutcture？我说，哪方面的structure，没懂你说的意思。我愣了一会，反应过来，问他是不是要个ticket的class，他说对。我又重新写。 然后就是dfs的部分， 写完了以后，我说我现在加几个test case吧。然后手动加了点case，包括机票的list和起点终点，小哥又说了，你为什么要自己放一个输入在那里？我又懵了，说为了test啊，他说你让用户去测啊，我说好，给改一个Scanner，他说要这玩意干嘛？我说读取用户输入啊，他说为啥要读取，不需要啊。然后我说那该咋样啊，他又说你自己figure out吧，我又懵了。2分钟后，他说，时间到了，不要写了。你有啥要问我的吗？ 邮件上说45分钟，可是才过了38分钟啊。 我说，没有，面的太屎不想问。他说好吧，然后，就没有然后了。 我就想说，这面的是bloomberg么？被坑的一愣一愣的。 
+
+链接: https://instant.1point3acres.com/thread/169247
+来源: 一亩三分地
+
+早上刚面完的。全程没看到别的candidates,就我一个人。。。楼主一直生病，面试过程中各种咳嗽，心好累。 1. 2个大叔，一个没有口语的三叔，一个冷面小哥，不知道后来突然变热情了。。可能是慢热型 1） 一堆做过的项目的具体问题 2） Java各种问题，java和C++区别 3) Unit test.我说了我没用过他们还一直问，我特别无语。。。 4） 第一道题目：sorted array找第一个为target的index… binary search.考虑下不存在的情况 5）第二道题目： listnode表示的两个数据相加，是1->2->3和4->5，加起来1->7>7。说了两种思路，一种reverse加完再reverse.一种stack 问了他们一堆问题。他们太能扯了。。总共持续了70分钟左右 2. 一个BB12年的看着特别像个刚毕业的小哥。。好想问他保养之道。。 上来一堆项目问题。也不知道他懂不懂，反正就一直问。 然后就是股票那个题目，一直有新的股票交易加到系统中（String id, int volume(正数))。 一天结束后要求你返回volumn总和最大的20个。然后扩展到随时返回。。 Map+Heap的思路。 这个小哥一直各种问，问我map内部怎么实现的。然后问我java heap怎么实现的，怎么比较的，怎么删除的。。。。 我嘴欠问了下要不要考虑volume overflow,然后他开始问我怎么处理。让我design一个bigInteger。。 BB真坑爹，午饭就让我自己在kitchen吃snack…. 3. HR。问了几个我想做什么项目，缺点，优点。然后开始无止境给我安利BB。。各种benefit介绍。。这是什么情况啊。。。 难道今天不是面试日，就我一个？ anyway,求过吧。。。 补充内容 (2016-6-17 05:16): 今天拿到offer了。但是,HR不愿意告诉我offer细节，因为我也在等别的公司offer。他们说要等我拿到别的结果才能告诉我offer。。什么鬼啊？有人碰到这种情况吗 
+
+链接: https://instant.1point3acres.com/thread/180743
+来源: 一亩三分地
+
+
+
+第一轮，先问简历。 1： rotate linked list 2：binary tree path sum 设计：这儿说不太清楚， 是关于股票的数据结构， 用到了union find。 感觉这轮面的不错， design一把思路讲出来面官就懂了， 估计和他想的一样。 第二轮， 一个中国senior 和一个 欧洲口音senior。 中国人感觉挺友好的，欧洲人从头到尾一脸老子欠他一百万的样子。 一上来也是先问简历。 然后欧洲人说了个很傻逼的问题。 画了个杨辉三角形。 说你能不能想一个data structure 去返回第i 行第j 列的值。 我逼逼了一下突然反应到组合数， 就说了直接算组合数，这样不就O（1）了么。 结果这个欧洲人说， 你能不能想想data structure呢？ 如果这个第一行不是从 1 开始呢？ 感觉日了狗了。 没想到什么好的解法， 除了暴力。 然后每一行因为是对称的，所以这里可以优化下。 欧洲人一脸不屑的表情。。。显然不满意。 这时候时间没剩多少了。 中国大哥给了个设计餐馆订座系统的问题， 感觉也就是走走过场吧， 期间感觉到欧洲人已经不想浪费时间了。 然后被hr滚粗。 祝大家好运。 求加分！ 
+
+链接: https://instant.1point3acres.com/thread/185064
+来源: 一亩三分地
+
+
+
+很感激地里的小伙伴贡献的面经，自己终于能做出一份贡献。昨天完成的店面，上来介绍一个project，然后why BB，之后就面了一个题：add two numbers。。。。。。。。。。 3分钟秒了，结果白人小哥就开始不停follow up，问写完代码后我自己要怎样设定一些输入去检测代码的正确，我就说了一堆vector的不同情况，结果似乎不是他的意思，我又想拿return个奇怪的结果？或者throw一个exception？他又说不用管具体函数的内容，就在函数声明这怎样让别人知道输入的格式。。。我就纳闷了，这能怎么改，然后就和他一直讨论，最后才搞懂他的意思是要自己定义一个新的class作为输入，在这个class中去保证输入的格式，比如vector会有[1 -1 34]这种情况无法表示一个数。。。。。然后就没了，就提问了。我我以为这次就挂了，才一个题，结果今天居然收到了on site，自己都不敢相信。。。。感觉BB还是挺人性化的吧，首先你得保证写代码没问题，之后的话可能还是注重交流的过程。。。。 大家加油！ 
+
+链接: https://instant.1point3acres.com/thread/185072
+来源: 一亩三分地
+
+
+lz周一面的 Bloomberg phone screen，刚刚收到了拒信，虽然还不知道是因为什么，感觉都做出来了，可能今年的 bar 是比较高吧，看来急需一波人品，所以 来地里发个帖赞赞人品， 3道题： 1. warm up, 去重题， list1, list2 都没有 duplicate list 1 : 1, 2 list 2 : 1, 2, 3, 4 返回 list 3 : 3, 4 我用了个 hashset 存 List1的元素，然后遍历 list2 ，返回不在 hashset 中的元素 2. 先让我写了个 linkedList Node class， 然后写了个 treeNode class， 然后问了 BST key 和 value 的区别，然后上题目，感觉 bb 家面试就是虽然做题，但是中间会穿插着问各种基础知识，比如第一题就被闻到了 hashset 底层的实现，我当时就记得 hashtable 的底层，就回答的是用 array 和 linkedlist 组合而成的 lol... 题目： BST insert， 插入成功， 返回0, 不成功（该 node 已经存在于 tree 中）返回 1 也算常规题吧，不停地搜索，小于 key 走左边，大于 key 走右边，然后找到 position 就插入 3. 第三题： BST 层序遍历，给定一个 Level, 打印出这一层所有 node 的值 lz 用的是 queue 来实现，然后用一个变量来维护层数，当层数 == level 时，打印 node，如果 lvl 大于树的高度，就返回失败的结果（忘了） 中间还穿插着问了我 为什么用queue ，还有 queue 的 add 和 offer 的区别，一阵狂搜啊，然后网上说是 add 会抛 exception，然后他又追问什么时候抛 exception。。。我就继续狂搜 blablabla...... 然后又问了 queue 能装的最大容量是多少。。。。我tm 心想这个不是可变的吗。。。怎么还有最大容量，就回答了根据内存大小定。。。 能回忆的就这些了，今年 BB 实在是不太懂，看同学各种简历也被拒，希望借此贴与地里的小伙伴共勉~ 
+
+链接: https://instant.1point3acres.com/thread/163732
+来源: 一亩三分地
+
+
+
+不知道是被黑了还是面试中犯了什么大的错误，简短地说，就是：1点开始面试，1.50结束电面，2.20收到据信，传说中的秒据。 背景：面试官应该是ABC，姓Wong（中文似乎是黄？），但似乎是比较“资深”的ABC，因为LinkedIn的语言里面只写了English，没写Chinese之类的，高中、本科似乎都是这边，也听不出来中国口音。我用的Java，但对方Java似乎不熟，因为我写arr.length的时候，他问我Java的array能直接这样获取size吗？全程没有debug（他没有让我run试试，我也忘了询问，所以不知道最后的代码是否有别的什么问题） 插曲：在2.00附近的时候，给面试官的LinkedIn发了个Thank you的InMail，就是一句简短的Thank you那种。他没过多久就回复了我说good luck之类的（当时还没有收到据信） 面经： 简历：问了PhD做的什么，感觉他不是很懂，没有深问。又问了提到的一个web development项目，说我在里面做了什么，有没有和别人合作，用的什么语言/技术什么的，同样没有深问。 ——————————————- 题目： 1. reverse integer。花了不少时间和他确认一些细节，比如负数、溢出、末尾是0。最后，他说负数和溢出都返回-1吧。我开始没理解对，以为他说的只是当overflow才return -1。然后想的是把input先转化为正数，所以写了句： if(num == MIN) return -1; 他问为什么要这么做，我说因为我要转化为正数。然后说用一个flag标记这个数是不是负数，然后他说那num = -5怎么办，我说return的时候看flag，就return flag ? -res : res就行了。这时才知道他说-5要return -1，于是第一句就改过来了。 在考虑溢出的时候，我写的是： while(num > 0) { if(res > (MAX-num%10)/10) { return -1; } res = res*10 + num%10; num = num/10; } 然后他就问res > (MAX-num%10)/10这个为什么要 -num%10，我说有可能出现 MAX/10是OK的，但加上num%10这个digit就溢出了。他似乎不满意，就问我：如果当前是MAX，MAX+1会怎样。我说：MAX是011…11，所以加1变成：100…00，应该是MIN。他说，那就是负数，对吧。我说对。他说，那你觉得这里可以怎么简化？所以我就换成了下面这个： while(num > 0) { res = res*10 + num%10; num = num/10; if(res < 0) return -1; } ——————————————- 2. second max of an array of unique numbers. 先询问了如果是null或者长度小于2怎么办，他问我怎么办。我说可以exception或者返回那个元素。他问throw什么exception，我没有想好，就直接throw new Exception(“Invalid Input!”)。 先装逼说了句一个intuitive的方法就是sort就行，但复杂度高。然后马上说应该可以用DP的思路，存两个元素，然后scan一遍。我写的是： int maxTwo = new int {nums, nums}; 且在这里强调说：maxTwo是最大，maxTwo是第二大。后来在他提醒下才知道这里有个bug。然后一个for循环从i=2开始扫一遍就行了。 在这里，他还问为什么不用两个primitive，我说用primitive也可以，并且会更好。他问为什么，我说不用创建ojbect，并且primitive是存在heap里面的，读取更快。 他也问为什么不直接写 int maxTwo = {nums, nums}; 两个写法有什么区别？我说实质是一样的，都要create and initiate object。 后来我又说maxTwo可以初始化为MIN，这样从i=0扫一遍就行了。 ——————————————- 后记：面完30分钟收到据信，还是挺伤感的。就又给面试官发LinkedIn求feedback。他没过多久回复我说一般不会面试后联系被面试者，但还是会给我说一些本来打算在面试过程中说的，但当时没时间了。然后很快加了一条disclaimer说所说的东西和公司无关，我说完全理解。 等了半个小时他没消息，我就说你也可以邮件给我或者电话给我。结果又过了半个小时，他说after second thought，不给我任何反馈了。。。 求分析下，大家觉得我可能挂在什么地方？以后需要注意什么？我女友当时在身边，说听上去我像不会做似的，而且问了太多问题（确认细节）。但我想的是：我不是在他没有提醒的前提下题目都做出来了吗？
+
+链接: https://instant.1point3acres.com/thread/168554
+来源: 一亩三分地
+
+
+1. 问 map vs unordered_map 的两个区别。 一个map是排序的，另外map占用的内存小 2. 判断一个二叉树是否符合，奇数，偶数按层交叉分布，升序，降序按层交叉分布，比如 1 2 4 11 9 7 5 6 8 10 12 
+
+链接: https://instant.1point3acres.com/thread/176989
+来源: 一亩三分地
+
+
+1. 问 map vs unordered_map 的两个区别。 一个map是排序的，另外map占用的内存小 2. 判断一个二叉树是否符合，奇数，偶数按层交叉分布，升序，降序按层交叉分布，比如 1 2 4 11 9 7 5 6 8 10 12 
+
+链接: https://instant.1point3acres.com/thread/176989
+来源: 一亩三分地
+
+
+6.10中午的电面。听口音像印度人。整个电面三部分1. 介绍项目经验。（15分钟左右） 2. 算法题。比较简单。 第一题是两个string, str1 和str2。找出任意一个str2中的字符在str1中第一次出现的位置。我用了一个hashset,面试官追问了很多hashtable的细节。 第二题lc股票1，区别是数组中有正有负，不存在最大的diff返回-1. 3. 问了两个问题。 总体而言，电面还是比较简单的，拿不到onsite只能算是被烙印给黑了。 
+
+链接: https://instant.1point3acres.com/thread/180805
+来源: 一亩三分地
+
+
+电面： 设计下面这个Structure。实现的功能：给一个数字，比如2667，返回所有词典中Encode后以2667开头的单词 Encode是电话本的格式： 0/1：“” 2: “abc” 3: “def” 4: “ghi” 5: “jkl” 6: “mno” 7: “pqrs” 8: “tuv” 9: “wxyz” 假如词典是：company, coop, corporate, test input是2667，那么返回company, coop, corporate public class Solution { public void buildDictionary(ArrayList dict) { } public ArrayList lookup(int input) { } } Onsite： 1. 一白女+1黑不知道哪个国家的男+1Shadow，先聊了不少时间，后面女、男各出一道Easy题： - LinkedList Intersection - Move Zeros 2. 两白男。两人都不怎么友善，其中一人几乎每次问我一个问题我解释了一两句后准备继续说时他都会打断不让我继续说。当时以为要两轮游了 - 另一白男拿出一张纸，上面打印的我Github上面的HashSet的代码，让我找Bug。。。最后找出了两个Bug，他似乎比较满意 - 返回杨辉三角形第i行第j列的数。我用的Brute Force的方法，O(n^2)复杂度。他似乎让优化，但并不太明白他想干啥 3. HR聊了20来分钟，各种问 4. Sr Manager聊了近一个小时，各种问：简历上的东西，问得比较细。比如我说我做了个网站，网站里面有一些SQL表。他就问User这个表里面有哪些列。又问如果让重新设计这个网站，会怎么改？如果Employee数量从当前的10人增加到1000人需要怎么改，等等 本来是想着两轮游的，没想到竟然给Offer了。。。
+
+链接: https://instant.1point3acres.com/thread/179754
+来源: 一亩三分地
+
+
+
+05/16/16新鲜的 phone interview 面经没有视频，面试官听口音是一个印度小哥，先讲了一下面试流程， 接着让我做自我介绍，然后让讲了一下实习。问了一下 C/C++ 的熟悉程度，回不熟悉，never mind，继续问 Data Structure 熟悉程度，回熟悉，就开始 Code。Code: 1. Maximum Subarray (Leetcode 53)他说给一个 List of Integers，输出maximum subarray的值，follow up 是输出起止 index。给了两个例子。我问输入是 List 还是 Array，他就问 List 和 Array 的区别， suppose 给 Array。描述思路再开始写，写完让用两个例子走一遍。2. Longest Path in Binary Tree先问熟不熟 Binary Tree， 回熟。 就先让写一个求深度的 method， follow up 是求 Longest Path (任意两点)，然后也是走一遍，举反例。最后是问问题阶段。 希望能有 onsite， 祝大家好运！
+
+链接: https://instant.1point3acres.com/thread/178877
+来源: 一亩三分地
+
+
+大概半个月之前的失败电面， 编程题有两个，一个是Fibonacci数列，要求分别用递归和迭代做，另一个是用int类型如何防止溢出，比如说有一个函数 return a+b，需要加一条 if(a>0&&maxInt-a>b || a<0&&minInt-a
+链接: https://instant.1point3acres.com/thread/179653
+来源: 一亩三分地
+
+
+
+上次面了Bloomberg， 感觉体验很差，又是一轮游，这里发下面经当攒RP吧。 面我的是一个叫Tom的上了年纪的人，问了很多Knowledge-based的题目，感觉很恶心。 上来先和我过了一遍简历，然后就问我什么是Functional Programming(我简历上有些上过这个) 然后就Multithread和Multiprocess有什么区别，再接着问Mutex和Semaphore什么区别。 然后让我写个简单的program to eat up all the heap memory. 接着再写个简单的program to eat up all the stack memory. 最后问个Valid Parenthesis. LC简单题 BB感觉问很多Knowledge-based的题目，大家好好准备吧 
+
+链接: https://instant.1point3acres.com/thread/176426
+来源: 一亩三分地
+
+
+面试我的是个烙印，一听口音心想完了。第一题是股票问题，题号121， 先跟面试官讲解思路，用的dp，加数组做的。做完面试官问时间复杂度和空间复杂度，问能不能优化，能不能用其他数据结构，我说用链表，然后面试官又问哪一种更好，为什么。不好的那个数据结构更适用于什么场景。最后又问还知不知道其他数据结构，就又说了map，然后问使用场景。 第二题是找两个链表的common node，题号160， 让讲一下思路，时间复杂度和空间复杂度。然后又让优化，这个题没让coding就直接结束了. 运气不错，两道题都很简单。 下午收到邮件让去onsite，积人品！ 
+
+链接: https://instant.1point3acres.com/thread/180649
+来源: 一亩三分地
+
+
+刚想跳槽，就被猎头抓去电面， 根本没时间刷题。 运气不好，面试官出 LeetCode 第二难的题。(126) , 有些改动， 字典改成了验证函数 
+
+链接: https://instant.1point3acres.com/thread/180572
+来源: 一亩三分地
+
+今天面试面了两轮 应该跪了 感觉不太适合自己 甚至在面试的时候因为一直解释不了 差点没控制住脾气 最后要了五分钟来calm down 第一轮 1. 一个模拟题 分清楚就一点难度都没有了 秒解 纯粹是看一下我这个读生物的人的编程能力 2. 看两个listnode是否聚合到一点 第二轮 1. H index的变型 让我output max subset 注意是subset！ 就是在这题我没忍住，第一个方法sort这个都毫无疑问， 第二个解法 就是用counting sort， 因为是subset， 我就压缩进一个nums的array里，which means the nums array represent the count of index in the set. res 是存结果的set for (int i = nums.length-1; i>=0; i--) { for (int j=0; j
+链接: https://instant.1point3acres.com/thread/184113
+来源: 一亩三分地
+
+
+
+发一个Bloomberg 的面经吧，求大米 店面： add two linkedlist， leetcode 原题 国人大姐面的，过了。 当时觉得好开心啊 onsite： 两轮游，面试官全是阿三，好衰啊 第一轮： compress string： 例如： TOM-> 3， 2M， T2，T1M， TO1, 1OM, 1O1, TOM TIM-> 3, 2M, T2, T1M, TI1, 1IM， 1I1， TIM 有这么几种 compress 方法，任意找到一种就可以了，同一种compressed result 已经使用过 就不能再使用了，比如果TOM->3, 那么 TIM 就不能再compress 到3了，而是 T2， 或者 2M follow up 是c++的一些基本问题 第二轮： group anagram，Leetcode 49 原题 然后两轮游了。。。 
+
+链接: https://instant.1point3acres.com/thread/184548
+来源: 一亩三分地
+
+
+onsite 三轮游的一周后发了拒信. 电面: 先啰嗦了几句, why bb, most interesting project. 1. 给你一个长度为n的数组作为输入, 给你一个现有功能random(i,j) 随机生成从i到j的某个值. 希望你写一个功能, 从array里面等概率挑出三个数(就要三个,不是参数), 这三个数只要求index不同且等概率, 不要求值不同. 注意, 与其他面经中提到的一样, 如果输入invalid(数组长度小于3), 面试官希望你能抛出异常, 这里异常自己随便定义一个类就行, 没必要专门去记C++自有类. 2. leetcode, linked list intersection. 一个fast一个slow指针秒, follow up是如果两个list都可能有环, 该怎么做? 傻了几分钟, 回答hashset, 秒写 第二天来邮件通知过了就约了onsite. 哎, 拖了三周, 准备的东西一个都没问到(题目, C++基础等), 感觉好亏. 第一轮 3位面试官: 1.机器人跳台阶, 台阶无限向上向下延伸, 给你一个func()功能让机器人随机往上或往下跳一个台阶, func()返回true时时往上, 反之往下. 让你写个新功能jumpOne()使得它可以固定向上跳一格. follow up: 不让你用counter来计数, 于是用了recursion; 又再加上不让使用while loop, 在引导下最后写了个很简洁的几行, 是recursive调用jumpOne() 2.类似Leetcode这几天新出的生成random number题, 当时还木有… 场景:你给公司里的每个人发抽奖券,每人一张. assume每个人的名字都是unique的, 你希望能随机抽出5个人作为中奖者. 给定random(i,j)函数. 需要实现的几个功能是:增加一个人, 删掉一个人, 生成中奖者. 印象中这里我用了unordered_map map1, unordered_map map2 把人和数字对应起来. 关键点在于删掉某个人时要把最后一个人拿过来补上这个数字的空缺, 才能保证随机数生成的时候不会miss (面试官要求的, 不是我非要那么优化…) 用两个map的考虑是先得用map1让每个人拿到个号码是吧, 然后抽到数字之后得知道它对应的人是谁对吧(map2), 现在想想仍然这样是比较好… - -! 在需要生成中奖者时, 同样可以先random(0,n) 比如得到i, 然后i和n交换, random(0,n-1) 面试官反映说答得挺好, 祝我下一轮顺利之类. 第二轮 2位面试官, 都像是俄罗斯之类的口音, 好难听懂, 而且题目好奇怪: 面试官进来说, OK我们这一轮你先介绍一下你自己, 然后我们两道题. 1. 他说, 给你两个csv表, 让你设计一个程序找出他们俩的不同. 然后我等着他继续说一些细节, 他瞪大了眼睛看着我, 说我需要个解决方案… 看到这里我给各位同学强调一下, 他真的是几乎什么多余信息都没给, 需要你自己设想….! (我知道SVN Git之类写项目合并的时候会有类似的这种工具, 可是让人自己写.. 难啊) 第一个方案是直接对两块内存做异或操作, 他表示interesting. 随后我提出两个表都有自己行数和列数, 相当矩阵对矩阵, 每个element假设为数值. 他点点头. 我说如果是human来做这件事, 那么他一定会基于一个“相似程度”, 这里简单理解为如果f1的某行与f2的某行对应, 那么意味着他们相同的内容大于某个阈值, 这里不妨设为t, 他点点头. 我说这里能否假定两个文件的列数是一样的, 比较符合实际情况, 他点点头. 我说可能行数不同, 需要重点考虑, 他点点头. 我说假设每个file都有get(i,j)表明得到矩阵的值, 以及一些其他功能, 现在好像记不清楚了. 然后表示让我开始写!代!码! 居然还要写出来?! 然后不知不觉30多分钟过去了. 大概写了好几页值, 需要检查多种情况, 好麻烦. 2. 没有第二题了…另一位面试官说没时间了, 我这题也是个设计题, 你有什么想问就问吧 (楼主: excuse me??? 我特么是new grad啊, 第一轮算是1代码1设计, 这轮两题设计???) 然后他们俩说, 你第一题回答的非常好, 不要有压力, 马上会有第三轮, 你先休息一下. 就走了. 之后, 等了50分钟….50分钟啊…KAO 进来了一位HR, 我心想这啥情况, 不应该是什么技术方面的manager吗 然后居然直接问我今天过得怎么样, 有没有什么问题了, 聊了几句之后说我送你下楼. 然后就被送下来了. GG. 
+
+链接: https://instant.1point3acres.com/thread/184719
+来源: 一亩三分地
+
+
+其实是一天面两个组，如果是一个组，估计一轮就出来了 :) 第1轮. 两个interviewer， 第一个题和c++有关，问了一些基本概念。然后要求实现一个虚函数，在一些细节上比较扣。说实话, c++一些概念自己掌握的不好，所以毫无悬念地挂在这轮。建议以后面c++的同学多看看虚函数的概念 第二题是面经题 Bloomberg onsite面经 作者需要拥有至少50积分以显示此链接. (出处: 一亩三分地论坛) 马拉松 一堆runner再一个跑道一起跑步, 上面有很多sensor, 每个sensor有sensor id, 当一个runner通过一个sensor的时候会有一个message传到中央sever, 要你设计一个实时leader board. 当时想了个类似LRU的方法实现O(1)的复杂度。时间不够了，没写code。有同学知道怎么做吗？ 第2轮聊了以前的projects. coding题目是给一个开始日期和结束日期，把时间按季度打印。 例如 4/30/2015 to 02/01.2016, printQ2 2015Q32015Q42015Q12016这题有些conner case， 注意下就行 第3轮问题一是valid BST，注意leetcode的解法的要有严格的顺利， 不能出现root<=right的情况。写了recursive and iterative两种实现问题二是 找 longest prefix substring from a long file. 一种解法是用 trie 然后HR上来把我送出去了。 总的来说， BB的coding不算难，可能他家更看中交流和解题的思路。 
+
+链接: https://instant.1point3acres.com/thread/183989
+来源: 一亩三分地
+
+
+Round1 一个烙印＋一个亚洲中年女 第一题，设计一个数据结构能够处理网页的backward,forward 和 show history. 楼主用了两个stack, 每访问一个网页就把网址压进stack1,然后backward就把stack1的top压进stack2. show history就把stack2里的都压进stack1,然后都pop出来。女面说如果只在两个网页切换，history应该显示多次交替访问的纪录，两个stack搞不了。再加个array记录history。 两人表示可以。 第二题， move zeros, 假装沉思一番给了两种解法。第一种，两个指针一个记录非0位置一个扫，扫到非0就挨个给记录非0的位置，然后再把剩余的设成0。第二种，两个指针扫，第一个扫到0位置的时候，另一个找下一个非0的元素然后swap。 Round2 一个nice白人小哥, 不是一般都两个人么。。 第一题，compress string, 除了二指针能不能玩点别的。。。 第二题，问了array和linkedlist 然后他就亲自领我出去了。。。被领出去了。。。领出去了。。。出去了。。。去了。。 熙熙攘攘的Lexington大道又多了一个孤寂落寞的背影。 
+
+链接: https://instant.1point3acres.com/thread/183193
+来源: 一亩三分地
+
+
+Alright, 楼主刚面的， 一接电话卧槽是个硬杜人。前十分钟问简历，世系期间坐的橡木， 问得还比较聚体。 然后开始问汝河实现蛤系表， 最几本的那种， 汝河处理碰撞。 接下来边城题， 大家注意下他家的变成题一定要炮出结果的，所以不要油bug。 题目狠简单。 书入： [ 而，一， 无，而，叁，酒】 书出 [一， 而， 而， 叁] 一开始口头说了个nlogn的，然后说可以linear， 好了就开始写linear的了。 楼主秒了，结果卧槽一看为什么和硬杜人说的输出不一样呀。 一看卧槽输出可以重复的，你个死硬杜怎么一开始没提醒老子。。。 秒改， 马上过 他的test case。 这人因为不怎么懂py， 还给我加了好几个test case都过了。 还剩十五分钟，硬度人说好了perfect你可以问我你想问的问题了， blablabla。尼玛楼主有点虚为什么不再来一题呀。 Anyway，看看现在这家去面试的貌似都是两轮游。。。。不知道是不是现在招人招的少了。 由于以前实习和面试都被硬杜人坑过，楼主极为反感硬杜人，也希望同胞们一定要团结互助 ！ 楼主年底毕业所以即使收到两轮游也就当是练手了吧。 祝所有找工作的朋友们好运， 加油！ 
+
+链接: https://instant.1point3acres.com/thread/183389
+来源: 一亩三分地
+
+
+昨天面完BB，他家没有NDA，报一下面经，求offer。 电面： 差不多一个月前，1轮，东欧口音的面试官，先聊了几分钟简历，然后是C++的基础题，虚函数，多态，virtual table等等。接下来直接在codepair做题，都不难。第一题是删除链表中大于等于某个值的节点，用dummy head秒了，跑通全部test cases。第二题也是lc简单题，missing number，先写个公式求和再全部减掉的解法，follow up如果数很大怎么办，上bit operation，再follow up是用第一个求和的做法在overflow时返回-1怎么办，用long long解决。两天后收到onsite通知。 onsite： 早上起的迟，差不多是最后一个才到的，在等待区都没座位了，并且发现自己打了领带显得有点傻，站着等了一会儿后hr带着转了一圈，上楼拿饭盒然后被面试官领走。 第一轮：白人+印度人。聊简历，最proud的project，然后开始做题。 1. 找数组中最大和第二大的简单题，corner case是如果有相同的要输出最前的index。我写了个输出pair的解法，如果数组长度小于2就输出一样的index，然后白人小哥说不喜欢，你还是写个exception吧，改之。刚开始紧张，程序不够精炼，有corner case会被判断两次，跑完test case应该没啥问题小哥说你程序里有个else if可以去掉，我说是，然后删掉检查通过他说OK。 2. 找链表交点，只要刷过题都轻松，先写个在尾部交换指针的解法，问能否快一些，如果不考虑内存的话，又快速写了个用unordered_set存指针的方法，然后说复杂度其实一样，但后者只需遍历一遍。 3. 假设有一段上古时期的code，其中一个是send()的函数，一个是receive()函数，其中send()函数将用户输入的一段“单词+n个空格+单词+…”形式的string发出，然后receive()函数接收这个string，不知什么原因现在receive()函数接收到string以后，所有的空格都没了，变成了“单词单词单词单词…”这样，问在不能改变这两个函数并且也必须使用这两个函数的情况下该怎样保证收到正确的原始string。先迅速给出一个用hash存所有candidate word的解法，然后马上说会有多个解因此不正确，同时边说边想其它解法，然后想到可以用lc271的方法。自定义sendNew()函数，把原始string编码，改成“单词长度+#+单词+空格长度+#+…”的形式，再用原函数发出，再写receive()函数解码即可。白人小哥说如果原string里就有#会怎样，我说这方法应该可以handle，举例解释，然后小哥乐了，说虽然不是他想的解法但应该work，我说也可以分析是什么原因导致空格丢失，还没聊几句小哥一看表说你问问题吧，问完问题show给我看了terminal的一些功能就收工。 第二轮：吃完盒饭来了两个面试官，南美？中东？+印度人，知道暂时还不是两轮游心情略为放松，先聊简历project面试官说我们知道第一轮你讲的是论文这次换一个，讲完另一个project开始做题。 1. 井字格手机键盘输入数字，输出candidate单词，类似lc17但加了candidate的限制。先给出backtracking的解法，中间加一段用词典判断是否是candidate后再输出。follow up能否优化，想到用trie解决，字母做trie node，写出结构，举例解释，说可以省空间，问时间复杂度，至少O(3^n)，问能否优化，再说了一个用数字做trie node并存对应长度candidate的解法，比backtracking省时间，面试官说可以了。 2. 若干台计算机连成网络，从一台机器开始，让所有机器执行某段程序。答bfs发给邻居节点，给每台机器加个bool值标志是否执行过。然后问如果接下来还有别的机器要执行别的程序怎么办，答在程序开始执行之前写个clear程序先bfs把所有的节点设为false，再执行程序。follow up如何判断所有节点都执行完了，如果已知总台数。答在发起程序的主机设置count，并在bfs的时候附加路径信息，然后每台机器false变true的时候沿路径传回一个标志，在主机收到标志时count增加，直到等于总台数即可。然后又问如果不知总台数怎么办，有点懵就开始天马行空了，说主机收到标志信息的时间间隔应该跟深度有关并有一定规律，如果未收到标志信息的时间超过某个阈值时则可以判断已执行完，但立刻想到如果每台机器执行时间有区别就只有等了，说暂时想不到更好的方法，最后印度小哥说可以了，说其实他自己也不知道。 3. design画板，稍微扯了扯南美小哥说OK，接下来写段code实现区域染色功能吧。发现其实又是bfs，秒之，并用了一个这种4邻域grid结构bfs遍历的小trick，用{0, -1, 0, 1, 0}加for循环代替四个方向分别判断，小哥有些兴奋，说cool，写完code了说好了你问问题吧，问完问题收工，说你在这里等着。 第三轮：等了一会儿来了很nice的亚裔hr mm，坐下开始聊而不是领我走，知道不是二轮游了。简历+behavior，聊完说一会儿会有manager来。 第四轮：白人manager，无算法题，behavior，软件工程概念，unit test，coding style，自动化编程，未来规划，问问题，聊的自己嘴角冒泡但不知是否有说错话，到时间后manager领着取了行李箱送下楼。 补充内容 (2016-7-26 11:17): 今天下午收到了hr的电话offer，BB真是我的福将！是所有公司里第一个给电面，第一个给onsite，也是第一个给offer的！
+
+链接: https://instant.1point3acres.com/thread/183263
+来源: 一亩三分地
+
+
+第一轮三个面试官，两个白人一个印度人。问了下实习经历，五分钟后开始做题。 第一题 reverse link list。用了dummy node + 头插法直接写出来了，但是面试官都说没见过这种方法，我就用几个例子解释了下，解释完了面试说你这方法还挺好的。 相关问题：问什么要用dummy pointer；string result = “”，当这条指令执行的时候，发生了什么。(copy assignment = default constructor + assignment operation) 第二题 LC 17。题很简答，一上来我就知道要用DFS写，但是脑子突然不转了就卡了一段时间，花了20分钟才写出来。 第三题 Design Parking Lot。我就日了狗了，还剩不到15分钟给我一个design的题，好在这道题前一天晚上看面经的时候想了想，就大概说了设计的思路，有哪些object，member variable和function，object之间的关系。没有写代码。 隔了半个小时第二轮，一个白人一个中国人。 第一题（就跪在这道题了） 题目的背景不太好理解，花了快10分钟才明白要干啥，简化的来讲就是如果第一列是月，第二列是日，现在如果把月和日连起来，如何连。 比如，1月11号和11月1号连起来都是111。但是这种encode的方法没办法 只通过111来区分是哪一天了。 这道题的答案就是0111和1110…这也是我刚出BB门才想到的。开始想解法的时候在草稿纸上写了些思路，比如数字之间相乘相加之类的，写到位操作的时候，面试官就开始追问位操作的各种细节，一方面是我对位操作的具体实现不是很清楚，另一方面我就以为这道题的解法就是跟位操作有关。纠结在位操作上，半个小时过去了也没想到那个简单的解。 第二题 Buy and Sell Stock II 可能国人大哥看我在第一道题上受挫太严重了，就给我出了这个，解释了下思路就写完了。中间有个bug，最后也修改了。 第二轮完了整体超时30分钟。因为第二轮的面试官说现在应该把我送到第三个面试官的房间，但是按照schedule来看我当时第四轮面试应该已经开始了，所以他们就直接把我送到了schedule里的第四个房间。我当时以为自己前两轮过了，就开始在房间里复习behavior questions。结果等了一个小时还没有人来，正要给HR发邮件问what's next的时候，来了另一个HR说你今天已经结束了。就送我出去了。 感觉有点遗憾，第二轮的第一题想法一开始没有走到正确的path上，面试官也没有纠正我。给之后面试的同学两个建议吧。 1.如果你从西飞到东onsite，最好能提前一天去倒时差。我前一天从西雅图飞了6个小时过去，晚上12点到酒店 时差问题也不怎么困，睡眠不足就导致第二天明显能感觉到自己状态不是特别的好。 2.BB onsite是在纸上写代码，而且是比A5还小的纸。我写的时候写的很乱，也没有说明每张纸写的是什么。当看到第二轮面试官把我写的纸收走的时候，我就觉得下次有机会还是要注意下。 祝各位好运。 补充内容 (2016-7-22 05:57): 更正：1. onsite是7月20号。 2. 11月1号和1月11号应该是1101和0111
+
+链接: https://instant.1point3acres.com/thread/183255
+来源: 一亩三分地
+
+开始介绍一下自己的项目，还有为什么要使用某些技术等等。 算法题： Palindrome，只需要针对int类型。 设计题： 设计一个C#类，处理Unmanaged的资源，主要考虑如何释放资源。Dispose() 和 Finalize()。后一个当时没想起来。 
+
+链接: https://instant.1point3acres.com/thread/183238
+来源: 一亩三分地
+
+
+
+一共电面了bloomberg三个组，第一个挂了，其他两个给了on-site 这次电面用了1个多小时，一共三道题 1. 统计一个给定的字串在另一个字符串中出现的次数，类似strstr， 不同的是给出出现的次数 2. 实现链表的插入删除 3. 给两个已经排序的数组，找出same numbers，different numbers 和missing number. 要求只用一次scan完成 
+
+链接: https://instant.1point3acres.com/thread/183200
+来源: 一亩三分地
+
+
+新鲜的电面，昨天下午面的，还是挺简单的。一个白人小哥，上来先问了下学校都学了啥，实习的项目，为啥转cs master等云云。。10min 然后开始做题 1. CompressString， 就是把 aabbbbc ->aab4c 小哥上来先让说思路，因为很简单，说完以后就直接写了，然后我自己给了几个test case跑了跑。不过中间有个比较有意思的是我用stringbuilder.append()的时候，写的是append(a+a+"")，输出的是数字，迅速改掉了，小哥说very interesting，问我为啥会这样，我先说的是可能用了不同的override函数，后来一想不对这时候已经是string了，我说可能和java用了类似express tree的东西做转换有关系。""+a+a就没问题了，小哥说sounds reasonable， 反正他不会java，于是就跳过了。 2. DigitalRoot, 上来给了个Naive n*n的解法，小哥说不错，但是有const time的解法，这个题lz是刷过的，但是忘了=_=。然后他提示我说你自己写几个连续的例子，然后发现是1-9循环，后面就比较顺利了。也是自己给几个test case跑了下，两种解法结果一样，小哥说不错。 最后问了三四个问题，主要是关于工作内容和培训的，然后就结束了。差不多用了1个小时。 今早收到onsite通知，求大米，求Offer！ 
+
+链接: https://instant.1point3acres.com/thread/181325
+来源: 一亩三分地
+
+
+刚刚面的BB的phone interview，题目很基本的一开始聊聊简历，然后问问java中的array，arraylist， linkedlist这种，然后是写一个题目，atoi。不算困难吧，我还打开lc看了一眼。。。聊得还行，过不过不知道，反正也是面着玩的，没啥期待，马上就要回国了。 
+
+链接: https://instant.1point3acres.com/thread/180150
+来源: 一亩三分地
+
+
+老印 挺nice的一直提示，但是没刷过类似的 平时用heap也直接调library 这回惨烈了后来发现lintcode上面有: http://www.lintcode.... 电面的全题是要求输入一个无序数组 生成一个heap的binary tree. heapify之后还要弄成一个binary tree 这步比较简单，recursion就可以了。 heapify数组的话bottom-up siftdown的方法是O(n)的： http://www.jiuzhang....
+
+链接: https://instant.1point3acres.com/thread/186154
+来源: 一亩三分地
+
+
+两道题 1） K-way merge of linked list 2) 在一个排序的数组中找一个数出现的次数， 用binary search 两个题目leetcode都有 
+
+链接: https://instant.1point3acres.com/thread/186168
+来源: 一亩三分地
+
+怀着极其沉重的心情发这条面经。。。interviewer： 印度小哥，冷漠，口语还行 1. why BBG？interesting project 2. 只有一道题 其实和flatten tree一样不过是linkedList 每个node都有一个next和一个down 1->2->3->4->5 ｜ 6->7->8 | 9 要flatten变成126978345 楼主第一次面试吓尿了。。用的DFS stack找的，中间解释的磕磕巴巴。。。 然后分析time space 然后他说能不能用o（1）的space 然后我想了半天，他提醒了说用recursive的方法，他问recursive有什么弊端，解释了几句。 然后就问问题了，也没让我写代码。。。 他迟到了15分钟，然后又提前结束了，总共面了30 分钟。。。 挂不挂到是无所谓，但是作为第一次面试经历太糟糕了。。。觉得自己好挫啊，稍微遇到一点变动的题目就吓得要死。。。 
+
+链接: https://instant.1point3acres.com/thread/168846
+来源: 一亩三分地
+
+
+今天（0824）面完BB，第二轮完就被赶出来了，实在有点理解不能，来给大家分享一下 第一面，问了点project和C++的一些东西，然后一个binary tree level traverse和binary tree serialization，够简单吧，直接秒，还顺便提了下怎么validate input是一个有效的pre-order，面试官都似乎都不知道这种方法，还让我解释，完事儿还挺开心的开开玩笑。 第二面，先是一个brain teaser类型的问题，不写程序，求解火车进洞里面那个人该往哪里跑，用了点中学知识解决，面试官也肯定了答案正确。然后编程题，一个LinkedList，每个Node有四个方向的link，所以本质上就是个图对吧，给一个start node和distance以及一个value，求问能不能在distance以内找到这个value。这不明显的BFS来解么，一个BFS不断更新距离，找到值了就返回，不然就继续，直到当前距离超出distance。秒掉之后讨complexity，我说是O(n)，面试官说应该跟distance有联系，然后我就说应该是O(3^d) at worst，然后面试官不知道怎么就说这个应该是O(d^2)，恕我直言这点我没怎么懂，但我看时间快到了就表示认同，最后说应该是O(min(n, d^2))，面试官说对然后就愉快的结束了面试。哦对了，面之前我似乎去洗手间迟到了5分钟，因为前一轮的人告诉我有20分钟吃午餐，email也是这么说的，但似乎这轮提前5分钟开始了。 然后，我就被HR赶走了，一脸问号啊简直是。当年毕业是时候面BB第三轮被赶是因为题目的确没做出来我理解，这次题目做对了，而且交流上我也是非常注重讲清楚思路问清楚问题，难道就因为最后分析complexity不完美跪了？我面之前也看了最近BB的面经，没什么难题，而且说实话很多拿到OFFER的面经的解答都不算最优，我这样的表现谈不上完美但不至于第二轮就被赶吧？难道是今年招满了明年名额也还没出？还是因为我去shit迟到了5分钟？ 
+
+链接: https://instant.1point3acres.com/thread/188176
+来源: 一亩三分地
+
+
+Phone，一轮。 第一题，给一个数字n，按字典序输出1-n的所有数字，要求尽可能优化时空复杂度。 例如，n=11 Output：1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9 第二题，BST上面的Two Sum：一颗二叉搜索树，给一个target，求树里面和为target的任意一个pair。 Onsite 第一轮： 设计国际象棋，设计一个函数使得query(int row, int col) 可以表示在(row, col)的棋子可以吃掉那些棋子。 第二轮： 1. 一个String，求里面第一个出现的Unique Char 2. 约瑟夫问题 3. Invert Binary Tree LC226 第三轮： HR扯淡 第四轮： Manager就我的Project提出的一些Design方面的问题。 Onsite第一轮表现的不好，没玩过国际象棋，现问的规则。。。 发帖攒RP，祝大家都能拿到满意的Offer！ 
+
+链接: https://instant.1point3acres.com/thread/179195
+来源: 一亩三分地
+
+
+新鲜电面面经如下： 1. 找一个string的distinct substring数量，follow up如果这个string有100,000个char咋办？ 2. 给如下一个Table, 用mysql query找出所有前一天温度比当天高的日子有哪些 DayId(INT) | Date(DATE) | Temp(INT) 1|2/1|10 2|2/2|25 3|2/3|20 4|2/4|30 比如上面这个例子，返回2和4就行啦 
+
+链接: https://instant.1point3acres.com/thread/118137
+来源: 一亩三分地
+
+
+刚电面完，我也是醉了。印度小哥，电话那头杂音不说，题目由于codepair connection error，直接口述：有一堆飞机票，每张票三个信息（起点，终点，起飞时间，到达时间），打印出可以从目的地飞到终点的所有机票组合的sequence。 好吧，听完题目我给他说了算法， 用DFS就好了，但是要注意起飞时间和到达时间的判断。建一个2D list存结果，当成功找到目的地，就把当前机票组合添加到里面。 然后他说你开始写吧。我就写，我问他你输入是什么样的？是不是String数组，他说你自己figure out吧，我就写了个string数组存input，用comma分割三项信息，小哥说，你为什么不先定义strutcture？我说，哪方面的structure，没懂你说的意思。我愣了一会，反应过来，问他是不是要个ticket的class，他说对。我又重新写。 然后就是dfs的部分， 写完了以后，我说我现在加几个test case吧。然后手动加了点case，包括机票的list和起点终点，小哥又说了，你为什么要自己放一个输入在那里？我又懵了，说为了test啊，他说你让用户去测啊，我说好，给改一个Scanner，他说要这玩意干嘛？我说读取用户输入啊，他说为啥要读取，不需要啊。然后我说那该咋样啊，他又说你自己figure out吧，我又懵了。2分钟后，他说，时间到了，不要写了。你有啥要问我的吗？ 邮件上说45分钟，可是才过了38分钟啊。 我说，没有，面的太屎不想问。他说好吧，然后，就没有然后了。 我就想说，这面的是bloomberg么？被坑的一愣一愣的。 
+
+链接: https://instant.1point3acres.com/thread/169247
+来源: 一亩三分地
+
+
+第一轮，先问简历。 1： rotate linked list 2：binary tree path sum 设计：这儿说不太清楚， 是关于股票的数据结构， 用到了union find。 感觉这轮面的不错， design一把思路讲出来面官就懂了， 估计和他想的一样。 第二轮， 一个中国senior 和一个 欧洲口音senior。 中国人感觉挺友好的，欧洲人从头到尾一脸老子欠他一百万的样子。 一上来也是先问简历。 然后欧洲人说了个很傻逼的问题。 画了个杨辉三角形。 说你能不能想一个data structure 去返回第i 行第j 列的值。 我逼逼了一下突然反应到组合数， 就说了直接算组合数，这样不就O（1）了么。 结果这个欧洲人说， 你能不能想想data structure呢？ 如果这个第一行不是从 1 开始呢？ 感觉日了狗了。 没想到什么好的解法， 除了暴力。 然后每一行因为是对称的，所以这里可以优化下。 欧洲人一脸不屑的表情。。。显然不满意。 这时候时间没剩多少了。 中国大哥给了个设计餐馆订座系统的问题， 感觉也就是走走过场吧， 期间感觉到欧洲人已经不想浪费时间了。 然后被hr滚粗。 祝大家好运。 求加分！ 
+
+链接: https://instant.1point3acres.com/thread/185064
+来源: 一亩三分地
+
+电面： 设计下面这个Structure。实现的功能：给一个数字，比如2667，返回所有词典中Encode后以2667开头的单词 Encode是电话本的格式： 0/1：“” 2: “abc” 3: “def” 4: “ghi” 5: “jkl” 6: “mno” 7: “pqrs” 8: “tuv” 9: “wxyz” 假如词典是：company, coop, corporate, test input是2667，那么返回company, coop, corporate public class Solution { public void buildDictionary(ArrayList dict) { } public ArrayList lookup(int input) { } } Onsite： 1. 一白女+1黑不知道哪个国家的男+1Shadow，先聊了不少时间，后面女、男各出一道Easy题： - LinkedList Intersection - Move Zeros 2. 两白男。两人都不怎么友善，其中一人几乎每次问我一个问题我解释了一两句后准备继续说时他都会打断不让我继续说。当时以为要两轮游了 - 另一白男拿出一张纸，上面打印的我Github上面的HashSet的代码，让我找Bug。。。最后找出了两个Bug，他似乎比较满意 - 返回杨辉三角形第i行第j列的数。我用的Brute Force的方法，O(n^2)复杂度。他似乎让优化，但并不太明白他想干啥 3. HR聊了20来分钟，各种问 4. Sr Manager聊了近一个小时，各种问：简历上的东西，问得比较细。比如我说我做了个网站，网站里面有一些SQL表。他就问User这个表里面有哪些列。又问如果让重新设计这个网站，会怎么改？如果Employee数量从当前的10人增加到1000人需要怎么改，等等 本来是想着两轮游的，没想到竟然给Offer了。。。
+
+链接: https://instant.1point3acres.com/thread/179754
+来源: 一亩三分地
+
+
+
+05/16/16新鲜的 phone interview 面经没有视频，面试官听口音是一个印度小哥，先讲了一下面试流程， 接着让我做自我介绍，然后让讲了一下实习。问了一下 C/C++ 的熟悉程度，回不熟悉，never mind，继续问 Data Structure 熟悉程度，回熟悉，就开始 Code。Code: 1. Maximum Subarray (Leetcode 53)他说给一个 List of Integers，输出maximum subarray的值，follow up 是输出起止 index。给了两个例子。我问输入是 List 还是 Array，他就问 List 和 Array 的区别， suppose 给 Array。描述思路再开始写，写完让用两个例子走一遍。2. Longest Path in Binary Tree先问熟不熟 Binary Tree， 回熟。 就先让写一个求深度的 method， follow up 是求 Longest Path (任意两点)，然后也是走一遍，举反例。最后是问问题阶段。 希望能有 onsite， 祝大家好运！
+
+链接: https://instant.1point3acres.com/thread/178877
+来源: 一亩三分地
+
+大概半个月之前的失败电面， 编程题有两个，一个是Fibonacci数列，要求分别用递归和迭代做，另一个是用int类型如何防止溢出，比如说有一个函数 return a+b，需要加一条 if(a>0&&maxInt-a>b || a<0&&minInt-a
+链接: https://instant.1point3acres.com/thread/179653
+来源: 一亩三分地
+
+
+面试我的是个烙印，一听口音心想完了。第一题是股票问题，题号121， 先跟面试官讲解思路，用的dp，加数组做的。做完面试官问时间复杂度和空间复杂度，问能不能优化，能不能用其他数据结构，我说用链表，然后面试官又问哪一种更好，为什么。不好的那个数据结构更适用于什么场景。最后又问还知不知道其他数据结构，就又说了map，然后问使用场景。 第二题是找两个链表的common node，题号160， 让讲一下思路，时间复杂度和空间复杂度。然后又让优化，这个题没让coding就直接结束了. 运气不错，两道题都很简单。 下午收到邮件让去onsite，积人品！ 
+
+链接: https://instant.1point3acres.com/thread/180649
+来源: 一亩三分地
+
+
+
+onsite 三轮游的一周后发了拒信. 电面: 先啰嗦了几句, why bb, most interesting project. 1. 给你一个长度为n的数组作为输入, 给你一个现有功能random(i,j) 随机生成从i到j的某个值. 希望你写一个功能, 从array里面等概率挑出三个数(就要三个,不是参数), 这三个数只要求index不同且等概率, 不要求值不同. 注意, 与其他面经中提到的一样, 如果输入invalid(数组长度小于3), 面试官希望你能抛出异常, 这里异常自己随便定义一个类就行, 没必要专门去记C++自有类. 2. leetcode, linked list intersection. 一个fast一个slow指针秒, follow up是如果两个list都可能有环, 该怎么做? 傻了几分钟, 回答hashset, 秒写 第二天来邮件通知过了就约了onsite. 哎, 拖了三周, 准备的东西一个都没问到(题目, C++基础等), 感觉好亏. 第一轮 3位面试官: 1.机器人跳台阶, 台阶无限向上向下延伸, 给你一个func()功能让机器人随机往上或往下跳一个台阶, func()返回true时时往上, 反之往下. 让你写个新功能jumpOne()使得它可以固定向上跳一格. follow up: 不让你用counter来计数, 于是用了recursion; 又再加上不让使用while loop, 在引导下最后写了个很简洁的几行, 是recursive调用jumpOne() 2.类似Leetcode这几天新出的生成random number题, 当时还木有… 场景:你给公司里的每个人发抽奖券,每人一张. assume每个人的名字都是unique的, 你希望能随机抽出5个人作为中奖者. 给定random(i,j)函数. 需要实现的几个功能是:增加一个人, 删掉一个人, 生成中奖者. 印象中这里我用了unordered_map map1, unordered_map map2 把人和数字对应起来. 关键点在于删掉某个人时要把最后一个人拿过来补上这个数字的空缺, 才能保证随机数生成的时候不会miss (面试官要求的, 不是我非要那么优化…) 用两个map的考虑是先得用map1让每个人拿到个号码是吧, 然后抽到数字之后得知道它对应的人是谁对吧(map2), 现在想想仍然这样是比较好… - -! 在需要生成中奖者时, 同样可以先random(0,n) 比如得到i, 然后i和n交换, random(0,n-1) 面试官反映说答得挺好, 祝我下一轮顺利之类. 第二轮 2位面试官, 都像是俄罗斯之类的口音, 好难听懂, 而且题目好奇怪: 面试官进来说, OK我们这一轮你先介绍一下你自己, 然后我们两道题. 1. 他说, 给你两个csv表, 让你设计一个程序找出他们俩的不同. 然后我等着他继续说一些细节, 他瞪大了眼睛看着我, 说我需要个解决方案… 看到这里我给各位同学强调一下, 他真的是几乎什么多余信息都没给, 需要你自己设想….! (我知道SVN Git之类写项目合并的时候会有类似的这种工具, 可是让人自己写.. 难啊) 第一个方案是直接对两块内存做异或操作, 他表示interesting. 随后我提出两个表都有自己行数和列数, 相当矩阵对矩阵, 每个element假设为数值. 他点点头. 我说如果是human来做这件事, 那么他一定会基于一个“相似程度”, 这里简单理解为如果f1的某行与f2的某行对应, 那么意味着他们相同的内容大于某个阈值, 这里不妨设为t, 他点点头. 我说这里能否假定两个文件的列数是一样的, 比较符合实际情况, 他点点头. 我说可能行数不同, 需要重点考虑, 他点点头. 我说假设每个file都有get(i,j)表明得到矩阵的值, 以及一些其他功能, 现在好像记不清楚了. 然后表示让我开始写!代!码! 居然还要写出来?! 然后不知不觉30多分钟过去了. 大概写了好几页值, 需要检查多种情况, 好麻烦. 2. 没有第二题了…另一位面试官说没时间了, 我这题也是个设计题, 你有什么想问就问吧 (楼主: excuse me??? 我特么是new grad啊, 第一轮算是1代码1设计, 这轮两题设计???) 然后他们俩说, 你第一题回答的非常好, 不要有压力, 马上会有第三轮, 你先休息一下. 就走了. 之后, 等了50分钟….50分钟啊…KAO 进来了一位HR, 我心想这啥情况, 不应该是什么技术方面的manager吗 然后居然直接问我今天过得怎么样, 有没有什么问题了, 聊了几句之后说我送你下楼. 然后就被送下来了. GG.
+
+链接: https://instant.1point3acres.com/thread/184719
+来源: 一亩三分地
+
+
+Alright, 楼主刚面的， 一接电话卧槽是个硬杜人。前十分钟问简历，世系期间坐的橡木， 问得还比较聚体。 然后开始问汝河实现蛤系表， 最几本的那种， 汝河处理碰撞。 接下来边城题， 大家注意下他家的变成题一定要炮出结果的，所以不要油bug。 题目狠简单。 书入： [ 而，一， 无，而，叁，酒】 书出 [一， 而， 而， 叁] 一开始口头说了个nlogn的，然后说可以linear， 好了就开始写linear的了。 楼主秒了，结果卧槽一看为什么和硬杜人说的输出不一样呀。 一看卧槽输出可以重复的，你个死硬杜怎么一开始没提醒老子。。。 秒改， 马上过 他的test case。 这人因为不怎么懂py， 还给我加了好几个test case都过了。 还剩十五分钟，硬度人说好了perfect你可以问我你想问的问题了， blablabla。尼玛楼主有点虚为什么不再来一题呀。 Anyway，看看现在这家去面试的貌似都是两轮游。。。。不知道是不是现在招人招的少了。 由于以前实习和面试都被硬杜人坑过，楼主极为反感硬杜人，也希望同胞们一定要团结互助 ！ 楼主年底毕业所以即使收到两轮游也就当是练手了吧。 祝所有找工作的朋友们好运， 加油！ 
+
+链接: https://instant.1point3acres.com/thread/183389
+来源: 一亩三分地
+
+
+第一轮 technical interview： 面试官 一个亚洲人一个白人。 亚洲人上来让design 和implement object。 user input string , object要能分析并return 出 string中 between 0x02 和 0x03 中间的string。 这个题 tricky的部分是 如果第一次的input 没有0x03, 就要继续read 下一条 input 直到 检测到 0x03. 如果 同一个input中， 出现两次 0x02 ABCD 0x03 0x02 DDBCD 0x03 那么 就要return arrayList < ABCD , DDBCD> 楼主太紧张，在面试官很多提示之下，最后做出来了。 第一轮第二题： 爬楼梯题， 一个人爬楼梯，有一个已知function： jump() 会随机return true false; 如果jump return true， 这个人上一台阶。 反之 下一个台阶。我们要implement 一个function 叫做enforcejump(); 就是这个function要确保这个人必须是上一个台阶。 要用到 jump（） 这个楼主跟面试官讨论了题目， 高清之后开始做。 做出来了。 第二轮 一个印度人， 给了到简单无比的题， 个人认为 他再进来之前就收到消息 不继续面我了。 所以给了个没什么技术含量的题。 就是 find the second largest number in an array. 我给了两种做法 一种快的一种慢的。 然后他问我对于公司什么的有没有问题。聊了一会儿以后 我就被悲剧的请出去了。。。。。。。。。。。。 一天愉快的结束。 小伙伴们要是还没面的 加油哈！ 好运 
+
+链接: https://instant.1point3acres.com/thread/181813
+来源: 一亩三分地
+
+
+呜呜呜，一个小时前刚结束的BB电面，不堪回首 上来印度小哥介绍了下自己哪个部门干啥的，然后问了我的project, why BB等。 直接HackRanker码题。上来就让design class Family Tree，说一个家庭有1-2个人，每个人都有0-2个children,让开始设计class. 一脸懵逼，说好的Two sum呢 这个题目就表述的不太清楚，到底是设计啥玩意，问他他也讲不清楚。一开始我还想搞个Binary tree那样，但因为搞不清楚他到底想要什么，就瞎设计了一个Family class, 里面是数组People parents, People children，因为我以为他说的是一个family只有一层！各种乱改。。估计小哥看的崩溃了。 后来通过他让设计的问题了解到是要搞整个family有哪些人，其实就是拿个hashMap存这个family所有成员，每个成员是个单独的People class,里面有name和children…哥哥你是坑我嘛 然后就让设计一个method判断一个人是不是这个family的成员，然后一个method判断两个人是不是cousin…. 第一次电面，加上一上来就懵逼，估计挂了。Move on了。。太挫了。准备的算法题全没用到。。 
+
+链接: https://instant.1point3acres.com/thread/178491
+来源: 一亩三分地
+
+
+3.23的onsite，整理好心情发一下。 第一轮： 印度小哥+白人小哥，都工作一年半，他俩似乎是同期生关系都还不错，人都很好。 behavioral： 1. 介绍你自己 2. 最有挑战性的项目 technical： 1. n个人围一圈，每隔k个人删掉一个人，最后剩的那个人是赢家，求赢家。 以前没仔细想过这道题，白人小哥特意提示挑一个合适的data structure，恍然大悟可以用cycled linked list做。做完小哥表示满意，算时间复杂度，经提示得到O(nk)。 2. 设计：股票实时更新最高10% 说了好多想法，比如heap，sort，分配不同机器处理，最终都是O(nlgn)的算法。印度小哥似乎知道还有更好的方法，一直在问我如何改进。最终时间到了就没有继续，小哥表示满意。从第二轮来两个面试官来看，应该这结果还算说得过去。 被虐惨的第二轮： 工作5年第一次面fresh grad的国人大哥+40年工龄的白人老妖精，老妖精说他最近已经做了类似律师的职位，我猜是专利之类的吧。 behavioral： 1. 介绍你自己 2. 为何转向financial area找工作 ——以上两题是国人大哥问的，很正常的behavioral，国人大哥谢谢你 3. 你吃午饭了么…… 4. 你喜欢啥颜色，为什么…… 5. 你当TA觉得有意思吧？喜欢TA哪几点？ ——工作40年的人的关注点果然和我们不一样了……………… technical： 国人打个先出题，因为老妖精一直在打岔问我C++问题，所以这一轮只做了这一道，不知道这一点是不是成为了两轮游的主因。 变形BST Search：有指向parent的指针，入口节点可以是树的任何一个节点 说思路：通过和parent node value的比对，决定在此点开始普通BST search还是移到parent node再进行比对。 国人大哥和老妖精均表示可以，然后开写。 然后噩梦就开始了。 刚想定义TreeNode，写下struct之后老妖精立即打断我：为什么不用class。然后就struct和class的异同点展开了深入的交谈。 交谈了10多分钟，只记得最后扯到virtual function的实现。我说什么提到了function pointer，然后老妖精说"Yes, that's virtual table."。这一波终于过去了。 刚写上node里面的left pointer，老妖精又问我为什么要用pointer。。。。 随后又对pointer和reference的区别和特点做了深入交谈。。。。 定义结束，我说我给指针默认设置成null吧。落笔，老妖精又和我就默认值和constructor展开了交谈。。。 至此，我写完一个node定义已经花了接近半小时。。。。 这可是国人大哥出的题，老妖精如此频繁插话他也不太满意了，后面老妖精也就没怎么打岔。 和老妖精交谈的过程中，国人大哥还是帮我说的很多好话的，还有适当的表现出不满才能让老妖怪有所收敛吧，国人大哥再次谢谢你。 最终45分钟写一道题，老妖精说没时间了，他不出题了，我问问题。。。 临走前他说不是他们做决定，他们也不知道接下来是谁来接我，还跟我good luck。。。。 你good luck根本就是不管我拍拍屁股走人，我两轮游的节奏啊。。。 最后果不其然就被hr送走了…… 感觉老头是超叼的人，但是可能工作久了对fresh grad的期望过高了吧 
+
+链接: https://instant.1point3acres.com/thread/171898
+来源: 一亩三分地
+
+刚结束的电面 面试官是烙印，晚了20分钟，目测要挂 1. 先介绍项目，问了一些machine learning的问题 2. class A { } class B { A a1(); A *a2 = new A(); } 比较a1 和 a2的区别，在什么情况下用好，如何改成smart pointer copy constructor 和overload = 的区别 3 给一个字符串，找出第一个不重复的字符，我用了两个map来保持计数和下标，然后问如何用一个 move on ~
+
+链接: https://instant.1point3acres.com/thread/181326
+来源: 一亩三分地
+
+
+
+今天刚面了bloomberg的onsite,然后就是两轮游… 1. 老白+烙印: 1.1 给一个sorted array of int, 构建出一棵最小depth的BST，老白是俄国人，我一开始没听清，从index*2 和 index*2+1上去做这个题，然后发现不对，立马改正，选取中间的node来构建树，然后left child 和 right child都构建一下. 1.2 stock buy and sell I, 我写完了，follow up了一下是不是可以把判断local minimum放在前面，然后update currMax放在后面有什么好处？提醒后也都说出. 1.3 设计一个bignumber的class,我说用array of int来实现，然后要implement plus这个member method, 然后烙印说是不是用+比较好，我说好呀，那就overload一下，然后就写了一下，然后烙印问了一下为啥用array of int, 用array of char可不可以，我说可以，然后烙印问哪个好？我说他们的size不同，烙印问是多大，我已经记不清了，就说都是1一个byte，烙印说这个没事. 2. 小白+中墨： 2.1 设计一个class, 是一个search engine, 用来search documents, 有很多的docuemtn, 要实现public void index(Document document)和public arraylist<> search(String keyword)这两个memeber method,每一个docuemtn class有一个collection of key words。我一开始用两个hashtable来做，然后写了一下代码，两个人都说ok 然后问我当数据大的时候是不是很慢，我说是呀，然后我就用trie来做，然后写了一下trie的实现，两人都表示OK，然后问我trie还能有啥优势，我说可以实现type suggestion,两人对此感到OK. 2.2 有一个grid，比如3*3, 然后每一个node与周围的node都有两个pointer相连，问从A走三步可以有哪些走法，因为可以回头，所以就不需要hashtbale，然后就直接DFS就可以，我写了一下，两人表示OK，然后又问了一下时间复杂度啊啥的，我都答上来了. 总结一下，我觉得我面得蛮不多的，基本上没有出现大的卡顿在做题时，基本写出来的code也都不需要改进，算法上用trie也是准备到的，溜得很，题目也基本不难，自我感觉不错，然后还是碰到了两轮游，真是不开心，所以在拒信来之前发一发面经，也算把这事了结了… 补充内容 (2016-5-13 07:53): 面得不错的* 补充内容 (2016-5-14 00:57): 还有就是问了能不能把plus这个operator给overload,我说可以啊..还有就是问了需要不需要把plus变成static,问了static能不能继承，我说不能，然后他说能不能有办法来把他变成能继承的，一般来说面试官这样说都是在y… 补充内容 (2016-5-14 00:59): 但事实上他没有引导，这是在给我下套，他说可以用virtual static来让他可以继承不，我说虽然java中没有virtual这个用法，不过你说可以就可以吧, 然后后来发现virtual static也是不存在，烙印真是太可恶了….
+
+链接: https://instant.1point3acres.com/thread/178381
+来源: 一亩三分地
+
+
+
+白人小哥。人很nice....但是我作死的弄错了电面时间...EST 和ET时间不一样啊.....小哥还等了我半个小时才电面....简直作死....1. tell me about your project 2. find the shortest palindrome of a string, append, for example: given a string "abcd" , you will output "a". 3. If you are in 1/3rd of a tunnel, and there is a truck running into the tunnel too, but you don't know how far the truck is . there is no enough room for you and the truck in the tunnel. . you just konw, the speed of the truck is twice of your speed. So you have two choice, which is better decision?(1) run to the end of the tunnel(2) run backwards to the tunnel. 
+
+链接: https://instant.1point3acres.com/thread/177730
+来源: 一亩三分地

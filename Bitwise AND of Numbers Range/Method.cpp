@@ -9,8 +9,8 @@ class Solution {
 public:
     int rangeBitwiseAnd(int m, int n) {
         
-        for(int i = 1; i>=0; i<<=1) {
-            if(m&i&&n&i) {
+        for(int i = 1; i>0; i<<=1) {
+            if(m&&n) {
                 if(n/i > m/i) {
                     n&=(~i);  //clear to 0
                 }

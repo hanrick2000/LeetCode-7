@@ -31,3 +31,21 @@ public:
         
     }
 };
+
+    不如这么做：先把nums1所有数用无序表记录下来， 然后遍历nums2, 如果存在在无序表中，加到res中，无序表中删除这个元素。
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        
+        unordered_set<int> mymap;
+        
+        vector<int> res;
+        for(auto x: nums1)  mymap.insert(x);
+        
+        for(auto x: nums2) {
+            if(mymap.count(x)) {
+                res.push_back(x);
+                mymap.erase(x);
+            }
+        }
+        
+        return res;
+    }

@@ -43,4 +43,26 @@ public:
     int findMin(vector<int>& nums) {
         return findMinHelper(nums, 0, nums.size());
     }
+    
+    思索了半天，发现这题唯一需要搜索两边的情形是nums[start] = nums[end] = nums[c]. 否则和原来一模一样。
+    
+    int findMin(vector<int>& nums, int start, int end) {
+        if(start == end) return nums[start];
+        
+        int c = (start + end) / 2;
+        
+        if(nums[c] == nums[start] && nums [c] == nums[end]) return min(findMin(nums, start, c), findMin(nums, c+1,end));
+        
+        if(nums[c] <= nums[end]) return findMin(nums, start, c);
+        return findMin(nums,c+1, end);
+        
+    }
+
+
+    int findMin(vector<int>& nums) {
+        
+        return findMin(nums, 0, nums.size()-1) ;
+    }
+    
+    
 };

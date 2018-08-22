@@ -63,3 +63,38 @@ public:
  * int param_3 = obj.top();
  * int param_4 = obj.getMin();
  */
+上面那种做法是错的。。 这题先用一个栈A完成基本功能。 然后得用另外一个栈B记录最小值。push时就不断的push到A，如果栈B空的话就插入到B，否则如果当前数>=栈B的栈顶，就push到B。这样B始终放着一个递增序列，pop时，如果发现栈A的顶=栈B的顶就pop出这两个，否则只要popA即可。
+
+class MinStack {
+    
+    stack<int> minstack;
+    stack<int> mystack;
+    
+    
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+        minstack.push(INT_MAX);
+    }
+    
+    void push(int x) {
+        mystack.push(x);
+        
+        if(minstack.top() >= x) minstack.push(x);
+    }
+    
+    void pop() {
+        
+        if(mystack.top() == minstack.top()) minstack.pop();
+        mystack.pop();
+    }
+    
+    int top() {
+        return mystack.top();
+    }
+    
+    int getMin() {
+        return minstack.top();
+    }
+};
+

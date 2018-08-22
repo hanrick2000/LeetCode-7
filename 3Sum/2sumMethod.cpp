@@ -15,7 +15,7 @@ public:
                 res.push_back({-temp,nums[p],nums[q]});
                 do{ 
                     p++;
-                }while(nums[p] == nums[p-1]&&p<q);
+                }while(nums[p] == nums[p-1]&&p<q);    //这一段最容易遗忘，
             }
         }
     }

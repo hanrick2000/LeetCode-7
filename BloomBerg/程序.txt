@@ -1,0 +1,407 @@
+leetcode
+111 Minimum Depth of Binary Tree  
+7 Reverse Integer
+1 Two Sum
+66 Plus one: array +1
+类似 159 longest substring with ay most 2 distinct characters
+116 Populating Next Right Pointers in Each Node
+117 Populating Next Right Pointers in Each Node II
+62 unique paths 走方格，求path总数 想O(n)空间
+63 unique paths II 
+102 Binary Tree Level Order Traversal
+121 Best Time to Buy and Sell Stock
+283	Move Zeroes
+206 Reverse Linked List
+160 Intersection of Two Linked Lists
+17 Letter Combinations of a Phone Number
+strstr
+8 String to Integer (atoi)
+11 Container With Most Water
+53	Maximum Subarray  
+23 Merge k Sorted Lists
+49  Group Anagrams  
+268	Missing Number  
+274	H-Index 
+275	H-Index II  
+315 Count of Smaller Numbers After Self
+232 Implement Queue using Stacks  
+225 Implement Stack using Queues 
+26 	Remove Duplicates from Sorted Array  
+100 Same Tree  
+13 Roman to Integer  
+172 Factorial Trailing Zeroes 
+189 Rotate Array 
+50 Pow(x, n)  
+215 Kth Largest Element in an Array  
+5 Longest Palindromic Substring  
+105 Construct Binary Tree from Preorder and Inorder Traversal  
+139 Word Break  
+103 Binary Tree Zigzag Level Order Traversal  
+49 Group Anagrams  
+386 Lexicographical Numbers  
+274 H-Index
+113 Path Sum II  
+146 LRU Cache  
+42! Trapping Rain Water  
+287 Find the Duplicate Number  
+33 Search in Rotated Sorted Array
+68! Text Justification  
+387 First Unique Character in a String  
+226 Invert Binary Tree  
+144 Binary Tree Preorder Traversal  
+398 Random Pick Index
+54 spiral matrix
+59 spiral matrix II
+
+    
+    
+    
+一道马拉松
+
+
+lintcode Heapify
+
+341 Flatten Nested List Iterator
+126 Word Ladder II
+
+
+
+
+
+
+
+设计lottery
+设计多项式
+设计电梯
+设计singleton
+
+class S
+{
+public:
+    static S& getInstance() //必须得返回引用或是指针 
+    {
+        static S    instance;
+        return instance;
+    }
+    
+private:
+    S() {} //默认构造函数
+    S(S const&);              // Don't Implement. 复制构造函数
+    void operator=(S const&); // Don't implement  赋值构造函数
+};
+
+
+生成singleton:
+S& s = getInstance();
+
+这里static函数的意思是在不出现类的实例下就可以调用它，static 变量在程序中只初始化。销毁一次。然后各种构造函数都得变成私有  
+
+
+
+设计factory
+
+enum carModel {merc, honda};
+
+class car {
+    
+    int width;
+    int length;
+    
+public:
+    virtual void printModel() =0;
+};
+
+
+class Mercedes: public car {
+        
+public:
+    void printModel() {cout<<"this is a mercedes car"<<endl;}
+};
+
+
+class Honda: public car {
+    
+public:
+    void printModel() {cout<<"this is a honda car"<<endl;}
+
+};
+
+
+class carFactory {
+
+public:
+    virtual car* produceCar(carModel a) = 0;
+};
+
+
+
+class carFactoryInterface: carFactory {
+    
+public:
+    car* produceCar(carModel a) {
+
+        switch (a) {
+            case merc:
+                return new Mercedes();
+                break;
+                
+            case honda:
+                return new Honda();
+                break;
+        }
+        
+        return NULL;
+    }
+};
+
+设计国际象棋：
+ public class ChessPieceTurn { };
+     public class GameManager {
+         void processTurn(PlayerBase player) { };
+         boolean acceptTurn(ChessPieceTurn turn) { return true; };
+         Position currentPosition;
+     }
+ 
+     public abstract class PlayerBase {
+         public abstract ChessPieceTurn getTurn(Position p);
+     }
+    class ComputerPlayer extends PlayerBase {
+         public ChessPieceTurn getTurn(Position p) { return null; }
+        public void setDifficulty() { };
+        public PositionEstimator estimater;
+        public PositionBackTracker backtracter;
+    }
+    public class HumanPlayer extends PlayerBase {
+         public ChessPieceTurn getTurn(Position p) { return null; }
+     }
+ 
+    public abstract class ChessPieceBase {
+         abstract boolean canBeChecked();
+         abstract boolean isSupportCastle();
+     }
+     public class King extends ChessPieceBase { ... }
+     public class Queen extends ChessPieceBase { ... }
+ 
+    public class Position { // represents chess positions in compact form
+        ArrayList<ChessPieceBase> black;
+        ArrayList<ChessPieceBase> white;
+     }
+ 
+     public class PositionBackTracker {
+        public static Position getNext(Position p) { return null; }
+     }
+    public class PositionEstimator {
+         public static PositionPotentialValue estimate(Position p) { ... }
+     }
+     public abstract class PositionPotentialValue {
+         abstract boolean lessThan(PositionPotentialValue pv);
+     }
+     
+     
+     
+
+
+
+
+设计棋类  一般都会有三大类 board, player, game
+class board {
+
+    vector<vector<char>> chessboard;//
+    char chessboard[4][4];
+public:
+    
+    board() {} //初始化0
+    Get_board ()  //返回棋盘上是啥子
+    Set_board ()  //落棋，修改棋盘
+    Draw_board () //画棋盘
+};
+
+class player {
+
+protected:
+    string name;
+    int hand;
+    
+public:
+    move() {}
+    read()
+    check() {} //合不合法
+};
+
+
+class human: public player {
+  
+read_input();  //读取用户输入
+move(board); //下子
+
+
+};
+
+class game {
+    board;
+    *player1;
+    *player2;
+    round;  //轮数
+    
+get_result();   // 有没有结束
+add_round(); 换人
+judge();  
+
+};
+
+
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int v): val(v), left(NULL), right(NULL) {}
+};
+
+class BST{
+private:
+    TreeNode* root;
+
+public:
+    
+    BST(): root(NULL) {}
+    BST(int val): root(val) {}
+    ~BST() {delete root}
+
+    bool search(int val) const {}
+    void insert(int val) {}
+    void delete(int val) {} 
+};
+
+
+public class Elevator{
+  private int currentFloor;
+  private int targetFloor;
+  private int status;
+  private static volatile Elevator instance = null;
+
+  private Elevator() {
+    this.currentFloor = 0;
+    this.targetFloor = 0;
+    this.status = 0;
+  }
+
+  public static Elevator getInstance() {
+    if (instance == null) {
+      Synchronized(this.class) {
+        if (instance == null) {
+          instance = new Elevator();
+        }
+      }
+    }
+
+    return instance;
+  }
+
+  public int getCurrentFloor() {
+    return currentFloor;
+  }
+
+
+  public int getStatus() {
+    return status;
+  }
+
+  public void moveToFloor(int targetFloor) {
+    while (currentFloor < targetFloor) {
+      moveUp();
+    }
+    while (currentFloor > targetFloor) {
+      moveDown();
+    }
+
+    status = 0;
+  }
+
+  private void moveUp() {
+    status = 1;
+    currentFloor += 1;
+  }
+
+  private void moveDown() {
+    status = -1;
+    currentFloor -= 1;
+  }
+}
+
+
+public class RequestHandler {
+  List<Request> requests;
+  private static volatile RequestHandler instance = null;
+
+  public static RequestHandler getInstance() {
+    if (instance == null) {
+      Synchronized(RequestHandler.class) {
+        if (instance == null) {
+          instance = new RequestHandler();
+        }
+      }
+    }
+
+    return instance;
+  }
+
+  private RequestHandler() {
+    requests = new ArrayList<>();
+  }
+
+
+  public addRequest(Request req) {
+    Synchronized(req) {
+      requests.add(req);
+    }
+  }
+
+  private Requst getNextRequest() {
+    int curentFloor = Elevator.getInstance().getCurrentFloor();
+    int shortestdistance = Integer.MAX_VALUE;
+    Request next = null;
+
+    for (Request req: requests) {
+      if (Math.abs(req.floor - currentFLoor) < shortestdistance) {
+        next = req;
+      }
+    }
+
+    return next;
+  }
+
+  public void processRequest() {
+
+    while (true) {
+      Request req = getNextRequest();
+      if (req != null) {
+        while (Elevator.getInstance().getStatus() != 0);
+        Elevator.getInstance().moveToFloor(req.getTargetFloor());
+        request.remove(req);
+      }
+    }
+
+  }
+}
+
+
+public class Request {
+
+  private int targetFloor;
+  Requst (int targetFloor) {
+    this.targetFloor = targetFloor;
+  }
+
+  public int getTargetFloor() {
+    return targetFloor;
+  }
+}
+
+
+public class User{
+  public void generateRequset(int targetFloor) {
+    RequestHandler.getInstance().addRequest(new Request(targetFloor));
+  }
+}
+
+

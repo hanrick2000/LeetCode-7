@@ -1,0 +1,3084 @@
+347	Top K Frequent Elements 
+1	Two Sum  (返回所有的下标)
+15	3Sum  
+155	Min Stack 
+297	Serialize and Deserialize Binary Tree 
+323	Number of Connected Components in an Undirected Graph
+189	Rotate Array
+141	Linked List Cycle  
+19	Remove Nth Node From End of List 
+146	LRU Cache  
+200	Number of Islands  
+84	Largest Rectangle in Histogram   (divide and conquer)
+295	Find Median from Data Stream  
+336 Palindrome Pairs  
+348	Design Tic-Tac-Toe
+166 Fraction to Recurring Decimal 
+387	First Unique Character in a String 
+198	House Robber
+213	House Robber II  
+27  Remove Element
+94  Binary Tree Inorder Traversal
+102	Binary Tree Level Order Traversal
+206	Reverse Linked List 
+46	Permutations
+47	Permutations II  
+205	Isomorphic Strings
+10	Regular Expression Matching  
+8	String to Integer (atoi)
+116	Populating Next Right Pointers in Each Node
+117 Populating Next Right Pointers in Each Node II 
+153	Find Minimum in Rotated Sorted Array  
+154	Find Minimum in Rotated Sorted Array II
+322	Coin Change  
+344	Reverse String
+162 Find Peak Element  
+4	Median of Two Sorted Arrays  
+321	Create Maximum Number
+216	Combination Sum III  
+384	Shuffle an Array 
+134	Gas Station  
+163 Missing Ranges
+101	Symmetric Tree  
+96	Unique Binary Search Trees  
+find the node in a binary tree have the length of root to a leaf equal k
+49	Group Anagrams  
+88	Merge Sorted Array  
+13	Roman to Integer 
+315	Count of Smaller Numbers After Self
+224	Basic Calculator 
+205	Isomorphic Strings
+44	Wildcard Matching
+108	Convert Sorted Array to Binary Search Tree
+109	Convert Sorted List to Binary Search Tree  
+384	Shuffle an Array 
+3	Longest Substring Without Repeating Characters  
+341	Flatten Nested List Iterator
+29  Divide Two Integers
+151	Reverse Words in a String  
+239	Sliding Window Maximum
+41	First Missing Positive 
+132	Palindrome Partitioning II  
+142 Linked List Cycle II
+215	Kth Largest Element in an Array
+139	Word Break
+140	Word Break II  
+97	Interleaving String  
+121	Best Time to Buy and Sell Stock
+122	Best Time to Buy and Sell Stock II 
+230	Kth Smallest Element in a BST  
+378	Kth Smallest Element in a Sorted Matrix
+145	Binary Tree Postorder Traversal 
+125	Valid Palindrome   (不用loop)
+17	Letter Combinations of a Phone Number
+113	Path Sum II  
+208	Implement Trie (Prefix Tree)  
+53	Maximum Subarray  
+71	Simplify Path  
+62	Unique Paths  
+277	Find the Celebrity
+28	Implement strStr() 
+50	Pow(x, n)  
+138	Copy List with Random Pointer  
+
+ process 和线程什么区别
+2. hashing 是什么
+3. 当你访问yahoo.com时都发生了什么。 .鏈枃鍘熷垱鑷�1point3acres璁哄潧
+4. DNS? 整个过程。
+5. 然后我说要不要考虑一下HTTPS。 然后就问了一下SSL是怎么走的流程。 
+
+1. Find biggest 100 integers of 1 million integers. time and space of each method.
+3. Suppoer you are building a registration system and the web of registeration has the follwing pages:
+page 1 -> collect personal info
+page 2 -> collect phone number
+page 3 -> verify phone number. 1point 3acres 璁哄潧
+page 4 -> success. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+. from: 1point3acres.com/bbs 
+
+how do you measure the success of this product once it is released to end users?
+
+4. reverse the second half of a linkedlist. Can you do it with more space but faster?
+
+5. difference between encapsulation and abstraction.
+
+
+quick sort, merge sort
+
+数字1~16. print出来所有组合：相邻的两个数相加是perfect square
+
+Example:
+1 3 6 10 15 
+1,8
+2,7,9,16.1
+后来面试官提示规律：根据以下规律建图
+1->3, 8, 15
+2->7, 14 
+3->1, 6, 13
+4->5, 12
+6->3,10
+7->2, 9
+8->1
+9->7, 16
+10->15, 6
+
+3. 这个题还比较有意思, 给你 n 个 input， 给你一个数k。 比如
+n=4, k=2  abs(a-b)<=k a是b的ancestor
+input是n个数组
+(3, 1)
+(3, 2)
+(2, 4)
+(2, 5)
+Output:
+(3,1) (3,2) (2,4) (3,4), (3,5)
+我的理解就是这个input可以建一个graph， 然后path上的任意点只要ancestor减去任意只有的数的绝对值小于k就符合条件。
+
+第二题是给定一个Class Line, 里面是{int len, int value}, 代表的是这个object的长度还有这个object的value,
+     public class Line {
+           int len;
+           int value;
+     }
+现在给定一个长度N和一个List<Line> lines, 要求从lines里选出一些line，使得他们的长度之和<=N,  同时要求他们的value之和最大，返回选出的line。
+楼主一开始说先根据value/N的值排序，结果面试官就说你是不是要用greedy的方法？告诉你这里greedy不可以。楼主当时就一万只草泥马飞奔过，心里想，我根本就
+没有说我想要用greedy好嘛！他这么激动干啥子。。然后就附和着和他解释了下为啥这里不能用greedy，然后最后写了一个dfs+backtracking的方法。
+
+Given n nodes find the least ancestor in BST.
+
+1. 
+design 一个游戏的输入输；游戏是这样的，总共有n个球，两个player，每个人轮流拿球，每次拿1个或2个，哪个人碰巧拿完了所有的球，哪个人就赢了～. 不用写UI，考察的应该是corner case，和基本logic，很简单。
+写一个robot可以玩这个游戏。就是找最优解，或者说必胜策略。
+
+设计data structure 存电话号码。
+What is the difference between Java and C++?.
+
+climb stairs (not DP, print all possible climbing ways)
+C++ knowledge (inheritance, copy constructor, abstract class, friend class/function)
+
+
+国人小哥，简单的聊了一下项目。然后问了经典的在浏览器里输入url会发什么。
+然后问我会不会OS相关，说说进程和线程的区别。然后让我写个deadlock。
+lucky number
+用code pad 写个Singleton的例子
+用code pad 写个polymorphism的例子，说说用处. from: 1
+
+又问了http request， restful API， cookie等等一些概念。. from: 1point3acres.com/bbs 
+问了，如果打开browser，点开一个URL，这后面发生了什么。。。需要解释一堆东西，每一步发生什么了。
+然后告诉我应该熟悉这些概念。 
+
+3. 解释打开一个 www.xxx.com 网页的响应过程
+
+(涵盖 Browser 和 DNS, Web Server, File Server 相互的通信)
+
+后来又问我你懂不懂network programming，问了我下client和server工作原理, get和post方法的区别。
+
+
+给binary  tree中的两个点，找他们的closest common ancestor。
+给了数据结构
+Node{
+    Node p; //pointer to parent node.
+    Node left;
+    Node right;
+}
+
+
+1. java和c的区别。。。注意问的都不是c++，当场内心一阵晕眩
+2. java里面vector和arraylist的区别
+3. map和hashmap的区别. Waral 鍗氬鏈夋洿澶氭枃绔�,
+从此开始我就真心不会了
+4. 在操作系统中对sychronize的理解-google 1point3acres
+
+5. 说了上面的不太懂了之后，问了对在java中sychronize的理解. 1point 3acres 璁哄潧
+3. Retrieve smallest 1000 numbers from 1 million numbers.
+Sorting O(nlogn)
+Maximum Heap O(nlogk)
+Selection Rank O(n)
+.基本sql语句，join left join区别
+
+
+1, difference between c and c++;
+2, 什么是virtual function;
+3, c++ 的memory 分配问题;
+4, difference bewtween c++ and java;
+5, abstract & interface;
+6, could java implement multiple interface?. From 1point 3acres bbs
+7, static keyword;
+8, Exception & Errors;
+9, set, map, list;. 鍥磋鎴戜滑@1point 3 acres
+10, final keyword;
+11, terminal command 怎么修改文件权限；
+12,如何在big file 里面查每个单词重复了多少次；
+13, design pattern -- factory method;
+14, database join clause;. 1point3acres.com/bbs
+15, difference between where and having;
+16, agregation function;. more info on 1point3acres.com
+17, hadoop (根本不会……所以都不知道问的是什么)；
+79	Word Search  
+Graph circular detect, substring, HashMap implement, BT height, List<String> In String (n^2), OOD chess
+
+
+
+
+class 
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+
+lc 151 
+lc 186
+lc 226
+lc 20
+lc 200
+linked list中间的数，偶数个node的话就返回中间两个数的平均值
+N个数的sorted array，找出现次数大于N/4数，多个数出现次数大于N/4的话只返回一个就行了，无论哪一个。我做的是先找出位于N/4，N/2 和 3N/4位置的数，然后依次找出这三个数出现次数。 我做的时间复杂度是 O(N)，其实用binary search的话可以降到 O(logN) 的，挂完电话反应过来了T.T
+
+First non-duplicate char in a string, with one pass scan.
+validate 二叉搜索树, give two unsorted arrays a[] and b[]. each entry is sum of a[i] + b[i]. Find the first K sums in ascending order
+
+ 2SUM, OOD咖啡机, 数据库如果query很慢,大概原因, 网路知识..
+  OOD 档案系统. OOP概念,多型.
+  
+LRU Cache.
+1. shuffle an array. more info on 1point3acres.com
+2. binary tree path sum
+
+rotateArray和binary tree preorder traversal (iterative)
+
+链表判断有没有环。
+binary search和快拍，时间复杂度
+leetcode上的atoi
+
+lc5 O(n^2)
+lc240  quad分解
+getCommonDivisor
+lc 295
+find the occurrence in a sorted array.
+multi-thread
+
+1. 两个数，不用中间变量怎么交换
+              2. linkedlist 找环
+              3. find kth node in the linkedlist
+              4. minStack
+              
+              
+              
+给一个string  求长度为n的 所有字母combination （是combination 不是 permutation） 字母可以有重复   这题楼主电面的时候做了permutation的 但是时间不够没做出来  所以就没提电面 直接做了  先去重  再递归 
+
+然后问了sql什么程度  出了sql的题   简单设  多对多关系  图书馆和书数据库怎么设计  求share相同书的图书馆列表。 
+
+3.1  找下一个 permutation  
+     3.2  house robber. 1po
+     
+     1.1   实现队基本功能 
+    1.2   sql   考点 ： group by, count, distinct 
+    
+    2.1   2 sum  从brute force 一步一步优化    n方 到 nlogn 到n   follow up: combination sum
+    2.2   sql 考点： group by, count, max, distinct. 1point3acres.com/bbs
+    2.3   system design，    基本思路  数据量小的时候  用array， 量大用map  再大 用sql，
+    
+    
+    top k frequent elements in array. 
+    
+想起来上午1.2 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+给一个数组 代表每个元素的数量  另一个数组  代表每个元素占的百分比 指定一定容量的空间 按元素占比分配这些空间 如果有空余的空间 按剩余元素占比分配给剩余的元素 跟小哥沟通半天才明白要求 
+
+例: ABCD四元素, 数量【10,20,40,40】占比：【20%，20%，30%，30%】 空间：100. 应该给A分配20的空间 B：20 C:30 D:30, 但A只有10个 要把剩下的10空间按照比例给剩下的元素 也就是 c5个 d 5个。返回每个元素所需数量
+
+他家还挺爱问sql  都是基础的  什么join， group by， count。 我简历没写 linux 中间还被问了command， 要看面试官背景和心情。。。
+
+
+1.两个数字变量，不用中间变量怎么实现交换。 2.链表找倒数第几个节点。 3.设计一个最小栈
+146
+二分搜索找数组中的目标元素
+
+Input Array {3, -10, -2, -5, 10, 4, 5, -1, 10, 2, -4} Output Array {3, 10, 4, 5, 10, 2, -10, -2, -5, -1 , -4 }.
+Order is maintained and –ve numbers are sent to rightmost in order. (Write a pseudo code to do it in single iteration and in-place.)
+
+Longest Substring without Repeating Characters
+
+find all the intersections of two sorted array
+
+
+然后给了个sorted array 怎样转换成一个bst 能最有效地支持insert delete search等操作 如果有duplicate怎么改变一下设计
+
+ topK
+ 3sum
+ 2sum
+ Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
+ 
+ 去掉string中的duplicate character， “abbbc” 返回 “abc”。2， 写一个funtion 实现 hashcode。 3设计一个OOP design， poker huozhe pokeman go。 问题java 与 c++的区别。
+ 
+ 问了一些python和脚本的问题（满脸的黑线，楼主简历上并没有写会python）。 大概一问三不知，就让我看一些python的代码，看我能否看懂。
+ 
+ manager 面， 会问一下，类似于你与别人是否有冲突如何解决， 你的考试和project是否哟冲突， 如何解决。 还有design pattern的问题。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+ 
+ 1, flatten nested array, dfs解，要求sorted, 最后sort, 我说如果要去重就加个hashmap. 第二题对一个object (key-value pair)实现先按照value分类并排序，如果value一样，按照key的排序的变型, 就是烦一点，实现下就好了.
+ 
+ 
+ 第一题Pow(a,b), 第二题是判断一个都是正整数的array有没有可能变成一个连续的array. 这题我先从sort开始，然后写完说，如果数据范围在特定范围内的话，按照类似bucket sort的方式，可以做到O(n), 咖喱表示满意，最后问我，能不能不用额外的space(input不算), 我说那要改变input，用input来做flag了，但是可能会有点麻烦. 咖喱说直接把正数变负数就可以了，写完代码，pass.
+ 
+ 
+ 末了还给了我一个2 sum --- 3sum之间的题. 题目是给你一个array, 能不能找出三个数，让2个数相加等于第三个数. 反正就是hashmap计数然后去重...我白板全写完了，还给他讲了一遍
+ 
+ rotate array 
+ 
+ 
+ path sum 不过是是 root 到叶子节点的最大值   和 remove duplicates
+ 
+  validate bst 和 swap pair in linkedlist
+  
+  然后coding 是让我用c 写reverse string
+  
+  Efficient program to print all prime factors of a given number
+
+实现LRU， 然后follow up是怎么扩展到多线程
+
+iterator, 从后往前print, 要实现hasNext(), next()和remove()
+
+题目是这样的，给一串时序data, data的第一位代表时间，单位是秒，第二位是value，可正可负。然后求一小时内的最大value和, 输出value和和这一小时的开始点。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+举例来说是这样的 
+{[0, -1], [30, 2], [1000, -5], ....{3600, 100}, {4500, -90}, ....}
+楼主想用双指针sliding widow的解法，不断的移右指针，当前window size比一小时大时移左指针。 后来面试官给举了个反例, 说两个点可能离得特别远，这样双指针就不work。具体是这样的
+{[0, -10], [30, 2], [1000, 15], [2000, -5], [3600, -10], [9000, 10]}。
+至今不知道怎么做，ORZ~ .鏈枃鍘
+
+
+Find zeroes to be flipped so that number of consecutive 1’s is maximized
+
+
+ LC 280，不同点是nums[0] >= nums[1] <= nums[2] >= nums[3]... 而且输出必“字典序”最小的。
+例子：输入nums = [3, 5, 2, 1, 6, 4], 输出[2, 1, 4, 3, 6, 5]，时间复杂度O(n). 涓€
+
+
+
+Virtual memory:
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+What is virtual memory?
+What is the limitation of the virtual memory size?
+Why is 32 bits system memory space limited to 4G?
+Why should people use 64 bit system if 32 bit memory space is good enough?
+How to write 60G data to 64G memory on 32 bit system with 4G memory space?
+
+If a single process cannot do it, shall I use multiple process?
+How shall I know which process I shall turn to when I read/write?
+
+Thread:
+
+What is thread and process? What is the difference?
+Why is thread called a lightweight process? Where is it lightweight?
+Why we shall use multi-thread or multi-process?
+In what case is multi-process better than multi-thread? *
+
+TreeMap:
+
+There is an address book with names and address, what is the data structure you shall use if I want to output all names in order?
+What is the time complexity for a search? What is the worst case?
+What is a balanced BST, what is the cost to keep it balanced when insertion?
+. from: 1point3acres.com/bbs 
+Save the kth element:
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+Given a big file, how to read back the kth last line by only reading the file once.
+Two pointer is equivalent to read it twice.
+What if I want to save the time for enqueue and dequeue.
+
+Just use a cyclic array, and it shall be fine.
+. from: 1point3acres.com/bbs 
+Yahoo Messenger system:
+
+How to implement a Yahoo Messenger system?
+What shall be used to store values? What shall be stored?
+How is client talk to the server? Is it directly talk to a data base?
+How to know if a person is online or not? *
+
+What if push and pull model take too much resource?
+How to speed up checking if lookup database take too much time?
+How to avoid update too frequent.
+How about store it in the memory?
+
+What if your friend is in Europe and you are in Asia?
+
+Are all you guys data on the same server? *
+If not same server, how to coordinate?
+If not same server, how to get your friend list and talk to each other?
+
+Design a general BST without Java Generics *
+
+What type should be stored in the BST node?
+How to compare it?
+What will happen when you inherit functions from a parent class? 
+
+
+两个有理数相除，，写成小数那道题
+
+c++的pure virtual function，multiple inheritance，database
+
+string to integer
+
+二分搜索 rotate array
+
+linux shell command
+word break
+
+算法题。给一堆不等式，都是a<b, b< c, c<d的形式，问是否推出矛盾。比如：a<b, b<c, c<a。做法是构图dfs找环。完了，面试官说有等号的情况如何处理， 比如a=b。做法是用并查集，等号的丢同一个集合，如果有冲突直接跳出，没有的话，缩点构图，再dfs找环。完了再加a<=b的形式。当时没想出来，然后面试官说没关系，只是加点复杂度而已。其实做法也不难，有兴趣的可以试下，提示：加点和离散化，然后找环。
+
+
+
+算法题。记不清楚题目了，不难就是了。比较疑惑的是她最后问的一个behavioral question。我和一个朋友一起住。我出门了，他也出门了。我回家后发现没牛奶了，出去买，然后他后回来，也跟着出去买牛奶，结果买多了，问怎么处理使得这种情况不发生。作为一个吃货，我很想说，我把多余的牛奶喝掉就好了啦！或者，我敢保证绝大多数人都这么处理的吧。。。买多了放冰箱不就得了。。。但我当然不敢这么说，就说我会留纸条。她又问如果他等你很久不见你回来，实在忍不住出去了咋办。我说手机联系。。。。。然后手机没电了咋办呀（所以我才先说留纸条而不用手机啊。。。就知道你会这么问）。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。然后就没有然后了。。。。我至今搞不清楚这么问的用意。
+
+
+
+一上来先问了数据结构的问题，list和set的区别，从list取元素的时间复杂度，还有就是快排平均和最坏的时间复杂度等等这些基本的数据结构问题。
+然后开始问编程语言，我选的java，问了final，继承，代码共享的两种方式，hashmap在java里是如何实现的（这个有点懵）等等。
+第三部分是网络知识，先是在浏览器里输入yahoo会发生什么，然后tcp的特点，服务器是如何响应用户请求的，浏览器是如何解析网站response的等等。
+终于到了算法部分，很简单的string to interge, 给他说了一大堆corner case，他说先不用考虑这个，写完他问我如果输入中有非法的字符是应该忽略还是报错。
+最后是一道智力题，10块石头，一个天平，有一块石头比其他的重，问最少秤几次可以找到这个石头。
+
+
+LC 384
+
+第二题是给定一个Class Line, 里面是{int len, int value}, 代表的是这个object的长度还有这个object的value,
+     public class Line {
+           int len;
+           int value;
+     }
+现在给定一个长度N和一个List<Line> lines, 要求从lines里选出一些line，使得他们的长度之和<=N,  同时要求他们的value之和最大，返回选出的line。
+楼主一开始说先根据value/N的值排序，结果面试官就说你是不是要用greedy的方法？告诉你这里greedy不可以。楼主当时就一万只草泥马飞奔过，心里想，我根本就
+没有说我想要用greedy好嘛！他这么激动干啥子。。然后就附和着和他解释了下为啥这里不能用greedy，然后最后写了一个dfs+backtracking的方法。
+
+coding是implement hashtable
+
+
+## Print Binary Search Tree in non-decreasing order
+- How to implement without recursion?
+
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+## Binary Tree Level Order Traversal
+
+- How to implement with one queue
+
+## Reverse Linked List
+
+
+## Permutation
+- What if duplicate exists?
+
+#2
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+## Missing Number
+
+## Short URL system design
+- Database 设计...
+- 2 way hash function 是不是存在？ 在Mathmatitcs里叫啥，面试官说是bidirectional....记不清了。。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+- How to support large scale?
+- How to speed up using cache?
+- Other way to speed up?  ----> Redis
+面到这就感觉要跪了。
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+#3
+## Implement Link List and Insert/Delete operation
+题主用了个Dummy Head。-google 1point3acres
+写完之后面试官先是说我删除不对，删错node了。后来才发现我用了个dummy Head。
+大喊一声：你为毛要用Dummy Head！！！！浪费内存有木有！！！！你造不造一个Node有多大！！！！
+然后完全不听我解释啊 = =。
+. more info on 1point3acres.com
+## Closure 是啥，啥时候用
+
+## Polymorphism 是啥， 啥叫Runtime Polymorphism
+. visit 1point3acres.com for more.
+## Function Overwrite 和 Function Overload的区别
+
+
+邮件后端组，技术面一共4轮。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+第一轮，国籍不明. From 1point 3acres bbs
+题： first no repeating character with only one scan
+      find the node in a binary tree have the length of root to a leaf equal k
+上面两题应该算是秒给代码，正确不正确我也不知道。
+其它： 简历上的内容，例如我有写restful,就问了restful.其实我不是太懂这个，幸好面试官没有深究。
+          然后是大量Java的内容，包括exception的理解，各种集合的优劣。这方面我有点积累，答的还可以。
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+第二轮：
+  1. two sum. From 1point 3acres bbs
+  2. find the close elment for a given target in a sorted array
+基本都是leetcode原题，我没有理由不秒杀啊。
+然后问了一些网络方面的知识，应该令对方很满意。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+然后是数据库的慢查询，楼主有点工作经验所以回答的让对方还是挺满意的。
+
+第三轮：
+k biggest pair for two array,基本上是先排序然后leetcode原题。楼主这一题几天前才做过。所以这一次就详细的给面试官解释就完事了。
+然后是多线程设计题，最后让我优化，我觉得没有空间可以优化了，最后幸好时间到了就结束了。多线程这题我回答的一般，当时感觉挂了。
+
+最后一轮：
+first missing number in a string, leetcode有原题是给找数组的first missing number。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+这位严肃的大姐几乎让我绝望啊。我一边做一边想挂了。
+然后我就用了一个很navie的解法，然后说还可以优化。大姐说算了，然后让我解如果数字不是从1开始，让我去解。然后弄了很久才弄明白他的意思。他的意思是input总是missing a number。所以你必须知道给定一个字符串哪个数字是miss的。最后我说用back tracking，然后她一直说不明白我的代码。整个过程非常stressful.
+
+然后经理过来见我，大概意思是组里的人对我感觉还可以(真没想到)。然后问我什么时候能给答复，然后说希望我可以加盟之类的。然后有个人说明天能不能安排时间谈一下薪水。
+我在想是不是口头OFFER？发个面经希望积点RP最后真能拿到OFFER吧。
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+求offer这样我就不用一边刷题一边工作这么痛苦了。
+
+
+
+1.1 binary search的不难
+1.2 number of islands
+1.3 给一堆string，找出所有可以组成palindrome的pair
+1.4 忘了
+
+2.1 DNS怎么工作的，怎么表示图，bfs最短路
+2.2 忘了
+
+manager 吃饭
+
+3.1 忘了，很简单. From 1point 3acres bbs
+3.2 circular buffer： 实现两个function：get(), put()
+3.3 follow up1: consumer productor problem，一个semaphore解决
+3.4 follow up2: 很多个thread同时访问，根据他说只用一个mutex，我做麻烦了
+
+4.1 binary search
+4.2 一个class 两个method，register(string name, Filesystem fs), getFS(string name)。很简单，hashtable
+4.3 follow up: make it multithread safe，mutex + condition variable
+4.4 一个web system，有一个地方突然变得很慢，怎么debug。还有一些load balancer和NAPT的东西
+4.5 tiny url，问到了怎么设计这个hash，database replication 还有 sharding的东西
+
+
+求人品！！最后一轮太累了，问了太多东西。。。跳槽process快结束了，求各种offer
+
+
+补充内容 (2016-10-20 11:32):
+2.2 想起来了.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+84. Largest Rectangle in Histogram，我说我见过，让他换题，他说没事，然后我打算给标准的stack的解法，他说换一种方法做，提示divide and conquer
+
+
+
+前两周在纽约面了两轮onsite mail组（相当于电面） 已挂第一轮 decode ways
+第二轮 best time to buy and sell stocks.  刚开始没懂什么意思 因为她说买卖是分开的 ， 买和卖都有利润 求最大值。。到最后也没明白 是啥意思 但是按照lc写出来了。。。。 然后面试官说这样复杂度太高了，大数据的时候不应该这么写，然后给我讲了她的思路， 然而我觉得 和标准的dp方法没有区别。。。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+. visit 1point3acres.com for more.
+两轮题都做出来了 可能第一次 比较紧张吧 反正挂了！
+马上BB电面 求好运！
+
+祝大家都能找到好工作！
+
+
+
+是一个还比较nice的国人，问了问简历，还算比较仔细
+然后问了一大堆基础知识。。。只记得很难
+
+OS process里的address space长什么样
+condition variable怎么写
+mutex 和semaphore
+deadlock是什么 怎么避免
+java中hashmap怎么实现
+
+算法题考了三道题， 还都比较简单
+1) Given a string, format this string to keep only one space between each word.
+自己想test case，
+
+2) Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
+The tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.
+Follow up:The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).
+
+3)Write a function that takes in a string and returns the length of the longest substring in which all characters are arranged in alphabetical order
+
+
+
+
+yahoo  cloud组，内推。
+第一天推，第二天约电面，一周后电面。
+
+一共一题： hitcounter （带锁的那题）
+
+问了如果不用queue做。
+在discussing里面，自己看哦。
+. visit 1point3acres.com for more.
+还没有过或者ｆａｉｌ消息。
+
+再发我一个朋友的面经，也是ｙａｈｏｏ
+
+问了很多ｊａｖａ基础知识，为了许多数据结构的时间复杂度。
+ｃｏｄｅ很简单：　找一个数组第二大。他也没有消息。
+
+
+
+10.11号career fair投了Yahoo，当天问了一些java问题，感觉还不错；11.4号收到电面邀请，11号下午进行了电面。总结起来一句话：简历里装了的逼，面试时肯定是要还的。我面的是cloud services组，最近在做的项目用的是python。问到的知识性问题类别有：Linux commands, vi commands, SQL, regular expression, networking, Github commands.
+
+编程题：
+How to find failed test cases from the following test result files? (using shell or Python)
+How to count #of failures?
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+    name of the files: TestResut[1..1000].txt
+    location:
+        ~/TestResult/d1/d2/TestResult1.txt
+        ~/TestResult/d3/TestResult2.txt
+        ...
+
+    inside each TestResult...txt file
+        <test_case_name>: Pass
+        <test_case_name>: Fail
+        <test_case_name>: Pass
+        
+f = global.go('~/TestResult/)
+
+
+        
+投的data组，稀里糊涂的过了SE电话一面。题目很简单，sort list， 我用的递归方法。 时间复杂度是logN
+二面跪了，不懂数据结构
+电话里沉默了半个小时. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+我把二面题目post出来赚点大米。 
+# Notation of tree: 'a : { b : { c }, d }'
+# Means ‘a’ is the root and it has two children ‘b’ and ‘d’, ’b’ has a child ‘c’, 
+#     ‘c’ and ‘d’ are leaf nodes.
+# - how to represent the tree as list of records
+#     read the given tree from list of records-google 1point3acres
+# - giving back the object hierarchy from list of records
+#    list the given tree, as example returning: ‘b : { c }’, or any other way which show the hierarchy  
+# - implement deletion of subtree: 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+#     deleting b result: ‘a : { d }
+
+
+
+第一轮：国人小哥。楼主面的是machine learning/Data Science research engineer职位，聊了会儿简历，小哥貌似很偏工程，对楼主的project不是特别感冒，刚讲了一个分细胞的project，小哥就说我们来coding吧，因为楼主是统计背景，小哥还问了句编程怎么样，楼主说还行吧，心里想快来道简单题吧。叙述了几句题目，猜到是word break 而且还要输出所有可能的parsing，leetcode原题，不过感觉这题难度对这职位是不是高了点。赞Yahoo效率，周五面，周日收到第二轮邮件。Yahoo貌似都是interviewer直接联系？
+第二轮 国人妹子。忍不住刚收到邮件就偷看了人家linkedin，大美女，身边找工作的男码农都好羡慕楼主。开始聊了好久简历，MM对video parsing + text parsing的project很感兴趣，然后问技术题，问常用哪种编程语言，答C++，MM接着问了几个相关概念，虚函数，析构构造函数哪个是虚函数，以及为什么。非常耐心。下一个是让设计一个singleton的类。最后写simplify path。-google 1point3acres
+
+已经通知准备下周五onsite 啦，有木有一起的童鞋~~
+
+
+
+Java basics, Html, CSS, OS basics
+coding: find the second maximum in an array
+
+上周五面的，三哥，面试套路非常诡异
+
+上来让写LRU，但是基本框架写了就行。写完跟我说代码有bug，我看来看去没bug，后来三哥说为了测试我的confidence level。。。-google 1point3acres
+
+然后开始聊简历。。。问kafka啥的。。。然后特么突然又问我String为啥是immutable。。。我没答出来。。。
+
+后来又聊了一会，只面了20多min说面完了。。。lz当时以为挂了。。还好今天收到邮件过了.鐣欏璁
+
+
+
+1. Java问题： java v.s. c++, java中的inheritance， subclass，superclass， interface vs abstract class，exception handling。基本都是简单的概念题。
+2. Coding Test: coding题目是给定一个sorted数组[1,1,2,3,3,4,4,5,5]，有一个unique element，其他都只能出现两次，找到unique element。 楼主先编了一个hashmap，然后问还能不能优化，楼主说进行两两比较，算法虽然是N但是更快，然后被问还有没有优化的，楼主问到每一个非unique的只会出现两次，然后说可以用binary search。然后就被要求实现binary search。最后binary search有点bug，考官说时间差不多了，然后继续问其他问题。（面试后楼主花了十分钟调好给面试官发了好的版本）
+
+
+45分钟一轮，whiteboard
+第一轮：针对楼主简历上的一个项目做了ood
+第二轮：基本的data structure如heap，stack，arraylist，linkedlist。写了一个serialize and deserialize binary tree
+第三轮：先聊了聊map reduce。编程是有向图中找连通区域，楼主用dfs ＋ union find。面试官不会union find，但应该解释清楚了。
+
+yahoo总部campus不是很大，但设施挺齐全，gym，理发店什么的都有。包三餐（楼主很看重这个。。。），饭也不错
+
+on campus：
+在纸上coding
+第一轮：sort一个log，用指定形式输出，java的话会写comparator就行，小哥用hadoop的，就聊了聊hadoop
+第二轮：一个白人老大爷，先快速写了一个min stack。之后聊了flood fill之类的面试不常考的algorithm，楼主转专业小白，leetcode之外的算法基本不会，随便说了说，还是给过了
+
+
+
+楼主来造福下各位国人。10.21面的雅虎实习，和面经完全不同（我也有两个朋友面的雅虎，基本都是面经）-google 1point3acres
+面我的叫做Rahul Teotia， 是邮件后端组的，各位以后碰到他要小心了。
+. 1point3acres.com/bbs
+面试内容，上来谈简历，楼主说自己做了个网站，他就一直问，我简历说，实现了log in function。他就问我，你这个怎么实现的呀，jason file是什么，和数据库又怎么打交道呀，问的我晕晕的。然后最后一个问题，我实在是听不懂了，我就说下个一个问题吧（三哥英语大家懂的）. more info on 1point3acres.com
+
+然后直接codepad做题。题目是leetcode three sum closest（翻版，要求返回的是那些数字）。 要了两个hint（有误导我的嫌疑），然后做错了。
+
+全程没有其他人面经的java 问题，没有数据结构问题。
+
+希望各位小心了，雅虎也不完全是面经，至少这个人不是面经内容。
+
+楼主第一次电面就这么挂了，不太甘心，不过没太多办法，自己没准备好挂不得别人。.1point3a
+
+
+
+1.    Encode
+a->1
+b->2
+...
+k->11
+z->26
+input “111”  output: aaa, ka, ak
+2.    Give a array, return a list ofpairs of index which sum to 0. If there is duplicate, only return the firstduplicated index with other numbers sum equal to 0.
+Array: {1,1,0,-1,3,2, -1}
+Index  0,1,2,3,4,5,6,7
+Output: (0, 3), (0,7),      ((1,3) and (1,7) should not be returned since it is not the first index)
+3.    Circulr array, implements put(intx) and get()
+get() will pop the current element. If put() already has element in the array or empty when calling get(), throw exception
+4.     Quesiton: Java if String is immutable.
+String a = “Yahoo”;
+Stirng b = “Google”;
+Swap(a,b);
+Print  System.out.println(a + "," + b)
+
+Wirte your Swap(a,b) and output should be
+
+Google, Yahoo
+
+
+
+前几天找了个学姐推了下Yahoo, 应该算是组面，没有任何在线申请流程，天竺经历直接发邮件约店面，一周面了两轮，题目如下：
+
+一面：
+1. reverse string。说了下思路，直接秒了，然而忘了处理edge case，经理提示了下才改了过来。。尴尬。。
+2. 一个file里有4 billion个integer，内存只有4g，怎么sort。这个大家应该都知道，思路就是分成小文件merge sort最后再heap排序。然后还问了时间复杂度，我就是说的nlogn，后来面完了感觉应该考虑下加个k...
+
+此外开始还有自我介绍啥的，喜欢啥技术。。面完半个小时直接约了二面，约了两天后，还是个天竺小哥，人特别客气。
+
+二面：
+0. HashMap怎么design，怎么处理collision，怎么处理collision太多，什么情况下rehashing。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+1. same tree，假设node非常多，不让用递归。开始想了半天也没想到怎么用constant space，后来小哥说可以用其他data structure，用queue做的。
+2. follow up，mirror tree，其实把一个queue换成stack就行，但是写的时候想错了，上了一天班脑子有点蒙，多此一举的加了个level变量让奇数偶数level遍历顺序相反。。后来小哥walk through了下才发现的。。于是又改了回去。
+
+题目虽然都很简单，但是面的过程不是很顺利，没有做到bug free, 题目最后才都做对了，表示一周过去了还没有任何消息。。希望别是默菊！！祈祷下周能有点消息吧。。
+
+希望能有所帮助，祝各位找工顺利！. 1point 3acres 璁哄潧
+
+
+
+
+楼主题刷的比较少， onsite心理比较虚的，加上看之前的yahoo ads组的面经考好多多线程的东西，心理更虚了，实际面试发现多线程的东西一道都没碰到过。。。orz.1point3acres缃�
+1. 亚裔小哥，给你一个sorted array，找target的出现次数。二分找lower boundary 跟upper boundary。-google 1point3acres
+2. 印度大叔，实现LRU， 人很好，给各种提示。
+3. 美国爷爷， 这轮面的最糟糕，没有写代码， 问了CICD的各种debug情形，然后最后让你OOD一个电梯， 时间不够了，楼主没做完。。 面的最惨
+4. 跟hire manager 吃饭， 就是聊聊。。。 问了个具体问题工作中最大的achievement是什么。。 剩下的都是扯淡，还跟hire manager 一起打乒乓球&#127955;
+5. 亚裔大叔， 1. 问交互两个数，不用临时变量， 用Bit XOR 来解 2. 问了 linkedin list找环 3. 徒手实现stack， 实现posh(), pop(), peek(), Findmin().  楼主用doubly linkedlist来解的， 对于找findMin， 再maintain一个最小的linkedlist就行了。。 保证findMin也是O(1)
+最后发个面经求好运， 最近还有AWS 的面试，感觉题还是要多刷。。。 要不然真虚。。。
+
+
+
+
+三哥，一直听不清他讲什么，要求他重复过好多次问题，他很痛苦，我也很痛苦
+1. presets 和 hashset 的区别，
+我不知道什么是presets, 只解释了hashset。然后三哥估计就失望了，开始直接写代码 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+code. from: 1point3acres.com/bbs 
+1. 输入1，000，000 个数，求前20 个大的数
+用priorityqueue，但是要求自己实现priorityqueue. from: 1point3acres.com/bbs 
+所以要先实现一个minheap， 然后再用priorityqueue 做题
+
+2. 实现math.random，例子：输入（1，17），给出1～17之间的任一个数
+可以调用系统时间。
+用时间％区间，得到0～size中的任意一个数，加上start，就是最后的值。
+
+因为一直听不太懂三哥的话，所以沟通很成问题，感觉很糟糕。
+
+
+
+
+补充内容 (2016-10-12 02:57):
+刚刚hr发邮件约了第二轮的电面，可能是第一轮的面试在基础知识部分表现的太糟糕了。
+
+
+
+面的Science & Technology组.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+第一轮manager+一个校友，跪在这轮
+manager出了一个多线程题，给你一些function，当developer有空的时候，并且kitchen准备好的时候，开始供餐，否则停止供餐。太紧张了，又是第一轮，一点没有事先热身，结果想着快点做，连题目都没理解透彻，正好多线程这块又并不熟悉，以前只在IDE上写都有提示，写白板都忘了Thread里要写run()方法，怪自己。
+class LED { void turnOnLED(); }. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+class Kitchen{ boolean isReady(); }
+class Developer implements Runnable {. from: 1point3acres.com/bbs 
+    public Developer getDeveloper();
+    void run() {
+        while (true) {
+            //TODO;
+        }
+    }
+}
+class XXX extends Thread {
+    //TODO;
+    void startSupply();
+    void stopSupply();
+}
+大概结构如上，一开始我没理解透彻，一位让我实现的是startSupply和stopSupply，纠结半天，现在想想这两个应该是给你的API，让你写的应该是继承Thread之后重写的run()，当时真是悲剧。。。现在想思路大概是定义一个static的local variable Developer d，然后Developer的run里面调用d=getDeveloper()方法，来改变d的状态(null或Developer)，然后再XXX里面重写run()，当d不为null并且Kitchen Ready并且Kitch状态不是starting时调用startSupply()，相反则调用stopSupply()，这里要注意d的同步，我猜可以用try...catch...写，不知道有没有别的想法大神们请指出。。. more info on 1point3acres.com
+反正当时这道题是跪了，然后manager让同行的校友小哥出了算法题，anagram，秒达。然后是问一些java基础知识，这里manager问的很深入，果然糊弄不过去，问题如下：
+1. final/finally/finalize ->我很愉快的答出了不同，然后问我什么时候应该去调用finalize()，并且会发生什么，懵逼。。。还问我在anagram里面如果把hashmap定义成final会怎么样，算法还会运行吗
+2. 问Exception的种类，runtime exception和compile exception，然后给我两个例子，void bar() throws runtime.../void foo() throws exception，然后在class foo{bar()/foo()}分别调用这两个方法，能编译成功吗。答案是bar()可以，foo()不行，这里我也不清楚原理，manager看来很不满意
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+第二轮是个美国小哥，考系统设计+DB+简历proj。DB让我设计学生选课的，我写了三个table，一个学生，一个课程，一个学生和课程的联系，然后让我写query来求某个学生选的具体课程，大概就是JOIN之后select。重点问题是让我设计一个file system，不是distributed file system，我说大概要实现read/write，以及文件的namespace之类，告诉他文件怎么存的，matadata的情况和content的情况，然后他问我具体怎么read/write，我说用trie tree/b+ tree来存namespace然后一个一个找，如果write的话看看这个file name是不是已存在的，然后系统分配buffer，写进去再allocate到disk之类，可能是没达到点子上，前半段一直在解释怎么存data，block啊chunk啊，然后在namespace里存着这些信息之类，虽然他一直说alright，但是估计有些问题回答的跟他想的不一样
+
+第三轮是个印度小哥，两道算法题，tree的level order traversal，秒答，一个queue解决，第二题他说是他自己想的问题，他也没最优解，坑爹。你要去旅行，给你很多tickets，这些tickets都只连接两个地方，然后你弄乱了这些tickets，让你排序这些tickets，我一开始以为只要我找起点和终点，写了半天他说我理解错了，是让我排序这些tickets，然后还hint我用doublelinkedlist，我就陷进去了，在想读到不同的tickets的起点和终点怎么排序选择doublelinkedlist。。。结果纠结很久没想出来，他让我先bruce force，我说好办select sort，n方复杂度，每次拿出一张，然后找跟它起点或终点一样的取出来，他说确实，然后让我想insert sort，我心里咆哮，这两个sort复杂度tm都是n方，有毛区别！但是想不到，最后他解释说，先在tickets里面找起点和终点，a-b,b-c,c-d,d-e,e-f这样的话能找出a和f，放到doublelinkedlist里面，然后再在剩下的里面找b和e，再插入doublelineklist。说的时候一脸得意的看着我，老子想，妈蛋这时间复杂度不是一样，估计他是想问doublelinkedlist相关吧。
+
+总结就是，首先一定不能紧张，读题理解一定要仔细再仔细，别急着写。manager的问题一定要答好，否则直接没戏。然后回来后恶补了java Thread API等内容。虽然老是抱怨点背，因为在面试结束后和别的一起onsite的几个人聊天的时候，有几个说问的全是algorithm，有两个面video组的倒是有被问到recommendation system，machine learning的问题，剩下只有一个人问到了system design，当时觉得“啊，我真背啊，又是多线程又是系统设计的。。。”，但是现在心情好点觉得是自己该，有些知识的死角在面试前并不能真正发现，manager问的问题都很刁钻而且正好涉及到我不熟悉的部分，只能加油move on了。至此FLGYB全灭，剩下的也只能慢慢面试了。。。Orz。。。希望对后来者有帮助-google 1point3ac
+
+
+
+yahoo 第二轮电面
+题目：给定一个数组，求数组的最大和，要求：相加的数字互不相邻
+例子：1， 4， 3， 7， 最大和为4+7 ＝ 11
+例子：1，8，1，1，1，9  最大和为：8 ＋ 1 ＋ 9 ＝ 18
+
+最开始想用back track，考官说不允许，必须是o(n)解法。
+各种不会，卡了20多分钟，考官提示要用dp解决。
+dp，dp[i] 代表在position i 位置的最大和
+
+follow up： 如果第一个数和最后一个数也算相邻，该如何做？ 
+int len = array.length;
+方法，两次dp，先求0 到 len -2的最大值，再求1到 len -1的最大值，两个最大值比较. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+这道题和follow up共用了60分钟才在各种提示下解决出来，答的特别糟糕，几乎没戏了，当攒人品了
+
+
+Yahoo是career fair上投的，后来hr联系约了电面，内容是一道OOD，设计一个拍卖的系统，玩家可以出好多个价，然后最后决定谁赢的规则是，价钱最低而且出这个价钱的玩家最少的那批玩家赢。其实挺简单的，但是一开始没搞懂意思，后来写完了有bug，最后通知跪了。
+
+
+加州onsite： 
+1. 自己设计一个长度为n的queue，实现offer() 和 qoll()。 我用了一个数组实现。 
+   Follow up: multithreaded
+2. 一个int array，里边的数字先降再升，找到最小值。 e.g: 5,2,1,4,7,9  最优O(lgn)
+   Follow up: 找任意一个值 e.g: 2  最优O(lgn)
+3. 类似第一题的一个设计题然后改为multithread，不赘述了。
+    系统设计： Tiny URL
+4. 2 sum 变种，挺简单就不耽误时间了。
+    DP: 用不同硬币凑成一个数字
+    SQL： 分组找出最大值 group by
+5.  OO Design: 写一个Tick Tac Toe
+
+纽约Onsite: 可能因为我人在纽约分成了两个半天
+Round 1:  写一个程序去玩猜字的游戏，给了服务器的url和规则。时间三个小时
+Round 2: 
+1.  讲讲Java的Garbage Collection
+      DP： 已知不同硬币的面值，用最少的硬币数量找钱给顾客  public List<Integer> optimalChange(int[] coins, int target)
+
+2.  https://leetcode.com/problems/trapping-rain-water/ 
+      简单的讲解可以看https://discuss.leetcode.com/top ... -time-and-o-1-space. more info on 1point3acres.com
+
+3.  Topological Sort
+
+结果还是不错的，两边都表示满意。
+现在的面临选择，finance组不大，一个40人，纽约20人。 Ads组很大，全在CA。Finance是雅虎最好的产品，Ads是赚钱的玩意儿。没有感觉到那边明显的好一些，所以可能还会留在纽约。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+大家也随便扯扯淡吧，毕竟我这一贴顶两贴呢。
+
+
+45分钟on campus interview, 无简历问题无基础知识, 一上来就是两道算法题
+1. Isomorphic Strings, LC 205
+2. Regular Expression Matching, LC 10. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+面试官人很nice, 第二题给了一些hint, 做完只剩1分钟问问题了。。
+
+
+
+
+刚面完
+跪得莫名其妙。
+约的十点，面试官来邮件说他迟到了，晚点给电话。
+然后15分钟后开始面，先是自我介绍。
+然后就是基础知识 基本上跟http://www.1point3acres.com/bbs/ ... adio%26sortid%3D311 一样。除了这些还问了快排，和二分搜索。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+因为都是准备过的，所以觉得自己答得还可以，没有没答上来的，结果面试官问完基础知识就戛然而止了，也没给做题。然后面试官说 我觉得你准备的不好…… 我也不知道这个好的标准 到底要多好（二分搜索时候我说了概念 顺手还举了一个例子 还补充了最差情况 还要我怎样 。可能 有时候就是容易理解有差异吧。
+Anyway 继续努力 move on吧
+
+
+
+今天下午刚面完雅虎，面试官是中国小哥，先问了我简历里数据库的一个项目，还好提前准备了一下，然后问了hash map和hash table在java里有什么区别，然后问怎么解决hash的冲突，然后问有没有用过linux（用过一点，不熟），然后问用过哪些版本控制系统，然后问我有没有上过计算机的相关基础课程，比如说数据结构与算法之类的，然后来到做题部分，leetcode 116，我还不是用的最优解，一紧张一下子想不起来了，就用了普通的bfs level order traversal。然后小哥让我手动跑个test case, 花了好多时间讲得非常详细，我都觉得有点浪费时间了，还想着一会儿要不要把不用额外空间的解也说一下，然后小哥给了个follow up, 说如果这个树不是满树怎么办。。。凉拌，代码一个字都不用变，跟他说一下为什么这个代码一样管用，然后就没了。最后剩下问问题了。全程大约一个小时，前面问基础知识有20多分钟吧，还是要准备一下的。希望能有onsite。
+
+
+刚面完，一个indian 面的，前面问一下java data structure question 问题， 地里都有， 然后写了linkedList Loop 那道简单题， 写完之后 又有一道braintesar 的题，给你10个 stone, one is heavior than any other. how to do to beam  balance. 体会： 感觉不难。 但是中间做题交流的时候感觉总是听不清他的问题， 哎 感觉是不是当面交流会听清一点。 最后那个puzzle也没想出来。 听天由命了
+
+
+
+国人姐姐：问了简历上面most challenge的project。题目分别是：rotate array find minimum. follow up是有duplicate的情况。 第二道题是：有一个很大的文件，每一行是一个数，怎么排序。我说分成很多小文件，分别排序，然后merge. 然后她就让我写merge k sorted array. 然后问了些时间复杂度。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+第二次：
+不知为何，有好几个面试官，3个以上，一人问了我一道题，还有人在旁边听。。估计是为了培训面试官吧。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+第一道题目很简单，但是题意很复杂，解释半天题目我才明白。就是input是一个字母组，表示树的指向（A->B,A->B->C,...）。返回一个map，分别是每个字母在树中的层次。其实就是每个字母在subarray中的最大index了，遍历一下就好。
+input: [[A, B],[A, B, C],[E, B, C]]
+
+output:.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+map:{
+    A:1 
+    B:2 
+    C:3 
+    E:1 
+}
+
+————-google 1point3acres
+C
+|
+B . 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+|\  -google 1point3acres
+E A
+
+--------------------------------------------------------------
+注意：如果加一个F
+input: [[A, B],[A, B, C],[E, B, C],[F, E, B, C]]
+
+output:
+map:{
+    F:1
+    A:1  1（此处A的index仍为1，不会变成2.。。一开始我绕进去了= =）
+    B:2  3
+    C:3  4
+    E:1  2. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+}-google 1point3acres
+
+————
+C
+|. Waral 鍗氬鏈夋洿澶氭枃绔�,
+B . from: 1point3acres.com/bbs 
+|\  
+E A
+|
+F. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+-------------------------------------------------------------------------------
+第二道题就是coin change.
+
+
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+新人初来乍到没有米，好多贴看不了。求米！万分感谢！祝愿大家找工作一切顺利！
+
+
+应该是小组面。在Sunnyvale E 楼。
+3：00pm - 6:45pm
+一面：印度manager 
+missing number [1:n] sum 和，面试官希望用bit vector 但是，我太水。。。跪
+merge sort
+他们貌似前端，后端都需要， 楼主表示都感兴趣后，他很开心的问了javascript event delegation...跪
+照相
+
+二面： 美国小哥. more info on 1point3acres.com
+implement hashmap using c++ (key,value 都是 int, 为了好些，只要求put get) 白板写的很是随意，直接vector 存pair key value ...由于太随意，syntax 啥的 各种bug。 小哥没说啥，但是一脸惊呆。。
+dictionary 里是string. 给preceeding string target, 找到以这个string 开头的3个最接近的(短的优先，然后alphbatical order)。 bfs 解，楼主脑子进水加了visted set（多余）。
+之后问了drawback, memory timeout. 改进trie. 没写完
+照相
+. 1point3acres.com/bbs
+三面： 印度三姐
+人品 应该都用到三姐这了，此三姐uiuc的。很nice。
+database leetcode 原题， 
+join （left,right,inner, outer), 
+reverseString(look at you)=> (kool ta uoy)
+find peek
+find median
+照相
+
+四面： 印度啊三+亚裔（貌似）  
+find single number(1 1 2)-> 2 (1 2 1 2 3)->3 原题.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+find single number II 有两个出现 一次 跪. Waral 鍗氬鏈夋洿澶氭枃绔�,
+type www.yahoo.com what happens?????  这个遇到不要太多，求面试关解答要怎么答
+dictionary 里 ['','a','ab','abc','abcd‘~~]
+找到最长的从''->'a'->'ab'->'abc'-----
+dfs 但是三哥急不可耐的说，character 可能是特殊的不是'a'-'z'，还没开始回答，说了句trie也可以做。三哥立马不管特殊character，直接让写trie, 然后dfs trie.. . From 1point 3acres bbs
+
+大致如上 .鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+
+
+补充内容 (2016-6-12 02:19):
+补充，第四轮 reverse linkedlist interative & recursive
+
+
+数字1~16. print出来所有组合：相邻的两个数相加是perfect square
+
+Example:
+1 3 6 10 15 
+1,8.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+2,7,9,16.1point3acres缃�
+
+
+后来面试官提示规律：根据以下规律建图
+1->3, 8, 15
+2->7, 14
+3->1, 6, 13. 鍥磋鎴戜滑@1point 3 acres
+4->5, 12
+6->3,10
+7->2, 9 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+8->1
+9->7, 16
+10->15, 6
+
+
+
+这次是第二次发帖， 内容是有关yahoo的电面：. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+在介绍电面内容之前，想补充一下UP主自己上一次电面的follow up。. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+今天想在此补充一个follow up的问题。UP主在上个帖子中提到过引申的第三点。 其实面试官的follow up问的就是第三点：如何在不用call get function的情况下来去除内存中expired的内容。 因为这是一个follow up的问题，所以只要我说思路就可以了。 我的回答是： 我们可以利用LRU cache的思想来解决这个问题。 我们可以将内存中先加入的<key,value,duration> pair 按照时间的顺序向后排列，排到末尾的可以直接去掉。 面试官听到回答后说了good good。  但是很不幸的是UP在上周收到了拒信。。。。。。。。。
+
+下面说正题，UP主&#127542;收到了一个yahoo的电面，不够虽说没接到结果，但是估计也是跪了。 这里忍痛同大家分享一下。. 鍥磋鎴戜滑@1point 3 acres
+
+其实这次电面的问题一点都不难，但是问的很详细。 首先上来的是一系列有关Java基础的问题，UP主努力回忆，所问问题如下(都是在Java中)：
+1.List 和 set的区别. more info on 1point3acres.com
+2.ArrayList 和 LinkedList 的区别. Waral 鍗氬鏈夋洿澶氭枃绔�,
+3.How hashmap works？
+4. 什么是Hash function. 1point3acres.com/bbs
+5.hashmap 的 contains() 和 put()的时间复杂度
+6.如果hashcode相同的视乎如何处理.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+7.Class 和 interface 的区别
+8.inheritance 的特点
+9.final， finally， finalize 的用法和区别
+10多线程有关的问题，例：如什么是thread， how do u make threads, 如何避免 collision，how do u make lock
+
+其实UP主都大概了解，但是由于面试官问的太细，所以很多没答上来。 估计由于前面回答的不够好，所以免得算法题也很简单：题目如下
+实现一个convert string to int的function。 那么UP主当时写的如下
+和面试官交流得出来的结论是：只有正整数，木有负数
+public int stringToInt(String s) {
+      //Coner case 
+      if ( s == null || s.length() == 0 ) return -1；
+      int size = s.length();.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+      int result = 0;
+      for ( int i = size - 1; i >= 0; i--) {
+            result += result *10 + s.charAt(i) - '0';
+       }
+       return result;
+}
+算法应该没写错，后面面试官接着问，那你这数字最多能表示多少啊？ UP回答2^31 - 1; 估计是对前面UP主回答的基本问题很不满意，面试官又问：那你为什么不用long来表示，那样范围不是很大嘛。。。。。。。UP主实在无言以对，只能以我面试很紧张为由来推脱。。。。。. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+后来UP回忆这两次面试，得出感悟如下：
+大公司的电面貌似都不是很难，但是他们对于基本的算法考的都很灵活。 像UP第一篇帖子中提到的改写hashmap，还有这次的convert string to number， 本身的算法并不难，但是主要考察的是你对数据结构的理解。 如果理解到位，应该很快可以写出。 所以小伙伴们在刷leetcode的时候，也不能疏忽Java基础知识。 尤其是对于EE转CS的同学，本身的基本功是比不上CS科班出身的，所以在刷题之余更要加强对于Java基础知识的掌握。 提前预告一下， UP主在10月6号有triplebyte的onsite。 到时候和大家再来分享题目。。。。
+
+望大家多多支持UP主，给UP点个赞。。。。。 也在此祝大家招工组顺利
+
+
+
+在学校面的Yahoo， 一共60分钟，分别见了两位面试官
+
+直接说题吧~
+
+
+1. Given an arbitary tree（有多个children）, design the tree node. What kind of helper function would you add to this tree node class.
+然后面试官就让我画了一个arbitrary tree，然后说给你一个start node, end node， print 出start -> end 的path（不给出root）
+
+这个没太写完。。。因为30分钟实在是太短了，之前还聊了下简历时间就到了，我大概说了下还有哪些test case没有涵盖到面试官就走了
+
+第二个面试官是一位印度人，
+
+2. Number of Islands， 我说了下思路，然后面试官没有让我写代码
+3. 这个题还比较有意思, 给你 n 个 input， 给你一个数k。 比如
+n=4, k=2  abs(a-b)<=k a是b的ancestor
+input是n个数组
+(3, 1)
+(3, 2)
+(2, 4)
+(2, 5)
+Output:.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+(3,1) (3,2) (2,4) (3,4), (3,5)
+我的理解就是这个input可以建一个graph， 然后path上的任意点只要ancestor减去任意只有的数的绝对值小于k就符合条件。
+
+
+网上申请，过了两周通知第一轮电面，是个很nice的中国（？）小哥。开始就是小哥自我介绍，然后过一遍简历，由于楼主有iOS方向的经验，面的组也是iOS组，所以问了一些iOS的东西， 比如MVC，networking用啥API做的，delegation，notification center, cocoa pod，weak vs strong, etc. 然后问了一道算法题，实现一个能O(1)找max值的stack， 用collabedit写。最后问了小哥几个问题就结束了，花了一个小时左右。这轮小哥比较nice，比较想跟人聊天，代码写完会自己写test case然后跟你说每步执行结果啥样， 之前问iOS的问题有个没答上来，还自己写了段代码跟我讲为啥是这样的原理是啥。
+一周以后面了第二轮， 也是个亚洲小哥。对比起来没有第一轮那么nice， 但总体还不错， 也是iOS组的小哥。没有自我介绍，就直接对着简历问项目，然后还是一些iOS问题和Objective-C的问题。问完就开始写算法题。跟小哥说了写好了，他就直接问我说还有没有其他问题，问了他一个问题就结束了第二轮，大概一共花了半个小时，好惶恐。。。
+// input: 2 integer arrays, A[] B[]
+// output: boolean, true if A[] and B[] have eaxctly the same elements
+// example" A = [12, 24, 33, 22], B=[33, 22, 24, 12] = > true
+
+求能去加州旅游啊.......
+
+
+
+补充内容 (2015-11-14 12:51):. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+补充下onsite：
+一共三轮， 第一轮问了ObjectiveC的优点，Project, 一道tree的题目，time & space complexity的分析， 针对这个function如何写unit test；
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+补充内容 (2015-11-14 12:52):. 1point 3acres 璁哄潧
+第二轮详细介绍了一个项目，要添加new feature， 要如何添加新的data structure，添加了以后work flow是怎么样的， 为啥这样设计之类的；
+. 鍥磋鎴戜滑@1point 3 acres
+补充内容 (2015-11-14 12:54):
+第三轮 开始还是介绍项目，开始用Objective-C写题，还是tree，define node， define tree， 实现BST tree添加和删除节点。
+. 1point 3acres 璁哄潧
+补充内容 (2015-11-14 12:56):
+每轮大概45min，三个engineer里两个亚洲人，一个印度小哥， 总体人都挺好，各种给hint。。然而面的并不是特别好。。。真是愧对那些hint。。。
+
+
+
+这周五刚刚面完的，过来和大家分享下，地里的y家面经着实少。。。
+面试体验感觉还不错，前一天飞到san jose，有他们公司合作的shuttle公司来机场接，来接我的那个大叔人真是很nice，因为在路上堵车晚了，一直在那说sorry sorry搞得我都不好意思。。然后在离机场不远的酒店住一晚之后，第二天坐shuttle和其他onsite的人一起去yahoo campus面试。先集中一起互相介绍下，介绍下recruiting团队之后就各组的人来接去面试。总共面了4轮，一轮pm，三轮技术面。
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+第一轮是pm在那介绍下组里的情况，平时做什么，以前大概做过哪些项目之类的。。 然后随便问了问一些简单的behavior question，这个自由发挥就好，没问代码题。
+第二轮问了一个类似算法设计的题，属于open question，要你设计一下yahoo answer中相似问题和推荐回答的模块。并没有标准答案，主要就是考察你的沟通交流能力和基本的思考能力，这个问题我当时是先根据问题内容提取关键字，然后再用前缀树提取出目标问题的关键字，找最相似的top k。两个问题都差不多的思路，大概扯一扯就是了。
+第三轮问了两个算法题，第一题是给你一些用户和对应的好友，要你输出所有共同好友的列表。举个例子，{a:[b,c,d], b:[a,d], c:[a], d:[a,b]}, 输出 {(a,b):[d], (b,c):[a], (b,d):[a], (a,d):}. 其实很简单，有点像倒排索引，一个loop，用tuple当作key建字典就行。第二题是lc的find median of two sorted array。幸好我前两天就做了。。。
+第四轮就问了一个算法题，find longest substring at most 2 distinct characters。没什么好说的，也是原题。这题很久不做了，有点傻，刚开始有点小问题，不过一会儿就解决了。
+
+面完之后集中用shuttle送回机场，然后就结束了，面完真的好饿。。。
+
+各种求人品。。。
+
+
+补充内容 (2015-12-17 13:47):
+已收完口头offer hr说正在写书面的 但是已经有g家 估计是不收了。。。 他家这个组我真是挺喜欢的
+
+
+
+第一次发贴, 如果觉得有用,请赏点米吃.  尽量用中文，请凑合看！
+
+
+最近面了yahoo的邮件组， 发面经，攒人品，
+
+店面：mail组manager直接面的，就问了我目前工作的项目，没有考算法和基础知识
+Onsite: . more info on 1point3acres.com
+1) 国女： 找到第一个不重复的字符 in a string. 要求用最少的时间，我说用LinkedHashMap来做，被认为不够好，因为LinkedHashMap内部maintain那种顺序也需要时间
+2) 国小哥: 1) 如何判断两个两个字串是permutations的, 2) follow-up 有一个字典，给一个string, 在这个字典里找出所有此string所有的permutations. 这个function需要被调很多次，所以速度一定要快
+3）白人C++大叔，这个职位招java, 大叔是组里唯一的C++person, 所以拿出一个小本子，全是问了特别基础java题, exception的种类，什么叫POJO, polymorphism. 没有code, 特别简单，看些基础Java就行了。
+4）经理的经理，三叔，这一轮最stressfully, 给了我yahoo邮件的后台的整个picture, 然后突然一天很多用户抱怨邮件进去的mail list那一页变很慢，让我troubleshooting为啥，我列举了很多方面: database, or web service, ets 可能
+会有的问题，在白板上列了好多条，但感觉都没答到点上，一直都没有表情，我其中也说了看network bandwidth是不是drop很多，他说没有，结果他最后告诉我说是网卡坏了，我都不敢相信自己耳朵，难道网卡坏了，bandwidth不会降吗？
+不敢反驳，人家是Sr Director级别
+
+另外大部分人面试都用了一半时间来讨论我目前的工作项目。
+
+HR说今天会告诉我能不能給Oral Offer, 攒人品, 攒人品
+
+
+一个特别客气的国人小哥。.1point3acres缃�
+因为面的是安卓组，所以先问了些安卓的知识。
+然后笑着说来道简单题吧-google 1point3acres
+Two Sum
+我就泪如泉涌。
+
+但接下来follow up
+让我确实惊叹了。
+int[] 里有重复出现的数字
+【1,2,2】sum target = 3
+输出【1,2】【1,2】
+. From 1point 3acres bbs
+蒙了好久，又问了好久才终于领悟到.1point3acres缃�
+这是个非常奇特的变体，每选一个pair，要消耗其中一个数字的次数。然后输出最多pair。
+需要用HashMap统计每个数字出现的次数
+然后遍历int[]
+每次pair出现时，要选其中出现次数较大的，使其次数-1.
+Two Sum 真是博大精深
+
+
+
+之前在地里看到有哥们提供自助式内推服务，我就自己试了一下。
+上周HR电话问了一些基本情况，约的今天电面。电面的是一个Sr.manager，烙印。
+
+1. 对什么工作感兴趣，why yahoo？
+2. What is virtual memory, how it works？ Is there any limitation for the size of virtual memory?
+3. 现在有一些数据，该用什么data structure来存和query，ID+Address, ID是Integer，Address是String,要求data是按照ID sorted。两个methods，一个是getAddress(int ID), 一个是get all IDs. Time complexity. 1point 3acres 璁哄潧
+4. 现在有一个file，要求返回 last N lines。Assume有一个API read the line one by one.要求是只读文件一遍。
+第四题，我说这个好办啊，就像是linked list那样，用两个pointers相隔N，然后返回。他说这样的话，就算读两遍了。后来他提示可以用extra memory。。。好吧，用一个stack or linkedList,都存进去，然后返回前面N个。他说good。
+
+整个是面试没有coding啊，约的是45min，其实就20min结束了。感觉要被黑了。。
+
+
+1面是个和蔼的国人叔叔，上来先让自我介绍和简历内容，然后问了SVM的principle 是什么 什么是support vector，abstract和interface区别，default的package是什么类，AWS EMR跟普通的Hadoop里的有什么区别（懵逼）. Waral 鍗氬鏈夋洿澶氭枃绔�,
+你的project里的hadoop是几分钟一次的?(二次懵逼)，最后代码是 写一个singleton class和 leetcode 216。写singleton时问了是不是必须static。。static是在comile time还是runtime里的。。写backtrackking时还问了跟exaustive method有什么区别。。为什么要new一个放进去。。
+2面也是先自我介绍，问了HMM和一般markov的区别。。让楼主介绍项目。。还没介绍完就打断了说来不及写代码了。。然后出了一道leetcode hard非面经题。。leetcode321。。后来又跟了一道follow up是给你两组数如果全部都用该怎么实现。
+
+
+
+今天刚完成的yahoo电面， 完全非主流， 没有算法，甚至算不上系统设计，
+一个白人小哥， 问了5分钟简历，然后说 我们来做个ecommerce system  Restful service. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+心里一万个FFFFF ,  于是就扯了一个半小时 关于 Restful ！
+
+和兄弟一交流 都觉得这个是灭我的节奏， 你丫要灭我 也不用1个半小时吧， 还是video conference！
+
+
+
+印度小哥  人很好。 电话上来没墨迹 问了两三点简历上的东西  直奔主题开始出题  . From 1point 3acres bbs
+
+* lc上原题    258.  给你个整数  把各个位相加   如果结果小于10 返回结果  如果不小于10   把结果接着各个位相加    直到结果小于10。   我递归做的 本来以为有follow up让我找规律O(1) 解决 结果没follow up直接下一题了  - _-
+* 字符串permutation. 给一个 无重复字符的字符串  列出所有permutation
+   
+* 我面试之前跟他说的是做FullStack 他就给我出了个 js的题。 他说对js不太熟的话我们可以跳过这题 结果我脑子灌水了来一句 试试呗。。。 js是野生学的  他让我写个js的prototype 不会。 进入下一题
+* 是第二题的follow up， 给一个无重复字符的字符串， 一个int类型的长度   列出所有从str里拿出指定数量字符组成的 permutation. （就从str取出指定数量的字符 返回所有permutation)  时间到了没写完    挂电话忽然反应过来了 这不跟第二题一样么  就多个变量 -_-
+
+
+1. remove duplicated character from string without changing character order.
+hash set秒了。
+
+2. find least common ancestor. 
+第二题的tree node还给了parent，所以只要向上找最先出现的公共parent就行就行了，非常简单。. from: 1point3acres.com/bbs 
+
+题目波澜不惊，20分钟秒掉，不过最后提问的时候问了个非常傻逼的问题，感觉自己就是脑子被门挤了。我问了个常问的问题之后，突然表示非常想知道问什么yahoo关了中国地headquarter？面试官小哥听了一惊，表示一下难过，也不知道该说啥。
+
+
+
+一个很nice的印度大叔, 题目都不用code, 说思想就行
+1. 因为楼主是转行的,上来先让你给自己的skill评分, C++, Python, Java, 会不会multi-threading, 懂不懂OOD, 知不知道啥是RPC...
+2. 怎么find least common ancestor in BST... 一开始他还说错了, 说成了binary tree, 楼主想复杂了, 说了一会儿才发现他其实只要BST. 顺便问了BST和binary tree的区别...
+3. min stack
+
+
+onsite:
+1. 白人大叔, 问了大概50个CS fundamental questions: 
+先是OOD:
+encapisulation, inherentance是啥, 有啥好处, 什么时候用inheritance vs composition
+Polymorphism:. 1point3acres.com/bbs
+Static polymorphism
+dynamic polymorphism
+Why it is useful?
+Design patterns:
+what is a design patterns?
+how many categories do you know?. visit 1point3acres.com for more.
+然后一堆multi-threading和OS问题:
+Read lock? Write lock? Reader-Writer lock (shared-exclusive) lock? Nested lock? Conditional variable?. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+Deadlock? How to prevent deadlock?
+Pthread related..
+mandatory lock vs advisory lock
+
+
+2. 印度哥哥, Code to implement a function to calculate 一个函数在一个点的导数
+
+
+
+3. 女印度director, 吃饭闲聊加reverse a linked list. 说这个组还挺受公司重视
+
+4. 中国哥哥, Merge k-sorted array and find top k elements in a BST. 楼主写太快了时间用了只有一半,然后他就走了,凉了楼主一个人做了快半个小时.
+
+5. 一脸严肃的印度大妈. split a linked list. 用python写完了说我不懂Python, 再让用C++写一遍... 啥是virtual function. overloading vs overwriting
+
+
+2天后告诉楼主虽然你面的不错, 可是我们没时间train你,这个职位就算了..
+
+
+
+给一个array，都是正整数，没有重复，问是否存在一个subsequence其和等于target.例如：{1,2,5,6,10,12,17}, target=15. 应该返回true， 因为有{1,2,12}或{5，10}. 应该是跪了,实在没想出什么好的解
+
+
+
+没有概念题，两道 Coding：
+
+1、[3, 2, 1, 5, 6, 19, 9, 20] 返回范围  ["1->3", "5->6", "9", "19->20"]：输入 int[] nums, 输出 List<String>(). 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+2.1、gas station
+     输入：gas station 位置 [X0, X1, X2 ... Xn]
+     条件：car 加一次油最多能跑 100，要求停最少次数到终点 (Xn)
+     输出：停车加油的位置 ArrayList<Integer>()
+2.2、follow up
+     每个station 有 cost [C0, C1, C2...]
+     求使得 cost 最小，返回停车加油次数
+     
+     1) reverse string in place
+2) Combination sum.只需要输出最终有多少种组合. 相同数字不同顺序视为一样。
+
+另外想请问下大神第二题如果用DP应该怎么写。。。
+
+
+
+面试是早上9:00-12:00
+manager一大早先会带我逛一下整个公司，然后进了一个会议室，先给我介绍了一下雅虎的整个香槟分公司的工作team流程，妥妥的大数据部门啊暗爽。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+然后开始有的没的问behavior的问题，然后随性的问了几个比如MVC属于哪个设计模式，Softwareproject相关课程之类的问题。
+
+
+之后就是新的一组的algorithm面试，首先还是问java基本问题，thread vs process, abstract vs instance, what is abstract class, stack vs heap，java参数传值是按值传还是按引用传递之类的，也有一些比较偏的java问题，不过答不上来他也让别紧张，然后问时间复杂度问题，hashmap，heap之类的。然后给了道链表题让做最优解，之前没见过这题链表题，觉得蛮灵活的。
+
+
+然后是雅虎经典的reverse engineering 面. visit 1point3acres.com for more.
+给你一个文件，求出第四列的所有数据的和（java,linux, python），问test的种类，看test代码告诉代码的含义，小问题比如unsigned int的最大数，看代码找错（溢出）
+
+
+蛮惊讶这次没有面database的，因为sql也是雅虎经典内容之一。
+
+
+anyway最后又是一个manager，不过那时候我处于雅虎technical questions的兴奋中，感觉自己对面试的feedback应该让他们蛮满意的，于是然后我就屁颠屁颠跟去雅虎食堂吃饭了。
+
+
+当天下午收到了offer，这几天在和香槟的员工接触中感觉得到雅虎的香槟组还是一个非常technical的大数据的组，弄的我即使有其他的offer也还是很想去，因为真的能学到东西。而且待遇很不错，这个香槟组也没有怎么被裁员。
+
+
+希望对大家有用，最后，求米T T
+
+
+
+最近过了两个雅虎的电面，Finance和Ads。
+-google 1point3acres
+面的都是LeetCode原题，废话就不说了。. visit 1point3acres.com for more.
+Fianance Team:. more info on 1point3acres.com
+1.  https://leetcode.com/problems/symmetric-tree/
+2.  Follow up: 不用递归完成 . more info on 1point3acres.com
+
+
+Ads Team:
+1.  https://leetcode.com/problems/top-k-frequent-elements/   
+2.  Follow up : 讨论了其他几种数据结构实现的方法。 正好我之前用三种方法做过这道题，所以很顺利。 链接给大家参考 https://discuss.leetcode.com/topic/48158/3-java-solution-using-array-maxheap-treemap. visit 1point3acres.com for more.
+3.  时间剩的比较多就加了一道简单dp： https://leetcode.com/problems/unique-binary-search-trees/.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+希望能对大家有所帮助！
+
+
+不得不说的是我觉得雅虎的HR是说话最舒服的。
+虽然不景气，但是说话很诚恳，说说公司近况和未来打算什么的。
+-google 1point3acres
+Yahoo 第一面
+一共45min
+
+面试官说话很糊，听不清楚。
+刚开始聊简历和自我介绍什么的大概10分钟左右。
+然后问了一些技术概念什么的。
+coding是要求实现一个event emitter，
+实现publish和subscribe两个function。
+
+等结果攒人品ing
+
+
+
+1）一个string set，求anagram，案组输出
+2）一个msg stream，每个msg有一个处理好的topic，如何求得过去一个小时的最多的k个topic
+followup 是大量message如何处理-google 1poi
+
+
+正规传统的45分钟面试。面试官是个三姐，是个manager。因为平时听三哥英语习惯了，没啥大的压力。
+
+首先是各种非技术问题，谈项目经验，针对她感兴趣的问题提问，老实说就好。10多分钟结束。
+
+然后是算法题，很经典的问题：给一个英语单词list，将拥有相同字母组合的单词归为一类，然后将最后的分类结果返回。比如：stop, post, eat, tea, tops, apple，结果是三类：stop, post, tops; eat, tea; apple.（；是类别分隔符）。用hashmap就好。key的话我一开始是排序单词来做。follow up是有没有更快的生成key方法：hash算法，26进制或者Java的那个hash算法都行。17分钟时间。
+
+最后又是机器学习问题。情景是这样：假设一个email account肯能被黑了，如何设计出feature set来判断出一个email account是否被黑。16分钟时间。
+
+剩下的是扯问题。问了她的组干啥的。
+
+上周五面的，趁着还知道说了啥，写个面筋求大米。学校career fair随便投的，竟然有消息也是很惊异。楼主背景本科商科，研究生读水水的information science，拿到码农面试都很开心的这种。。。hr联系之后发了面试时间，看到了面试官是个印度人心里凉了半截。本来看了地里面筋感觉他家特别喜欢考基础知识，背了一晚上的各种概念，java知识blabla。
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+面试官准时打来电话，听着口音还能听懂也是松了口气。随便说了一下简历，竟然就让我开始写题，楼主也是目瞪口呆.jpg ，一共三道题。第一个是说出一个程序的输出结果，涉及到java基础知识，楼主开始的时候说错了，面试官指出了我的错误，还让我打开idea跑跑自己看看结果。楼主后来把结果改好了，他就开始问我为什么错了。第二题后来问了周围的人大概是个博弈论的题，在不说出每个人真实工资的情况下设计出一个方法得到一群人的平均工资，面试官引导我给了很多hint，说到了一半，楼主真的不会做。。。第三题是reverse array，但是要求不使用额外空间，不用loop，当时就懵了。。。还好后来磨磨唧唧写了个recursive。。。。然后写完第三题，面试官又让我把我没做完的第二题说完。。。正在这个时候一个小时的时间都到了。
+
+让楼主更加目瞪口呆的是，印度三哥准时挂了电话，说了一句 “我五分钟之后给你打回来”。楼主以为自己听错了。。。。后来在面试的界面，三哥又问了一遍楼主第一题错误的原因，这次楼主把原因敲进去的，三哥很满意，竟然真的又给我打回来，还花了20min给我了hint，终于把第二题给勉强做完了，面试官竟然跟我说great。。。。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+之前一直听说印度面试官很坑，楼主也很惊异自己运气太好了，没难为我，还帮我把面试完成了。不过楼主水平也真是不怎么样。。。希望有个二面攒攒经验就很开心了。
+
+
+
+1面：中东大哥.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+What will happen when you type "yahoo" into url. (之前最备好稿子了，背诵之）。 中间问了DNS的工作原理和寻找过程 （背诵之）。 他想再深入问各种协议的时候，我说了下，然后马上说这些东西不太记得了。Java garbage collector 工作原理， java interface 和 class区别， 多继承问题。 数据结构 问了 LinkedList 和 arrayList区别， Hashmap和set, hash key如何产生， 如何解决collision. Heap, heap操作复杂都。 数据库，denormalization and normalization, 各种joint的区别。（主要是概念和理解，度准备好了）
+coding: reverse linked list， remove duplicates 
+面完还有5分钟，聊了会天气。。。。
+
+2面：3姐
+第二面是我到目前为止最惨不忍睹的面试，面试过程中就想跪下给三姐说求求你别面了， 面完就直接等拒信的节奏。。。。。
+面试前周四，三姐发邮件祝贺我过第一轮，说明天会给我说下面试主要是什么。我心想三姐真好啊！然而等到了下周一任然没消息，所以问了三姐。她说不好意思最近很忙，面试主要focus在algorithm and datastruece.心想那好啊，遂继续刷题。。。. more info on 1point3acres.com
+开面：. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+我看你玩过mapreduce,我说是的，但是主要就写了mapper , reducer function, 因为这个是一个big data课里用到的. 三姐不理，继续说那好， 我问你下分布系统 HDFS的东西。。。狂吻一堆。。。楼主完全没准备，当场google都来不及，被问的劈头盖脸。。。其实楼主上那个big data课的时候还看过google的那篇文章，时隔半年，已经忘了。。。三姐继续穷追猛打问，我实在招架不住了想给她跪下了。。。。中间只听到一个load balancer熟悉，但是也没准备那玩意。。。三姐爽了后，贴了一大段SQL在collaedit上，说这个SQL有bug吗。。。。我日。。。看了5分钟，好像没问题，但是又好像看着不爽。三姐说你要是觉得没问题就说这个是对的，我们就下一题吧。我说好像有问题，遂改之。三姐说改了后是对了，但是改太多了，把我原来的语言结构改掉了。算了，我们下一题。。。
+上来就是一个位运算题，不是leetcode那几个位运算题，纯位运算技巧题。。。我对位运算没系统准备，没想到会考这个。建议大家好好看下CC150,位运算那章，系统总结了。位运算这个东西如果没准备过，很难想到那些trick, 比如如何巧妙的用mask之类的。。。楼主彻底跪了。。。。。三姐还不放过我，说算了，我们聊下java garbage collector的几个可能状态和相互之间的转换吧(sleep,wait之类的）。。。。最后， 那你说下LinedList和arraylist区别，多谢三姐，这个我很会。。。最后，it is really nice talking to you.........
+
+唯一一个数据结构的问题就是LinedList和arraylist区别。。。。自己的CS实力确实也不够强， 其实现在回想起来三姐问的题都不难，就是蛮偏的，非常重基础。但是之前的邮件太误导了，我完全就是沉浸在刷题中。。。
+这种面经也不知道能帮到大家多少。。。。
+
+
+
+Yahoo cloud platform 在CA面的onsite， 之前两轮电面在此略过，不是很难。。
+onsite3轮，每轮45min，日程上没有午饭。。。醉
+. 1point 3acres 璁哄潧
+1：印度妹子，刷简历，findLongestSubstringWithSameChar, findLargestSumInTreePath, removeDuplicateInArray;. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+2：印度小哥，OOD-elevator， findTopKelementsIn2DMatrix；
+3：印度大叔， system design， 设计支持yahoo的系统，先从login account开始，一顿瞎说，感觉这一轮比较磕磕绊绊。。最后考了一个 mergeTwoSortedArrays 速度写出来了。 其实没等写完他就说可以了，然后带我去吃饭去了（这里提一句，本来没有吃饭时间的，面试完刚好还有4min食堂关门，他就带我去蹭了一顿），吃饭聊了一点有的没的就结束了。。。
+
+以上，求offer啊。。。好想去CA。。。-google 1point3acres
+
+
+补充内容 (2016-4-13 08:43):. 1point 3acres 璁哄潧
+update：口头offer以拿
+
+
+这里是一面的帖子：http://www.1point3acres.com/bbs/thread-175091-1-1.html面试官是个三哥哥，先问了问简历，然后来了个merge intervals，先讲了讲思路，然后写code。写了几个test case，没什么问题，move on下一题。
+考了hashmap，问的挺细的，java的一些基础数据结构的细节要很清楚，最好看看API，面试官会给你code，问你结果是什么，然后解释原因。循循善诱，人很好。
+
+前天拿到offer。无奈之前怂了就签了加州的亚麻，只能拒了。。（看了看雅虎fb上intern group，从大家的学校来看排名都很不错，不像亚麻鱼龙混杂）
+
+
+
+一个多月之前面的，Google Hangout，一个manager级别的工程师。
+一开始介绍自己，问了很多基础知识，类似hashtable的构造，arraylist和linkedlist区别之类。最后剩几分钟做了一道很简单的题，给一个文件，将文件里的特定字符串换成另外的字符串。
+结束的时候面试官说这周有消息，现在等了一个多月了杳无音信，给recruiter发邮件也不回。
+真的强烈谴责这种公司，无论如何都应该发信通知一下结果，太不尊重面试者了，差评！
+
+
+Onsite 3轮 连午饭都没有，发下面经，目测要跪。。
+
+1 轮 3哥， 先扯了半天有的没的什么是BST， 又花了很长时间才弄懂要干什么， 要删除BST大于某个value 的所有节点，然后维持删前其他节点的pre, in， post 顺序不变，听着就很绕。。。开始以为要顺着节点删，写着写着觉得不好写，然后就跟. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+三哥讨论按照pre， in 重构BST， 扯了半天就到时间了。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+2轮 3哥， 类似LC number of island 变种。。dfs秒了
+3轮 白哥hm， first non duplicate character,  Roman to Integer.  然后聊有什么可以改进的地方。。。
+
+
+
+
+2轮电面 贡献下面经， 没问啥基础知识。。
+1轮 ：Caculator,   LC 315
+
+2轮 ：Isomophic,  Wildcard matching. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+下周 onsite， 希望RP好点。。
+
+
+在linkedin上面找的学长内推的，之后recruiter 发邮件给我让我去他们家网申，我一上去网申，呀呀的，这么复杂，算了不申了。 结果过了两个礼拜又有别的recruiter来找我了。是yahoo的mail组。.1point3acres缃�
+
+10/21刚开始一面是一个前段的三哥，面了5分钟他发现我想申请后段的，于是就挂了电话，留我一个人在房间里凌乱。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+
+10/30 于是就安排了第二个一面，这一次是一个国人小哥十分nice
+刚开始先介绍了下他们组的事，然后就问了一下我的project，
+接着就开始问题目了
+先问了一些简单的知识: array和list有什么区别 ， 解释一下hashtable的原理， 就是当发现用户加载网页太慢时候，服务器端应该做些什么改进。
+第一题:
+删除第一个string里面，存在第二个string里面出现的char，用hashtable就好了
+第二题：
+tree有parent节点，找两个node的公共祖先
+
+
+11/9 二面：一个印度女三哥也是十分nice
+   上来先问了hashtable的原理，怎么所有人都要问这个。。。
+第一题:
+返回一个string第一个只出现过一个一次char
+abbbcaaa  -> c
+abacdb    -> c
+这个很简单，扫一遍建一个set，扫第二遍就出来了
+follow up: 只能扫一遍。
+
+-google 1point3acres
+备注:他们家面试是按照组来的，所以可以面很多组，一个组挂了还可以面另外一组
+
+
+雅虎membership组，白人小哥(1) 各种基础知识：. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+map vs set,  list vs array,  binary tree vs binary search tree 一些基本数据结构操作的复杂度
+garbage collection :  java vs c++ vs python
+(2) coding : leetcode 原题 convert list to a BST,   我写了个convet linkedlist to BST, 写完他说arraylist也行
+
+好了，以上都很正常，下面是本场面试的重头戏
+
+＝＝＝＝画风变变变＝＝＝＝＝画风变变变＝＝＝＝＝＝画风变变变＝＝＝＝＝画风变变变＝＝＝＝＝＝画风变变变＝＝＝＝＝＝＝
+他说我有一个array， 你给我找出出现次数最多了数字，no hashmap。 我心想这是 leetcode 上的原题啊，用那个什么voting
+诶不对紧接着发现他给了个例子是这样的 1， 2，25，25，2，1，1 返回1
+我就问这里面的众数出现次数是大于一半size的吗，他说啊不是我们这个是arbitrary array，不一定超过一半
+好吧，我写了个sort的，他说啊你这个不是最优的，我们有time o(n) space o(1)的 ，你再想想
+最后没时间了，他把那个voting算法搬出来，说你看这个
+
+我说啊你这个只在超过一半时用，不然得到的不一定是众数诶
+他啊这样你可以再check一遍，发现不是就排除这数（你在逗我吗，这样一个一个排除还是o(n)吗
+......
+......
+听他后面的语气不是很淡定，有点恼羞成怒的意思
+深深感到自己情商余额不足，这种情况除了指出来我也不知道要咋办了
+......
+写面经求人品
+
+
+小伙伴内推的，先给了个Mini project做，两天时间，题目是一个文件每行一个人名，玩那种接名字的游戏（后一个人的first name和前一个人last name一样就能接到一起），求最长的name chain……比较麻烦的是要求写成Product级别的代码，还不给框架，整个要自己写，连input文件都要自己找……我还写了unit test以及Makefile……花了六七个小时的样子……不过事实证明这个练习还是有用的……
+
+过了两周左右我以为已经没有然后了的时候，突然说要电面，要给连续两小时面两轮的时间，不过如果第一轮不过第二轮就取消了，最奇葩的是确定时间之后他群发了所有人的面试安排…………于是我看到了有十几个小伙伴一起面同一个组……
+
+然后第一轮是个三哥，一开始搞错时间提前打过来，我说没空，他说那按约的时间再打，然后他迟到了15分钟。然后问了半小时的项目。然后写了一道two sum.....然后feedback是表现一般勉强给过……你出个two sum倒是让我写出花儿来啊！！然后hiring manager跟我约下一轮的时候还说，我觉得内推的能过面试的挺少的，你加油……
+
+以及你们还记得我刚刚说约的时间是连续两小时么？ 所以第一轮面完我没有直接接到下一轮不知道是挂了还是下个人迟到了，就在那坐了半个小时没敢去吃饭，结果最后hm跟我说是只有面得特别好才会连续面两轮，否则就是过后通知下一轮…………能早点说清楚么大哥！.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+. from: 1point3acres.com/bbs 
+一周之后第二轮（上周五），换了另一个三哥……这回寒暄两句直接写代码。第一道是给一个int N，和一个范围[lower, higher]，问从1到N的所有整数里面，数字位数在lower和higher之间的数有多少个。第二道是给一个数组card，里面是顺序随机的卡牌，每个上面有个integer（就是顺序随机并且不是所有数字都有），然后每一轮删除一个数字n，外加n+1, n-1（如果n+1和n-1在卡牌里的话），问最多可以删多少轮。第二题写的比较渣，没想到好的办法，后来想了一个先sort的办法就是nlogn的复杂度但感觉也不是最优？
+
+然后就没有然后了，这回应该是真的默拒了吧……╮(╯▽╰)╭
+
+
+
+来报个Yahoo一轮的电面，题目不难，面试的是个ABC小哥，在Yahoo做了8年，现在在video team，人很nice。
+一开始先做自我介绍，问了我一些简历上的问题，因为我之前做Nodejs的，问了我们的product是怎么处理scalability的，websocket是怎么用的，碰到什么难题之类的。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+接下来是两个coding题目：
+1. 检查一个string是不是palindrome，返回true/false，
+代码写的有点冗余，被提示能不能clean up。
+2. 给一个array，做random shuffle
+一开始我直接写了random generate+swap，脑子一下抽住没有考虑到swap过的那个位置不能再次被swap，经过提醒改正确了代码。
+
+
+最后就提题，我就问了下他们组是具体做什么的，说是做video，web和mobile，Yahoo其他组如果要用video就是他们提供sdk，web也用nodejs和javascript，我表达了我对nodejs和video streaming这方面很感兴趣balabala，之前的经验也是做video web application之类，小哥说很好啊balabala，愉快的结束了聊天。一共45分钟。. 1point3acres.com/bbs
+
+
+感觉代码完成的还不错，希望可以拿到下一轮面试。
+
+
+前两天在学校里面的career fair投的简历（Yahoo software internship），当天就收到了第二天的campus technical internview的消息。楼主并没有准备充分，全当是第一次的techical internview练手了。
+45分钟的interview有四道题目。. more info on 1point3acres.com
+第一道题目是， network, when you type www.yahoo.com, what's happenning then? 这道题目yahoo貌似经常出。
+第二道题目是，为什么网页前后端都要进行安全性检查。
+第三道题目是， 有一张表 三个字段 第一个字段是 80 digits number,第二个字段是 200 varchar, 第三字段是 80 varchar字段，问你为什么将第一个字段设置成index 会比将第三个字段设成index的快？此题面试官还在讲故事，也是醉了。
+第四道题目是，实现singly linked list, 我在第三道题目上纠结了太久，导致了第四道题目悲剧了。。唉。
+anyway，祝愿大家都能拿到offer。
+楼主继续等待其他的internview了。
+
+
+campus onsite:
+1. 输出pascal 三角形的任意一个元素，递归就行了，注意边界条件
+2. encoder, decoder problem. decoder 已经确定不可以更改：作用是 3xa ->  aaa; ab3xcd -> abcccd, 也就是 encoded text -> orginal text；写encoder, 主要是找encoder的special case, orginal text 只有字母和数字，只有字母可以进行缩写：
+（1）orginal text 123xa, 如果原样输出则decode结果为 123个a; Solution: encoded as: 123x1xa
+  (2) orginal text 3xa, 怎么办： encoded as: 3x1xa
+
+第二题基本是靠着提示过的
+
+phone：.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+聊简历后直接做题，题目不难，但是我没见过：
+假设你有个set, 里面是所有的大写和小写字母，不一定是英文；你有一个function toUpperCase(Character c) 他会返回输入字符的大写
+请用以上两个条件实现 function toLowerCase(Character)
+
+My solution:
+toUpperCase 可以用来判明输入字符是否是大写，c == toUpperCase(c) 就是大写
+关键是小写怎么map到大写：想了快10分钟才想到怎么用set, 大概这样
+upper = toUpperCase(c);-google 1point3acres
+set.remove(upper);
+循环set 找到c in set that c == toUpperCase(c), return c; 需要O（n）
+
+他说怎么O(1): 我实在想不出来，他提示了一句我才反应过来：先initialize, 把所有结果存到HashMap里面(upper -> lower), 这需要O(n^2), 但之后再次调用就只需要O(1)了
+
+当时真是犯2了。后来发现也不用操作集合，删除元素，只需要loop 一遍 找到 ch in set that toUpperCase(ch) == toUpperCase(c) and ch != c, （c是input）就行了
+彻底跪了，权当攒人品吧，反正感觉yahoo快不行了。。。
+
+
+小哥上来介绍他们组，然后问简历，因为有java/Spring Framework/Maven的经历，详细问了这个. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+基础知识：. From 1point 3acres bbs
+1. hashmap和hashtable
+2. java里面的GC
+3. 操作系统，有log file记录的登录User和登录时间timestamp，找出J.Smith的登录频率，大致说一下怎么做，不用写
+
+code：
+1. 很nice的warmup，小哥说让我熟悉collabedit。reverse string
+2. 找出数组里的largest distance，找最大最小值减一下
+3. 找一个String里最长的不含重复字符的子字符串，原题，问了HashSet和array的优缺点.1point3acres缃�
+
+最后问问题结束。
+题目简单感觉还不错，求过求onsite。。。
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+补充内容 (2016-3-9 01:54):
+收到onsite
+
+
+面了有段时间了
+电面. 1point3acres.com/bbs
+国人大哥放水，只记得有个2sum了
+
+onsite. more info on 1point3acres.com
+1. 印尼女  system design 手机浏览图片system 设计
+2. 国男 扯了半天背景，本来以为大哥要放我水，结果最后来了个题，我到现在还没搞通题意，题目就讲了很久，大概抽象出来有点像nested list iterator什么的，反正我是不懂，最后几分钟随便写了个inorder tree traverse
+3. 午饭，国人大哥director， 人巨好巨牛，什么都懂，一直鼓励我，以前创业然后公司被Yahoo买了，当时就想跟这种老板混有前途，然挂了
+4. 好像是个小日本，午饭聊得有点过了，好像迟到10分钟，第一题vender machine找零钱问题，本来挺简单的，小哥非得要按他思路做出来，最后写了几种解法。 最后几分钟，居然要我写Android 的manifest.xml文件，当时就懵逼了
+5. 小印， 第一题一个MXN数组里面，求nxn sliding window里面的sum 2. wildcard matching， 用DP做了，跑了testcase后然后小哥问为什么不用DFS，我跟他解释DFS有什么什么问题，并举例给他他才焕然大悟，那我就郁闷了，你的标准答案是什么？
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+说好一周给结果， 然而默拒， 考虑到Yahoo里面的混乱我也就不说什么了
+
+
+雅虎第一面基本是面筋里的题目，考了考分布式系统的基础还有多线程的基础，只要做过类似project就没什么问题。coding题目是写一个binary tree，然后问你能加什么function。都比较基本，三叔叔没有为难我。。
+. more info on 1point3acres.com
+今天收到二面通知。
+
+
+
+今天刚面完的雅虎电面，不知道他家具体流程，之前on campus之后给了phone interview，听面试官小哥口气可能还有二轮电面。。。本来约的昨天小哥有事临时改成今天，听口音不是印度人，聊的还蛮愉快。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+上来他先介绍了自己，然后让我也介绍，简单说了一下background，以及介绍了做过的project和internship，然后他逐个问问题，比如project里database怎么连接，Spring的框架模式之类，因为是backend engineer，问了实习中关于java programming的经历，大概10多分钟。
+
+然后半小时开始狂轰滥炸问java基础知识。. more info on 1point3acres.com
+1. 说说hashmap
+2. 说说concurrent hashmap。这个以前没接触过，回答说用hashtable线程安全，他说对，但是concurrent hashmap性能更好，问我如何实现。。。我扯了set不知道对不对，懵逼了都没google一下，蠢得要死. 鍥磋鎴戜滑@1point 3 acres
+3. 说说interface和abstract，以及jre 8的interface跟之前版本的区别，区别你大爷啊
+4. 说说GC.1point3acres缃�
+5. 简单说一下final，对象，方法和类
+6. Singleton-google 1point3acres
+
+这时候已经过去40多分钟了，终于开始coding 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+第一题lc原题，在一个大多数出现过两次的array里找只出现过一次的数字：eg ｛4，5，4，5，3，7，7｝返回3。刚拿到题目兴奋啊，脱口而出easy，用哈希表或者位运算＝ ＝结果可能太兴奋没有演一演，可能被他怀疑做到过Orz。。。。。说好的实(yan)力(ji)呢
+第二题，只用加法实现减法乘法以及除法，还简单. From 1point 3acres bbs
+. From 1point 3acres bbs
+已经一个小时过去，最后15分钟问了些问题，就结束了，他说今天会把报告交上去，快的话我第二天能收到消息
+求人品，求过求onsite，求offer。。。。拿了好多rej心情低落中。。。。。
+
+
+
+补充内容 (2016-2-26 03:49):
+过了，下周第二个电面，估计还得再刷一轮，求onsite。。。
+
+
+实习的一面，中国小哥按时打电话过来，先亲切地自我介绍了一下，然后问了问我的项目，看我本科不是CS的就问了我一些C++基础知识，都答上来了，又问了thread，我老老实实说没上过OS 的课对这个不是很熟悉，小哥也没有揪着不放。
+然后就给了一道reverse words(leetcode 151原题)，楼主当时一听那个慌啊，怕什么来什么啊，怕string来string啊，幸好之前做过这道题，思路是有的，只是觉得写起来特麻烦还不容易bug free，整个人都要不好了……然后强打精神跟小哥先讲了思路，一开始小哥不明白我的reverse word最后再reverse一遍的思路，我给他举了个例子他就明白了，然后我开始写码。磕磕绊绊地，果然bug遍地，但是卤煮不依不挠地在改嘤嘤……最后45分钟到了，小哥说要去开会，叫我别慌慢慢改，他待会儿回来看码，然后我就沉下心来继续改，5分钟就改好了QAQ哭瞎惹。最后又完善了一下multiple spaces between words的情况，然后保存了。小哥目前正在查看，我就过来写面经了。
+. From 1point 3acres bbs
+string这种怎么能在半小时内bug free啊啊啊啊啊啊！
+感觉不给二面说不过去，希望二面不要再难了嘤……
+
+
+
+1. Java基本概念，inheritance,abstract class, interface, constructor, 介绍一个design pattern.
+2. database基本概念和操作，怎么create一个table, 什么是primary key, select(*)和selectcol name有什么区别，index的disadvantage
+3. unix command, 怎么比较一个文件和另一个在remote server的文件内容是不是一样的(我不知道用diff加什么别的命令),grep用法
+4. 一些system的问题，怎么scaleup usage一个网站，怎么确保一个网站的安全(https?),什么是restfulAPI, cookie, session, MVC pattern.
+5. 最后一些html和css的问题.
+全程一个小时, 没有问datastructure和算法，不知道是什么情况.
+
+
+
+面试过去一段时间了，寒假一直拖延忘记发面经，但Yahoo应该还在持续招聘，希望能够有用～～
+10月底第一次电面，11月中旬第二轮，12月7号onsite。非常走运，这次面试遇到的大多是国人面试官，面试过程也很enjoy ~. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+第一轮电面：
+面试官是国人小哥，全程50分钟。开始聊简历大概十分钟。coding是斐波那契数列变种，其实就是找规律，不是很难。 第二个是LRU。（中间还有一道，不好意思忘记了）。
+
+第二轮电面：
+面试官是一个国人姐姐，三道算法。第一题是，多叉树lowest common parent，其实就是lc 上的变种。第二题：sort一个几乎排好序的数列（数列中大部分元素有序），给出一个最优的算法。（第三题不好意思，也忘记了，只记得不是很难）。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+Onsite:.1point3acres缃�
+1. Hr 交谈20分钟，逛campus
+2. 聊简历15分钟，期间聊到了SQL和NoSQL DB的使用，怎么设计data model等等。算法题细节有点记不清了，大概是给定一个二维矩阵，如
+    ＊＊＊＊＊＊
+    ＊＊＊＊＊＊
+    ＊＊＊ 1 ＊＊
+    ＊＊＊＊＊＊
+
+
+补充内容 (2016-1-18 03:41):. visit 1point3acres.com for more.
+找出1临近（上下左右）位置的点的坐标，follow up是矩阵很大的时候怎么破。
+3. 聊简历，coding 是sliding window maximum 变种。
+4. 一个白人大叔，全程设计题，问到了mapreduce, big table, load balancer 等等
+
+补充内容 (2016-1-18 03:50):
+编辑的时候不小心碰到“发表”键了，尴尬。。。
+Yahoo直接跟组面，全程很开心，组是做移动端广告的，面试过程中面试官还带我去见了组里的小伙伴。很喜欢这个组，就是不太清楚is a best time to join yahoo ... 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�.
+. visit 1point3acres.com for more.
+
+补充内容 (2016-1-18 03:50):. from: 1point3acres.com/bbs 
+最后祝小伙伴们都能收获心仪的offer ~~~
+
+
+印度哥。abstract类里面有个protect method子类能重写这个method嘛？ Given n nodes find the least ancestor in BST.   First Missing possitive number.各种问为什么。。。一定要说你是错的然后费劲口舌告诉他是对的才行。然后他也不一定相信。. Fro
+
+
+
+
+今天面了2轮， 第二轮表现非常差。
+第一轮, ads&&data组1：谈以前做过的项目
+
+
+2： OOD， factory patter, observer pattern, singleton
+3: association rule algorithm for data mining
+
+第二轮， platform组
+
+1： BST找最小公共祖先. visit 1point3acres.com for more.
+2：只允许用加法实现乘法和除法 （除法没答上来， 面完后想了一下是取补码模拟减法然后就可以了）
+3：C++ new operator, 我直接说我不知道， 就挂电话了.
+
+赶deadline去了。 烙印不好对付啊...
+
+
+
+今天拿到了正式offer，奉上面经，积攒RP。
+.1point3acres缃�
+一共三个小时。面了3+0.5轮。
+
+1. 第一轮先Manager带着转了一下building，然后进到一个会议室开始聊。没有面任何技术性的问题，主要就是了解一下背景。大概是以下这些问题：. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+    什么时候毕业。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+    因为我之前学另外一个专业后来转CS的，为什么转CS啊。还好简历上列了一下选过的CS的课，manager说大概表达了一下，看着你选了一些本科生的课我就放心了。因为我们要solid programmer，研究生level的课不太实用啊。你有没有上过算法, data structure的课啊？我没有上过，就老实说没上过，但是在网上coursera跟着学过等等。. 鍥磋鎴戜滑@1point 3 acres
+    问问project。哪个最有挑战，最有成就感。.1point3acres缃�
+    有没有用过Hadoop啊？知不知道Mapreduce啊？
+    我们这还要招好多人，我们希望招intern之后还能回来的同学们。（同志们，表忠心的时候到了，千万不能放过啊。表示自己要留下发展啊。）
+    然后看剩下的时间挺多，说那我介绍介绍我们这都是干嘛的吧。开始粗略的介绍了一下，发现剩的时间还是好多。然后说，那我再换一种说法仔细讲一下吧。然后终于等到了下一轮面试官。
+2. 第二轮面试关于data structure/Algorithm。
+    Code how to test if a tree is a binary search tree.. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+    问了关于stack, queue, linkedlist, arraylist的不同操作的big O。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+    然后还有一些java的概念知识。
+3. 第三轮面试reverse engineering。之前看过地里有一个去香槟onsite面试全职的人的面经，有一轮他也是被考了这个topic。建议大家去地里翻一下。那个人列出来的题90%是我被考到的题。
+4. 第3.5轮，另一个manager过来wrap up一下。没有任何面试的问题。只是单纯介绍了一下，什么时候给消息啊，intern进来都干嘛啊，最后要给VP门作报告之类的logistic方面的东西。估计也就最多听他说了二十到二十五分钟就结束了。
+
+
+还有一个只是我个人的小小建议，smile goes a longgggg way。我感觉我基本把面试官当成了group partner，面试变成了一次group meeting，心态就会放松很多。
+
+
+
+
+因为新人加了个url没权限，帖子发不出来，回到版面刚才打的字都白打了otz
+
+首先楼主申请了reschedule（其实因为时差之前算错了，但沟通时解释得可能不太好），遭到了recruiter的严厉警告，说you should not provide a time slot that is inconvenient for you， this alone can make us not consider you as a candidate，吓得冷汗狂冒赶紧道歉。大家引以为戒吧！
+
+面试用的google doc.先问了问project（写上去凑数的居然也问了），然后就是概念array和linkedlist的区别。楼主之前从来没面过tech经验不足，说了好多废话譬如they are very different什么的。后来反思面试时间还是很宝贵的，千万不要抱有侥幸心理拖延，绝没有好处……然后implement一个linkedlist（就是generally define一下member variable，constructor，不用写具体的method），除了indentation不太顺手还是比较熟练的。
+
+coding题目。请大家自己去wiki lucky number楼主没有权限发url……问给一个数n，判断是不是lucky number.不一定用数学，simulation即可。其实没什么复杂的算法，但楼主自乱阵脚，先说用array后又改成linkedlist,其实时间并没有快多少反而复杂的数据结构有更多overhead，事后反思也觉得是挺不好的选择。最后interviewer评价这个code很confusing.问问题，面试结束时就知道自己已经跪了。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+yahoo面试glassdor看也说不会太难，所以主要是不要太紧张吧……最后祝大家offer多多！. 涓
+
+
+
+上周参加了 Yahoo 的第一轮电面，找 16 年暑假的实习。第一次面试巨紧张 囧。。。-google 1point3acres
+简历应该是十月初学校 career fair 投的。当时收简历的大叔一脸冰冷，啥都没问我就结束了，让我去网上申请。
+后来一直赶 due 也没来得及去网申。上周就收到了电面的邮件。一个叫 flurry 的组说对我的简历感兴趣。
+
+一开始就先聊聊简历，然后就开始技术性问题了。.1point3acres缃�
+
+第一个问题是：给你个 int 数组，让你返回一个逆序的 LinkedList
+比如：
+输入：[1, 2, 3, 4, 5]
+返回：5->4->3->2->1.1point3acres缃�
+
+先让你写一个 Node 的 class，然后给你确定输入输出类型，把当中的逻辑写好。
+
+太紧张了，一开始写完了结果是顺序输出，他让我把数组代入试一试，结果还傻呵呵的直到第二个 loop 才发现输出错了，改了下，第一次还没改对。最后还是改对了。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+第二个问题是：给你个 BST 和一个 level number，让你返回在那个 level 所有树节点的值，用 LinkedList
+比如：
+                    10
+            8               12
+        6       9       11      14
+    4       7
+
+level == 1 -> [10]. 鍥磋鎴戜滑@1point 3 acres
+level == 3 -> [6, 9, 11, 14]
+
+给定你输入输出类型。
+
+写到一般发现他没有给树节点的 class 然后问他，他说 glad you ask 囧。。。当时脑子里只有 leetcode 上 tree level traversal 的做法，就先把整个实现方法写了上去，写完发现其实并不需要遍历完整棵树，做了些修改，但还是用了 ArrayList 套 ArrayList 来存储之前遍历的节点。其实也并不需要，太紧张了没想到只要用一个 int 记录层数就可以了。然后他看我用了 Queue 来遍历，其实就是 BFS，就说时间差不多了，问我有什么想问的么，然后就结束了。
+. 1point3acres.com/bbs
+面试完的心情是崩溃了 QAQ 这么简单也能面挂也是醉了。。另外，Yahoo 听说一向默拒。。祝地里各位好运~
+
+
+
+刚面完
+应该是个三哥哥，口音。。。回答问题的时候就只能坐等他打出来，几乎听不出来。。
+
+自我介绍了下，然后重点问了好多实习的东西，都忘了。。。
+然后基础知识什么的，问了多态.......之类的，忘了都问什么了。。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+然后code是. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+1.给一个Array，排序 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+没指定写那个，我就说写QuickSort吧. from: 1point3acres.com/bbs 
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+2.在LinkedList里边找中间节点，偶数个就返回中间俩平均值
+//1,2,3,4     返回 2.5
+//1,2,3,4,5  返回 3
+快慢指针
+
+3.sql
+大概是有两个，分别是
+Employee,   id, name
+Salary,        date, id, amount
+然后问有个叫 'ABC' 的这个人，今年总共的salary是多少
+
+
+select sum(amount) from employee, Salary where Employee.id = Salary.id AND YEAR(date) = 2016
+
+最后问了个如果写JAVA的时候，出现OutOfMemory，可能是什么原因
+
+求祝福，求好运
+
+
+phone interview，第二轮，感觉yahoo问题都差不多，先花了半个小时聊天，主要问问课程和project，然后问了一下networking。然后写了一，典型的union find 问题（学校career fair投的简历）个人觉得主要是要跟小哥聊得来，其实并没有考察很多coding。嗯，下周出结果。
+
+
+1. 
+design 一个游戏的输入输；游戏是这样的，总共有n个球，两个player，每个人轮流拿球，每次拿1个或2个，哪个人碰巧拿完了所有的球，哪个人就赢了～. 不用写UI，考察的应该是corner case，和基本logic，很简单。
+写一个robot可以玩这个游戏。就是找最优解，或者说必胜策略。
+
+2. palindrome partitioning 2 
+返回一个index array，每个index表示在哪里需要进行partition(最优的partition 方法)。 
+
+中午lunch. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+3. 
+设计data structure 存电话号码。.1point3acres缃�
+两个linked list，有交点。找到交点。 
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+4. permutation
+linked list tree to binary tree。 保证中序遍历所生成的二叉树的结果和遍历linked list的结果一样。 
+system design：
+what happens after you type in URL。
+前端后端，如果反应速度很慢，怎么办？如何优化，前端后端都要讲一下。
+
+5. manager 聊天
+介绍了一下组里干什么，聊聊天，人生啊。。什么的。。。 
+
+
+
+. 鍥磋鎴戜滑@1point 3 acres
+补充内容 (2015-11-29 05:20):
+如果觉得有用，麻烦各位给点大米，多谢！！！
+
+补充内容 (2015-12-5 11:10):
+最后一个问题是 double linked list to binary search tree 打错了。。。开始她问，single linked list，做法也一样。。没太大差别，然后说了一下怎么做single linked list 之后就说改成double吧，简单一点。。。
+
+
+两轮背靠背店面，默据。
+
+
+
+First Interviewer Q:
+. 鍥磋鎴戜滑@1point 3 acres
+1. a CEO supervise SVPs, an SVP supervises VPs, count the number of positions of CEO,SVP, VP in a company
+
+2. ABCD*4 = DCBA, what are A, B, C, D?
+
+3. when we use a browser to surf the internet, what happens? is TCP used? is IP used?
+
+4. how linux shell executes a command?
+
+5. how debugging breakpoint is implemented?
+
+2nd Interviewer
+. visit 1point3acres.com for more.
+Warmup chatting. 
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+1. What is the difference between Java and C++?
+
+2. Given an array of number, how to randomly select a number (>80) for raffle? . 鍥磋鎴戜滑@1point 3 acres
+. more info on 1point3acres.com
+    How to clarify the problem and improve solution with assumptions
+
+   what is the tradeoff between time and memory?
+   
+   
+
+几周前的面经. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+第一轮：
+讲自己的project。. From 1point 3acres bbs
+设计短url，根据你的设计很多follow up 比如url后面的.html, .jsp之类的要不要保留，自己的设计最大能多少个，大量怎么办。
+
+第二轮：
+用O（n） 时间 和 O（1）空间打印出数组中每个数的数量，数组中最大的数为数组长度减一。
+java基础题，有个奇葩题，垃圾回收对a point b， b point c ，c point a 会怎么处理。.1point3acres缃�
+
+第三轮：
+面的很不好，很多behavior比如 什么样的code decent，recursive 和 interative区别（我说recursive更费空间 他表示惊讶， 我也没说清楚）。
+然后写了个几行的java代码（类似jdbc的一段代码conn后调用一个方法里面一个匿名内部内），什么也没说就问我有什么问题，我说了很多都不是，然后才说是多线程的问题，然后我还是不知道什么问题，这里纠结了很久导致最后做题才10几分钟。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+最后做的题是两个集合，一个代表相等的关系，另一个不等{A = B， B = C}， {A ！= B}，问存不存在矛盾。之前看过面经有这题，我觉得是union find 写完后他说有O（n）的解法但是你的也work。后来和别人讨论，别人答的是用hashmap的key记录A，B之类的，value作为所属set的编号。我觉得这种解法不太对，因为对(a,b) (c,d) (b,c)这种顺序依然要重新扫描所有hashmap中的元素。
+
+自己还要多练练交流，感觉题基本都做出来了。现在只希望可以给我报销。。
+
+
+The process took toooooo long ! It took five weeks for Yahoo to give me an formal offer after the onsite interview.
+
+1st phone (10/16) : resume, url shortening design, climb stairs (not DP, print all possible climbing ways). more info on 1point3acres.com
+2nd phone (10/26) : isPalindrome, Split linkedlist, C++ knowledge (inheritance, copy constructor, abstract class, friend class/function)
+onsite (11/11) : 
+        first round : system stack, static variable, 2Sum, print all possible product combination of a number
+        second round : anagram, find if negative element exists without using less than, merge two sorted linked list. more info on 1point3acres.com
+        lunch : lunch break with team manager
+        third round : find median in unsorted array, isBST
+
+Right after the onsite interview, the manager sent me an email saying that everyone likes me there and will proceed me to next step. After two weeks of hearing nothing, I emailed them asking for the update. Then I got an email (11/25) saying Yahoo is moving forward and requires me to answer some questions including GPA, relocation need, sponsor need and do I have other offers. Then came the Thanksgiving holidays...QQ . From 1point 3acres bbs
+On 12/2, I recieve a phone call from the team manager saying that my GPA(3.4) is slightly lower than their standard and requires me to give some stories or explanation. She says that she really wants me on her team and will make the best package of me. She says she even gave me the highest ratings. However, I started googling stuff on the internet and found out that Yahoo really takes GPA seriously and the standard is also kind of high.. (3.5). From that moment, I was like a walking dead and all I could do is waiting. I was always trying to look for stories of low GPA Yahoo offer. Looking back,  I dont know how I make it through today lol
+On 12/16, I sent another two emails to the hiring manager and also my recruiter asking for the status of my offer. They said they are happy to inform me that I just passed the hiring committee and was currently waiting for the approval of CEO. Unfortunately, she was on maternity leave at the moment due to the birth of her twins. Its almost Christmas and I got another offer due on Christmas. I was so anxious and even found out how MM likes top-tier schools and high GPA. There are even stories of how people got turn down because of low GPA. Now I am like a anxious walking dead ! 
+On 12/22, I emailed my recruiter saying that I cant wait anymore and he said my offer was sent on the 17th! It went straight to the Spam folder lol. So technically, I received my formal offer on 12/17. 
+
+Unlike Google or others, referral for Yahoo won't necessary get a response. To my understanding and observation, all the referals will go into a resume pool and only if there is any team find you match to them will they contact you directly. So through out the interview process, there are no HRs involved. The engineer of the team will contact you and interview you directly. 
+
+Yahoo does take GPA seriuosly (3.5). GPA requirement for intern offer is even more serious than full-time offer. If the team you interviewed really wants you, then there is a high chance you woll still get an offer with low GPA. 
+
+It is such a harsh year comparing to the past. Good luck to everyone with your job search ! Happy Holidays !. Waral 鍗氬鏈夋洿
+
+
+1. Find biggest 100 integers of 1 million integers. time and space of each method.
+
+
+2. Angle between minute and hour hand when its 3:25pm?. from: 1point3acres.com/bbs 
+
+
+3. Suppoer you are building a registration system and the web of registeration has the follwing pages:
+page 1 -> collect personal info
+page 2 -> collect phone number
+page 3 -> verify phone number
+page 4 -> success
+
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+how do you measure the success of this product once it is released to end users?
+
+4. reverse the second half of a linkedlist. Can you do it with more space but faster?.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+5. difference between encapsulation and abstraction.
+
+
+国人小哥，简单的聊了一下项目。然后问了经典的在浏览器里输入url会发什么。然后问我会不会OS相关，说说进程和线程的区别。然后让我写个deadlock。这是我第一次遇到要写deadlock的...
+然后让我打开lucky number的wiki，写一个函数，判断某个数是不是lucky number。
+就是按照wiki上的逻辑来计算就好，建一个大小为n的数组，先确定要删第几个，然后删一轮。如果第n个被删掉了就不是lucky number，否则就是。
+逻辑挺明确的，然而我写出了bug，时间到了也没改出来的。T.T
+
+
+刚面完Yahoo第一轮，之前在地里看了很多面经，所以来回报一下社会~
+学校10月中的show case的时候投的简历，都过了一个月，我早就以为自己fail掉了，突然来了个邮件，跟地里另外一个同学收到的格式很像，大致意思就是说很快要来学校招聘，所以要尽快选一个电面日期。我选了两个星期之后，也就是今天。后来看到地里的帖子才知道这个是模板邮件，根本就没什么面试……早知道就再往后推几天了。
+面试官是个阿三哥，publishing platform组的，人非常nice，上来先问了我一堆关于自己的project的问题，我有Android App的开发经验和机器学习的course project，他就挑了两个来问，问我App是怎么实现的，整个系统如何运作，然后机器学习的DataSet和Model分别是哪些。
+聊这些就聊了十多分钟，然后开始coding test。题目非常简单，就是给你一个整数的数组，让你统计其中的出现次数最多的integer，然后返回，如果有多个出现次数都为最高的，就全部返回。我看了一下就说这个我能想到两种实现方式，一个是写一个数组，把index和input中出现的数字对应起来，出现一次就count++；另外一个用HashMap实现，统计所有数的出现次数，然后再返回最高次数的key。阿三哥问我HashMap好在哪，我说比较省空间，避免数字不连续会导致的浪费空间的情况。他说好，你写吧。
+然后就开始敲代码，中途我忘了HashMap更新value的写法，然后傻了吧唧地问他”不好意思我忘了XX我能Google一下吗“，阿三哥超级爽快说"No problem go ahead"……然而我还是太傻了……我应该自己默默google不要告诉他的(ฅ>ω
+慢吞吞地写完，差不多要到45分钟了，他又问，你能写一个test function来测试你自己的函数吗？我想确定你有使用这种test function的习惯。我说啊我平时会自己写test case来测试的，如果你需要我可以现在写。他说没事我知道你会写就行了。然后coding部分就结束了……阿三哥还真是随便啊……
+之后是open question……问我你在网址里输入yahoo.com或者google.com之后会发生什么……我心想这不是计算机网络的东西么……我完全没学过啊……于是照着自己的模糊记忆随便答了一下。他说嗯你说的是对的……然后又问我有没有什么问题，然后就结束了，互相预祝节日愉快什么的。
+整个电面在一小时以内。估计下星期会有结果，不过平常心吧，找工作对我这样的转行狗来说是个长期斗争~
+祝大家都有好offer！
+
+今天一面，是三哥，但是口音还算比较容易听懂，有听不懂的时候的时候基本上重复几次也就明白了~
+. 鍥磋鎴戜滑@1point 3 acres
+先是简单根据简历问了一个最近的project的问题，然后就开始做题。第一题quick sort， 第二题找linked list中点，要求只能遍历一次。主要就是注意一下如果长度是偶数的话，返回中间两个的平均值。. From 1point 3acres bbs
+
+这时候才过去了半个小时不到的样子，然后就又聊了一下简历上的project，问一问每个Dataset的大小，问有没有做过distributed system的project，我说这个没有，他说that's fine.然后就问我有没有什么问题问他~ 然后就说他会把feedback给manager，然后会有其他人联系我~ 不过之前manager在一面之前就帮我把二面要给约上了，可能是因为想赶在Christmas之前结束？~ 所以就等消息啦！
+
+祝找工作的大家好运！~
+
+
+
+面试官是个越南人，一个二十多岁的小哥，自我介绍阶段他说自己刚来雅虎小半年，intern是雅虎于是拿了雅虎的return offer，然后就问了一道题。。。一道题。。。lru cache。。。。. 1point 3acres 璁哄潧
+本人脑子短路首先跟他巴拉heap+双向链表，因为前些有人被问到实现一个可以peekmax和popmax的栈，脑子一抽直接跟他说了heap+双向链表。。。。。。
+花了十分钟想明白到底怎么回事以后开始敲，20多分钟敲完了。。。。
+问了他一下feedback，小哥心不在焉地跟我说代码能过就木问题。。。。。。。虽然我全程一直试图巴拉巴拉可是小哥从来不怎么回我。。。。。。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+面的是membership组，跪求趟过，以上
+
+
+
+发个yahoo labs的面经，投简历时选的是Machine Learning的职位，结果被转到Knowledge Graph组的一个经理手中。
+目前一共进行了3轮电话：
+第一轮电话，他主要介绍他们组的工作，主要是yahoo目前在建立和完善yahoo自己的knowledge graph，从data到model的一系列步骤都详述了一遍。
+第二轮电话，主要是我介绍我简历上的经历和项目，同时，他还问我他们目前正遇到的一些问题，如果是我的话会怎么处理（用哪些技术）。
+第三轮电话，他问了一下machine learning和data mining的经典算法，如ensemble learning，linear regression， logistic regression等。
+
+下周还要第四轮电话，说要考算法题和Machine Learning设计题。汗，之前修过相关课程的知识都忘光光了！
+
+求好运！
+
+
+下午结束了来美第一面，Yahoo的2016 intern
+面试的是一个印度小哥，听声音和语气应该是和蔼的。
+可是，我实在是听不懂印度口音啊，，整个介绍membership 组的时候我几乎没听清一句整话。是时候看些宝莱坞大片练听力了么Orz.....
+
+面试前三十分钟聊了简历。简历里有关于sentiment analysis。正撞枪口，说他也在搞这样的项目，于是问了我SVM的细节等等。其实我也就是使用toolkit水平外加看了一点点论文。。踉踉跄跄的结束了这一段。
+下来是coding，貌似和之前所有面经不同。
+一枚硬币，连续投N次，得到一个array，里面是H，T。代表正反。
+求，只翻转其中的一次结果，得到里面最长的连续H/T subarray长度。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+先是秒出了一个brute force。然后花了3分钟想出了O（N）。 就是维护一个窗口，然后从左往右扫一遍。
+小哥貌似还不满足，说我要同时得到最长的T和H，我一开始没反应过来。后面一想，，维护一个H的和一个T的不就得了。
+貌似他还是不满足，，因为我没有给出他心里那个ideal solution的样子。。最后他和我讲了一遍他的，我觉得具体实现起来，和我的差不了多少。。
+
+不过小哥还是很NICE的，最后我告诉他这是我第一个英语面试，他很热情的和我讲了些feedback，当然是general的，不包括我的performance。
+比如，遇到题目，不要想着怎么coding，一定要先把思路和他讲一遍等等。我果然还是too naive啊。我本来想写一点伪代码配合讲解，，毕竟感觉纯靠说，怕描述不清。。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+刚转专业的小菜，收到一个面试已经是感激涕零。求人品再给我一次面试机会吧！. from: 1point3acres.com/bbs 
+
+PS，求点米
+
+
+昨天上午11点刚面完的yahoo ad&data 组的第二轮，运气很好，碰见一个很好的国人大哥，上来主要问了问假期实习所用的技术和项目，怎么处理数据啥的，很简单。没有具体问基础知识。
+
+然后上来给了一道3sum的题目。返回所有不重复的triplets。先排序再双指针的解法做完。主要讨论了下如何优化代码，很简单。
+
+面试完国人大哥告诉我可能得两到三个星期才会给我消息，因为最近感恩节假期。没想到昨天下午就收到了onsite邀请。貌似是12.11日yahoo的一个活动。总体感觉面试yahoo的这两轮运气非常好，希望自己onsite也有好运气～
+
+
+all numbers in +ve ints random, no duplicates.. 1point 3acres 璁哄潧
+
+turn: we pick one card, read value , suppose it's x, we delete x, x+1 and x-1 from the cards array if they exist.
+repeat turns till no card is left.
+1 1 1  1 1
+5,7,8,12,13
+1->3,4->5->7
+O(n)->N*O(N)
+//greedy algorithm, x. visit 1point3acres.com for more.
+//brute force:iteration.->x that has no neighbor
+SCAN
+-google 1point3acres
+//greedy algorithm
+int maxTurns(int[] cards) {
+        Arrays.sort(cards);
+        int n=cards.length;
+        //record which has been deleted
+        boolean[] bt = new boolean[n];.1point3acres缃�
+        Arrays.fill(bt,true);
+        int counter=0;
+        int maxTurn =0;
+        while(counter<n){
+                maxTurn++;
+                //scan from left to right to find the best choice for this turn.
+                int minTimes=0;
+                int minIndex = 0;
+                
+                for(int i=1;i<n-1;i++){
+                        if(!bt【i】){
+                                continue;
+                        }
+                        int times=0;. more info on 1point3acres.com
+                        //compare left
+                        if(bt[i-1]&&cards[i-1]+1==cards【i】){
+                                times++;
+                        }. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+                        //compare right
+                        if(bt[i+1]&&cards[i+1]-1==cards【i】){
+                                times++;
+                        }
+                        if(times<minTimes){. Waral 鍗氬鏈夋洿澶氭枃绔�,
+                                minTimes=times;
+                                minIndex=i;.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+                        } 
+                }
+                //consider the last element later
+                if(cards[minIndex-1]+1==cards[minIndex]){
+                   cards[minIndex-1]=false;
+                   counter++; -google 1point3acres
+                }
+                bt[minIndex]=false;
+                counter++;
+                if(cards[minIndex+1]+1==cards[minIndex]){
+                   cards[minIndex+1]=false;
+                   counter++; 
+                }
+         }
+        return maxTurn;
+}
+
+75: 2 digits 5,7
+120: 3 digits 1,2,0
+
+
+n=120, 1,2,0
+98: 2 digits
+lower= 1 upper = 2
+
+lower =1000, upper = 2000 upper limit->9
+// Count nos from 1...n, in which numbers of digits are between [lower, upper]
+int count(int n, int lower, int upper){
+        //validation  
+        if(n<0 || lower>upper || lower<0 || upper>9){. Waral 鍗氬鏈夋洿澶氭枃绔�,
+                if(upper>9){. Waral 鍗氬鏈夋洿澶氭枃绔�,
+                        System.out.println("invalid input, integer can only be 0-2^32");. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+                }
+                return 0;-google 1point3acres
+        }
+        //count the length of the digits of n.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+        int length=0;
+        while(n>0){ 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+                n/=10;
+                length++;
+        }
+        //length,upper,lower. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+        if(length<lower){
+                return 0;
+        }else if(length<=upper){//n=999 lower=2,upper=3 10-299 
+                return n-(Math.pow(10,lower-1)-1);
+        }else{//length>upper n=1m,lower=2,upper=3 10-99
+                return (Math.pow(10,upper)-1)-(Math.pow(10,lower-1)-1);
+        }
+}
+
+坑爹的阿三面的，说话完全听不懂，各种催毛求疵，。。。。，不过楼主第一题代码是有点问题就是了，复杂度太高，
+
+
+今天刚面完的yahoo店面第一轮，中国大哥面的，还是校友，果断非常顺利。
+大哥是ad&data组。我当时是直接给hr发的简历，过了一个星期大哥直接联系的我。赶紧约了一个面试。
+上来问了问简历，实习经历。然后开始了两道极其简单的code，股票买卖1，2。然后大哥问我会design pattern吗，我说不太会，然后让我写了个singleton。问我是不是thread safe的，我说不是，大哥就说我知道你了解就好了，大哥就是给力。然后大哥问我会中文吗？现在才过去了17分钟，我们就开心的聊了起来。结束的时候25分钟。
+看地理的yahoo面经比较少，希望给大家多提供点面经，大家加油！
+
+
+发个雅虎的面经， 两轮电面+Onsite， 整个流程还是运气比较好，面的是ads & data pipeline大组。11/03收到口头offer. . 1point 3acres 璁哄潧
+
+10/07电面一轮：
+一个挺Nice的三哥，就考了一道题，validate BST 分别用recursive and iterative. 剩下20多分钟聊简历，那个组是做audience data pre-processing的，就详细的问了我实习做的spark on hadoop的project然后就愉快的结束了。
+
+10/13电面二轮：
+同一个组的三哥，口音实在不敢恭维，信号又不好然后我就不停地sorrysorry. 也是一道题，top K elements. 剩下时间又是刷简历，说他们组有两个sub team, 之前那个三哥是batch processing team, 他自己是stream processing, 然后就开始问我kafka和storm的工作原理。这里答得不太好，因为project里用到过但没有深入了解过，所以一路磕磕绊绊糊弄过去。最后三哥顶不住了说我们还是聊你实习的project吧。。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+10/30 Onsite:
+Yadoo Yodel day，上午来了带着参观campus然后吃个brunch，11点15开始三轮面试。
+第一轮hiring manager, 是个白人小哥，最后才知道是校友。两道题，第一道找string的first non-duplicate letter. 第二题，roman to integer. 小哥在白板上把1-20的对应数字全写出来了然后让推倒规律，结果我还是推错了，最后按他说的写的。哎到这里已经感觉不太好了。
+第二轮印度小哥，刚毕业一年的校友，穿的学校的文化衫来面试的，我都没注意还主动套近乎说听michael(就是刚才的hiring manager）说你也是校友啊然后看了眼衣服马上oh sorrysorry I didnt notice that= =. 然后小哥还是给我放水了。。第一题，binary tree level order traveral, follow-up in zigzag order. 第二题，find kth largest element in BST. .1point3acres缃�
+第三轮国人大哥，有点严肃不怎么笑，人感觉还是不错的。上来先问了个challenging project 然后做题。第一题find median in a data stream. 第二题, BT post-order travesal in non-recursive way. 
+
+
+
+明天FactSet onsite，在酒店虚的慌，发来上午刚面过的雅虎面经==求攒人品……
+
+雅虎也好奇葩==都是Engineering直接联系我，一面是上周五，面的感觉好烂=
+我发现我的面试永远和别人不一样-。-面试官HQ Search组的
+1. Map, Set, List共同点
+2. HashMap
+3. how hash map works
+4. HashMap vs TreeMap
+5. Time complexity and space complexity in HashMap and TreeMap
+6. MySQL Command: show databases, use Database_Name, show Tables_Name, Desc Table etc.
+7. SQL Normanization (1nd, 2nd, 3nd)
+8. left join, inner join, right join
+9. design Table (more to more, class table and student table), write SQL
+10. etc. forget.....
+还有好多==已经忘了==这里各种概念已经过去了40分钟了……
+
+Code:
+write a get funtion, the intput is index, and return the value in a custom-defined IntegerLinkedList class. Easy but I make a mistake about the first index and construction method.
+. more info on 1point3acres.com
+最后问问题，问他next step是啥，他说我最好去问HR，我说没有HR联系我……只有你联系我，他表示很吃惊orz……
+
+面完感觉面的很差就move on了……结果周二晚上被另外一个engineering联系，亚特兰大Mobile Search组，好像Yahoo Engineering都是模板发面试？告诉我这周必须要面完，因为他们马上要来我们学校招聘……
+结果因为周五有onsite，只能匆匆忙忙的约了今天早上，毫无准备就上了==
+- missing number
+- isPalindrome
+- isPalindrome without loop
+- Letter Combinations of a Phone Number - If the word in the dictionary, add to result, otherwise, ignore it.
+都是秒写完，这时候才过了30分钟然后他说他OK了，问了15分钟问题结束
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+刚刚收到CA onsite邀请==HR终于出现了！！！Yahoo速度怎么这么效率了……所以所谓的Yahoo来我们学校招聘都是假新闻……他家就是模板发面试的么！
+然后邮件的标题也是错的！！！写的另外一个人的名字==虽然正文title是我的名字，确定不是在逗我玩？
+
+时间就已经定好了……现在公司怎么都喜欢这样……他家好像是专门的Yodel Day....话说时间不匹配可以申请更改么==
+
+
+刚刚结束的yahoo电面，趁记得过来给大家通报下：
+面试官本来是个中国人，后来有事换了个阿三哥，人很nice，上来介绍下自己的情况，project经历和从中学到什么，估计扯这些时间太长了，没有问更多的基础知识直接code，
+allen->112-223-444
+bryan->232-444-999
+...
+...
+Zach->123-345-789
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+name->number . From 1point 3acres bbs
+有一个无法直接查询的phonebook
+public class phonebook{
+     static Record getReord(int index){
+         return record;
+       }
+
+      public class Record(){
+           Static String Name;
+           Static String Number;
+           String getName(){
+              return this.Name;
+            }
+            String getNumber(){
+               return this.Number
+            }
+       }
+    String checkNumber(String name){
+           //return name's phone number
+   }
+}. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+大体就是上面的结构，具体一些细节既不太清楚，让你implement最后的checkNumber函数；就是考你java很基本的编程
+问了一下时间复杂度，然后问如何提高，我说利用首字母排序过后可以利用binarysearch来进行名字定位，然后他又问这种办法什么时候会出问题，出问题怎么办，然后继续implement，最后时间到了，code到一半他让直接把思路一说，觉得可行就没让继续了。 最后问了点问题，说hr回来之后会给消息。
+.1point3acres缃�
+题很简单，但是自己前面太紧张，感觉思维卡壳了，基本悬了。。。 唉
+
+
+上周面完的，这周刚定好onsite，来把之前的面经写了。。
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+估计因为是看见我交换去过日本的缘故，雅虎把我分配给了sunnyvale的japanese product search team，所以面的题目什么的和地里感觉不太一样，都是比较常规的算法题，几乎没问过概念。
+
+第一轮：
+国人大叔，问了两个题，permutation和merge sort。第一题一开始要我拿cpp写可我实在很久不写了，写的乱七八糟，后来允许我用python写完事儿。。。 第二题之后还问了个follow up是怎么merge k sorted array，没让写代码，说了下idea就结束了。
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+第二轮：
+国人姐姐，人非常好，这次因为上次的教训特意复习了一下java，然后拿java面的。。第一个题是path sum ii，lc原题，秒杀。第二个题是给你一个log和一个字典，要你把log里字典里出现的单词都删掉。这应该显然用trie做，我说把字典建trie，然后在log里找，找到了就删。然后要我实现了一下trie，也是lc原题，很快做完了。-google 1point3acres
+
+雅虎的题感觉还是不太难，但是目前为止也还没遇到什么太多概念题，不知道onsite会怎样。。。 还有就是onsite的语言问题，问了hr半天也没回我。。 
+
+各种求人品吧。。。加油！ 
+
+
+
+发给面经攒攒人品！希望我的电面们都能过。。。
+
+两轮电面：
+第一轮：
+先聊简历，
+然后问了permutation
+又问了http request， restful API， cookie等等一些概念。
+问了，如果打开browser，点开一个URL，这后面发生了什么。。。需要解释一堆东西，每一步发生什么了。
+然后告诉我应该熟悉这些概念。 
+
+第一天面完，下午就问我提供时间，我提供了第二天，然后第二天就面了第二轮。也是迅速。。。 
+第二轮：
+写一个web service, 用restful API。 实现一些简单的功能。
+从一个server上抓取：比赛，球队，球员等信息
+写一个web service (based on http)，可以提供average point per game for each player 等等这种简单的功能们。
+用python写的很不熟练。
+
+
+
+刚结束店面，一个巴西哥，问了很多 System Design 的问题，没有准备到，但是下面也写写自己的理解，供讨论. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+1. Coding
+/*. 鍥磋鎴戜滑@1point 3 acres
+- given a set of denomination of coins (1, 5, 10, 25, 50)
+- write a method that returns that value in the least number of coins possible                                                                                                                         
+- result should be the number of coins needed for each denomination                                                                                                                   . visit 1point3acres.com for more.
+*/
+Greedy 问题，假设 coins 已经是从大到小排好，没有难度
+2. 如何 debug 上一段代码
+(面经看到很多类似的问题，求一个比较系统的答案)
+3. 解释打开一个 www.xxx.com 网页的响应过程
+
+(涵盖 Browser 和 DNS, Web Server, File Server 相互的通信)
+4. 解释网页加载图片
+(答的 Lazy load)
+5. 如何调试一个 Mail System
+这个问题是目前他组里遇到的问题，问我有没有比较可行的 idea. 感觉没有答到点子上，但是他自己也说目前的工作非常 tricky 和 hard (全程店面都在说这两个词，深感巴西哥对手头的工作比较恼火)
+现在回家想想，因为其实面试官并不需要你马上有一个立马奏效的方法，其实可以说一说的，下面是我目前的思路:
+拆分整合着想问题，意思是说可以先收集 failure rate 数据 根据开始到响应中间每一个过程的 failure 一个过程一个过程的去分析并解决问题
+比如 Web Server 的问题，可以是不是需要增加 servers，是不是需要减少 webpage的size 还有可能是 DNS Server ISP 的问题等等
+
+
+刚刚电面完雅虎， 一个阿三面的， 口音有点重，听力不好，真是蛋疼，刚开始有个题意不理解，说的不好，后面换在线doc就好了。
+
+首先自我介绍下自己的背景和做过的项目，然后开始面试。简历上写的java，光问java的题了。
+
+OOP Polymorphism 概念 和 应用好处 
+
+Abstract class and Interface 区别 然后后面问我如果我有一个API已经在用了，我想加点新东西用哪个好。我也没听清，以为是扩展性哪个好，随便扯了句接口。
+原来这货意思是给我一个已经在使用的API，重点是已经在使用的API。我说接口，他问我这样会产生什么问题，我一头雾水，支吾了半天没说出啥。
+最后跟我说如果我往接口里加东西如何，我才反应过来，已经实现接口的类会受到影响，如果这里用抽象类，那么往里加点非抽象方法是人畜都无害的。这里如果被黑那么也只能认命了。. visit 1point3acres.com for more.
+
+
+StringBuffer 和 StringBuilder 的区别 从线程的角度回答 他们的应用场景  为什么比直接用字符串要好。
+
+然后还有堆内存栈内存的分配以及一些 gabage collector的问题 具体就是对象和premitive类型的分配 String的比较。
+
+
+编程题是给两个数组，一个数组比另外一个少一个数，其他都一样，问怎么做。说了好几种方法，最后实现了一种。
+
+
+
+对yahoo面试比较重视，因为yahoo面过一轮基本就onsite了，同时前几日帮一个妹子面试了yahoo mobile组，问得算法题也比较简单，sort colors 所以开始心态比较放松。面试的时候开始就和你扯扯你的基本背景，然后他们组是干什么的，我比较感兴趣就是mail search什么的，主要考我了一些database的东西。
+问了下create table，索引的优点，如何实现索引(B 树, B+ 树) 算了下搜索1 milion items，查询的次数， 如果建index 就是log2(1 million) =20, 他考了我下反应速度。2^10=1000 2^20=1 million.
+之后问了下，linedlist 和array的区别，array和arraylist的区别。
+后来又问我你懂不懂network programming，问了我下client和server工作原理, get和post方法的区别。
+最后考了我两道算法题：-google 1point3acres
+1 design a deck of cards.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+2. // A full house is a hand (5 cards) where there are 3 of a kind and a pair.
+boolean isFullHouse( Card[5] hand) 
+本人不太擅长玩扑克，所以开始full house也不知道是什么，然后理解了一小会儿，写了写，但是感觉有小bug，最后他问我如何去优化，我说用hashmap，他是idea不错。
+他问我不觉得玩扑克有助于写代码嘛，我说十分有助于，如果join你的team是不是还要会玩poker啊。
+感觉有点悬最后，yahoo面试还是很标准的，开始和你扯各种背景，最后面个小题，如果leetcode上面的基本就能秒杀，但是如果弄个新的，还是有点难度。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+期待能有onsite吧~
+
+
+九月份面的communication组。manager有事换人面的。三个题1. N个数组找前K大的数
+2. sorted String list找target单词
+3. min stack
+然后十月底说背景不match换组面，一周一周拖到现在另一个组也没找我。
+
+
+
+Yahoo phone screen on 11/05
+
+First part of the interview was spent discussing my resume and projects that I have done. The interviewer followed up with questions like why did you choose DyamoDB over mongoDB, security issues of using AWS etc.. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+Coding question:Given a phone number provide the possible valid words using the letters in the keypad. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+For example: the keypad is like 
+1() 2(ABC) 3(DEF)
+4 (GHI) 5(JKL) 6(MNO). 1point3acres.com/bbs
+
+given a number 23 the possible words are AD, AE, AF, BD, BE, BF...... and these words can be checked using a dictionary.
+
+Easy problem was able to solve it. Hoping for a favourable reply!. 1point 3acr
+
+leetcode
+max deep of tree(two way)
+double linked list : insert O(n)
+reverse work(consider no ascii characters)“ hello world ”要变成“
+olleh dlrow ”, inplace ＋ 2
+reverse sentence.
+find middle node
+find element in BT
+lru + sychronization ＋ 2, cache
+两个图⽐较
+reverse string : multiple ways
+两个array交叉合并
+tree dfs traversal，non-recursive post-order traversal ->不让你修改原数据
+呢？->preorder
+ 2-sum
+min stack
+regex 实现
+merge sort, external merge sorting
+string a ⾥找到所有string b的permutation 的 出现位置， ⽐如 a = abcdcba, b=
+abc, 那么返回0， 4: O(n ) :有，我⽤的是两个指针，⼀个left，⼀个i，同时维护⼀个
+hashmap或者⼀个数组，有点⼉像 leetcode Longest Substring Without Repeating
+Characters
+word search - boggle game 允许对⾓线位置的搜索
+⽤16个⾊⼦随机填充word search的input字符矩阵
+mapreduce: implement word count , table join
+任务调度： 拓扑排序.就是给你⼀堆任务是点，边（i,j）代表任务i要在j之前完成。假定肯定
+有个解，让你给出⼀个任务排序。
+⼀个集合的power set
+电话号码
+NP define
+design data structure to return 15 min stock information
+circular buffer problem
+common ancester
+Java:
+implement
+linkedlist, BT, BST 定义
+linkedlist implement, with cycle, add/remove/iterator
+oo
+concept
+inheritance/ multiple inheritance(cause problem)
+design:
+德州扑克
+设计灯泡和开关
+other
+const, &, *
+JMV
+dynamic binding and static binding
+diamond problem
+linker : header file, source file
+DB
+limit/ top
+copy table
+create foreign key, default , not null, unique key
+ACID
+normal form 3rd
+test case / unit test
+project life cycle
+linux
+behavior
+50000代码，没有document，就⼀个⼈
+
+
+
+刚刚面完。是三哥考的，交流有障碍真心桑感。
+问了一下project。之后就做题. more info on 1point3acres.com
+
+是一道很简单的dynamic programming的题目。
+{1， -2， -3， 4， 5}
+给一个类似的数组，找一个continuous subarray，要这个subarray的sum是最大的。
+
+
+
+
+Yahoo 第一次电面， 面试官晚了 20 多分钟，正要给 HR 发吐槽邮件的时候，电话就打过来了。
+
+很奇怪的面试，前一半全在问简历上的 proj,  后面就问了一道很简单的 money change 的题，然后问了几个 follow up,  不是很难。
+
+还在等结果。。
+
+
+好像是实习的时候投的，忘了。。
+Communications Products Team.
+
+先是简历背景问题
+自我介绍。我希望找什么样的职位。介绍一些Java编程的经历。
+
+然后问了些基础知识
+Hash table, hash collision, open/close hashing
+inheritance, polymorphism in OOP
+override, overload
+final, finally, finalize
+
+最后简单的coding。
+给binary  tree中的两个点，找他们的closest common ancestor。
+给了数据结构
+Node{
+    Node p; //pointer to parent node.
+    Node left;
+    Node right;
+}
+
+简单。
+
+
+趁着刚面完，记忆还比较深刻的时候发一下面经， 回馈一下地里。 1. 问简历
+2. . 鍥磋鎴戜滑@1point 3 acres
+write a function to captialize letters A and Z in a string?Input: "My name is and i am a student". From 1point 3acres bbs
+Output: "My nAme is And i Am A student"
+
+就是把所有的a和z变大写. 1point3acres.com/bbs
+3. 
+What is the output of following program?
+#include <stdio.h>
+
+int fun(n)
+{
+    if (n == 5)
+      return n;
+    else return 3*fun(n+1)
+}
+
+int main()
+{
+  result = fun(1);
+  printf("result: %d", result);
+  return 0;
+}
+
+
+
+感觉这个是三哥临时写出来的程序。
+4. How would you implement the rendering engine of a web browser? 
+其他技术性问题. 1point 3acres 璁哄潧
+1. process 和线程什么区别
+2. hashing 是什么
+3. 当你访问yahoo.com时都发生了什么。 
+4. DNS? 整个过程。
+5. 然后我说要不要考虑一下HTTPS。 然后就问了一下SSL是怎么走的流程。 . more info on 1point3acres.com
+BTW, Openstack 组
+
+
+unique-paths
+reverse link list
+Populating Next Right Pointers in Each Node II
+
+
+
+1. 自我介绍
+2. coding: input "aabbb", return "a2b3"
+               input "aaabccaa", return "a3b1c2a2".鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+前后花了十几分钟，最后我提问，就叫他大概介绍组和职位。
+
+之前看论坛上都问基础知识，害我电面前几天疯狂地复习，不过这也好，因为我本来比较少了解基础知识。XD
+
+两轮都是口音很重的三哥，心好累
+一轮：1. 反转字符串同时判断回文-google 1point3acres
+2：写hash function
+3. Valid Telephone number
+
+还有各种十万个为什么
+. 鍥磋鎴戜滑@1point 3 acres
+二轮：
+设计一个算法比较字符串间的相似度，返回[0,1]间的一个数。
+
+感觉是open question，就是要看你思路。
+
+攒人品，求好运。
+
+第一轮前端知识，印度小哥实现js对象，前端优化，还有好多前端细节的问题，答得不好跪在这儿了应该。
+第二轮senior老头，聊了一个小时java 和 c++差别，还有自己做过的项目. 1point 3acres 璁哄潧
+第三轮算法，celebrity问题，
+
+
+
+
+昨天Career Fair拿到的，第二天来面。两轮。事实证明早起傻一天。。。
+.1point3acres缃�
+第一轮：
+白人，问了简历上的东西。我被问到的就是search engine的ranker的东西，tfidf啥的，然后corpus很小怎么能提高搜索精度。然后让我讲了Angular JS还有CORS。简历上基本就这个。交谈甚欢。之后问了，怎么排序最慢。。。我说那selection sort吧，n方么，他说再慢点。。。直接就懵了。他最后说，shuffle直到排序成功，我。。。然后问，为什么要写这样的程序。。。我。。。真不知道。。。
+
+
+第二轮：
+三哥，alumni，上来问我选啥课，然后bs了我半天，说选的太简单了。。。我，你妹。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+然后问了点很简单的基础知识。然后问题。两个都是CC原题。
+第一个：第一章最后一个吧，就是判断rotate string的那个。
+第二个：排序那章，rotate sorted array找integer。
+我承认代码写的差, 加上早起傻一天，edge case没写全，直接就被鄙视了。。。. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+估计已跪，调调生物钟，然后继续白纸限时写code吧。。。
+
+
+总体来讲，Yahoo的面试不难。行程安排如下：1. 前一天到达san jose. visit 1point3acres.com for more.
+2. 面试当天11am之前到lobby集合
+3. campus visit + lunch
+4. 第一轮面试
+5. 第二轮面试
+6. 第三轮面试
+7. 和Hiring Manager随意交流（不计入面试）. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+
+第一轮考了简历中最自豪的项目、外排序和strstr()；
+第二轮考了数据结构、Database和git的操作；. 鍥磋鎴戜滑@1point 3 acres
+第三轮考了Pow(a, b)、Unique Path、简历的项目实现细节、BST和HashTable的区别
+. more info on 1point3acres.com
+
+还有些题不太记得了，总之给人感觉考得很杂，什么都考了。
+楼主面的是Platform组。
+Wish for the best ~~~ Fight on
+
+
+
+.13面的。。现在还没消息。整个人都不好了。。。phone interview后给的onsite，onsite在yahoo总部，总共3轮。. more info on 1point3acres.com
+第一轮是个口音标准的印度阿姨，问了resume的project，然后接着问了在very very very long string找not duplicate.
+第二轮是个abc。同问了resume，同时在撸主讲的时候问了怎么存储前n个最少数据。coding是copy random pointer。
+面完这两轮撸主觉得表现还不错。然后问题来了。。。第三轮。。烙印三哥。。。。
+第三轮。。一开始看我做个分布式的project，然后开始疯狂攻势。假设distributed system 各种scenario问应对方法。。撸主上课也没讲这么深入好木好。。撸主各种糊弄。然后coding叫我用pthread implement thread safe class. 神马？！pthread? 撸主也不熟好木好。。问能不能用java，幸亏可以。写了一大堆，然后各种不满意让我改。面试时间都过了45分钟，还抓着撸主问什么process vs. thread, process 之间怎么communicate。。期间撸主只听懂烙印50%口音。。。面完之后直接感觉又悬了。
+
+
+###另外求问同Yahoo 总部onsite的童鞋！！！你们的feedback什么时候有的！！？？ 我哪个hr打电话转voice box, 发邮件也不回！！已经差不多3周了！
+###再求大米！！！！
+
+
+今天白天刚面的Yahoo技术电话面， 小小地面试官瞎扯了一下简历之后， 就开始进入到算法环节， 第一道很水问的是如何remove一个string里面的duplicate element， 第二道是找出一个Binary tree 的 deepest node，  要求返回的是node本身。希望能拿个onsite啊~
+
+
+首先的首先，楼主是肯定的挂了，虽然还没有具体的邮件通知，但跑不了也就是周一的事情。。。。。。联系我的是个白人小哥，面试前看了小哥的资料，看到精通c和c++的时候就感到大事不妙，因为楼主我只会java。。。。。。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+果不其然，在一大堆寒暄之后，小哥开始让我讲了3个resume上面的项目。
+然后让我比较了云计算一个project和安卓一个project的区别，这两项目除了都是用java写的以外没什么一样的（内心1w只羊驼呼啸而过）
+然后，开心辞典环节来了 （顺序记不得了）
+1. java和c的区别。。。注意问的都不是c++，当场内心一阵晕眩
+2. java里面vector和arraylist的区别
+3. map和hashmap的区别
+从此开始我就真心不会了
+4. 在操作系统中对sychronize的理解
+
+5. 说了上面的不太懂了之后，问了对在java中sychronize的理解
+
+
+嗯，然后就尴尬的结束了面试，没有传说中的白板答题，没有问coding，然后说会很快得到结果的，应该就是fail了。
+最后的最后，只能说Yahoo是一个什么都有可能问的公司，说好的java知识100问，也不是百发百中的~
+
+
+1.给出一个函数，这个函数可以确定一个人是否是另一个人的朋友，设计一个函数，确定一组人里面是否有个lead，所有人都是lead的朋友，但是leader不是任何人的朋友。朋友不是双向关系。
+2.一个字符串，求第一个非重复的字母，只能遍历一遍。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+3.一个字符串储存数学计算式， 这个数学计算式是中序的，如 1 ＋ 2 ＊ 3， 求结果，只能遍历一遍。
+4.java的浅拷贝和深拷贝
+5.java override 的函数执行顺序
+6.纯虚类和借口，纯虚函数的作用
+7.多用户同时访问服务器的解决方法，服务器的部署方法，数据库和程序如何解决多用户同时访问。
+
+
+
+阿三女，面了大概50分钟，LZ直接被各种概念问跪··· 可能这就是yahoo的风格吧，整个面试就是意识流+开心辞典. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+1. what is Checked and Unchecked Exceptions.
+2. Difference between Exception and Error?
+3. how to use of static keyword, expain
+4. 'final' keyword
+5. Difference between interface and abstract classes.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+6. Write a class using interface
+7. Write a class using abstract . more info on 1point3acres.com
+8.  Given following segament:
+public class A {. Waral 鍗氬鏈夋洿澶氭枃绔�,
+    private int i = 0;
+    private static void fun1() {
+        i = 11111;
+    }
+}对不对？
+
+改成
+public class A {. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+    private static int i = 0;
+    private void fun1() {
+        i = 11111;
+    }
+}对不对？
+
+9. 除了public 还有哪些modifier？--private package protected。 比较不同。。。
+10. 知道restful吗？？
+11. HTTP POST vs HTTP GET...   HTTP POST vs HTTP PUT. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+12.写过web的API吗。。LZ:没写过·· 她就没问下去了
+13.终于到coding环节了，出了道2sum
+写着好好地，到print的时候，她突然问system.out.print的system是什么 out是什么 print是什么。。。长跪不起····.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+好不容易写完code，LZ想面试快结束了吧。。。可是。。。可是。。。。新的一波问题又来了
+
+14.啥是garbage collection？ 
+15 java的memory leak，lz扯到了hashcode和equal的情况，又问hashcode是什么equal是什么？
+16.finalize, finally的区别
+
+17.她又看我简历有ml的东西，又问classification and clustering区别?
+18.见lz说了k-means，她说你写个k-means的伪码吧。。。
+
+lz体力不支的写完pesudocode，又问我会hadoop吗？ 我说会，她说解释下hadoop吧。。。这之间她还准备考下LZ的linux command，被我用一个话题扯开了。被她虐完了以后问她啥时候能有结果，她说likely you will have an in-person on-site inverview and will receive feedback next month，这算是过了吧。。。
+真是前所未有的面试体验·····
+
+
+
+电面是一位幽默的白人小哥。电面流程跟以前的帖子介绍的一样：简历+开心辞典+coding。
+1）简历部分其实没有聊什么特别的。让介绍了一下简历上写的第一个project和自己觉得challenging的地方。
+2）这部分问的关于C和Java的基础知识。觉得会被问这两个语言的，纯属因为他们是简历上skills部分列的排名最前面的两个语言。
+     关于C： header file是什么，应该在里面存储什么，不应该存储什么； 
+                 如果要存小数，应该选什么primitive data type；. 1point3acres.com/bbs
+     还有一两道关于C的小题但是已经记不清了。这块纯属自己作死。因为C基本没太用过，面试前也没有专门复习，赤裸裸的把C列在了第二熟悉的语言，结果被问的一塌糊涂，悲惨到小哥说我跟讲讲header file应该存什么吧。
+     关于Java: 什么是constructor; 什么是initialization block; 什么是inheritance；OOP的feature都有什么；什么是checked exception和unchecked exception；什么是try block。
+3）面试前1个小时，小哥发来了一封邮件，里面有3个CoderPad的link。说是时间条件允许的话，会做这3道live coding的题。
+     第一题，C语言的。当时一打开，内心真的是万千只草泥马奔腾而过啊。是关于位运算的一道题，依稀记得是给一个内存地址，然后reverse。一堆left shift和right shift。面试之前想着被考位运算的几率应该不会特别大，压根没看...所以说人真的不能有侥幸心理。这道题的惨烈状况该怎么形容呢...毫不夸张的说...小哥是从头到尾带着我做了一遍题。每句话我都highlight一下，问这是什么...
+     终于熬过了第一题，时间也耗费了很多。小哥说咱们直接第三题吧。
+     第三题java，设计address book。问要实现哪些功能。add, remove, get。非常简单的一套题。在这个过程中，有的field被我设计成了private,但是我又没有写get method，后来到test的时候小哥提醒，你这个不是public是access不了了，不在上面继续写着test，我帮你把他们都改成public。
+
+面试最后小哥说你还有什么问题吗？我问了一个真诚无比但是后来被很多人批评的问题，我说：如果这次面试我fail了，我最早什么时候开始申请，what do you see in an ideal applicant。他说什么smart, passionate, quick learner啊。最后压轴的说，我觉得你表现的挺好的啊。这真的是一个包容的小哥啊！你是好人啊！
+
+挂掉电话差不多十分钟就收到了onsite的通知。感觉面试之后收到的教训就是，不做死就不会死。不熟悉的东西不要写到简历上，一些知识点也不要想当然的以为不会考到。住大家都能拿到心仪的offer！
+
+
+
+刚刚结束yahoo第一轮电面，是yahoo 的security team。大概是看到我简历上有buffer overflow的project，所以给了我这次机会。
+面试通过skype，所有问题都是有关security 及一些基本概念的。. From 1point 3acres bbs
+首先，我介绍了所有做过的security的projects，然后面试官详细问了我xss攻击和android malware detection。包括怎么预防XSS攻击，怎么分析android代码。
+之后就是一些基本概念，java 的内存管理机制，garbage collection, 还有javascript的一些概念，但是js好久没看，已经记不清了。
+整体感觉面试过程挺愉快的，面试官也很和蔼，他们在做web scanner方面的研究，估计和我的项目比较match。
+
+
+
+电面一轮两题：1. use minimum counts of coins to represent a number
+2. lognest palindrome substring
+
+onsite 跪在OOD那轮，其实都不难，看了CC150应该能拿offer,可惜没有. Waral 鍗氬鏈夋洿澶氭枃绔�,
+1. find shortest path between two nodes in an arbitary tree. (it's just to find lowest common parent node). 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+2. shuffle deck of card with uniformly distributed probability
+3. lunch interview with HM, talking about multithreading, previous project blabla
+4. OOD yahoo fantasy sport app
+5. design a system to process big amount of URLs, then expand to web craweling those urls with 3 depths only (ask to write code), then how to implement LRU (pseduo code)
+
+很喜欢sports, 题也不难，跪的可惜
+
+
+
+刚刚面完的YAHOO! 第一个大公司面试。面的组是platform组，楼主事先不知道，所以没有往那方面准备。所以提醒各位，一定要在面试之前问清楚是什么组，然后对症下药。下面是面经：
+1. 首先询问take了哪些course。面试官打电话过来之前没有读过楼主的简历，所以问了这个。。然后我就罗列了下我学过的课，当我提到operating system的时候，被打断。。
+what is a file? It is on secondary memory or memory? How does os represents it? In a logical way or physical way?
+What kind of data structure it used to represent a file?. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+楼主怎么答的就不说了。。楼主没有准备过，所以答得不是很好。面试官发现有点尴尬，就继续下一个问题了
+
+2. Compare and talk about different sorting algorithms.
+Why merge sort is O(nlogn) algorithm?
+. 1point3acres.com/bbs
+
+3. Retrieve smallest 1000 numbers from 1 million numbers..1point3acres缃�
+Sorting O(nlogn)
+Maximum Heap O(nlogk)
+Selection Rank O(n)
+
+
+4. First project on your resume.
+
+5. Any questions for me?. from: 1point3acres.com/bbs 
+
+这就是楼主的面经，如果各位看官看着还喜欢，求大米 同时，求人品 之前面了brightedge，题目都答上来了，但是被rej了；所以现在非常没有底！希望能有onsite！！
+
+
+补充内容 (2014-11-24 20:09):
+今天接到邮件，进下一轮onsite了！加油
+
+
+
+今早雅虎电面，来个面经攒人品1.问Project相关内容
+2.问你ood的几个feature
+3.如果你是一个老师，如何设计类实现各个科目打分功能
+3.exception handle, try catch语句
+4.coding 斐波那契数列输出
+5.coding 给一个string一个char，找string里面的那个char的数量
+6.基本sql语句，join left join区别
+7. mapReduce基本概念.
+
+
+
+13号面的。同行一起面的五个老中 两个阿三 两个老白
+
+java immutable object 没答出来 其实就是一个状态不可变的对象 每次状态改变产生新的对象 例如string对象
+
+一个lock实例传到多个myclass实例中去 如何让myclass实现trylock方法
+没做出来 提示用mutex互斥量。 但是我记得用semaphore会引起block，那就不是trylock了而是lock了。
+所以估计是搞个volatile的静态变量，每次lock之前检查变量值，如果有thread已经lock了那就return false，如果没有就lock 然后修改值 return true。
+一下是网上找的一个实现，有些出入，大概意思差不多吧。这题没答上来完全是对题目意思没有领会，这里表现不太好。
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+import java.util.concurrent.atomic.AtomicBoolean;  
+  
+/**
+* @author asme2u
+*/  
+public class Lock {  
+  
+    private AtomicBoolean lock = new AtomicBoolean(true);  
+  
+    public boolean tryLock() {  
+        return lock.compareAndSet(true, false);  
+    }  
+  
+    public void unlock() {  
+        lock.set(true);  
+    }  
+  
+}  
+
+
+
+leetcode two sum-google 1point3acres
+square root 
+字符数组 替换比如把 ‘A’ 换成 ‘CC’
+
+给你一个字典 然后让你找一个巨大字符串里面包含的所有存在于字典中的word。这些词有个特点，有的是其他的前缀或者后缀。
+所以先预处理，建个map，key是每个word，value是个word list，就是这个word包含的所有的前缀后缀集合。. visit 1point3acres.com for more.
+匹配的时候就匹配最长的word开始，一旦匹配上了那么list里的所有都匹配，减少匹配时间。匹配用KMP算法。随便扯了扯。
+
+给你一个8位的电话号码，让你track这个号码是否被用过了，设计数据结构和算法。用了bit map 实现的总共一百兆内存就可以
+. 鍥磋鎴戜滑@1point 3 acres
+然后一些看代码说输出的题目。具体如下:
+下面是java代码
+
+        public static void main(final String[] args) {
+                Super obj = new Sub();
+                obj.bar();. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+        }
+
+        public static class Super {. Waral 鍗氬鏈夋洿澶氭枃绔�,
+                public void foo() {
+                        System.out.println("this is super.");-google 1point3acres
+                }
+
+                public void bar() {
+                        foo();
+                }
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+        }
+
+        public static class Sub extends Super {
+                public void foo() {
+                        System.out.println("this is sub.");
+                }
+        }
+
+这里和C++搞混了，我说如果加virtual那么输出sub，不加输出super，晕。 其实java中没有virtual关键字，都是自动runtime binding的，所以只要子类重写方法那么肯定调用子类的方法。
+
+C++代码：
+
+
+
+我有五轮，第一轮是经理带你转转，公司不是特别大，但是氛围很好，很多东西都免费，包括午餐。然后我被领进小黑屋，会在黑板上写一下香槟这边的主要任务，其实就是ads组和hadoop组啦，整个雅虎40%靠香槟，剩下就加州吧。接着就是经理各种类似behavior的问题，比如你是怎么test，你怎么实现一个project life cycle之类的，还好有实习经验，说了一堆，其它的问题不是很记得了，但是感觉不是很刁难你的样子。
+第二轮是DB，印度小哥的题目貌似不难，唯独两个没说出来的，第一个是LIMIT（当然我用TOP 10之类的，但是TOP 50就不太好了，用LIMIT吧），第二个是小哥问怎么复制一个table，我当时就呵呵，不会这种syntax，小哥说，呵呵，小样，不会了吧，你先建一个copy_table，再insert所有data不就行了吗。。。呵呵。。。其它的真心不难，不过都非常基本，比如在CREATE里面的Foreign Key，Default之类的，NOT NULL啊，Unique Key啊这些非常基本的，必须要掌握。ACID，这个也要知道。
+.1point3acres缃�
+第三轮是Algorithm，题目真心不难，第一个是返回树的最深高度，两种做法搞定就好啦。第二个是double linked list里插入一个点，我当时以为二分法找插入的位置会快点，结果一想不太对这个是linked list，你要找中间结点也要遍历的，还不如直接O（n）走起，于是刷刷两下搞完。题目只有两道，不过follow up很多，忘了。。。 哦对，他还问了我简历。
+
+然后中午吃饭，好贵好贵。顺道看了一下他们的新楼，两层。
+
+第四轮是Reverse Engineer，首先你了解一下什么是RE吧。然后基本linux指令你要会，我只考了ps，sort，grep和pipeline的用法。然后问了test的东西（了解一下Unit Test），我就各种扯，反正能说比不说好。。。哦，这里他有问到，如果有一个50，000行的代码，你没有documentation，没有team，就你一个，你怎么办。之后给了一个Python的程序，后来才知道是testing用的。我看的好纠结，各种猜测，还猜对了一些，比如batch。。。（这是啥我还是不知道）
+. 1point3acres.com/bbs
+第五轮丫的根本上来就直接扇死我了，我说考我C++吧大哥。大哥说好，请问dynamic binding和static binding是啥。。。第二个问我inheritance？multiple inheritance？然后multiple inheritance带来的问题？这些还好，准备C++的同学要看看这些OOP的基础，还有一个叫Diamond Problem，这貌似是一种类型的问题，有不少sub-problem，我当时就答上了一个。第三个问你linker的，还有header file和source file，linker那个不是很知道。然后上一个编程题，让你reverse一下字符串，比如“  hello world ”要变成“  olleh dlrow ”，空格不能少。开始要我返回一个new copy，我就说好吧，给你把Leetcode的方法重演一遍哈。然后他说那你给我一个in place的，我说好，因为之前考过类似的，所以会写。然后大哥来劲了，如果我有symbol呢，如果我有大小写呢，如果我是所有Unicode里的character呢（比如中文，日文）。。。反正都能给解释吧，有些让你写code。然后来了一个OOD，设计一个德州扑克，那丫我当然会玩啊，我偏说不会，他就跟我解释，我好有时间想。其实这个题之前有同学考到了，但是我认真去想，结果考到了。。。最后又来了C++的基础题，是关于const的，还有&，*的，还凑合，大家要考C++的，这些都应该知道才对。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+香槟的雅虎绝逼是个能挣不能花的地方，而且据说这几年这里的组绩效特别好，做的东西也特别有意思。总之面经就是这些啦，大家加油！.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+记得上礼拜的这个时候，我刚分手，呵呵。。。
+
+
+同学内推，两天前联系说今天面试。。。上周面了三家，感觉这周相当倦怠。。。完全不想面。
+先来问了一些project做的东西，然后是跟httpclient实现，背后的操作相关的问题。然后是一个说有给你一堆点，和点两两相连的edges，然后让判断这个图里面是不是任意的两个点都可以连起来。突然之间对这种比较开放的题很手生，思绪混乱，想了半天想出来现把一条边的点加到一个hashmap里面，然后不断搜索与hashmap里的点相连的点加进来，直到hashmap里面的点不再增加或者跟所有点数相等的时候。但是想了半天，刚想明白的时候就已经没有时间了，也没有写完。
+感觉要挂了。。最近心态很有问题，总是觉得找实习的面试早晚都是挂，不是一轮挂就是二轮挂，就算onsite也会挂。。。
+
+
+刚刚面的，趁还有记忆。电面，五十分钟。。。。
+1. 自我介绍，说了一下自己的兴趣爱好以及实习。
+2. 问我会不会Hadoop，不熟，只用过sqoop。同时还扯了一下自己来自wiki的对于Hadoop的认识。
+3. Java里面什么是immutable object，概念和举例子
+4. 解释Interface
+5. Inheritance chain. 超级tricky的东西。
+6. How to store 7 bits telephone number
+7. isPalindrome
+8. two sum
+9. Given a mutex class, implement a lock without waiting. 彻底没想法。
+
+Hope it work for you guys.
+
+
+新鲜出炉的雅虎电面面经，面了一个小时，先是问了简历和projects，然后就是各种technical基础知识，还有大数据的我都不会…1, difference between c and c++;
+2, 什么是virtual function;. more info on 1point3acres.com
+3, c++ 的memory 分配问题;
+4, difference bewtween c++ and java;
+5, abstract & interface;
+6, could java implement multiple interface?
+7, static keyword;.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+8, Exception & Errors;. 鍥磋鎴戜滑@1point 3 acres
+9, set, map, list;
+10, final keyword;
+11, terminal command 怎么修改文件权限；
+12,如何在big file 里面查每个单词重复了多少次；
+13, design pattern -- factory method;
+14, database join clause;. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+15, difference between where and having;. 1point 3acres 璁哄潧
+16, agregation function;
+17, hadoop (根本不会……所以都不知道问的是什么)；-google 1point3acres
+
+要注意基础知识，他们问的灰常细……感觉已跪，大家加油吧！
+
+
+
+昨天刚面的。面的Ads&Data组，这个组好像是个大组。。。
+
+上午8：45拉过去，听介绍这个组。有一个小时的coding exercise，用我们自带的电脑，题目是leetcode上面word search的变种，好像叫boggle game，不过也允许对角线位置的搜索。题不难，但是还需要实现用16个色子随机填充word search的input字符矩阵【随机数这个地方我没写对，嘤嘤嘤。。。】。最好再写相应的test case。我把代码交上去才发现我自己写的test case过不了啊！！！【苍天啊悔死我了！！！为什么要手欠写test case！！！】
+这个coding exercise好像是因为我面的是ads&data组才加的。。。
+
+中午吃饭，下午开始正式的三轮面试。
+.1point3acres缃�
+第一轮的面试官没出现 TAT.我望眼欲穿了一个小时。。。. 1point3acres.com/bbs
+
+第二轮，好歹有人面我了。。。是个台湾小哥，人不错~ 拓扑排序（题目是任务调度啦！）；求一个集合的power set；还有一个啥，也不难。问了我分布式系统的概念，但是我已经忘光了 T_T 但是小哥说问题不大。【我还是好好补补基础知识吧】对啦！小哥写字好好看~【我写的字像狗爬一样嘤嘤。。】
+
+第三轮，是个严肃的国人。
+上来就问我non-recursive post-order traversal。【post-order不是最难的么啊啊啊啊啊】我就有点儿楞。。。【求放水啊喂！！！】想起来有个线索树，就抖抖索索的说了【妈蛋真是用英语捯饬不明白，想直接说中文嘤嘤。。】。大哥明白了我的意思，没让我写代码，又问，不让你修改原数据呢？【好像有解法，但是我想不起来了啊啊啊啊啊】【求放水啊啊啊啊啊！！！】我这回是真愣住了。。。我想着好像跟preorder有啥联系来着，就试探的说了一下。他说，那你先写个preorder吧。我就写了。然后开始纠结。。【我以前写过啊！！！！】脑内小剧场各种咆哮谴责自己。。。我突然想起来好像是用栈做的！然后就开始捯饬，用例子纠结来纠结去。。。过了好久，我终于想起来了妈蛋！！！然后跟面试官说了解法，他就没让我写代码。好像之前还写了个啥，不过很简单，我给忘了 ><
+本来以为就差不多了嘛。。。又来下一道，2-sum。我写的用hashmap的解法，面试官说我代码不够简洁啥的，让我改。我又抖抖索索改了半天他也不满意，最后他说我overthink了，原来就是把if条件弄得更简洁就好。
+
+
+
+补充内容 (2014-11-16 02:15):
+因为就面了两轮，很担心。。。HR说可能之后会补一轮电面，嘤嘤。。。
+
+
+一共五轮 第一轮management随便扯扯但也问了一些问题比如agile waterfall的流程 看到简历上有C还问到C 太久远完全不记得。。
+. 鍥磋鎴戜滑@1point 3 acres
+[size=12.6666669845581px]1. Waterfall & agile project process. C static, volocite keyword.
+[size=12.6666669845581px]2. Graph circular detect, substring, HashMap implement, BT height, List<String> In String (n^2), OOD chess.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+[size=12.6666669845581px]3. Reverse Engineering: Linux command(grep cut cat wc tr), follow up a Python project(just analyze, do not need to know Python).
+[size=12.6666669845581px]4. Web: Ajax(implement), JOSN, CSS Box, how to improve web performance, web design pattern? 还有其他不少web概念木有听过 也记不得了。。。
+
+[size=12.6666669845581px]求人品求好运！加油！
+
+
+
+电面时间一个小时，先问简历，也有不问的。
+面试题目，一棵树，打印高度小于k的所有节点。写算法，时间复杂度，和各种些细节问题。最后要求循环解法。
+最后问问其他问题
+
+
+下周有一个雅虎的电面 一个小时电脑前的那种 同学们最近有电面的吗 看地里好多小伙伴说电面了好多c++,java 的基础题， 有面到算法的小伙伴吗？跪求分享. from: 1point3acres.com/bbs 
+这个电面来的也很突然 我翻看了我投简历的记录，么有这个职位，FE or full stack engineer.
+
+
+第一轮phone:
+Valid 一串 id : 假设id从1开始，到N (N 已知)， validate 一下这串id是否是从1到N每个数字都出现，且仅出现了一次。 输入是一个array包含了这些数字，输出是true （valid）或者false （invalid）。. visit 1point3acres.com for more.
+我用了类似于bucket sort的方法，见到一个数字就减去1，放到相应的index里面。遇到重复的或者超出数组范围的就返回false，否则继续检查下一个index，直到所有数字通过测试，返回true。
+
+第二轮phone:
+题目跟第一轮phone基本一样，只是条件稍微有点变化，记不太清楚了，但是完全可以用同样的方法来解。. From 1point 3acres bbs
+
+onsite:
+
+1. lru implementation + sychronization analys (哪些方法需要 synchronize， 为什么)。 这一题感觉时间略紧张，要在40分钟不到的时间里写完，还要求尽量把code 的readability 弄好一点。
+
+
+2. 给定两个array, 从每个array的最后一个元素起，交叉放置两个array里面的元素，形成一个新的array。 （就像洗牌一样，交叉放置，从array1的最后一个开始）
+应用题，打印一个公司的人员结构，不太好描述，但是其实简化来说就是： tree 的 dfs traversal。 感觉这一轮尤其的简单。
+
+
+3. min stack （cc150第四章原题）+ db的基本知识，normal form （什么是3rd nomal form, 为什么要使用3rd normal form.  
+
+
+4. double linked list implementation, without/with cycle, add() remove(), iterator.  
+How to write test case. 
+Unit test. 
+
+. 1point3acres.com/bbs
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+. 鍥磋鎴戜滑@1point 3 acres
+总结：
+整体感觉题目偏简单，主要考察写code的能力。比如onsite 2那道题，非常简单，但是interviewer给了很多code改进的建议，感觉非常的有启发。据他说他们平时的code review就是这么做的。
+所有面试官都非常nice，在面试的过程中我发现题目有一些问题，他们都很积极地跟我讨论了这些问题。
+
+
+第一次发帖，有什么地方表达的不清楚欢迎讨论。
+祝大家好运。
+
+
+刚收到onsite通知，发个电面攒攒人品。
+本来说好的45分钟电面，最后只有30分钟，代码也没写，就是讲讲思路。
+
+1. 挑一个项目介绍。. from: 1point3acres.com/bbs 
+2. reverse string, iterative和recursive的方法。
+3. 1~100的sorted数组里找缺失的那个数。. from: 1point3acres.com/bbs 
+4. 二叉树找叶子节点的个数，给了个O(n)的方法， 但面试官说有O(logn)的，实在没想出来。。。
+.1point3acres缃�
+题目都不难，但yahoo的效率实在太低，等了一个月才有结果，都以为默拒了已经。。。
+
+前一分钟刚刚雅虎电面结束，趁着记忆还在，赶快写一个面经回馈地里。
+雅虎面试因为ml期中考试和上周生病硬是让我拖了两周，弄到后来我都直接跟面试官说如果你取消面试我也理解，我自己都不好意思了。不过这个面试官人真的很好，还是很耐心的给我面试，赞一个。
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+首先上来是面试官自我介绍，他去年夏天才加入雅虎，而且听声音很年轻。他确认了我是找香槟的全职，而不是加州的那个。然后介绍说在香槟有两个组，一个是platform，主要做雅虎内部的框架维护和apache open source的项目。另一个是他的组，主要负责adverstising。一天数据量很大，用java写hadoop mapreduce的job。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+然后开始面试，这次的考查范围和之前大家的面经不太一样，而且好多都是面试官的主观发挥，好难呀，面经基本没用。。。。。. visit 1point3acres.com for more.
+第一部分是编程语言题，首先问的java。
+1.the difference for java compared with other programming languages.(oop,garbage collector,jvm cross platform)
+2.primitive type for java, difference between int and float, difference between float and double, the three sections for 32-bit float(how many bit for fraction part....)-google 1point3acres
+3.what's oop and give an example for four features for oop
+3.definiation for interface,abstract and the difference, when will you use interface and when will you use abstract. Then give you a shape class and set/getcolor method, how to design it as an interface or abstract class.
+4.what's excpetion handling, the kinds of exception, and give examples.
+5.final and static keyword defination .
+6.how to define a class
+7.definiation for constrcutor, destructor(destructor尼玛答错了，回答成了get,insert,add....)
+
+然后是python.(我自己傻乎乎写上python，发现问的都是语法，尼玛没准备过呀）
+1.built-in types for python(int, long, float, complext,....我答成了List,set,dictionary). 鍥磋鎴戜滑@1point 3 acres
+2.the null value for python(不会。。。。查了是none). 鍥磋鎴戜滑@1point 3 acres
+3.give the list comprehension of python(不会。。。。）
+4.how to do oop in python, and how to use inheritence(我当时就斯巴达了。。。。我只能说我是自学，尼玛没用过啊。。。）
+
+然后他就尴尬的不问了，然后说我们来做算法题吧。
+give a function and two input: string and char, to find the times that char appear in the string.
+那就直接扫一遍string，计算就好了，然后给他python 代码。
+然后follow-up:
+if the char becomes an array of char, how would you do this and only loop for each array and string once.. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+那就对于array of char 建hashtable，然后循环string建表，就得到了。（尼玛一开始理解错题，给他说了好几种方法，幸好他说了个only loop once我知道啥了）
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+最后是database，之前看面经啥的，都是问什么基础啥的，结果为什么问我直接让我设计table，然后写sql语句，以及不停更新啊。。。。。（大家可以体验一下打着电话，脑子里好几张table，然后不断更新和使用sql语句调取内容的画面。。。。智商太低，反应不过来啊。。。。）
+设计一个db for retail store to get the transactions for customer and products.(要求是如何设计能得到一个customer买两个东西两遍，之后followup 如何更新获得一天不同的price for product）
+
+一顿我东扯西扯之后，时间到了。。。然后就大概问我还有什么问题吗，就结束了。
+
+恩，就是这样了，希望对你们有帮助，给点米吧，面的不好的人求怜悯
+
+2. lowest common ancestor
+3. 给一个字符串，去重
+
+
+今天刚面完香槟的yahoo，现在趁热赶紧把面经po一下，有些问题木有代表性，因为面试官直接跟据你的简历问的。大家还是要好好准备自己的简历。并且不同面试官风格完全不一样，我之前看的面经没有一个用上的。。。1. 前两轮都是算法和数据结构，有问到java的基本概念，JVM，LinedList, BT,BST,的定义。 算法题有，reverse words， find middle node in linkedlist， find element in BT。
+2. Reverse Engineeing: basic linux commands, grep and cut. 还有一个他们自己语言的阅读题，这个基本就放弃吧，一般没在yahoo工作过的肯定不知道啥东西。。
+3. web  programming: DOM tree, how html works.Bubble up rendering.  HTTP request.  what is AJAX.  how to select atttribute.  what is sprite.  How ember works. How js works when refreshing the page.  What is CSS BOX. How to speed up the webiste from user -end , server , data base.  What is CRUP REST, SOAP. What is XSS ? What is SQL injection.  How to exploit those vulnerbles?
+
+
+
+今天面的，感觉不难， 就是覆盖很多基础知识：
+1. 写基本的sql (select from where,   insert into)
+2.  inner join, lleft join的不同 （电面前最好能自己动手做一个小小的练习，不然很容易弄错）
+3. JVM的作用
+4。differenence between overridding and orverloading
+5.  final, finally, finalize
+6. coding: reverse a string.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+7. coding:  remove dumplicate chars in a string. From 1point 3acres bbs
+8. difference  between i++, ++i
+9. difference between StringBuilder and StringBuffer（这个真不知道， 后来Google一下才知道）。.1point3acres缃�
+
+能想起的就这些了， 总体分Java, Database, Coding(简单的data structure and algorithm)， （linux的基本命令本来要问的， 但是没被问到）。  
+
+面试的是个中国妹子， 挺nice的， 有些基本知识答得不好， 不知道能不能过。
+
+在拒信没来之前， 求过！
+
+
+周六on campus面了雅虎，进去后自我介绍后什么都没问，直接写code，题目到很简单，一个是判断回文，另一个是fibonacci, 完了还问如果先求f(10),再求f(5),如何改进可以更好，又问了些java的基础题，问了他一些工作的事，20分钟就结束了。 攒人品求后续
+
+
+career fair上跟yahoo谈的，给interview特别爽快...
+
+先go through了一下resume,让我详细讲讲以前intern的工作经历，大概过了一下，然后挑了一个project详细描述下。之后直接technical. Technical的题感觉对面在照着稿子念问题和答案，略囧。
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+Q1. C++和standard C比有什么不同，好在哪不好在哪  
+Q2. 解释public, private, friendly
+Q3. what is STL, how to use it. what are the challenges(difficulties) of using that
+Q4. 解释inheritance  -google 1point3acres
+Q5. constructor,destructor
+
+
+C++的部分好水...然后是database的问题
+Q1. Colomn和Tuple意义是什么
+Q2. how to use SELECT, WHERE. Difference between inner join and outter join.
+Q3. 描述如何建立新table
+Q4. Primary key and foriegn key
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+为啥感觉更水了…… 比考试还简单... 然后描述了一下组里是干啥的，问有没有搞big data的经验。
+
+神马情况…… 雅虎电面不是应该问system design啥的吗。。至少问几个Coding题目啊，略迷茫。
+
+
+
+
+先问了一个基本的概念，很简单。
+
+1. 给一个字符串，返回去掉重复字符以后的字符串. From 1point 3acres bbs
+. 1point 3acres 璁哄潧
+2. 2叉树找最近的公共祖先. visit 1point3acres.com for more.
+
+题目不难，很快就做完了。
+
+
+
+Yahoo：
+1月底的时候on site的，ads&data组
+面试8点到10点是个上机，按照他的要求自己带电脑配置好所需环境（自己选的语言和unit test framework，比如Junit）。 将近1个半的小时在先介绍组里做的东西，然后讲了讲Unit Test.
+之后大概40来分钟不限语言，做了一道很简单的暴力穷举编程题。 没有用unit test framework，c++用assert写了几个test case。
+之后三场面试，
+第一个人问了寄到很简单的题，不记得了....大概是cracking interview或者leetcode上非常简单的那种，不用在意了。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+第二个人问了一道 给出一个list，里面存的是图里的所有有向边的信息，判断是否有环。 没做出来................ 去年面tripadvisor考过一道一样的题，只是当时给的是GraphNode*, Node里边存一个边的List。 太久没做手生了。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+第三个人比较特殊，他说他同时有时，他是临时来面的。他一般面有工作经验的人，全是很虚的知识问答题，从NoSql跟关系数据库的比较开始发散，扩展了很多问题，比如设计通信协议，如何load balance，如何添加新服务器rebalance，如何避免staleness，如何上锁。最后问了一些C++11的特性。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+一个学长建议投yahoo的话可以稍微看一下图的算法，比较喜欢考。还有就是他们卡GPA3.5。
+
+
+platform组， 阿三面的。
+
+1： Java的generic编译过程
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+follow up,  给定 ArrayList<Integer> sort(ArrayList<Integer> a) 和 ArrayList<String> sort(ArrayList<String> a)， 假定implementation是正确的。
+
+
+在java和C++（把arraylist换成vector）编译中会出现什么警告。
+
+
+2： 给定函数 int add(int x), 要求写另外一个方法g求这个函数的导数。
+
+
+3： RSA加密 ， public key, private key.. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+
+答的还行， 交流得不错。
+
+
+
+1.. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+什么是NP问题. visit 1point3acres.com for more.
+给一段代码问运行结果. visit 1point3acres.com for more.
+编程两道：2sum  电话号码(leetcode类似)
+
+2.
+leetcode 151 reverse sentence
+解释hadoop，如何count word frequency
+external merge sorting
+
+3.
+given continuous data stream , design data structure to return 15 min stock information  -- circular buffer problem
+
+
+本人前天去yahoo onsite， 在这之前有一轮电面。on-site 有四轮，3个老印，都是一个team的，还有一个白人，另外一个team的。职位是2个principal，1个senior，还有一个QA manager。 
+第一轮，principal 老印， 数据库设计和SQL相关的知识，刚开始略紧张，第一题卡了一下，不过还是弄出来了，后来挺顺利的。
+
+第二轮，senior 老印 数据结构和算法，一个common ancester，一个cache的设计，coding过程中还问了一些编程想关的基本知识和技巧，这一轮很快秒杀，那位印度姐们直接说perfect，剩下时间就是唠嗑了。. 1point 3acres 璁哄潧
+
+第三轮，是个principal 白人，貌似不是老美，都是关于OO design和pattern的题目。有一个题没有答出最优的设计，他让设计灯泡和开关，我想的是一个是灯泡keep checking开关，另一个在开关的类里加一个灯泡的refercence。但是貌似都不是他想要的。还有一个关于参数传递的一个小trick弄错了。这一轮整体感觉还行，大部分问题都答出来了。
+
+
+第四轮，QA manager 老印，这哥们有点非主流啊，进来什么都没带，就拿着一个手机，面试过程中手机还在那不停的响，中途还接了一个电话。前面几位每人都带个mac，做点记录，这哥们完全不知道他想干嘛，而且说话语速特快，印度口语略重，听不太清。开始就是随便聊了一下，然后就开始coding，题目很简单，关键是写完之后他让我写test cases，以前没做过test相关的事情，就根据if条件， 循环条件写了几个test cases，但貌似不是他想要的，他让我如何写出保证这个implementation一定对的test cases，提示了半天，没听太清楚，也没听太明白，最后也没弄出他想要的，这轮感觉很糟糕。
+. 1point 3acres 璁哄潧
+本来以为很有戏的，最后一轮面完直接虚了，不知道这个QA manager是不是过来打酱油的，感觉丫什么也没准备，我的简历也没看，题目都是急性的。求人品，求offer啊。
+
+
+yahoo email组不知道是不是在扩招，面试我的小哥感觉挺赶时间的，就问了两道题20分钟不到就说可以onsite了
+1. remove duplicates from string
+2. common ancestor of binary tree (有parent pointer)
+
+
+今天刚弄完Yahoo phone interview的面试，怕过段时间忘记了。赶紧先写下来。
+
+先说说怎么拿的phone interview： 通过career fair拿的，投简历的时候就问了一些java + 算法的东西。譬如volitile关键字，包装类，继承等等。算法的话有linkedlist找cycle，tree traverse。有个问题我彻底不会，不用递归，完成in - order traverse。
+
+说说phone interview： 个人觉得要拿到Yahoo的面试，还是要看简历match不match。面试我的人主要是做后端的，用到restful architeture，这跟我简历上的第一个项目有点类似。当然只是个猜测。
+
+上来先过简历，问了我restful architecure的问题以及我用过的framework以及library。譬如Jersey， Gson，Jackson，大概说一下在项目中怎么使用的。以及为什么喜欢用JSON，不用XML。这一部分紧紧围绕简历展开，所以大家还是要好好过简历。
+. visit 1point3acres.com for more.
+然后话锋一转，问我对Java的熟悉程度。我说满分5分，我觉得自己有4分，他说好的。（感觉自己给自己挖坑了，后面的问题爆难。）
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+Q：用过泛型吗？
+A：用过。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+Q：为什么用泛型，有啥好处
+A：这里我把泛型跟Object做了比较，引入了auto casting这个概念。
+Q：好的，那我们实现一个泛型类吧。继承自HashMap，但是要有getMinValue跟getMaxValue方法。
+A：我说那你用TreeMap，应该自带这两个方法 （瞎猜的，哈哈）
+Q：还是用HashMap吧，要处理value，不是key哦。. visit 1point3acres.com for more.
+A：好。我说我有两种方法，第一种就是每次调用getMinValue（getMaxValue）方法的时候，遍历values，拿最小（最大）。第二种就是在插入，删除元素的时候，动态维护两个变量，一个是min，一个是max。你说用哪个？
+Q： 你自己决定把. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+A： 然后我给它大概分析了两种approach的复杂度。开写。这中间引入了很多问题。譬如== 与equals 区别，comparator接口与comprable接口的区别。Hashtable具体实现，如hashCode（）以及collison冲突。中间出了很多错误，泛型嘛，基本没怎么写过……
+
+题目结束了，这题断断续续弄了有半个小时吧。代码基本不能看，接下去还有大招，我晕……
+
+说说java的内存管理，垃圾回收。说说java什么情况下会memory leak吧。什么是Strong referecne 什么是 weak reference。
+. more info on 1point3acres.com
+死掉了，没有一个答的上来。
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+最后我问了一些他们组做些什么，草草结束。
+
+
+data&ads组， 烙印很恶心
+
+1：谈以前的项目
+2：abstract class和interface的区别， 举例在ood中是怎么体现的。
+3：给两个linkedlist, 找commen node. more info on 1point3acres.com
+
+这个阿三面试官真的太恶心了， 迟到了不说，交流很困难就罢了， 明明自己错了还嘴硬。第二个问题， 我回答期中一点是class能继承多个interface， 但只能继承一个abstract class, 他说what? are you sure? 呵呵了。 第三个问题， 先说element相同， 我说用hash， 他说是memory address相同， 我说也可以用hash啊， hash都能保存， 而且如果memory address相同两个lists从第一个相同的node开始之后就都一样了， 他还表示不理解， why？ 我说因为只有一个next啊。他没说话了， 然后问我有没有什么问题， 我说没有就挂了。
+
+
+yahoo的面试4次有1次感觉很好， 2次印象非常差, 放鸽子1次， 迟到2次, 交流也挺困难的。 
+
+
+一月中旬参加hackthon时认识了一个三叔，聊了下说让我把简历发给他。回来后过了两周才想起来，发了，2周后hr联系说面试。
+
+上周一面。相谈甚欢。主要是coding，share屏幕的。第一题，两个array，去所有重复。写完了写test，中间不停的想起来edge case，经常我说我想起来一个地方会有问题，对方说他正想问。。。然后是设计模式，不过问的是比较简单的。
+然后是问ls 后面有哪些option，什么叫wildcard。。。. From 1point 3acres bbs
+这个面试官很好，上来就是很平等的对待我，经常说“让我想想，看还有啥没问的”。
+最后问：如果我明天有due，朋友们要去paintball，我怎么选择。。。lol，这种整天出现在现实生活中的场景啊。。。
+然后给我看了很多他们组的搞怪照。-google 1point3acres
+然后我问问题，第一个问题，就是我在面哪个组。。。。然后就是很常见的客套话。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+第二天收到二面通知，昨天面的。事先忘记了，临时想起来找不到地方就在学校一个大厅面的。效果不好，不敢大声讲话。上来没有任何客套，编程。
+第一题，找出一个int array中duplicate为2的数返回。
+第二题，一个double array，一个double 数，找出离这个数distance最小的数。
+第三题，设计一个blog，post，comment，comment comment，怎么实现，然后是如何返回所有comment，如何返回最近的三条comment，如何插入comment。。。。
+
+目前还没消息。。。。
+
+
+来攒RP~~~
+参加了Yahoo校园面试   面试官非常年轻   去年刚入职   先简单自我介绍了下   然后就开始问题  一共两题  都不难
+第一题是把string转换成数字    
+第二题是反转字符串中每个单词   比如hello world变成olleh dlrow
+然后就是问有没有什么问题   完全没有问简历
+
+
+题虽然不难   但是面试官希望能把所有可能出bug的地方都考虑到  所以自己感觉面的不是很好   第一题刚进去还特紧张   写code有点混乱    听天由命吧~~来报面经攒RP~~
+
+
+昨天面完了 yahoo，面试官是一个principle engineer。
+他问了很多关于resume 的问题。 首先让给我10min让我自己介绍自己的经历 和 resume， 然后他提了几个问题和project 相关的问题。 更多关于framework 和 research 这块。
+
+然后问了 Java 常见的那几道题目， 比如interface 和 abstract class的区别。
+.1point3acres缃�
+接着就是两个coding 题， 一个是实现 substring ，一个是 atoi。 
+
+atoi的时候 我问了他好多test case， 比如溢出， 比如invalid char 的处理，比如 nagetive / positive， 他让我实现了一个最base 的 one，其他的问题以throw exception的方式抛出。
+这两题都是leetcode上的题目，不算难。. From 1point 3acres bbs
+
+最后简单介绍了一下他们的工作。
+希望能够有后文。。。 发帖攒rp。

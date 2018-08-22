@@ -39,4 +39,18 @@ public:
         return result;
         
     }
+    
+    double helper(double x, long long n) {
+        if(n == 0) return 1;
+        
+        if(n < 0) return 1.0/helper(x, -n);
+        
+        double res = helper(x,n>>1);
+        
+        return n&1? x * res * res: res * res;
+    }
+    
+    double myPow(double x, int n) {
+        return helper(x,n);
+    }
 };

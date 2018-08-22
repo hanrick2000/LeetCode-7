@@ -46,3 +46,41 @@ public:
         return canPartitionHelper (nums, 0, target);
     }
 };
+
+事实证明这个超时，并且如果我们用combination sum II 也会超时其实两者本质一样的，都是指数型。所以得用DP， 即背包问题。即只要把bound设为sum/2. 看看最大和是不是sum/2就行。但根据正统的方法来做需要O(kn)时间空间，所以空间超了。
+    
+    
+            //if nums[i] > w: 
+            //    dp[i+1][w] = dp[i][w];
+            //else:
+            //    dp[i+1][w] = max(dp[i][w-nums[i]] + nums[i], dp[i][w])
+    
+    bool subsetSum(int bound, vector<int> &nums)  {
+        vector<vector<int>> dp(nums.size()+1, vector<int>(bound+1));
+        for(int i = 1; i < dp.size(); ++i) {
+            for(int j = 1; j < dp[0].size(); ++j) {
+                if(nums[i-1] > j) dp[i][j] = dp[i-1][j];
+                else {
+                    dp[i][j] = max(dp[i-1][j-nums[i-1]] + nums[i-1], dp[i-1][j]);
+                }
+            }
+        }
+        return dp.back().back() == bound;
+    }
+    
+    
+
+    bool canPartition(vector<int>& nums) {
+        
+        int target = 0;
+        for(int num: nums) target += num;
+        
+        if(target&1) return false;
+        
+        target>>=1;
+        
+        return subsetSum(target, nums);
+    }
+
+然后我们发现，每一行dp[i][j]其实仅仅跟dp[i-1][j]有关。因此我们可以仅用O(n)空间。
+    

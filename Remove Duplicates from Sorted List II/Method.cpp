@@ -44,4 +44,36 @@ public:
         
         return H->next;
     }
+    
+    严格要求，必须把多余的元素也得释放。。那么我们假设一个上一个节点出现的值t，用一个指针p指向当时不可能重复的最后一个节点 。head 遍历 如果head值和上一个出现的值一样，说明p后面的节点要删掉了，删掉这个节点 head 继续设为这个点，下次循环还要再删，如果  值不一样，我们修改t，然后考虑这个点会不会是重复节点（peek一下下次），如果值一样，说明这个节点不可能是不重复的，否则可以让p等于这个head.
+    
+    ListNode* deleteDuplicates(ListNode* head) {
+        
+        if(!head) return head;
+        
+        ListNode* H = new ListNode(0), *p = H;
+        
+        H->next = head;
+        
+        int t = head->val-1;
+
+        while(head) {
+            if(head->val == t) {
+                
+                ListNode *tmp = p->next;
+                
+                p->next = tmp->next;
+                delete tmp;
+                head = p->next;
+            }  else {
+                
+                t = head->val;
+                if(head->next&&head->next->val != t) p = head;
+                head = head->next;
+            }
+        }
+        
+        return H->next;
+        
+    }
 };

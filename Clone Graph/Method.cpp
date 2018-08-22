@@ -72,4 +72,35 @@ public:
         return mymap[node->label];
         
     }
+    
+    可以用  dfs ,几乎就是把循环里的内容拷贝出来。
+        
+    void dfs(UndirectedGraphNode *node, Mymap &mymap) {
+
+        for(auto &neighbor: node->neighbors) {
+            if(mymap.count(neighbor)) {
+                mymap[node]->neighbors.push_back(mymap[neighbor]);
+            } else {
+                mymap[neighbor] = new UndirectedGraphNode(neighbor->label);
+                mymap[node]->neighbors.push_back(mymap[neighbor]);
+                dfs(neighbor,mymap);
+            }
+        }
+    }
+
+
+    UndirectedGraphNode *cloneGraph(UndirectedGraphNode *node) {
+        
+        if(!node) return NULL;
+        
+        Mymap mymap;
+        
+        UndirectedGraphNode* newnode = new UndirectedGraphNode(node->label);
+        
+        mymap[node] = newnode;
+
+        dfs(node, mymap);
+        
+        return newnode;
+    }
 };

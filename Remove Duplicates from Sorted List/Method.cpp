@@ -23,7 +23,7 @@ public:
         while(p) {
             if(p->val == pre->val) {
                 pre->next = p->next;
-                // delete(p);
+                 delete(p);
             }
             else {
                 pre = p;

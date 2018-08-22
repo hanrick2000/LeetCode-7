@@ -24,7 +24,6 @@
 class Solution {
 public:
 
-
     void reverseWordsHelper(string &s, int start, int end) {//start 到 end 全部反转
         int p = start,q = end;
         while(p<q){
@@ -51,11 +50,9 @@ public:
         while(s.size()>count) {
             s.pop_back();
         }
-        
-        
-        if(s.back() == ' ') s.pop_back();           //终于全部去除空格了
-
-        
+    
+        if(s.back() != ' ') s.push_back(' ');           //最后加一个空格
+    
         count = 0;
         
         for(int i = 0; i < s.size(); ++i) {         //反转每一个单词
@@ -65,13 +62,11 @@ public:
             else if(i&&s[i-1]==' ') {
                 count = i;
             }
-                
-            
         }
         
-        reverseWordsHelper(s,count,s.size()-1); //最后一个单词不要少。
+        s.pop_back();
+        
         reverseWordsHelper(s,0,s.size()-1);  //反转整句话。
-
     }
 };
 

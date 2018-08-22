@@ -37,7 +37,7 @@ public:
         
     }
 
-    /** @return the next smallest number */
+    /** @return the next    smallest number */
     int next() {
         
         if(iter->right) {
@@ -55,6 +55,37 @@ public:
 
     }
 };
+
+这个版本就是inorder，改变过来的非常简单。while的条件就是hes next. while里面的内容就是next.
+
+class BSTIterator {
+    TreeNode *myroot;
+    stack<TreeNode*> mystack;
+public:
+    BSTIterator(TreeNode *root) {
+        myroot = root;
+    }
+
+    /** @return whether we have a next smallest number */
+    bool hasNext() {
+        return myroot || mystack.size();
+    }
+
+    /** @return the next smallest number */
+    int next() {
+        while(myroot) {
+            mystack.push(myroot);
+            myroot = myroot->left;
+        }
+        myroot = mystack.top();
+        int res = myroot->val;
+        mystack.pop();
+        myroot = myroot->right;
+        return res;
+        
+    }
+};
+
 
 /**
  * Your BSTIterator will be called like this:

@@ -32,23 +32,14 @@ public:
     int sum(int index) {
         int res = 0;
         
-        while(index > 0) {
-            res+=array[index];
-            index -= lowBit(index);
-        }
+        for(int i = index; i ; i-=lowBit(i)) res+=array[i];
         
         return res;
     }
     
     void add(int index, int delta = 1) {
         
-        while(index <= len) {
-            
-            array[index] += delta;
-            
-            index += lowBit(index);
-            
-        }
+        for(int i = index; i <= len; i+= lowBit(index)) array[i] += delta;
     }
     
     void set2(int index, int val) {

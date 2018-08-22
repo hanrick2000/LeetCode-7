@@ -30,7 +30,8 @@ public:
             for(int j = nums.size()-1; j > i; --j) {
                 if(nums[i] < nums[j]) {
                     swap(nums[i],nums[j]);
-                    sort(nums.begin()+i+1,nums.end());  //这一行经常出错！！！
+                    sort(nums.begin()+i+1,nums.end());  //这一行经常出错！！！但其实到这里我们发现这一段都是逆序的，直接reverse即可。
+//                    reverse(nums.begin()+i+1,nums.end());
                     return;
                 }
             }
@@ -38,5 +39,36 @@ public:
 
         sort(nums.begin(),nums.end());
         
+    }
+    
+    //这道题就是摸清规律。从右往左找到第一个i, 使得 i+1…end存在一个j(j也要从右往左找), arr[i] < arr[j]  交换这两个值，这个I,j可以这么找，先找到最长非递增后缀，前面那个数就是I,然后在右边找到第一个大于i的值。 然后可以证明  arr[i+1:end]是逆序的，再逆序成顺序。 即可.时间O(n)
+
+    
+    
+    void nextPermutation(vector<int>& nums) {
+        
+        if(nums.empty()) return;
+        int index = -1;
+        
+        for(int i = nums.size()-2; i >= 0; --i) {
+            if(nums[i] < nums[i+1]) {
+                index = i;
+                break;
+            }
+        }
+        
+        if(index == -1) {
+            reverse(nums.begin(), nums.end());
+            return;
+        }
+        
+        for(int i = nums.size()-1; i >= 0; --i) {
+            if(nums[i] > nums[index]) {
+                swap(nums[i],nums[index]);
+                reverse(nums.begin() + index+1, nums.end());
+                break;
+            }
+        }
+        return;
     }
 };

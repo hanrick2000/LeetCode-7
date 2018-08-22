@@ -10,7 +10,7 @@ To the right of 6 there is 1 smaller element (1).
 To the right of 1 there is 0 smaller element.
 Return the array [2, 1, 1, 0].
 
-//使用逆序数有经典的解法为合并排序。
+//使用逆序数有经典的解法为合并排序。首先我们要求的是每一个数后面有多少数比他小，所以我们可以将数组从小到大merge sort.这样每一次merge 左右两个list的时候可以保证只有右边的list里的数会小于左边的list里的数，因为每次merge时  左右两个list已经从小到大有序，不存在逆序数。所以在merge过程中如果出现了nums[q] >= nums[p], 说明之前的nums[mid+1]...nums[q-1]都是小于nums[p]的。 不要忘记当p,q有一个出去时，p还在范围内时要持续++。
 
 struct Node {
     int val;
@@ -44,7 +44,6 @@ public:
             t[tPos] = nums[p];
             t[tPos].num += q-mid-1;
             tPos++;p++;
-            
         }
         
         while(q <= end) {

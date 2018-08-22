@@ -62,8 +62,45 @@ public:
                 
             }
         }
-        
-        
-        
+
     }
+    
+    用两个向量相乘，得到 周围八个点。
+    
+    int func(vector<vector<int>> &board, int i, int j) {
+        if(i < 0 || j < 0 || i >= board.size() || j >= board[0].size()) return 0;
+        return board[i][j];
+    }
+    
+    int calculateLive(vector<vector<int>>& board, int i, int j) {
+        int res = 0;
+        for(int k = -1; k < 2; ++k) {
+            for(int l = -1; l < 2; ++l) {
+                if(l||k) res += func(board,i+k,j+l)&1;
+            }
+        }
+        return res;
+    }
+
+    void gameOfLife(vector<vector<int>>& board) {
+        
+        for(int i = 0; i < board.size(); ++i) {
+            for(int j = 0; j < board[0].size(); ++j) {
+                int l = calculateLive(board, i, j);
+                if(board[i][j]) {
+                    if(l < 2 || l > 3) board[i][j] = 3;
+                } else {
+                    if(l == 3) board[i][j] = 2;
+                }
+            }
+        }
+        for(int i = 0; i < board.size(); ++i) {
+            for(int j = 0; j < board[0].size(); ++j) {
+                if(board[i][j] == 3) board[i][j] = 0;
+                if(board[i][j] == 2) board[i][j] = 1;
+            }
+        }
+        return;
+    }
+    
 };

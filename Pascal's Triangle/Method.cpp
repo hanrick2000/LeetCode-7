@@ -34,4 +34,17 @@ public:
         
         return res;
     }
+    
+    最简洁的写法。
+    vector<vector<int>> generate(int numRows) {
+        vector<vector<int>> res(numRows);
+        for(int i = 0; i < numRows; ++i) {
+            vector<int> tmp(i+1,1);
+            for(int j = 1; j <= i-1; ++j) {
+                tmp[j] = res[i-1][j-1] + res[i-1][j];
+            }
+            res[i] = tmp;
+        }
+        return res;
+    }
 };

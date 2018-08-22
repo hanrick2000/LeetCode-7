@@ -7,6 +7,7 @@ public:
         
         int xx = x,res = 0;
         while(xx) {
+            if(res > (INT_MAX - xx%10)/10) return false;
             res = res*10+xx%10;
             xx/=10;
         }

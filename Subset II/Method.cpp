@@ -66,4 +66,26 @@ public:
         return res;
         
     }
+    
+    上面那种方法太傻比了，应该使用这个递归比较方便。
+    void dfs(vector<int> &nums, int depth, vector<int> &cur, vector<vector<int>> &res) {
+        res.push_back(cur);
+        
+        for(int i = depth; i < nums.size(); ++i) {
+            if(i > depth && nums[i] == nums[i-1]) continue;
+            cur.push_back(nums[i]);
+            dfs(nums, i+1, cur, res);
+            cur.pop_back();
+        }
+    }
+
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        
+        sort(nums.begin(),nums.end());
+        vector<vector<int>> res;
+        vector<int> cur;
+        
+        dfs(nums, 0, cur, res);
+        return res;
+    }
 };

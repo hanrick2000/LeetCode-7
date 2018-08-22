@@ -48,4 +48,30 @@ public:
         return res;
         
     }
+
+    这个方法更好：和3D那道题思路一样，维持一个当前水位，从两边开始蔓延。3D里面那一个heap现在包含的就是两个值，max_left和max_right. 每一次选出小的那个进行蔓延，蔓延肯定是左边往右边蔓延，右边往左边蔓延。heap 的pop操作就是移动指针。双指针做。
+    
+    int trap(vector<int>& height) {
+
+        int max_left = 0, max_right = 0, p = 0, q = height.size()-1, res = 0;
+        
+        while(p <= q) {
+            if(max_left <= max_right) {
+                if(height[p] < max_left) {
+                    res += max_left - height[p];
+                } else {
+                    max_left = height[p];
+                }
+                ++p;
+            } else {
+                if(height[q] < max_right) {
+                    res += max_right - height[q];
+                } else {
+                    max_right = height[q];
+                }
+                --q;
+            }
+        }
+        return res;
+    }
 };

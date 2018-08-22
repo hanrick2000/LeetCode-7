@@ -113,6 +113,143 @@ public:
         return nodes.top();
 
     }
+    
+    这是类似于leetcode OJ那种方法，按照层序遍历来的（BFS队列）,不过我这种没有把尾部的N全部去掉 [1,2,3,N,N,N,N].（其实leetcode去没去掉也不好说）反正serialize按照层序遍历，记住NULL也得加到队列里，因为下一层的NULL，如果后面有非空节点，这个NULL也得输出在string上。所以最后一些NULL，没办法避免。
+        
+    deserilize时 ， 也用一个队列，记录当前是哪一个节点要构造左孩子还是右孩子。每次从队列中pop.如果是当前字符是N，直接continue，如果不是，得构造一个节点t，当前节点的左孩子==t, 当前节点的右孩子==下一个t.然后这个节点构造完毕了。自动挪到下一个节点。
+    
+    string serialize(TreeNode* root) {
+
+        queue<TreeNode*> myque;
+        myque.push(root);
+        
+        string res;
+        
+        while(myque.size()) {
+            
+            TreeNode* tmp = myque.front();
+            myque.pop();
+            
+            if(!tmp) {
+                res += "N,";
+                continue;
+            }
+            
+            res += to_string(tmp->val) + ',';
+            
+            myque.push(tmp->left);
+    
+            myque.push(tmp->right);
+        }
+        return res;
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data) {
+        
+        string t;
+        bool left = false;
+        
+        TreeNode* root = new TreeNode(0), *cur = root;
+        
+        queue<TreeNode*> myque;
+        
+        for(int i = 0; i < data.size(); ++i) {
+            if(data[i] == ',') {
+            
+                TreeNode *tmp = NULL;
+                
+                if(t != "N") {
+                    tmp = new TreeNode(stoi(t));
+                    myque.push(tmp);
+                }
+                if(left) {
+                    cur -> left = tmp;
+                    left = false;
+                } else {
+                    cur -> right = tmp;
+                    left = true;
+                    if(myque.empty()) {
+                        break;
+                    }
+                    cur = myque.front();
+                    myque.pop();
+                }
+                t = "";
+                
+            } else {
+                t += data[i];
+            }
+        }
+        
+        cur = root->right;
+        delete root;
+        
+        return cur;
+    }
+    
+    这个版本是用preorder（dfs）的.  注意serelize 和BFS很像.只是把队列换成了栈。而deserilize 完全不同，我们本质也想对每一个点记录这个点的左孩子构造了完没有，下一次是构造左孩子还是右孩子但和bfs不同，bfs每一次构造完当期那节点的左孩子时，下一次直接就构建它的右孩子了，所以只需一个全局变量不断的flip就可以了。  而dfs每一个节点的左孩子构建完后我们又要构建它左孩子的左孩子去了，所以下次再回来构建它时我们到底是添加在左孩子还是右孩子？ 所以我们得拿一个栈保存节点已经一个对应的bool 值，如果这个值true，可以把当前节点插在栈顶节点的左孩子，否则建在右孩子，如果栈顶右孩子建完后，肯定没有它什么事了，贪走就好，剩下的都在处理 它的右子树。
+    
+    string serialize(TreeNode* root) {
+        
+        stack<TreeNode*> mystack;
+        mystack.push(root);
+        
+        string res;
+        
+        while(mystack.size()) {
+            
+            TreeNode* tmp = mystack.top();
+            mystack.pop();
+            
+            if(!tmp) {
+                res += "N,";
+                continue;
+            }
+            res += to_string(tmp->val) + ',';
+            mystack.push(tmp->right);
+            mystack.push(tmp->left);
+        }
+        return res;
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data) {
+        TreeNode* root = new TreeNode(0);
+        
+        stack<pair<TreeNode*,bool>> mystack;
+        
+        string t;
+        mystack.push({root,false});
+        
+        for(int i = 0; i < data.size(); ++i) {
+            
+            if(data[i] == ',') {
+                
+                TreeNode * p = t=="N"? NULL: new TreeNode(stoi(t));  //构造当前节点。。
+                
+                if(mystack.top().second) {  //如果要构造右孩子
+                    
+                    mystack.top().first->right = p;  //栈顶接上
+                    mystack.pop();  //滚
+
+                } else {  //接左孩子
+                    mystack.top().first->left = p;  
+                    mystack.top().second = true;  //设置变量下次构建右孩子
+                }
+
+                if(p) mystack.push({p,false});  //如果当前节点非空，push.
+                
+                t = "";
+                
+            }  else {
+                t += data[i];
+            }
+        }
+
+        return mystack.top().first->left;
+    }
+    
 };
 
 // Your Codec object will be instantiated and called as such:

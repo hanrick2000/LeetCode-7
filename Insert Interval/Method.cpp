@@ -81,4 +81,54 @@ public:
         return res;
 
     }
+    
+    网上一个很好的代码。找到interval中第一个和最后一个与newinterval重复的下标，然后merge删除或者插入。
+    
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
+        auto lb = std::lower_bound(intervals.begin(), intervals.end(), newInterval,
+            [](const Interval& lhs, const Interval& rhs) {
+                return lhs.end < rhs.start;
+            });
+            
+        auto ub = std::upper_bound(lb, intervals.end(), newInterval,
+            [](const Interval& lhs, const Interval& rhs) {
+                return lhs.end < rhs.start;
+            });
+            
+        if (lb == ub) {
+            intervals.insert(lb, newInterval);
+        } else {
+            lb->start = std::min(lb->start, newInterval.start);
+            lb->end = std::max((ub-1)->end, newInterval.end);
+            intervals.erase(lb+1, ub);
+        }
+        return intervals;
+    }
+    
+    自己又写了一个O（n)的算法。
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
+
+        bool flag = true;
+        vector<Interval> res;
+        
+        for(auto &interval: intervals) {
+            if(interval.end < newInterval.start) res.push_back(interval);
+            else if(interval.start > newInterval.end) {
+                if(flag) {
+                    res.push_back(newInterval);
+                    flag = false;
+                }
+                res.push_back(interval);
+            }
+            else {
+                newInterval.start = min(newInterval.start, interval.start);
+                newInterval.end = max(newInterval.end, interval.end);
+            }
+        }
+
+        if(flag) {
+            res.push_back(newInterval);
+        }
+        return res;
+    }
 };

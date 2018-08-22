@@ -46,4 +46,19 @@ public:
 
         return res;
     }
+    
+    网上最快的方法。
+    
+    int maxProfit(vector<int>& prices) {
+        
+        int buy_one(INT_MIN), sell_one(0), buy_two(INT_MIN), sell_two(0);
+            
+        for(int &price: prices) {
+            buy_one = max(buy_one, -price);
+            sell_one = max(sell_one, price + buy_one);
+            buy_two = max(buy_two, -price + sell_one);
+            sell_two = max(sell_two, price + buy_two);
+        }
+        return sell_two;
+    }
 };

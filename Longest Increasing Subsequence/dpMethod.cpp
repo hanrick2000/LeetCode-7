@@ -95,3 +95,47 @@ public:
         
     }
 };
+
+    
+    记住这题 数组d[i] 表示 长度为i+1 的LIS 的最小nums[j].  以这个例子来说
+    10, 9, 2, 5, 3, 7, 101, 18
+    数组的变化范围是：
+        []
+        [10]
+        [9]
+        [2]
+        [2,5]
+        [2,3]
+        [2,3,7]
+        [2,3,7,101]
+        [2,3,7,18]
+    可以发现这个数组d就是每次把nums[j] 二分插入 参见search insert position. 遇到相等的数 直接返回
+
+    void insert(vector<int>& nums, int target) {    // search insert position 
+        
+        int p = 0, q = int(nums.size())-1;
+        
+        while(p <= q) {
+            
+            int c = (q - p)/2 + p;
+            
+            if(nums[c] == target) return;
+            
+            else if(nums[c] < target) p = c+1;
+            else q = c-1;
+        }
+        
+        if(p < nums.size()) nums[p] = target;
+        
+        else nums.push_back(target);
+    }
+
+
+    int lengthOfLIS(vector<int>& nums) {
+        
+        vector<int> d;
+        
+        for(int &num: nums) insert(d, num);
+
+        return d.size();
+    }

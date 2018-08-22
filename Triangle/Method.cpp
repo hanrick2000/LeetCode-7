@@ -35,4 +35,25 @@ public:
         
         return mini;
     }
+    
+    这题显然不能破坏原来的数组。所以得用一个长度为n的数组dp.但是我们更新数组时方程是这样的 dp[j] = min(dp[j],dp[j-1]) + triangle[i][j]; 所以每一次计算数组时，dp[j]要用到开始时的dp[j-1].如果我们顺着下去计算，那么dp[j-1]就会被更新了，所以我们可以从后面开始迭代往前计算。
+    
+    int minimumTotal(vector<vector<int>>& triangle) {
+        
+        if(triangle.empty()) return 0;
+        vector<int> dp(triangle.size());
+        dp[0] = triangle[0][0];
+        
+        for(int i = 1; i < triangle.size(); ++i) {
+            dp[triangle[i].size()-1] = dp[triangle[i].size()-2] + triangle[i].back();
+            for(int j = triangle[i].size()-2; j>=1; --j) {
+                dp[j] = min(dp[j],dp[j-1]) + triangle[i][j];
+            }
+            dp[0] += triangle[i][0];
+        }
+        
+        int res = INT_MAX;
+        for(int &x: dp) res = min(res, x);
+        return res;
+    }
 };

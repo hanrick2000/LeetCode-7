@@ -9,13 +9,11 @@
 class Solution {
 public:
     string convert(string s, int numRows) {
-       
-       
+
         if(numRows==1) return s; 
         string rst;
         int cons = 2*numRows-2;
-        
-        
+       
         for(int i = 0; i < numRows; ++i) {
             for(int j = i,cut = j+cons-2*i; j < s.size(); j+=cons,cut+=cons) {
                 rst+=s[j];
@@ -26,7 +24,6 @@ public:
         }
         
         return rst;
-        
         
     }
 };

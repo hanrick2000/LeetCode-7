@@ -15,13 +15,10 @@
 class Solution {
 public:
 
-    void reverse(vector<int>& nums, int start, int end) {
+    void reverse(vector<int>& nums, int p, int q) {
+                
+        while(p < q) swap(nums[p++],nums[q--]);
         
-        int p = start, q = end;
-        
-        while(p < q) {
-            swap(nums[p++],nums[q--]);
-        }
     }
 
     void rotate(vector<int>& nums, int k) {

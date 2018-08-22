@@ -32,4 +32,21 @@ public:
         
         return maxi;
     }
+    
+    最简洁。。
+    int lengthOfLongestSubstringKDistinct(string s, int k) {
+        int p = -1, res = 0;
+        vector<int> mymap(128,0);
+        for(int i = 0; i < s.size(); ++i) {
+            if(mymap[s[i]]++ || k--) {
+                res = max(res, i-p);
+            } else {
+                
+                while(--mymap[s[++p]]) ;
+                ++k;
+            }
+        }
+        return res;
+        
+    }
 };

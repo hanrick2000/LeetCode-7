@@ -32,3 +32,20 @@ public:
         return res;
     }
 };
+
+上面的方法弱爆了。。。 可以一次扫描数组。  扫描到i时判断  target - nums[i]在不在hashmap里，每次判断完如果没有的话，再把nums[i]加到hashmap,这样就可以保证及时两数一样，也可以通过先后判断出来。。
+    
+    vector<int> twoSum(vector<int>& nums, int target) {
+        
+        
+        unordered_map<int,int> mymap;
+        
+        for(int i = 0; i < nums.size(); ++i) {
+            
+            if(mymap.find(target - nums[i])!=mymap.end()) return {mymap[target - nums[i]], i};  //这行真容易出错 是target - nums[i]
+            mymap[nums[i]] = i;
+        }
+        
+        return {};
+        
+    }

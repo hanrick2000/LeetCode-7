@@ -28,4 +28,20 @@ public:
         
         return H->next;
     }
+    
+    
+    
+    ListNode* reverseList(ListNode* head) {
+
+        if(!head) return head;
+
+        ListNode *H = head;
+
+        while(head->next) {
+            swap(H, head->next);
+            swap(head->next, H->next);
+        }
+
+        return H;
+    }
 };

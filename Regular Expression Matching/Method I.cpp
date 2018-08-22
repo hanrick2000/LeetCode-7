@@ -93,22 +93,8 @@ public:
             return map[index];
         }
 
-        if(j==p.size()-1) {
-            if(i == s.size()) {
-                map[index] = false;
-                return false;
-            }
-            map[index] = (s[i] == p[j] || p[j] == '.')&&i==s.size()-1;
-            return map[index];
-        }
-        
-        if(p[j+1]!='*') {
-            if(i == s.size()) {
-                map[index] = false;
-                return false;
-            }
-            
-            if(s[i] == p[j] ||p[j] == '.') {
+        if(j==p.size()-1 || p[j+1]!='*') {
+            if(i < s.size()&&( s[i] == p[j] ||p[j] == '.')) {
                 map[index] = backtracking(s,i+1,p,j+1,map);
                 return map[index];
             }

@@ -56,4 +56,33 @@ public:
         return head;
         
     }
+    
+    用递归感觉也挺直观的。
+    
+    bool plusOneHelper(ListNode* head) {
+        if(!head) return 0;
+        
+        if(!head->next) {
+            head->val+=1;
+            head->val%=10;
+            return !head->val;
+        }
+        
+        head->val += plusOneHelper(head->next);
+        bool flag = head->val == 10;
+        head->val%=10;
+        
+        return flag;
+    }
+
+    ListNode* plusOne(ListNode* head) {
+
+        if(plusOneHelper(head)) {
+            ListNode *t = new ListNode(1);
+            t->next = head;
+            return t;
+        }
+        
+        return head;
+    }
 };

@@ -41,4 +41,38 @@ public:
         dfs(0,nums,cur,res);
         return res;    
     }
+    
+    防止重复：
+    
+    void dfs(vector<int> &nums, int depth, vector<vector<int>>& res, vector<int> &cur) {
+        if(depth == nums.size()) {
+            res.push_back(cur);
+            return;
+        } 
+        //     1   2    3    4     5    6
+        
+        unordered_set<int> myset;
+        
+        for(int i = depth; i < nums.size(); ++i) {
+            if(myset.count(nums[i])) continue;   //防止相同的nums[i]交换到nums[depth]
+            myset.insert(nums[i]);
+            swap(nums[i], nums[depth]);
+            cur.push_back(nums[depth]);
+            myset.insert(nums[i]);
+            dfs(nums,depth+1,res,cur);
+            
+            cur.pop_back();
+            swap(nums[i], nums[depth]);
+        }
+        
+        return;
+    }
+
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        
+        vector<vector<int>> res;
+        vector<int> cur;
+        dfs(nums,0, res, cur);
+        return res;
+    }
 };

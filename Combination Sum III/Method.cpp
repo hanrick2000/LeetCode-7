@@ -54,4 +54,28 @@ public:
         dfs(k,res,cur,n,1);
         return res;
     }
+    
+    还是这么做吧。。
+    
+    void dfs(int depth, vector<int> &cur, vector<vector<int>> &res, int target, int k) {
+        if(k == 0) {
+            if(target == 0) res.push_back(cur);
+            return;
+        }
+
+        for(int i = depth; i <= 9; ++i) {
+            if(i > target) break;
+            cur.push_back(i);
+            dfs(i+1, cur, res, target - i, k-1);
+            cur.pop_back();
+        }
+    }
+
+    vector<vector<int>> combinationSum3(int k, int n) {
+        vector<int> cur;
+        vector<vector<int>> res;
+        
+        dfs(1, cur, res, n, k);
+        return res;
+    }
 };

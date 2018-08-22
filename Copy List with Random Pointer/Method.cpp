@@ -54,4 +54,44 @@ public:
         
         return newhead;
     }
+    
+    这题额外O（1）空间只能这么做。分为三步：
+       A->B->C   
+    1) A->A'->B->B'->C->C' 克隆到后面
+    2) A->A'->B->B'->C->C' 赋值随机指针
+    3）把连边复原成A->B->C 和 A'->B'->C'
+    
+    
+    RandomListNode *copyRandomList(RandomListNode *head) {
+        
+        if(!head) return head;
+        
+        RandomListNode* p = head,*q;
+        
+        while(p) {
+            RandomListNode* p_cpy = new RandomListNode(p->label);
+            p_cpy->next = p->next;
+            p->next = p_cpy;
+            p = p_cpy->next;
+        }
+        
+        p = head;
+        
+        while(p) {
+            if(p->random) p->next->random = p->random->next;
+            p = p->next->next;
+        } 
+        
+        p = head, q = head->next, head = q;
+        
+        while(q) {
+            p->next = q->next;
+            if(q->next) q->next = p->next->next;
+            
+            p = p->next;
+            q = q->next;
+        }
+        
+        return head;
+    }
 };

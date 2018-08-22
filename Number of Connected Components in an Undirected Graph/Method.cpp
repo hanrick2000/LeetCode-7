@@ -72,4 +72,48 @@ public:
         
         return num;
     }
+    
+    class Solution {
+public:
+    
+    int findSet(int x, vector<int> &father) {
+        if(x != father[x]) {
+            father[x] = findSet(father[x], father);   
+        } 
+        return father[x];
+    }
+
+    void Union(int x, int y, vector<int> &father, vector<int> &size) {
+        int xx = findSet(x, father);
+        int yy = findSet(y, father);
+        
+        if(xx == yy) return;
+        
+        if(size[xx] > size[yy]) {
+            father[yy] = xx;
+            size[xx] += size[yy];
+        }
+        else {
+            father[xx] = yy;
+            size[yy] += size[xx];
+        }
+        return;
+    }
+
+    int countComponents(int n, vector<pair<int, int>>& edges) {
+        
+        vector<int> father(n);
+        vector<int> size(n,1);
+        
+        for(int i = 0 ; i < n; ++i) father[i] = i;
+        
+        for(auto &edge: edges) {
+            Union(edge.first, edge.second, father, size);
+        }
+        int cnt = 0;
+        for(int i = 0; i < n; ++i) if(father[i] == i) ++cnt;
+        return cnt;
+    }
+};
+    
 };

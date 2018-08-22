@@ -24,4 +24,21 @@ public:
         
         return nums[p] == target? p:-1;
     }
+    
+    最简洁版本：
+    int search(vector<int>& nums, int target) {
+        
+        int p = 0, q = nums.size()-1;
+        
+        while(p <= q) {
+            
+            int c = (p+q+1)/2;
+            if(nums[c] == target) return c;
+            if((nums[c] < nums[q] && target >= nums[c] && target <= nums[q]) || (nums[c] > nums[q] && (target >= nums[c] || target <= nums[q]))) p = c+1;
+            
+            else q = c-1;
+        }
+        
+        return -1;
+    }
 };

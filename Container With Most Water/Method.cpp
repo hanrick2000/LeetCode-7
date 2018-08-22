@@ -79,4 +79,16 @@ public:
         
         return max;
     }
+    
+    真复杂，还不如写成这样。。。
+    int maxArea(vector<int>& height) {
+        int p = 0, q = height.size()-1;
+        int res = 0;
+        while(p < q) {
+            res = max(res, min(height[p],height[q])*(q-p));
+            if(height[p] < height[q]) ++p;
+            else --q;
+        }
+        return res;
+    }
 };

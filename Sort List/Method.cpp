@@ -40,7 +40,7 @@ public:
 
     ListNode* sortList(ListNode* head) {
         
-        if(!head||!head->next) return head;
+        if(!head||!head->next) return head;    //递归 出口是0个或1个节点切记不要漏了1.
         
         ListNode* fast = head, *slow = head;
         

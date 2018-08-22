@@ -49,4 +49,18 @@ public:
         root->right = NULL;
         return newRoot;
     }
+    
+    
+    简介版本，空节点或者左子树的节点为空  都返回root。
+    TreeNode* upsideDownBinaryTree(TreeNode* root) {
+        if(!root||!root->left) return root;
+
+        TreeNode* p = upsideDownBinaryTree(root->left);
+        
+        root->left->right = root;
+        root->left->left = root->right;
+        
+        root->left = root->right = NULL;
+        return p;
+    }
 };

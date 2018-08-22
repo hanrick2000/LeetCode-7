@@ -110,4 +110,26 @@ public:
         }
         
     }
+    
+    简介版的代码：
+    
+    int findKthSortedArray(vector<int>& a, vector<int>& b, int p, int q, int r, int s, int k) {
+        if(s - r > q - p) {   //确保 a数组长度大于b数组。
+            swap(a,b);
+            swap(p,r);
+            swap(q,s);
+        }
+        
+        if(s == r-1) return a[p+k-1];   // b数组空了
+        if(k == 1) return min(a[p],b[r]);  // k==1求第一个数.
+        
+        int k1 = min(k/2, s - r + 1), k2 = k - k1;
+        
+        if(a[p+k2-1] == b[r+k1-1])//注意这里 千万不要疏忽 写成a[k2-1] == b[k1-1]  k1,k2都是偏移量，所以base地址不能忘。
+            return a[p+k2-1]; 
+        
+        if(a[p+k2-1] > b[r+k1-1]) return findKthSortedArray(a,b, p,q,r+k1 ,s, k-k1);
+        
+        return findKthSortedArray(a,b,p+k2,q,r,s, k-k2 );
+    }
 };

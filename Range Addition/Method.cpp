@@ -50,7 +50,7 @@ public:
         for(int i = 0; i < updates.size(); ++i) {
             res[updates[i][0]] += updates[i][2];
             
-            if (updates[i][1] + 1 < length)  res[updates[i][1]+1] -= updates[i][2];
+            if (updates[i][1] + 1 < length)  res[updates[i][1]+1] -= updates[i][2];   //这个if条件很容易忘啊
         }
         
         for(int i = 1; i < length; ++i) {

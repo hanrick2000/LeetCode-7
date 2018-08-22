@@ -32,35 +32,34 @@
 class Solution {
 public:
 
-    int findLeft(vector<int>& nums, int target) {
-        int p = 0, q = nums.size()-1; 
-        while(p<q) {
-            int c = (p+q)/2;
-            if(nums[c]<target) p = c+1;
-            else q = c;  // 可能会死循环的 一定要注意while条件,但根据我们c的定义判断了一下并不会。因为不管p和q是多少，(p+q)/2最终都能导致p == q 或者p == q - 1。
+    注意  防止数组为空
+    int searchLeft(vector<int> &nums, int target) {
+        if(nums.empty()) return -1;
+        int p = 0, q = nums.size()-1;
+        
+        while(p < q) {
+            int c = (q-p)/2 + p;
+            if(nums[c] < target) p = c+1;
+            else if(nums[c] == target) q = c;
+            else q = c-1;
         }
-        return nums[p] == target?p:-1;
+        return nums[p] == target? p: -1;
     }
     
-    
-    int findRight(vector<int>& nums, int target) {
-        int p = 0, q = nums.size()-1; 
+    int searchRight(vector<int> &nums, int target) {
+        if(nums.empty()) return -1;
+        int p = 0, q = nums.size()-1;
         
-        while(p<q) {
-            int c = (p+q+1)/2;
-            if(nums[c]>target) q = c-1;
-            else p = c;   //可能死循环，注意c或者while的条件。发现当p == q-1时死循环  我们改一下 c即可. 
+        while(p < q) {
+            int c = (q-p-1)/2 + p+1;
+            if(nums[c] < target) p = c+1;
+            else if(nums[c] == target) p = c;
+            else q = c-1;
         }
-        
-        return nums[p] == target?p:-1;
+        return nums[p] == target? p: -1;
     }
 
     vector<int> searchRange(vector<int>& nums, int target) {
-        int a;
-        if((a = findLeft(nums,target))==-1) {
-            return {-1,-1};
-        }
-        
-        return {a,findRight(nums,target)};
+        return {searchLeft(nums,target), searchRight(nums,target)};
     }
 };

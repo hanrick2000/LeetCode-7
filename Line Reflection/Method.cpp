@@ -41,4 +41,27 @@ public:
         
     }
 
+        struct myHash {  
+        size_t operator()(pair<int, int> __val) const {  
+            return static_cast<size_t>(__val.first * 101 + __val.second);  
+        }  
+    };
+    bool isReflected(vector<pair<int, int>>& points) {
+        
+        unordered_set<pair<int,int>,myHash> myset;
+        
+        int left = INT_MAX, right = INT_MIN;
+        
+        for(auto &point: points) {
+            myset.insert(point);
+            left = min(left, point.first);
+            right = max(right, point.first);
+        }
+        double mid = (double(right) + left)/2.0;
+        
+        for(auto &point: points) {
+            if(!myset.count({ 2*mid - point.first,point.second})) return false;
+        }
+        return true;
+    }
 };

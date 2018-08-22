@@ -34,4 +34,19 @@ public:
         
         return res;
     }
+    
+    //剪枝的DFS最简洁还可以这么写。
+    void dfs(vector<int>& candidates, int target, int depth, vector<int>& cur, vector<vector<int>> &res) {
+        
+        if(target == 0) {
+            res.push_back(cur);
+            return;
+        }
+        for(int i = depth; i < candidates.size(); ++i) {
+            if(candidates[i] > target) break;
+            cur.push_back(candidates[i]);
+            dfs(candidates, target-candidates[i], i, cur, res);
+            cur.pop_back();
+        }
+    }
 };

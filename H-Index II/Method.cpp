@@ -62,4 +62,26 @@ public:
         return citations.size() - p;
         
     }
+    
+    
+    从左到右找到第一个ai >= n - i.  返回 n - i
+    
+    int hIndex(vector<int>& citations) {
+        
+        int n = citations.size(), p = 0, q = n - 1;
+        
+        while(p < q) {
+            
+            int c = (p + q) / 2;
+            
+            if(citations[c] >= n - c) q = c;
+            
+            else p = c + 1;
+        }
+        
+        if(p == n || citations[p] < n - p) return 0;
+        
+        return n - p;
+    }
+    
 };

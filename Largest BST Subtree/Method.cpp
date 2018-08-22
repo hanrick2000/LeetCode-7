@@ -92,4 +92,45 @@ public:
         return largestBSTSubtree(root,e);
         
     }
+    
+    
+        bool isBST(TreeNode* root, int &l, int &r, int &res) {
+        
+        if(!root) return true;
+        
+        int l1, r1, l2, r2;
+        bool flag = true;
+        
+        if(root->left) flag = isBST(root->left, l1, r1, res);
+        
+        if(root->right) flag &= isBST(root->right, l2, r2, res);
+        
+        l = root->left? l1 : root->val;
+        r = root->right? r2 : root->val;
+        
+        if(!flag) {
+            root->val = 0;
+            return false;
+        }
+        
+        if(root->left && r1 > root->val || root->right && l2 < root->val) {
+            root->val = 0;
+            return false;
+        }
+        
+        root->val = 1;
+        if(root->left) root->val += root->left->val;
+        if(root->right) root->val += root->right->val;
+        
+        res = max(res, root->val);
+        
+        return true;
+    }
+
+
+    int largestBSTSubtree(TreeNode* root) {
+        int l, r, res = 0;
+        isBST(root, l,r, res);
+        return res;
+    }
 };

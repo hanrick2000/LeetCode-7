@@ -63,4 +63,28 @@ public:
         
         
     }
+    
+    神仙般的做法，，一个二叉树，可以发现空节点的个数是非空节点的个数+1。  用一个cnt 来统计他们的个数，初始设为空，扫描过程中，发现空节点++,非空节点--. 到最后cnt得变成0，期间如果cnt变成0就return false
+    
+    bool isValidSerialization(string preorder) {
+        
+        preorder+=',';
+        string t;
+        int cnt = 1;
+        
+        for(int i = 0; i < preorder.size(); ++i) {
+            if(preorder[i] == ',') {
+                if(cnt == 0) return false;  //表示之前的树已经满了，那你这个点想要加给谁？
+                
+                if(t != "#") ++cnt;
+                else --cnt;
+                t = "";
+                
+            } else {
+                t += preorder[i];
+            }
+        }
+        
+        return cnt == 0;
+    }
 };

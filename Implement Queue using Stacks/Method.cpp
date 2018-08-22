@@ -58,3 +58,40 @@ public:
         return !(stack1.size()+stack2.size());
     }
 };
+
+
+也采用这种做比较好。 如果push(允许O(n))
+
+class Queue {
+    stack<int> masterStack;
+    stack<int> tmp;
+    
+public:
+    // Push element x to the back of queue.
+    void push(int x) {
+        while(masterStack.size()) {
+            tmp.push(masterStack.top());
+            masterStack.pop();
+        }
+        masterStack.push(x);
+        while(tmp.size()) {
+            masterStack.push(tmp.top());
+            tmp.pop();
+        }
+    }
+
+    // Removes the element from in front of queue.
+    void pop(void) {
+        masterStack.pop();
+    }
+
+    // Get the front element.
+    int peek(void) {
+        return masterStack.top();
+    }
+
+    // Return whether the queue is empty.
+    bool empty(void) {
+        return masterStack.empty();
+    }
+};

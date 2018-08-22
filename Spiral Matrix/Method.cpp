@@ -66,4 +66,28 @@ public:
         return res;
         
     }
+    代码无法简单了
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int m = matrix.size();
+        if(!m) return {};
+        int n = matrix[0].size();
+        vector<int> res;
+        int k = min(n,m);
+        for(int i = 0; i < (k+1)/2; ++i) {
+            if(m&1&&i == (m+1)/2-1) {
+                for(int j  = i; j < n-i; ++j) res.push_back(matrix[i][j]);
+                return res;
+            }
+            if(n&1&&i == (n+1)/2-1) {
+                for(int j = i; j < m - i; ++j) res.push_back(matrix[j][i]);
+                return res;
+            }
+            
+            for(int j = i; j < n-i; ++j) res.push_back(matrix[i][j]);
+            for(int j = i+1; j < m-i-1; ++j) res.push_back(matrix[j][n-1-i]);
+            for(int j = n-1-i; j >= i; --j) res.push_back(matrix[m-1-i][j]);
+            for(int j = m-i-2; j > i; --j) res.push_back(matrix[j][i]);
+        }
+        return res;
+    }
 };

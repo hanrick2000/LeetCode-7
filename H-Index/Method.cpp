@@ -35,6 +35,24 @@ public:
         
     }
 };
+    
+    算了还是记从小到大排列吧
+
+    int hIndex(vector<int>& citations) {
+        
+        sort(citations.begin(),citations.end());
+
+        for(int i = 0; i < citations.size(); ++i) {   // 找到第一个
+            
+            if(citations[i] >= citations.size() - i) {   
+                return citations.size() - i;
+            }
+        }
+        
+        return 0;
+        
+    }
+
 
 
 //还有一种O(n)的方法，类似于counting sort.记录每一个数出现的次数，最后从高位开始，依次累加，这样可以得到，大于等于i的个数。

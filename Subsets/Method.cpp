@@ -42,4 +42,24 @@ public:
         
         return res;
     }
+    
+    还可以这种递归：
+class Solution {
+public:
+    void dfs(vector<int> &nums, vector<int> &cur, vector<vector<int>>&res, int depth) {
+        res.push_back(cur);
+        for(int i = depth; i < nums.size(); ++i) {
+            cur.push_back(nums[i]);
+            dfs(nums,cur,res,i+1);
+            cur.pop_back();
+        }
+    }
+    
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> cur;
+        dfs(nums, cur, res, 0);
+        return res;
+    }
+};
 };

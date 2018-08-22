@@ -45,4 +45,30 @@ public:
         return root;
         
     }
+    
+    这个方法最后恢复了原链表。
+    
+    TreeNode* sortedListToBST(ListNode* head) {
+        if(!head) return NULL;
+        if(!head->next) return new TreeNode(head->val);
+        
+        ListNode* p = head, *q = head->next;
+        
+        while(q&&q->next) {
+            q = q->next->next;
+            if(q) p = p->next;
+        }
+        
+        q = p->next;
+        
+        TreeNode* root = new TreeNode(q->val);
+        
+        root->right = sortedListToBST(q->next);
+        p->next = NULL;
+        
+        root->left = sortedListToBST(head);
+        p->next = q;
+        
+        return root;
+    }
 };

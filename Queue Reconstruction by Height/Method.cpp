@@ -34,12 +34,51 @@ public:
         
         for(int i = 0; i < people.size(); ++i) {
             
-            int k = 0, c = people.size() - i - 1;
+            int k = 0;
             
             for(int j = 0; j < vec.size(); ++j) {
                 
                 if(k == people[i].second && vec[j].second == -1) vec[j] = people[i];
                 if(vec[j].second == -1 || vec[j].first >= people[i].first) ++k;
+                
+            }
+        }
+        
+        return vec;
+        
+    }
+};
+
+
+我们按照身高从矮到高，一样身高k大的排前面 排序。首先从最矮的开始，看他的k，由于后面其他人的升高都大于等于他，那他肯定就在下标k（下标0开始），下一个人依然是剩下那些人最矮的，所以它的位置只要从头数起，没排人的肯定都大于等于他，--k,排了人的肯定比他矮，k不变，找到位置依次放就好了。
+
+class Solution {
+public:
+    static bool comp(const pair<int, int> &a, const pair<int, int> &b) {
+        
+        if(a.first != b.first) return  a.first < b.first;
+        
+        return a.second > b.second;
+        
+    }
+
+    vector<pair<int, int>> reconstructQueue(vector<pair<int, int>>& people) {
+        
+        sort(people.begin(),people.end(),comp);
+        
+        vector<pair<int, int>> vec(people.size(), make_pair(-1,-1));
+        
+        for(int i = 0; i < people.size(); ++i) {
+            
+            int k = 0;
+            
+            for(int j = 0; j < vec.size(); ++j) {
+                
+                if(k == people[i].second && vec[j].second == -1) {
+                    vec[j] = people[i];
+                    break;
+                }
+                if(vec[j].second == -1) ++k;
                 
             }
         }

@@ -18,54 +18,38 @@
 还有另外一个解法。每一次push,先把有元素的那一个栈里的元素全部按顺序移到另一个空队列，然后把新元素放到该队列，然后再把另外队列那些元素倒回来到该队列。O(n)
 这样pop就是出有元素队列的队首O（1）。top也是返回队首， O(1)
 
-
-class Stack {
     
-    queue<int> que1;
-    queue<int> que2;
-    int mytop;
+用这个方法，  一个masterQue 主队列和 用一个tmp辅助队列。    每一次push时，先把所有的master里的内容依次push的tmp里，在把xpush到master里来，然后再把tmp的内容全部push还给master。每一次push前和push完后， tmp都是空的。
+    
+class Stack {
+    queue<int> masterQue;
+    queue<int> tmp;
 public:
     // Push element x onto stack.
     void push(int x) {
-        if(que2.size()) {
-            que2.push(x);
+        while(masterQue.size()) {
+            tmp.push(masterQue.front());
+            masterQue.pop();
         }
-        else {
-            que1.push(x);
+        masterQue.push(x);
+        while(tmp.size()) {
+            masterQue.push(tmp.front());
+            tmp.pop();
         }
-        mytop = x;
     }
-    
+
     // Removes the element on top of the stack.
     void pop() {
-        if(que1.size()) {
-            while(que1.size()!=1) {
-                if(que1.size()==2) mytop = que1.front();
-                que2.push(que1.front());
-                que1.pop();
-                
-            }
-            
-            que1.pop();
-        }
-        else {
-            while(que2.size()!=1) {
-                if(que2.size()==2) mytop = que2.front();
-                que1.push(que2.front());
-                que2.pop();
-            }
-            
-            que2.pop();
-        }
+        masterQue.pop();
     }
-    
+
     // Get the top element.
     int top() {
-        return mytop;
+        return masterQue.front();
     }
-    
+
     // Return whether the stack is empty.
     bool empty() {
-        return !(que1.size() + que2.size());
+        return masterQue.empty();
     }
 };

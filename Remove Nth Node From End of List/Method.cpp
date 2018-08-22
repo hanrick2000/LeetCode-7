@@ -41,4 +41,27 @@ public:
         return H->next;
         
     }
+    
+    
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        
+        if(!head) return head;
+        
+        ListNode *H = new ListNode(0), *p = H;
+        H->next = head;
+        
+        while(n--) head = head->next; 
+        
+        while(head) {
+            p = p->next;
+            head = head->next;
+        }
+        ListNode* tmp = p->next;
+        p->next = tmp->next;
+        delete tmp;
+        
+        tmp = H->next;
+        delete H;
+        return tmp;
+    }
 };

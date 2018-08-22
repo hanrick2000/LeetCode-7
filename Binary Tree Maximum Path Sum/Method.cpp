@@ -60,3 +60,31 @@ public:
         
     }
 };
+
+简化：
+
+    void dfs(TreeNode* root, int &maxi) {
+        if(!root) return;
+        
+        int tmp = 0;
+
+        dfs(root->left,maxi);
+        
+        dfs(root->right,maxi);
+        
+        int left = max(root->left?root->left->val:0,0);
+        int right = max(root->right?root->right->val:0,0);
+
+        maxi = max(maxi, root->val + left + right);
+        root->val += max(left,right);
+        
+    }
+
+
+    int maxPathSum(TreeNode* root) {
+        
+        int maxi = INT_MIN;
+        dfs(root,maxi);
+        return maxi;
+        
+    }

@@ -39,4 +39,23 @@ public:
         }
         return obstacleGrid.back().back();
     }
+    
+    下面运用了O(n)空间，特别是第一行和第一列以及第一个点很容易出错。。
+    
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        
+        if(!obstacleGrid.size() || !obstacleGrid[0].size()) return 0;
+        
+        vector<int> dp(obstacleGrid[0].size(),1);
+        
+        for(int i = 0; i < obstacleGrid.size(); ++i) {
+            for(int j = 0; j < obstacleGrid[0].size(); ++j) {
+                if(j == 0) dp[j] = obstacleGrid[i][j] == 1? 0: dp[j];
+                else if(i == 0) dp[j] = obstacleGrid[i][j] == 1? 0 : dp[j-1];
+                else dp[j] = obstacleGrid[i][j] == 1? 0:  dp[j] + dp[j-1];
+            }
+        }
+        
+        return dp.back();
+    }
 };

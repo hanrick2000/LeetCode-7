@@ -40,4 +40,25 @@ public:
         
         return head->next; //head记得cur的头，cur不能算进去。
     }
+    
+    简洁版。循环其实每次就是 cur->next = l1,l2小的那个。我们用一个指针引用small 引用它。 然后small = small->next即可 记住一定要引用，这样small = small->next 才能真正让它指的 l1,l2 移动，否则l1,l2是不会动的。
+    
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode* H = new ListNode(0), *cur = H;
+        
+        while(l1&&l2) {
+            ListNode*& small = l1->val < l2->val? l1 : l2;
+            cur->next = small;
+            small = small->next;
+            cur = cur->next;
+        }
+        
+        cur -> next = l1?l1:l2;
+        
+        cur = H->next;
+        delete H;  // 防止内存溢出
+        //H = NULL; 原本这是为了防止重复delete H，不过函数销毁后这个H会自动回收，因为H是一个变量在系统栈里
+        
+        return cur;
+    }
 };

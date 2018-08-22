@@ -44,7 +44,6 @@ public:
                     if(k +1 <= j+i) b = dp[k+1][j+i];
                     dp[j][j+i] = min(dp[j][j+i], k + max(a,b));
                 }
-                    
             }
         }
 

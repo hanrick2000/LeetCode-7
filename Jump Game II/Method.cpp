@@ -42,4 +42,23 @@ public:
         return step;
         
     }
+    
+    int jump(vector<int>& nums) {
+        
+        int end = 0, step = 0, curEnd = 0;
+        //curEnd表示当前step下能跳到的最远index。如何寻找下一个step下能跳到的最远位置？ 依次看每一个i<=curEnd, 看看i + nums[i]的最大值就是下一个step 能跳到的最远位置。
+        for(int i = 0; i < nums.size(); ++i) {
+            if(curEnd >= nums.size()-1) return step;
+            if(i<=curEnd) {
+                if(i + nums[i] > end) end = i + nums[i];
+            } else {
+                if(end == curEnd) return -1; // 说明上一次能跳到的最大距离并没有更新，即无法跳到 i这个点。如果不退出，就是死循环在之前的地方无穷跳下去
+                curEnd = end;
+                step++;
+                --i;//这句话极容易漏
+            }
+        }
+        
+        return step;
+    }
 };

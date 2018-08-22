@@ -46,3 +46,32 @@ public:
 
     }
 };
+
+
+注意这题j不用从0开始迭代，j可以从i+1开始迭代。因为a到b的斜率算过我们不用再算b到a的斜率。 注意vertical得当成hash的一项，只不过
+是正无穷，就得另外算。same的点也得算，到时候求最大时加上去。
+    int maxPoints(vector<Point>& points) {    
+        int res = 0;
+
+        for(int i = 0; i < points.size(); ++i) {
+            
+            unordered_map<double,int> slope;
+            int verti = 0, same = 0;
+            
+            for(int j = i+1; j < points.size(); ++j) {
+                if(points[i].x == points[j].x && points[i].y == points[j].y) {
+                    ++same;
+                } else if(points[i].x == points[j].x) {
+                    ++verti;
+                } else {
+                    double s = 1.0*(points[i].y - points[j].y)/(points[i].x - points[j].x);
+                    ++slope[s];
+                }
+            }
+            int t = 0;
+            for(auto &x: slope) t = max(t, x.second);
+            t = max(t, verti);
+            res = max(res, t+same+1);
+        }
+        return res;
+    }

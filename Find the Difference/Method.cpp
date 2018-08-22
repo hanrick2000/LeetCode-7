@@ -43,3 +43,15 @@ public:
         
     }
 };
+
+    直接这么异或就可以  因为char 也是整数。s,t所有字符异或起来就是结果。
+    char findTheDifference(string s, string t) {
+        int r = 0, i = 0;
+        
+        for(; i < s.size(); ++i) {
+            r ^= s[i] ^ t[i];
+        }
+        
+        
+        return r^t[i];
+    }

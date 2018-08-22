@@ -12,11 +12,8 @@ public:
         int maj = nums[0], count = 1;
         
         for(int i = 1; i < nums.size(); ++i) {
-            if(nums[i] == maj) {
-                if(++count>0) {
-                    maj = nums[i];
-                }
-            }
+            if(nums[i] == maj) ++count;
+            
             else {
                 if(--count<0) {
                     maj = nums[i];

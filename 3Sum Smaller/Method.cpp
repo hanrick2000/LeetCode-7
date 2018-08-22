@@ -9,7 +9,7 @@
 //Follow up:
 //Could you solve it in O(n2) runtime?
 
-//O(n^3)不用说了 狗也会。关键是如何用O(n^2). 老样子还是2 pointer.其中一个i从0到n-2,表示最小的下标，剩下的i+1到n就首尾用2 pointer。如果nums[p] + nums[q] < target-nums[i], 表明 p,p+1, p,p+2, ... p,q 这q-p组都是解，直接++p, 否则就--q,一直循环直到p>=q;
+//O(n^3)不用说了 狗也会。关键是如何用O(n^2). 老样子还是2 pointer.其中一个i从0到n-2,表示最小的下标，剩下的i+1到n就首尾用2 pointer。如果nums[p] + nums[q] < target-nums[i], 表明 (p,p+1), (p,p+2), ... (p,q) 这q-p组都是解，直接++p, 否则就--q,一直循环直到p>=q;
 //这样总共n^2
 
 class Solution {

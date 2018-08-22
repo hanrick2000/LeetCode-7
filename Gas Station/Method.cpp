@@ -23,7 +23,6 @@ public:
                 min_index = i;
                 mini = sum;
             }
-            
         }
     
         min_index = (min_index+1)%gas.size();

@@ -1,0 +1,1262 @@
+一个美国小哥，上来完全没有自我介绍，直接问了我一连串关于abstract，interface 的问题，磕磕绊绊答上来了。
+然后就给题，具体题目记不清了，反正就是要用abstract class。 题目一出来我就惊呆了，abstract怎么拼我都快忘了居然还让我写代码？ 小哥给了很多hint，但最后还是没写出来。
+这个时候就剩下十分钟了，问我一个很大的文件该怎么去重，我说用hash呗，小哥说可是这文件很大很大呀，我又蒙了，心想难道这是不让我用hash？ 于是开始漫无边际的扯其他的，后来小哥hint了一下还是可以用hash的，遂想到可以只保存key。但是完全没时间写代码了。瞎扯两句结束。
+. 1point 3acres 璁哄潧
+总结：
+1.我基础知识果然还是太不扎实
+2.心态不够好，一看到要考我不会的abstract就整个人懵了，导致后来hash这么简单的问题也磕磕绊绊才答上来。
+
+
+
+发个电面fail电面面经
+
+1. leetcode 394 
+2.  第一题反过来，要求压缩到最短。
+     e.g  x`
+aaabcbc 压缩成 3[a]2[bc]
+axxxxaxxxxaxxxx 压缩成 3[a3[x]]    这个没做出来，现在还是不会。
+    求大神解答一下。
+
+. from: 1point3acres.com/bbs 
+
+
+补充内容 (2016-11-13 03:47): 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+aaabcbc 压缩成 3[a]2[bc] 这个例子举的不好，压缩后比压缩前还长，这种情况就不用压缩了，所以，好难好难
+
+
+
+贡献个面经。
+. from: 1point3acres.com/bbs 
+1. 一棵树，如果sub tree的和为0那么去掉这个subtree. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+2. 两个list A和B，求A-B和B-A
+
+
+花了十分钟讨论了下以前的项目，然后就开始做题，LC296。
+
+我lc就刷了一遍不过这题当时想了蛮久所以有点模糊印象，卡了一点，慌乱中还把median写成了mean的求法，跪点一。做完题差不多花了25分钟。follow up问最多有几个答案，我开始答两个，后来在被多方提醒下figure out出原来是两个median之间的range那么多，跪点二。后来时间不够问我怎么找一个数组的中位数（因为这道题我用的nth_element做），我在慌乱下给了个priority queue的O(nlogn)的解法，跪点三。看了下其他面经都做了两到三题，跪点4。。。
+
+所以，大家帮我看看是不是跪了？顺便求人品，过几天fb店面
+
+
+地里第一帖贡献给了狗家， 下午刚刚面完，烙印面试官判断等差数列。。数组壹：{[size=13.3333px]7 4 2 2}
+数组贰：
+[size=13.3333px]2 3
+1 4
+[size=13.3333px]3 4. more info on 1point3acres.com
+输出： 
+[size=13.3333px]Y
+[size=13.3333px]N
+Y题目很简单但是我道行太浅没反应过来直接暴力O(mn)解决。。
+老银说O(m+n)可以解决。。捂脸继续刷题吧。。
+
+
+补充内容 (2016-11-2 12:14):
+数组壹：{7，4，2，2}
+数组贰：{{2，3}，{1，4}, {3，4}}代表数组壹的index
+输出就是判断结果： Y, N, Y
+
+
+第一题：Binary Search Tree每个node都是int, 要return 一个所有node的sorted array. 用DFS/recursion做，O(N)时间O(N)空间。N是树里节点的个数。
+第二题: 已知k个sorted array of int, return 一个 sorted array. 其中每个array的average size是N. 用Heap(priority queue)做，O(Nklogk)时间O(Nk)空间。
+
+
+
+. from: 1point3acres.com/bbs 
+
+面的不是特别好，谢谢同胞照顾！地里的面经对准备也有帮助，回来回馈。
+
+昨天刚面完google，估计是跪了。三哥面试，题目从没见过，粘在下面了，各位自己看。上来读完题以后根本不明白他要我干什么，用了两个例子跟他确认好以后，感觉用queue很简单的就能做出来，但是显然不是他想要的。先写了代码，然后他问我有没有听说过circular buffer，这你妈日了狗，我上哪知道这个去。然后他就开始给我讲这个用circular buffer怎么做，最后follow up，问你知不知道constructor前面的explicit 是什么意思。日了狗了。. From 1point 3acres bbs
+. from: 1point3acres.com/bbs 
+Linear regression 
+The system is receiving pairs of inputs, (xi, yi), at a relatively high rate, e.g. one pair every 10 millisecond, and we like to model the relation between xi and yi. A linear model needs to be fitted over last N pairs. For each input pair (xi, yi), estimate bi as a model for y = b x  over the last N pairs, (xi-k, yi-k), k = 0,..., N-1. 
+
+
+Hint: Try to recognize a module that can be used for computing different terms. Implement that, and use it within your answer.
+
+. visit 1point3acres.com for more.
+b =(1/N j=1Nxjyj)  -  x  y(1/N j=1Nxj2 ) -  x2
+
+
+x=1Nj=1Nxj          y=1Nj=1Nyj
+
+
+Class MovingLinearRegressor {
+public:
+  explicit MovingLinearRegressor(int N);
+
+
+  // Returns |b|, for every new pair.. 1point3acres.com/bbs
+  float Update(float new_x, float new_y) ;
+};
+
+
+( , ), ( , ), ( , ), …, ( , ), ( , ), ( , ) 
+                         <------------------
+                           Last N pairs.. 
+
+发面经求onsite貌似很有用，面了2个狗家电面，来求Onsite.
+
+一面：
+1. 给n个集合比如{a, b}, {1}, {x, y}. 从每个集合里面去一个数组成新的集合，输出所有这种集合，比如例子就是：{{a, 1, x}, {a,1,y}, {b,1,x}, {b,1,y}}.. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+2. 写完后开始聊多线程，聊完就说你写个死锁吧，然后就写了2个线程和2个锁来读写文件的死锁情况，他也很满意，然后问怎么解死锁，我说用一个锁就是了。
+. visit 1point3acres.com for more.
+以为面得很好，结果一周后hr打电话通知二面！感觉被三哥黑了！！
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+二面:
+又是一个三哥！全程没说任何闲话都在做题。
+1. 给你n个coins和一个value比如1000，输出这些coins能组成多少种value小于1000， 每种coin可以用无限次。直接完全背包秒杀了。
+2. 给你1,000,000个数，求有多少个pair的和小于给定的数K, 直接排序加二分做的。follow up: 找三个数怎么办，我没多想就说对于排序后对每个数做一遍前面的问题。
+以为没有了，说完test case还有15分钟的样子，结果就来第三题了：
+3. 给你两个string s和t, 问s是否能删除小于N个字符，使得结果是t的一个子串，比如 "book, aook", N = 1, return true;
+看完直接懵了，因为最近做two points太多了，就朝那个方向想，一直想去用O(N)，最后他说不行，我也发现不行，然后45分钟一到，直接就说拜拜了。
+第三个题真的太紧张了，下来一想就是一个二维的dp也不难。
+
+求人品吧，3天了都还没消息。.1point3acres缃�
+
+. 鍥磋鎴戜滑@1point 3 acres
+补充内容 (2016-11-10 02:44):
+电面8天后终于收到Onsite通知，人品还是有点好
+
+
+
+听说面完到地里来报个面经拿到onsite的概率会变大？面完就来分享了（之前快码完了结果不小心页面被关了，再次码完分享，只求onsite）
+
+约的美东下午2点，准时来了LA的电话，3分钟相互寒暄之后直接上题。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+1.Given a text file, remove all the duplicate lines, maintaining the order such that the first occurrences of the lines stay in the same order.
+照例先问file size,能不能用extra space。小哥说take it easy你开心就好 ，于是用hashset解决，我问能不能把input简化成int[] array存hashcode,小哥先问了how to hash和conflict的问题，然后问存hashcode的话本来的出现顺序如何维护，我说加个map。小哥同意，于是1分钟码完，中间出个小bug,因为用的hashset,小哥问顺序如何维护，我说那就linkedhashset,他同意。
+follow up就是常规的file size大到内存放不下怎么办，我就说split into small pieces然后sorting去重，然后external sort。本来以为他会问我怎么external sort,结果他一直在质疑我用sorting去重的方法出现顺序没法保证，我花了5分钟run case才跟他说清楚（感觉他是故意装傻),此时时间已经过去20分钟。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+2.trapping rain water,照例跟他确认了问题和输入输出后先说了个O(N^2)的解法，小哥没听懂，我又跟他run case,但这题光有图不能指说起来真的很难说清楚，35分钟的时候他终于同意我的解法，我看时间不多了想抓紧码掉。他说不急，咱们先优化下，于是我说用单调栈实现O(N), 他说O(N)的确不错，但不需要用stack, 我又赶紧翻开笔记说了个记录level的方法，小哥说也不是他想要的。最后给了hint说只需要记录leftmost和rightmost, curBar存多少水只只取决min(leftmost, rightmost), 我心想这不还是单调栈嘛。。但嘴上只能说wo, so cool!那我来实现下吧，小哥说不用了，我知道你想出来了就行，下面问我问题吧。-google 1point3acres
+
+本来心想45分钟电面就写一个10行不到的代码，还出了个bug,第二题也没想出最优解，估计是挂了，于是随便问了个问题，what do think is the most important quality to be a great SDE in Google? 结果这小哥陷入了沉思，跟我分析了5分钟，说了balance between get something work and get something clean, 总体就是entry level先把活干了避免layoff, 升上去了或者活有余力再想优化。我一看他居然还聊hi了就赶紧follow up一下问他，所以你觉得对entry level来说ddl比quality更重要咯？他又跟我讲起了他自己的故事，中间不断跟我讲段子，有的没听懂，听懂的我就抖个机灵也跟他讲段子，一来二去时间已经到了3:15, 持续了半个小时的欢声笑语后突然出现了5秒钟的冷场，我当时心里再想:你是不是要跟我say goodbye了？但猜他在想：哥今天开心，再问再问再问。于是我就说感觉今天表现不是很好，最后一题没想出最优解（潜台词其实是，大哥我都陪您hi了这么久了，您能放我过吗），结果他还是不置可否，说大概1周出结果。大概3:20那边挂了电话。
+
+总结下：
+lz运气挺好了，遇到两个这么简单的题，比起最近G家电面的画风真是很幸运了，但是lz自身实力有限，trapping rain water的确只会那两种解法，挂了我也认了，毕竟白人小哥从头到尾套路太深，真的不知道他是想故意放水还是来个十动然拒。。接下来刷题一定要多想solution, 多想follow up。
+
+不求大米，只求好运，给个onsite吧！
+
+
+
+输入是一个字符串数组，一个int数组，输入的字符串数组是另外一个字符串数组通过int数组变换得到的，int数组的值代表的是原来这位置上的字符串经过变换后的坐标，然后输出是求变换之前的字符串数组，要求用线性时间，o(1)额外空间
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+打个比方，比如一个字符串数组是"cat", "rabbit","dog", "mouse"，int数组给的2,0,3,1，意思是string数组第0个词是cat，它本来的位置是在哪呢，我们要看int数组，int数组的0在index 1上，所以说cat之前应该是1号位的，同理rabbit在string数组的1号位，而index数组3号位的值是1，说明rabbit这个词之前应该在3号位上的，依次类推，所以变换前的字符串数组应该是 dog, cat, mouse, rabbit
+
+再打个比方，如果输入是Cat mouse dog rabbit和2,0,1,3，输出也会是dog, cat, mouse, rabbit
+
+再打个比方，如果输入是Cat mouse dog rabbit, tiger, lion和2,0,1,3,5,4，输出会是dog, cat ,moutse, rabbit, lion, tiger
+
+这个题感觉从变换前的数组求变换后的数组很好做，假设string数组是S，int数组是A， 直接一位一位循环遍历，当A[i] != i 时候把A[i] 与 A[A[i]]以及S[i] 与S[A[i]]一直调换就可以了
+
+但这个题是要从变换后的数组求变换前的数组，做了半天也没做出个好的解法，估计跪了
+
+
+
+numberIsland找不同形状的Island的个数
+比如
+1010.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+0100.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+0000.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+1010. 鍥磋鎴戜滑@1point 3 acres
+0100
+
+-google 1point3acres
+这样上下两个岛形状一样，return 1
+
+
+据说发面经有助于拿onsite，我就不要脸接着po了. From 1point 3acres bbs
+三道题，第一道判断n趋近无穷的时候n^1000000, e^n, n^n, n!那个大
+第二道给一段代码判断程序最终结果，一开始想复杂了，后来想出来就是个求一个数的因子个数
+第三题给一组公司人员的名字，id和上司id，输出层级关系（构建一棵树然后打印，秒掉）.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+前两道答得不太流利，希望国人姐姐高抬贵手
+
+
+
+
+
+
+贡献两则谷歌家面经。其实第一次觉得自己面的还不错，题目也不难，但还是被要求加面。
+11月1号第一次面试，貌似是一个美国大哥。先让我聊了聊实习的project，然后上题目，第一题是给一个String[] of integer和int k(subset的大小), 比如[9,15,3,14]和3, return一个subset，使得subset里面的最大值减最小值是所有subset里面最小的。所以这个例子返回[9,14,15], subset里面的数字不用按照input里的顺序。第二题是Leetcode reconstruct itinerary的简单版本。觉得自己答得还不错，结果被通知加面。. 1point 3acres 璁哄潧
+今天第二次面试，晚了10分钟打过来，因为小哥说他忘了带手机……目测美国小哥一枚，题目巨简单无比，让我怀疑这是不是谷歌的面试。第一题让自己定义一个double linked list，node的value是String. 然后写一个function, 给一个head和一个Set<String>, remove list里面value等于set里word的node。第二题是BST，给一个low bound和high bound, return list of nodes，这些nodes的值在low bound和high bound之间。用iterative和recursion两种方法写。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+两次面试题目都无比简单，不知道这次小哥会不会让我过，感觉也是挺心累的
+
+
+
+昨天下午面的谷歌，找工作的第一个大boss。面试官是一个三姐，有点口音。先是让我介绍一个自己的一个项目，然后问我知不知道“后缀表达式”，我开始不认识那几个单词，但是后来她解释了一下，我就说“哦哦，我知道，以前本科大二的时候讲过这个，我懂”。然后她问我知不知道二叉树，我说知道啊。她又问那你知道怎么遍历它们吗？我说有三种遍历，然后解释了一下每种遍历。
+
+然后她就在google doc上简单画了一棵二叉树，让我分别写出三种遍历的序列。我就写了一下，顺便解释是怎么来的。
+
+然后她又问我，那如果只知道其中两个遍历序列，如何复原原来的二叉树呢？我就以先序遍历和中序遍历序列举例说，应该怎么样怎么样，blablabla...
+. 1point3acres.com/bbs
+解释完了，她说好，那你写一下实现的代码吧，我就开始写了。思路清晰，但是写的比较慢，也有点不太习惯google doc这样写代码的氛围吧。写完以后，自己大致看了一下，说我写完了，要解释一下代码吗（但是我写的时候，在关键部分都有跟她说过这是干啥的），于是她就说不用了。
+
+最后问了我一下时间复杂度和空间复杂度。然后问我有没有问题问她，我想了想也没啥问题，就说没有，就结束了。虽然都答上来了（今天想想程序可能还有一点小bug），但是有种强烈的预感，这个三姐会挂我。算了，anyway，继续准备其他的面试吧。发在这里攒人品，祝大家找工作好运！加油～
+
+
+西雅图白人小哥面的，直接上题：
+1）给一个n大小的list，这个list全是interval，interval是包括首尾的。返回一个同样为n大小的array A，其中A的值是i在这些intervals里出现的次数。
+比如
+n= 5
+L = [(1, 3), (2, 4)]. 1point3acres.com/bbs
+返回[0, 1, 2, 2, 1]
+follow up是如果区间的end可以无限大怎么办。
+
+2）
+给一个类似以下的输入
+www bb cc fffff
+如果给出六行空间，greedy会返回这样的
+www bb    剩下: 0. 1point 3acres 璁哄潧
+cc            剩下: 4
+fffff     剩下: 1
+平方和的结果是0^2 + 4^2 + 1^2 = 17..鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+. from: 1point3acres.com/bbs 
+目标是排列以达到最优，最优是平方和最小的时候。比如这题最优解能达到3^2 + 1^2 + 1^2 = 11:. 鍥磋鎴戜滑@1point 3 acres
+www   剩下: 3
+bb cc     剩下: 1
+fffff      剩下: 1
+
+工作了一年多准备跳槽，电面遇见这种题我也是醉了。缘分不到吧，希望之后找工作能顺利。欢迎讨论。欢迎送大米送分=w=
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+
+
+补充内容 (2016-7-1 16:19):
+不好意思，不知道为什么排版乱了。。改不了了
+
+
+只有一道题， 当时三哥冷淡得我都绝望了，没想到居然给了onsite
+题目：一个int[] A, 输出不相邻的elements组成的最大的sum
+楼主记错了约好的时间，电话打来的时候一脸懵逼，找google doc找了5分钟
+然后无比傻逼的写了O（N^2）的dp解法
+被要求improve，用heap写了个NlgN的，没错，这时候我还没有发现它是house robber
+冷淡的面试官忍无可忍说要O（n），恍然大悟写了
+此时，已过去40分钟……
+follow up：A中有负数.1point3acres缃�
+
+祝大家好运啊，面试官冷淡你就多讲几句，我的所有test case都是自己写，面试官confirm这样的～
+
+
+第一次电面是一个拒镇旋转的问题，以及给定一个拒镇判定是否是从N个给定拒镇中的某一个旋转得出的。。。
+然后，加面了。。。. 1point 3acres 璁哄潧
+
+加面是这样的，
+
+1 给定一个字符串，只有两种字符，左右括号，写一段代码统计有多少种配对方案 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+2.从map reduce开始讨论了一些和大数据处理有关的问题
+
+感觉G家喜欢问map reduce，楼主没特别准备过，估计要挂
+
+
+不久前湾区来的天竺哥的电话，口音特别重交流挺痛苦的直接上题： 给一组objects， 每个对象2个属性分别是id和父id。要求给这组objects排序保证所有父id都排在id的前面，如
+给的是：1->10, 2->20, 3->30, 10->200, 20->100
+排好应该得到：3->30, 10->200, 20->100, 1->10, 2->20
+因为10是1的父id，所以10->200一定要在1->10的前面，如果没有父id关系的话就按id排就好了
+函数是
+List<Object> sortObject(List<Object> objects){}
+
+
+另外父id一定比id大且给的数组元素不重复. visit 1point3acres.com for more.
+
+lz当时第一反应就是感觉这是图的题，但是往托普排序上想方向错了，天竺哥也一直憋着，我说了大概托普排序的思路就让我实现，完了再拿出各种case告诉我是错的，还有XXXX没排对。
+lz后面发现这题可以用并查集+mergesort解。哎，看来还是要多多修炼。希望有大神有更好的解法
+
+
+
+
+1. 给一堆选票， 选票包含候选人名字，时间stamp，求出给定时间内得票最多的候选人（return 任一）
+2. 给一堆选票， 求出给定时间内的得票最多的一堆候选人（return 全部）
+3. 给一堆选票，求出给定时间内前K高的一堆候选人. from: 1point3acres.com/bbs 
+4. 给一堆根据票数多少排序的候选人list, 给一堆选票， 求出哪个时间内可以从这堆选票中得出这堆给你的候选人的list..
+
+
+
+
+判断toeplitz maxtrix, follow up 是矩阵很大怎么办。。听面试官的介绍应该要问很多题的。。可能时间不够或是我太水了吧。。
+面试官貌似在机场，各种噪声，电话还莫名断了好几次，上来发现我俩进的还不是一个google doc耽误了好久好久。。
+求onsite。。求大米。。
+
+
+
+听起来像是一个中国姐姐（口音）给我出的题也很简单啊。
+只不过我脑子死的很。。。想半天想不出来。。。。
+
+姐姐还给我好多个提示。
+
+我用的是python.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+题：
+given an array=[1,2,3,4,5], so the sum will be 15 in total. 
+return random number from the array based on the probability.
+e.g. 1->1/15
+       2->2/15
+所以每次run random(array) output will be different.
+2就会有2/15次的机会成为Output
+
+只能用ran() method->returns a number in [0,1). e.g. 0.2345
+不可以用random.randint哦~~~~. from: 1point3acres.com/bbs 
+
+最后写出来个最简单的O(N^2)的方法。我是不是很蠢。。。。。
+然后问我test case 有哪些。drawback 有哪些
+Test cases (unit):
+[1,2,3,4,5]  | want: return a number from the array.
+big array, length > 1m | want: no timeout
+
+Drawbacks:
+Time complexity: O(n^2) too large
+When array is big, then the “list” will consume all the memory
+
+
+
+刚刚面完的，感觉真是悲伤逆流成河。。。
+第一题，五子棋，给一个棋盘状态，判断有没有人赢。
+第二题，五子棋，找到一个没棋子的位置，每个位置概率相同。
+第三题，系统设计题？直接看图吧，我没太看懂题意，没写代码，写了一点思路。主要是用户在点击按钮后计数时间，用户A先点击的话，在53秒，传给服务器，服务器传给其他用户，假设总共需20秒，用户B在52秒（无效）点击的话，等服务器信息传给B，B的无效时间变为33，所以B点击后过了19秒，服务器传给B的时候，有效时间是40秒，那么B点击的有效时间是59秒，然后53和59比较确定谁赢。 之后又问有多个用户的时候，服务器怎么设计？又没懂，随便说多线程。感觉跪了
+
+讲真，看了2个月的谷歌面经题，没见过这样的，就像是面试官所在组做的东西的一些函数，居然完全没考到算法。。。最后一题从没见过这种形式的，写到最后心都凉了。。。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+今年为数不多的几个面试都颇为不顺，自信心不断被打击，不知道怎么办了。。。唉.
+
+
+刚刚电面了g家，发个帖子攒攒人品，实在是不会了。我感觉基本上是fail了
+PST时间1点约得电面，打电话来听是个中国人。
+然后问了问简历，介绍了一下自己。寒暄一下吧。
+然后就上题。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+Given a list of numbers, a[0], a[1], a[2], … , a[N-1], where 0 <= a[i] < 2^32, find the maximum result of a[i] XOR a[j].
+
+我说brute force肯定行，他说你不用写这个太简单了。接下来我就想，那异或XOR吗，你看最左边的位呗，然后就说你开32*N的数组，记他们BIT的信息。
+接下来就说根据第一位分两大类呗，0一类，1一类。就问我那后面31位怎么办？ 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+我想法是根据第二位分类，以此类推，最后做32个候选的union。结果想想不对，intersection也不对。
+
+最后我不知道怎么办了，服输了，问他，他说你在31位里面已经分好的0的大类里面，继续分1 分0，recursively做，可是我想了想那也不能出一个数啊，是两个数配对的啊. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+期间我也想是不是3维DP做。也没说，一直在这条路上走，也不对，我也不知道了。
+交流吧，我感觉题都不会，也没什么交流了。
+lz到最后一行代码都没写，绝逼是没戏了。
+发个帖子给自己攒点人品吧，小伙伴们谁会做，抬我一手。讲道理，我没见过这道题，也不会做，你们可以教教我。感谢了。
+
+
+电面一面的面经在这里
+http://www.1point3acres.com/bbs/thread-183067-1-1.html
+这次是第二面，第一面题好难LZ没答好，二面题目就超简单我也是被这个差距给惊狗带。不求offer，求个onsite体验一把啊哈哈哈
+
+大概就是取一个array里的任意n个不同的值,得到一个随机的组合，不能取同一个index的数，但是可以取数值相同的不同index的数
+
+给一个array：[5,1,3,3],
+再给一个数字n：2，-google 1point3acres
+求这个array里的任意num个数：比如可以得到[5,1] or [5,3] or [1,3] or [3,3] ，但是不能得到[5,5]. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+再比如[5,1,3,3], 1 ===> [5] or [1] or [3]
+
+LZ就是先判断如果n>array.length或者n<=0或者array是空,返回一个空array. visit 1point3acres.com for more.
+否则就是一个loop，每一次生成一个random的index数字，还用了一个hashset来存之前访问过的index，如果生成的random index之前已经get了，就再继续生成一个random index。
+loop n次，每次取到的值放进新的结果array里。
+然后说了说也可以用一个boolean array存每个值有没有已经取到。。
+写完后再写了写unit test什么的，还有问道怎么检测得到的结果比如[5,1]确实是[5,1,3,3]里的
+
+问问大家有没有更优的方法啊
+
+
+
+// Return sum of integer 1..N, excluding multipliers of any single integers in X.
+// Example: N = 10, X = {2}, return 1 + 3 + 5 + 7 + 9 = 25.
+// Example 2: N = 10, X = {2, 3}, return 1 + 5 + 7 = 13.
+// Assume 1 < N <= 2^31. 1 <= K = X.size() <= 10. X contains only distinct positive prime numbers.
+. 1point 3acres 璁哄潧
+想不到有什么快的方法，先写了个解法O(kn)。 然后问可不可以improve，想好久才想到用等差数列求和公式。 太紧张了， 连公式都不记得，半天也推不出来。应该是跪了。。
+
+
+下午两点准时从加州来的电话，听声音是白人小哥，感觉蛮和蔼的。先问了简历，问了最interesting project，然后又问了the most challenging technical part of the project.. 然后开始coding
+
+楼主不知道是电话通话质量不好还是耳机有问题，总是听不很清楚，结果第一题小哥说了题目，语速好快，我愣是一个字都没听懂。然后问小哥能不能paste题目到google doc上。。囧。。接着就感觉小哥口气明显不太好了，sigh..
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+第一题是Given a float array, 如果有两个duplicated element的index之差小于等于给定的X就返回TRUE.  其实题目很简单，但是小哥问的很细，HashMap的每一步操作都问的很明白才罢休. 还问了时间复杂度什么的
+-google 1point3acres
+第二题是Given a int array, find a local minimum. 我说直接scan一遍数组就行，他问复杂度，我说O(N)，他让我prove the worst case is O(N), 我就是说肯定要扫描整个array, 但是他不满意，要让我优化，，楼主隐约感觉可以用binary search，但是就是想的不是很明白，然后中途冷场了一会。。我直接问小哥可不可以先让我写代码，我边写边想。结果小哥义正言辞说：No, you can not code until you tell me your clear thoughts..   好在最后的确想到了，然后我说用contradiction可以证明，他说good， 然后就草草写了代码。最后随便问了个题目就完了~~
+
+求Onsite，求bless 求过亚麻group！
+
+
+
+补充内容 (2016-2-12 05:18):
+写错了，是2月11号。。
+
+
+
+第一轮电面点这里。求人品求Onsite！！. more info on 1point3acres.com
+
+楼主比较弱鸡只面了一道题。听口音是一位美国小哥，上来先非常激情地介绍了5分钟他自己的team，然后5分钟聊简历。接下来是technical code：. From 1point 3acres bbs
+. from: 1point3acres.com/bbs 
+input是一组string, 找到这里面的由相同字母组成的单词组成一组并输出。比如bat 和abt，但是a 和aa这样字母个数不一样的不算。. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+例子： input[could, bat, dog, said, tab, cloud] output: [[could, cloud], [bat, tab], [dog], [said]]
+
+
+我第一个想法是建一个trie，后来说着说着觉得这道题不关注字母顺序所以没什么用。
+第二个想法就是建一个字典，然后遍历input，把每个word排序后作为key，word append到value里。 再遍历字典输出。小哥说sounds good然后就开始写，写完后发现他全选了代码，感觉可能是复制到ide去跑test case了？
+
+然后小哥就问我怎么Handle input 里有重复的情况， 比如input[could, bat, dog, said, tab, cloud, bat]，output就应该是[[could, cloud], [bat, tab, bat], [dog], [said]]. From 1point 3acres bbs
+我就又加了一个dict来记录出现次数，当append到result里时按次数加进去。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+
+然后小哥就问我假如有punctuation能不能handle，我看了一下说能。
+
+接下来我问有没有可能会有大写字母的，比如Could，说有可能。我又改了一下代码。
+
+接下来问了个follow up，说有没有可能在多台machine上同时处理这program。我按照MapReduce胡扯了一通，差不多还有5分钟。小哥让问了点问题结束。
+
+祝大家找工作顺利！求人品求onsite!
+
+
+
+请告诉我 问这么容易的题是正常的……
+
+1. 给一个数组，找到比左右邻居都大的element。比如[1,2,3,4,3,5,6,7]，返回4
+看到这道题，内心无数黑人问号脸……
+
+2. 设计一个Iterator类，构造器input是一个Integer的Iterator,  next()返回里面的下一个负数，hasNext()返回是否还有负数……
+这道题也很简单，但我当时过于紧张，把剩余的时间都花在了这道题上……
+
+这种难度的题是不是至少要做3道才算合格，好机会没太把握好
+
+
+
+补充内容 (2016-11-10 10:58):
+刚收到二面通知，森森滴感觉被放水
+
+
+
+
+八月收到了一个recuiter的邮件，因为没有准备，一直拖到了11/2号面试。
+一上来先花了十五分钟再聊经历，剩下的30分钟就是全程懵逼的coding test。
+首先题目讲解了五分钟，说的是有很多sorted data streams， 其中有disk的数据， memory的数据，还有network的数据，然后让设计interface，返回sorted data stream（在disk中）。看到题目后瞬间懵逼，然后就merge sort开始编，最后返回了路径。中途不知道各种怎么call，然后就整了一堆不知名函数。
+最后又问有N个elements， K个data streams，问complexity。我问能不能fit it memory，毕竟写数据到disk的花费还是很高的，他说does not matter。我就日了狗了。最后说NlogK。 他说他能不能更好，我想了半天胡诌了一遍说可能，看数据格式，但一般来说是NlogK是最好的。他说I agree。 你都agree了问那么多干嘛。. 鍥磋鎴戜滑@1point 3 acres
+感觉狗家就这么悲剧了。
+
+
+应该是个白人小哥，听起来像是英国口音。题目：is_same_permutation(a, b)
+    给两个list，看它们是不是permutations of each other.
+求过。。
+
+
+非中印小哥，一上来，通话质量极差，我直接让对面在google docs上打题，就这样电话中间还断了。。。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+1. 实现浮点数数组求平均值，明显不可能加和这么简单，多问了一句是否保证不溢出，果然不保证，于是保存当前平均值，记录count，用加权的方式做的，感觉没问题，但是他还是说有问题，让我看，我没看出来，就过了。。。
+
+2. 第二题是字符串判断是否由重复字符串组成，感觉leetcode做过，可我属于一面试就极紧张的，脑子一片空白，问最直接的暴力算法行不行，他说先实现最好，我觉给了个暴力算法直接不同长度试，然后还有10分钟让我优化，想了个DP的方法不知道对不对，repeat数组存当前字符结尾的重复字符串的长度。。
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+写完代码他说我觉得很clear了，时间到了，你有什么想问我的吗？问了自己比较关心的，你认为在狗狗一个好的SDE最重要的是什么素质？他说要能够搞清楚自己应该做什么的能力，还有沟通能力，当然smart也很重要。-google 1point3acres
+
+虽然刷了2遍leetcode。。。但是心理素质差，一面试就慌，脑子空白，不抱希望了，发个面经攒人品希望上周亚麻群面能过就好。。。
+-google 1point3acres
+
+补充内容 (2016-11-1 04:37):
+DP算法最后证明不对，欢迎各位大神提供思路。
+
+
+
+Finding the first duplicate in an int array, java
+
+有大神知道 面试官说的linear hashing是什么意思么？
+http://stackoverflow.com/questio ... n-an-int-array-java
+. From 1point 3acres bbs
+
+补充内容 (2016-11-2 04:05):
+前面的两种方法都不是面试官要的答案。
+
+补充内容 (2016-11-2 10:00):
+面试官说了，空间复杂度需要是O(1), 时间复杂度优于 O(n2)
+
+
+电面中国女性
+电话接通后就两句： 能听到吗，能打开google doc吗。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+good，let's get it start. 
+。。。我都不知道她叫啥。anyway。。我倒是很喜欢这种风格
+
+两道题
+1. 给一堆interval 算出total cover的区间，输出list
+2. 二叉树找closest value。 注意有可能要返回一个以上。
+
+
+
+听口音是个白人大哥, 上来介绍了下自己, 对我没有丝毫兴趣, 然后开始做题
+第一道设计一个iterator, 输入一个数组[3,8,1,9,2,12]
+每次调用next()得到8,8,8,9,12,12
+问了半天才明白就是偶数index表示重复次数, 奇数index是要输出的数字
+
+第二题3Sum smaller
+
+第三题median data stream, follow up: 如果heap的size是固定的, 但是有很多input怎么办. From 1point 3acres bbs
+.1point3acres缃�
+题其实不难, 所以还是要看运气...
+攒人品求onsite求offer!. 鍥磋鎴
+
+
+
+本来没报什么希望，想着就是来贡献一下面经的，然而感觉现在这个面经也没太大价值了。。。
+白人小哥，问了简历上的一个项目，然后数据结构Hashtable和BST，问了这两个有什么本质性区别，感觉答的不好。。。（明明就很不一样啊好么。。。）coding非常简单, fizz buzz...follow up不许用%和/怎么做。。。之后还问了几个简单的ood概念。。。总而言之，言而总之就是很简单。。。都说狗家面试看运气，然而这也太简单了吧，难道是看穿了我是个大水笔么，23333。。。
+
+
+中国小哥电面，人非常的nice，题目超乎想象的简单。
+. 1point3acres.com/bbs
+第一题，从文件中读出字符串，输出字符串，但是重复的字符串只输出一次。. 鍥磋鎴戜滑@1point 3 acres
+             我的解释（1） Hashset （2） sort （3）create trie， google的电面总是想的很复杂，说了trie，并且说了trie比hashSet省空间，但是小哥没有让接着说。做了第一solution的代码，好简单，不敢相信。
+              follow up  文件非常大，不能load 到memory 怎么办。 我的solution，大的文件切成若干小块，把小块load到memory，sort，再写回disk。然后再用priorityQueue merge sort各个小块。重复的skip
+              小哥表示对这个方案满意
+
+第二题  给一个数组，里面有正负数，让找到不相邻的两个数，他们的和最大，输出最大和。
+            dp解决，很简单。
+
+题目超乎想象的简单，第二天通知onsite
+
+
+
+下午刚面的，波士顿的白人小哥。上来先讨论了一下为啥来谷歌和稍微聊了一下暑假的实习。然后就做题了，就是tree的遍历，有一个person类，包含Person的名字，mother,  father, 其实就是left 和 right。要求打印出一个人的所有祖先， dfs。 写的时候上来忘了判断这个人为空，所以follow up就是什么情况下这个程序会崩。发现自己的愚蠢错误后改正。然后还回答会stack overflow。小哥说这他没想到。然后小哥又问还有什么情况，我说求给个提示，他说有环的情况会崩。当然后来和他讨论实际上这是不可能的因为这样就乱伦了。第二个题是一层一层输出祖先，bfs。follow up同样是怎样会崩。 照样是有环的时候。然后问问题就结束了。求onsite求米
+
+
+补充内容 (2016-11-11 04:40):
+周一收到电话说过了, 约onsite
+
+
+
+一个很怪的印度小哥面的，迟到10分钟， 自我介绍没有，简历没问。1) override default equals for class B. Base check of field equality
+class A {
+public final int va;
+public A(int va) {this.va = va}
+}
+class B extends A {
+public final String vb;
+public B(int va, String vb) { super(va), this.vb = vb}
+}
+
+2 给 list和tagert 找list中最接近tagert的数。
+直接写了二分。。。很怪是说小哥 “看不懂” 我写的二分。一直让我run test。run了有20分钟，并没有发现bug。最后沉默5分钟，拉回去看我写while代码，说明白了。
+
+为什么这么简单，这是要黑我吗，面试之路好坎坷。
+
+
+
+G拖了快半月给了onsite。。。两轮
+一轮是美国小白 design a subscribe/broadcast library (Java)
+二轮国人大叔 find the first unique character in a string(all lower case). house robber II
+
+
+
+虽然觉得可能没多大参考价值，还是放在上面吧。
+
+我的题和下面的面经的phone interview是一样的：
+http://www.1point3acres.com/bbs/ ... adio%26sortid%3D311
+
+就是说，给定一个字符串s，问可以分成最多多少个palindrome的chunk。举几个例子：
+1. teammate 
+答案是6， 因为"te" -- "te", "a"--"a", "m"--"m"
+2. ab
+答案是1，因为不可分，所以就1个chunk
+3. “”. Waral 鍗氬鏈夋洿澶氭枃绔�,
+答案是0，因为没有字符，所以没有chunk
+
+写的时候有点懵……明明recursive很好解，偏偏想写iterative，结果写的有点乱……
+求过，求on site
+
+
+
+
+面试官迟到了10分钟。。。。
+据口音应该是个帅气白人哥，上来先自我介绍一番，在Google map做卫星*&……*&#!@#^^#什么什么的，太高大上，没怎么听懂。。。
+然后接着就问了我两个beha问题：
+1. What specific product in Google are you interested in and why.
+2. Why you wanna work at Google.
+胡扯了一堆然后大概时间过去了快20MIN..
+coding..
+一开始他问我知不知道circular buffer我说知道，然后让我简单写了一个，后来他说的东西把他自己都绕进去了。。。花了5分钟都没讲明白 然后他说never mid，let's move on.. - -####. more info on 1point3acres.com
+第二题问的是最大间隔
+
+给一个unsorted array, for all a[i] <= a[j] 找出 j - i 最大的值。。。O(N) time O(N) Space. visit 1point3acres.com for more.
+因为时间不多了加上也有点紧张。。没想出什么好办法。 后来他给了HINT说要开一个数组存smallest so far 然后我大概想了一会.1point3acres缃�
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+开一个n长度的array, 从左往右每个位置存到目前位置的smallest number. 存完后从数组最右往左遍历 记录结果max, 如果a[right] > small[right - max - 1] 更新max = max + 1. from: 1point3acres.com/bbs 
+如果发现a[right] <= smallest[right - max - 1] 说明，a[right] 比这之前的都小，就right--继续遍历。。。 直到right <= max。。。。. 1point3acres.com/bbs
+
+然后在结束前大概写出来了。。也不知道他怎么想的，有几个小BUG但是改过来了。 剩几分钟 愉快的聊了会天 。。。 可能是因为周五吧 他感觉全程都很高兴。。
+
+有点坎坷，但是希望能过。。。。- -。。
+
+
+45分钟：
+1. 设计题： 叫你设计一个logging system （包括log的数据结构）, 如何guarantee unique entry。
+完全懵逼，说了hash但是又被问如果只有一台机器处理log,hash size不够怎么办，卒. 鍥磋鎴戜滑@1point 3 acres
+2. 编程题：在一个 [1,2,3,4,5,6,...,n]的array里 请找出 所有set1,set2, such that set1 == set2.
+完全懵逼，最后被告知要用segment tree,卒
+
+原来以为gg了，但三个星期后被通知要加面. From 1point 3acres bbs
+. visit 1point3acres.com for more.
+45分钟：
+1.编程题： 给2个Set A, B, 请找出 set1: elements that are only in A, set2: elements that are only in B 
+例子： Set A = [1,2,3],  Set B = [1,4,5], set1 = [2,3] ,set2 = [4,5]. 1point 3acres 璁哄潧
+一开始用遍历，但后来呗提醒可以用hash table， 总共花了大概30分钟
+2.概念题： How does python manage memory？ (因为我编程题都是用python写的)
+我说我只知道用到了C，然后被告知python 用到了 reference count
+
+2天后收到onsite。
+
+可以看出两次面试难度天壤之别，过面试真的是一半靠运气, 同学们加油！
+
+
+
+前几天面的电面，国人大哥，一接电话安心了一半。没有问任何简历上来直接做题. 1point 3acres 璁哄潧
+给了list of message， 每message有一个parentID， ID 和content。 要求输入list of message按照先parent后children的顺序， 给定root message的parentID是固定的字符串。其实就是topological sort。 写完了之后简单跑了testcase问了时间复杂度就完了。. 鍥磋鎴戜
+
+
+电面：. From 1point 3acres bbs
+和Minimum Window Substring类似的一个题
+
+Onsite （Kirkland）：
+1. Binary Tree Max Path Sum
+
+2. 给一个无向图，找两个node的lowest common ancestor. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+
+3. Word Break，Plus One
+
+4. 如何测试一个随机函数 （看着像是SDET的题。。。）
+    Google Calendar突然变慢了，怎么debug
+    简单coding题 （忘了。。。）-google 1point3acres
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+5. Word Ladder II. 鍥磋鎴戜滑@1point 3 acres
+
+面完一周瑞苦特打电话说feedback very positive。然后过了几天又说executive review没过，挂了。。。
+
+
+
+1. lc的原题 检查一个String 是不是Palindrome
+她问我知不知道palindrome，我当然得说不知道，说听到过这个，好像是首尾都一样就是palindrome，然后问清楚了大小写，是不是只有英文字，就开始写code。
+然后嘴跑了5个小test cases, 她挺满意就继续了
+2.第二题 是给一个二维数组，里面有白黑两种颜色的格子，看白格子能不能全部连接上（0 代表 白格子，1 黑格子）
+比如 0 1 1        . 1point3acres.com/bbs
+        1 1 0. 鍥磋鎴戜滑@1point 3 acres
+就是错误的，因为白格子被区分开了    . from: 1point3acres.com/bbs 
+
+再比如 0 0 0
+           1 1 0
+是正确的，因为白格子是连在一起的 
+
+第一时间觉得在哪看到过，地里的面经还是哪里，但是记不起来了。。然后说了下（o(n^2)）DFS的解法，她说可行但不太效率，说是o(n)可以解决
+想了5分钟没想出来，她让我先写（应该是觉得我想不出来On解法了。。），然后改进。
+写完了后，中间有点小bug我马上发现改回来了。也没让我嘴跑程序，可能是时间不够了。
+
+
+新鲜Google 面经. 鍥磋鎴戜滑@1point 3 acres
+面之前略紧张，想去Google cloud team.
+国人姐姐，说话特别温柔。. 1point 3acres 璁哄潧
+1 一个String, 将其中的数字进行翻转
+2 一个Sorted array,给一个Target, 找到最大的index 使得Array[index] == target.
+
+
+刚挂了电话，来分享求米 国人大哥，人非常nice，最后还给我提了好多建议。不知道大哥能不能看到这个帖子，感谢感谢！ 
+
+问了两题-google 1point3acres
+
+
+#1 leetcode原题，单向链表，l1->l2->l3->...->ln，变成：l1->ln->l2->ln-1->l3->... .鏈枃鍘熷垱鑷�1point3acres璁哄潧
+
+.1point3acres缃�
+我先说用array存下来，然后重建链表，分析一下时间空间复杂度。然后直接说了最优算法。 全部写完大概二十多分钟。.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+#2 一个matrix存了好多数，支持两种操作 
+update(i, j, v)：更新坐标为[i,j]的元素 
+sum(x1, y1, x2, y2)：把[x1, y1]和[x2, y2]所确定的矩形空间所包含的数求和（x1<=x2, y1<=y2） 
+
+
+有三种情形，（1）update很多，（2）sum很多，（3）都很多。可以预处理，在三种情形下怎么设计。
+这题不用coding，只要讲思路。 最后问了一下工作内容，还有谷歌不同location的工作和薪资差别
+.1point3acres缃�
+-google 1point3acres
+感谢地里帮我内推的同学
+
+
+面完，感觉是跪了。。。。第二问说思路的时候估计思路不对，对面一直说不懂。。。
+写到45min的时候就说到时间啦就挂电话。。也不让问问题或者再写一会儿，明明我感觉再一下应该可以出来的。。。
+来上问题吧。。。一条街上有n个供热站，每个覆盖m的范围。给一个数组里面有每个房子的位置，都是一维的，要求每个房子都被供热站覆盖到。第一个问给定m，求最小的n。第二问给定n，求最小的m
+祝好运
+
+
+
+刚刚面完，热乎乎的面经回报地里，面我的好像是个国人大哥，人相当好
+两道题：
+1. Leetcode 163. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+2. 找到一个binary tree中最深的node，(如果有多个最大深度node，返回最左边的node)，我一开始用了recursive的解法，后来的follow-up是使用iterative怎么解，应该是用BFS，等到queue里面只剩下一个node并且这个node没有left child 和right child的时候，返回这个node。
+因为有我有competing offer，好像可以跳过二面onsite，不过结果还没出来，仅供大家作为参考。
+
+
+
+来个狗家电面的面经吧。
+一害羞三哥面的，上来简单自我介绍了一下，后面在我问他问题时回答也总是很简短。
+第一题leetcode298,我给了个Bottom up的解法，他让我跑了两个test case，然后就过了。
+第二题leetcode44,讨论思路几乎没花时间他就喊我写，我写了个DP，然后他貌似有点不明白，然后让我又是画表格又是炮test case，我问他需要再写个DFS帮他理解么，他说不用，然后就1小时过去了。
+希望有好消息。
+
+
+电面就面了一题，设计贪吃蛇游戏。整个过程非常的扯，面试官的英文完全刷新了我的三观。他自我介绍就以“呃，呃，呃”十下开始，然后后来几乎每句都是如此，讲出来的英文也不好懂。最后的结尾也是这货抢过了话头准备说点神马，然后“呃“了五六下估计不知道怎么表达了，直接让我问他问题，不到四十分钟结束。
+并不是烙印，而是某个不知名国家的神人，已在狗家工作六年。
+也许我就应该一直讲话，不要讲了几分钟问他的意见，血的教训。
+我预料到十之六七要挂了，因为他肯定感觉丢脸，所以不爽，然后我必然被他泄愤，这是好多人的自然反应。
+我给的LinkedList + HashSet的最优解，然而并没有什么卵用。还有就是这货Java也不熟的，linkedlist的API他都搞不清楚，然后这货的feedback说我数据结构不行，linkedlist不熟，日了狗了，哈哈。
+Move on, things happen.
+
+
+
+五分钟前刚刚结束电面。题貌似不难。可能因为我简历比较菜。不废话直接上题1.excel column => number 
+把excel的column 变成数字。excel colum: A,B,C,D,E,...,Z,AA,AB,AC,...,AZ,AAA,AAB,...   对应数字： 0，1，2，3，。。。，25，26，27.。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+输入： String input     for example:  AABZCD
+输出： int 
+以前做过这题，相当于26进制数转换为10 进制，很快bug free。
+2.find longest sequence in Dictionary
+给你个函数  boolean inDict(String input)
+输入： String s
+输出 ： int  
+对于这个string s,  每个char都可以选择要或者不要，要求这样组成的sequence在dict里，返回这样的sequence最长的length。
+例子string in =bcbbbbbabbbbt
+              0100000100001
+组成的cat在dict里。
+这个题只写出了brute force的解法，不知道能不能过。求过求下一轮。
+
+
+昨天刚刚面的google，基本就是course schedule。follow up是如果是一个data stram,就是不断有新的dependency进来怎么办，大家有什么想法？今天电话说要加面。。。
+
+
+之前跟几个已经通过电面的朋友交流了一下感情，发现他们电面都是一道题而且超级简单，例如那个什么log limiter 还有plus one 这种。然后大家都劝我不要太放在心上应该会比较容易，然后找google内部的朋友也帮我做个几次mock心里大概有谱了。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+
+然而。。。刚接起电话我就感觉不对，首先是一个三哥，然后一开始我俩寒暄几句，说的笑话我都没听懂。。。然后跟剧本不一样啊！从第一分钟开始就写代码啊！不关心我是谁来自哪要干嘛啊连个自我介绍都没有啊，不打开google doc开始写代码我都不知道你是谁啊有没有！！
+
+两道题，words square I 和words square II，同学们自己上leetcode感受一下把…… 两个我都写出来了，但是他似乎不是很满意，一直在找corner case挑错，我就写完了一直在跟他讨论这里是不是有bug如果有就fix bug。最令我不解的事，过程中我提出说我有更好的方法，然后show给他看，他说Don't present new idea, keep with your old one... 45分钟就这样过去了，我改完最后一个bug的时候，问我有没有什么问题，我正问着呢，他说啊哈时间貌似到了我得出这个会议室了，不好意思我们就聊到这里吧………………感觉真的非常不好，虽然写出来了但感觉他非常想草草了事而且conversatoin过程中没觉得有什么positive feedback。回头问了问狗家内部员工，朋友说出这么俩题还啥都不问不是什么好sign。。。而且从头到尾没有hint，也基本不说话，只有觉得我有bug的时候才说话，真的慌了………………
+
+分享经验攒人品吧！！！
+
+
+我朋友今天面的，真是醉了，题是Given a binary tree, find the path which nodes sum to a given value. The path can start from and end with any nodes
+做过CC150的肯定觉得这个是那上面的原题，但你仔细看CC150的解法，它的最后的答案还是从上到下的这种PATH，也就是从某个祖先（虽然不是ROOT），到某个后代节点
+
+但这个面试官让我朋友做的是真正的可以从任何点开始和结束，也就是说，可以是一个节点，一直网上爬到某个祖先的然后再拐到另外一个孩子往下爬到某个后代这种路径
+
+我朋友说他完全不会，讨论了45分钟还没讨论出正确算法，估计跪了
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+补充内容 (2016-10-8 11:06):
+发现G家面试真是要看RP，很容易碰到各种难偏怪
+
+
+
+
+跪跪跪跪跪一紧张写了一堆bug，对不起这么好的题……（哭泣）发个贴求过面试……
+
+和论坛里说的一样，对面惯常迟到5分钟。啥也没问，直入正题。
+
+第一题：Input一个string，判断它是否存在一种permutation是palindrome。
+follow up: 如何test这个function。
+
+
+正确回答是阐述一遍测试体系unit test, integration test, leak test, performance test 等等……. 鍥磋鎴戜滑@1point 3 acres
+小哥人很好，我没说到的他都给我科普了一遍。
+
+
+
+
+第二题：Hamming Weight，也就是count bits 1 in a number.
+写完O(n)了以后不出所料地让优化。
+幸好我在对方说题目的时候就机智地打开了wiki，照着wiki上的敲了一遍。
+. 1point3acres.com/bbs
+
+感觉身体被掏空（捂心口）
+
+
+re-order a string so that no adjecent characters are the same.e.g. caat --> cata or acat or acta..... visit 1point3acres.com for more.
+
+跪在Follow up
+Time limitation: O(n)
+
+
+第一题：1234…...87346374632correct order: [1, 2, 3, 4, … , 5, 3, 2]
+reverse:       [2, 3, 5, 4, … , 3, 2, 1]. visit 1point3acres.com for more.
+public class BigInt{
+public int [] internal;
+}
+. more info on 1point3acres.com
+
+static BigInt addAll(List<BigInt> nums); // Should return num
+
+第二题：
+zigzag iterator follow up
+
+interface Iterator {
+  Object next();. 鍥磋鎴戜滑@1point 3 acres
+  boolean hasNext();
+}
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+[a1 a2 a3 …]
+[b1 b2 b3 …]
+[c1 c2 c3 …]
+-->  a1  b1  c1  a2  b2  c2 ....
+
+
+
+
+问了hash是啥，然后一堆java的概念. 题目是给一个expression tree，leaf node都是数字，其他的node有符号+ - * /，最后要你print出来这个表达式，最好的情况是如果有加号减号要括起来，乘法除法不用扩，比如tree看起来这样           *
+     +       -
+8      3    5   4
+print（8+3）* （5-4），最后是问了java和Python的区别. 1p
+
+
+
+
+好像是个美国小哥，叫Micheal, 上来直接贴题：
+第一题： 给出一个dictionary，给出一个list里面包含首字母， output：在dictionary中找到的以list中首字母开头的最长的单词。例如：dict: {"hello", "hi", "lot", "laugh", "me"}, list:{"h, l"}; output: {"hello", "laugh"}dier
+第二题：直接贴图片了，反正我是没想到啥好方法。。忽略图片里的那个deny access...实在是截屏截晚了，大家凑活看吧～. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+楼主肯定是又跪了。。so sad...
+
+
+
+刚刚结束的Google，感觉有点虚，leetcode gg tag的136道题，刷了120道，结果就面到了剩下的那16道题中的Evaluate Division……哭瞎了，最后超了10分钟，只做完了这一道题，看地里都是两道题，不知道会不会过，求onsite 啊，手里都没面试
+
+
+
+
+就面了两道题目，第一道就是一个数组找大小，找到第k个大的数，很简单
+第二个就是需要一个tree的设计题目，设计如何构造一个tree才能满足一些操作
+
+
+这周二面的Google，太紧张了 脑袋木木的开始聊了聊简历
+然后问了很多关于C++的知识，继承多态虚函数之类的，简单提了提虚函数表以及一些hash table的实现
+
+coding题目是这样的，一个字典，里面很多单词，例如. 鍥磋鎴戜滑@1point 3 acres
+google, leg, about, lemma, apple, time
+找这样的pair <A, B>，有两个条件, (1) A单词的后两个字母和B单词的前两个字母一样 （2）A单词的第一个字母和B单词的最后一个字母一样，例如<google, leg>就是一个合格的pair，<apple, lemma>也是一个合格的pair， <about, time>不可以
+然后求这样的pair的最长长度，<google, leg>的长度=6+3
+
+
+我开始没听见他说这个dict是sorted，太紧张了唉。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+
+鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+我只好用了个很sb的方法，用每个单词的最后两个字母建了一个map，然后再扫一遍寻找所有的pair
+分析了复杂度，要分析的很准确， 
+. more info on 1point3acres.com
+后来他提醒了一下是sorted，有吭哧写了个带binary search的版本，BinSearch的函数没来得及写
+
+后来又问could we do better 已经没有时间了， 唉 感觉挺简单一题，写的太慢。 . 1point3acres.com/bbs
+
+不知道有没有其他很简洁的办法。。LZ弱的跟猪一样
+
+
+然后三天之后HR打电话来，说did well，被proceed到Youtube了。有种. 鍥磋鎴戜滑@1point 3 acres
+求问有没有类似经历的小伙伴，Youtube和Google貌似在不同的location，难度有什么不一样么
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+Anyway，已经做好move on的准备了。。总比直接挂了好。。
+
+
+感觉g家果然是人人都不同啊。简历只字未提，一上来问了一堆数据结构， 编程语言的基础知识, 然后才开始做题。
+1. 提供一个contains（string）方法用以查找input字符串是否存在于字典中。要求实现一个方接受一个字符串作为input， 输出所有由这个字符串拆分成的两个子字符串组合，要求两个字符串必须都包含的字典中。 
+dic{aa, ab, star, b, a}
+input: aab 
+output: {(a, ab), {ab, b}}
+
+2. 假如input字符串可以任意拆分成n个子字符串，输出所有的可能。
+dic{aa, ab, star, b, a}
+input: aab . 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+
+output:{(a, a, b), (aa, b), (a, ab)}. from: 1
+
+
+楼主10分钟前刚刚结束的电面。
+接电话是一位口音很好的美国大叔，上来聊简历约10分钟，聊得很好楼主觉得很顺利。. 1point3acres.com/bbs
+接下来就悲伤了！！楼主自己犯傻没有开google doc！！
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+第一题是一道maze题，然后大叔跟我说在这个maze上怎么怎么操作就能出结果我听得一脸懵逼。反复交流了10分钟后我只好说确实不明白这么visual 的问题，大叔非常耐心说下一题。
+第二题是 fibonacci方程f（），想获得f(5)，一共需要call几次f（）一步一步做就好。
+第三题是给了一个简单地api，里面有1. __init__（URL)：连接到这个url，连接后会获得相应table 2. get(key)获得这个key对应的string 3. set（key,value)在这个table里set key的value。 然后给了个run(phone_url, address_url, key)就是用phone_url， address_url连接到这个api，然后分别获得这个key对应的value: phone, address， 返回一个“key:phone:address” 问怎么优化。 楼主到这会还没有意思到题目在docs上，所以似懂非懂在瞎扯，直到大叔问我有没有在看着docs我才想起来。。然后答得是用multithread，大叔说很好，但用户还是觉得慢。我说慢可能是因为在__init__里假如fail的话就会一次一次reconnect，应该在每个thread里加timer，假如说__init__（）超过2s就直接返回fail。 大叔说correct，然后就是让我问他问题结束。 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+. from: 1point3acres.com/bbs 
+大叔很耐心一次一次给我描述第一题，全程应该主要是第一次需要写code，楼主还直接跳过了。。肯定是跪了。祝大家申请顺利
+
+
+
+今天处女面给了Google，感觉已然半跪了。。。
+职位Infrastructure&Tools，听说不难，果然不难啊！！题目很简单，很简单，给后来者打气~
+（白人 黑人问号）小哥面的，人很nice，工程师所以态度略冷，但是我做题和思考的时候都没有打扰，循循善诱，我的小福气吖~
+
+面试流程：
+1. Talk about what you're currently working on -- 一顿扯
+2. 听说你C++不错诶，你简历上也有Java和Python，给我聊聊C++和Java的区别 -- 一顿胡扯，估计可能跪在这里了
+3. 题目面试：
+   A. 给你一个Sudoku Grid，设计接口并且实现一个方法，检查里面的解是否合法。
+   B. Follow up: 如果是N*N的Grid，如何扩展你的程序。. 鍥磋鎴戜滑@1point 3 acres
+   C. Follow up's follow up: 如果是N*N的Grid，如何check这个grid的长宽是否合法。
+   D. 写一个Template function，接受两个Container和一个返回bool的函数作为输入，输出一个merge后的Container。
+
+半跪经：
+A. 这道题很简单才对啊……小哥说你怎么test你的程序，我扯了一大堆，然后说用户的什么输入会fail掉你的程序，我硬硬没检查输入的size啊，最后还是在小哥提醒下想起写最开始的尺寸检查。
+B. 我说可以设计一个类，存储block的数目以及grid尺寸。
+C. 说实话真不会。。。我说的检查height == width, 并且单边长n是个perfect square number满足 n % sqrt(n) == 0。大神求解答。
+D. 厉害了我的（谷）歌！考到语言特性了，几辈子没写template function和函参了。上网现搜先学，最后函参应该写错了。。。
+
+关于D，其实暴露了自己的口语和听力缺点，小哥说了几遍我都没听懂，小哥有点不耐烦了，给我说你就假设是两个任意数据类型的vector，给你一个bool返回值的function来实现min(x, y)，你返回一个merge后的container。小哥还提了一嘴，假设两个vector都是sorted的。
+. From 1point 3acres bbs
+教训：
+1. 谷歌最近很多follow up的样子，第一次写就要尽量generic，比如我写的 for (int i = 0; i < 3; ++i) 小哥就明显不满意。. 鍥磋鎴戜滑@1point 3 acres
+2. 数据的输入一定要检查啊~~一定要检查！一定要检查！一定要检查！！
+
+贴新鲜的代码（面完之后心好累就没看，可能有大bug，只是给大家看个思路，找到bug记得告诉我……）：
+
+
+Finding a 2D array inside a bigger 2D arrayExample:
+big_grid
+1234. visit 1point3acres.com for more.
+1234
+1234
+1234. 鍥磋鎴戜滑@1point 3 acres
+
+small
+12
+12. from: 1point3acres.com/bbs 
+
+return true;
+
+big:
+1234
+1234
+1234
+1234. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+
+small:
+22
+22
+
+return false. 1point 3acres 璁哄潧
+
+
+
+validate word square:
+
+BALL
+AREA
+LEAD
+LADY
+
+
+
+Stream of characters from a socket. Create structured frames out of that stream.
+
+Start character is 0x12
+End character is 0x13
+Escape character is 0x14
+
+0x12, 0xDE, 0xAD, 0xBE, 0xEF, 0x13 => 0xDEADBEEF
+0x12, 0x14, 0x12, 0x14, 0x13, 0x13 => 0x12, 0x13
+
+0x12, 0xDE, 0xAD, 0x13, 0x12, 0x14, 0x14, 0x13…… => [[0xDE, 0xAD], [0x14], ….]
+
+Structured frame = [0x13] => Stream = [0x12, 0x14, 0x13, 0x13]
+[0x12, 0x14, 0x14, 0x13] => Frame = [0x14]
+
+
+挂了。。。根本不理解题意。。交流题意花了太长时间。。。
+
+
+
+美国西北角的那个城市的office，非MTV。
+
+电面，一个小时，阿三面试官，非常nice。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+Word Square:
+A B C D. visit 1point3acres.com for more.
+B N R T. 鍥磋鎴戜滑@1point 3 acres
+C R M Y
+D T Y E
+
+Word Square的定义是，任取0<=k<n(长/宽)，第k行和第k列的字符组成的字符串是一样的，比如第一行ABCD和第一列ABCD，是一样的。
+
+除此之外，以下这种情况也是valid的。
+A B C D
+B N R T. more info on 1point3acres.com
+C R M. From 1point 3acres bbs
+D T 
+
+先写一下假设你要写一个函数判断给定的输入是不是WS你会怎么写test case 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+然后，给一个list of 字符串，给一个length，求长宽为length的所有valid的word square，以list of list of 字符串的形式返回。
+我是用backtracking/DFS的方法做的。
+
+最后分析一下复杂度。我的方法是n!，估计有更好的，但是后来结果还是pass了。
+
+
+贡献一个G家新鲜的电面面经。面试官是个美国人，很nice，迟到了10分钟，说是因为一开始用的电话是坏的，又临时换了一个会议室的电话再打。。一开始先问了我之前的博士题目，我大概找了一个项目说了一下，过去了大概10分钟吧。然后就开始做题，一共本该是45分钟，但是我们挂电话的时候已经比原定结束时间晚了15分钟。也就是整个talk的时间大概是50分钟吧。。
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+我的题挺基本挺简单的：
+给一个2D的grid, grid上面每一个element是一个character. 然后给一个input的单词，找出在这个2维grid里面所有可能match这个单词的path的集合。
+input: 2D grid, string word
+output: 所有单词的path的集合
+
+我开始问基本问题，可以向哪些方向移动？ 他说可以简单假设上下左右。 返回的是路径，那需要怎么表示？我问用pair<i,j> 可以吗？他说，that's a good strategy. 
+
+然后说了一下大概的思路，用DFS，然后就开始写code.
+我写的时候还怕太安静，偶尔还说一下我在做什么，他整个过程安静，也没有一直跟我说话。
+
+写了一会，给他看我完成的版本，他看了一会，然后问，在我的DFS子函数里面，输入的变量，比如 vector<vector<int>> & Vst, 为什么要用derefence符号“&”。然后我的子函数的code里面，为什么要把Vst[i][j]设为1，做DFS， 然后再把Vst[i][j]改回0. 然后问了一下 vector<vector<int>> & Vst 和vector<vector<int>>  Vst 的区别.1point3acres缃�
+. from: 1point3acres.com/bbs 
+第二个follow up，就是问复杂度，我一开始有点蒙，跟他说我想一下，他说好的你慢慢想，也没有一直问我跟我说话. 假设二维数组一共有A个element，单词长度是B， 我一开始觉得是O(A^B), 后来又好好想了想，写出来应该是 O（4*3^(B-1)*A)，他很惊讶，说我说的是对的，他要是自己想的话，会直接说O(4^B*A), 然后我笑了笑说仔细想想是有个小trick在里面的，不过我们讨论的很开心。. from: 1point3acres.com/bbs 
+
+这时候时间已经超了，他还问我，这个题如果不用DFS，还可以用什么方法做？不要求我写整个代码，说说思路，我说可以用BFS，但是一个global的visited数组不会work，要用特殊方法记录每一个path之前已经访问过的信息。他说好，时间到了，我们就到这里吧。
+
+总的来说题目做出来了，follow up也答得差不多，没有非常快的给出答案，但是在讨论和自己想了想之后，还是能答对的。面试官非常nice，这个要非常谢谢他。
+昨天上午面的，今天早晨一大早收到recruiter电话，还以为是要挂了，结果他说feedback非常好，要move forward to onsite。继续努力拼一拼，lz不是纯cs编程出身，所以求更多Bless..
+
+
+1. maxDepth of a tree:recursion
+2.Design a interface for find the running mode in a stream of values:
+   随时返回most frequent word
+   先写函数get();add(String input);
+   再问怎么实现这个两个函数：先说了Heap, get()-->O(1),add()--O(n) 然后她说优化add(),我说用HashMap+ counter，这样get()-->O(1),add()--->O(1). 1point 3acres 璁哄潧
+   然后开始写代码。。
+   写完了问你觉得这个代码有什么问题，我说multi-threading可能有错，一个在get(), 一个在add(),她说 是的，如果这是single thread
+         我说可能space太大了,因为有些hot词频会被频繁输入，但是冷门的词语也会一直保存，她说对的 怎么优化？
+         1.我说用Tritree，减少HashMap key的存放空间，她说这个key不一定是string，可能是object，
+         2.我说group input searching，比如 google， google.inc 表示的可能是一样的意思，只用一个key保存，这样插入时判断similarity，小于一个threshold就认定match，把当前位置+1；
+         3.我说用cache。大概说了说，时间就到了，她说you are in the right track，但是我们没时间了。
+         
+         
+
+
+发面经，攒人品。
+
+开始就聊了快20分钟。之后给了道题：
+给一堆硬币list，里面是面值。AB俩人轮流投掷，正面A拿走，反面B拿走。然后算下A, B分别拿走多少钱。最后算下A, B拿走的钱Tie的概率。
+是LC 39 组合和的变体
+
+写出了DFS，但面试官最后说DP是优化解。
+
+接着刷题刷题刷题~~~. 涓€浜
+
+
+
+面试官：名字忘了lol，应该是白人，有点欧洲口音。运气比较好他挺热情的，在search组。
+聊天：先问了我Java有什么Project，因为我简历上写Java experienced。
+         我一下蒙逼，都是学校里很久以前的Project，随便说了一个大一做的 A＊search。
+         他还细细的问了，我基本打哈哈过去了，还好他没追问，不然很糗都不记得了。
+         中间他提了Java OOP，我赶紧把话题转移到了OOP，说什么Class，Abstract Class，Interface之类的；果不其然，他问了我Abstract Class，之前准备过就扯了一扯。
+
+
+问题：一开始recruiter说45分钟有2-3题，我吓尿了，所以答题前问了一下。他说没个人都不一样，他问一题，然后follow up。. visit 1point3acres.com for more.
+         题目是Reverse Vowels in String。我在leetcode做过这题，就故意迟钝了一下，说了一下最优解，然后他说ok，我就慢悠悠的写了，免得很尴尬。
+
+
+         ［感觉这样不是特别好，一下子就写最优解，还好他疑心不重］
+
+Test：写完我就Walk through了一下examples，他问我time，能不能优化。我说不行，O(n)最好了
+
+Follow up：如果这个String 很长，是一本书，你没法放到memory，怎么破？他说idea就可以，除非你无敌，一定要写code
+                我有点懵again，然后就一直交流，找出了一个可行的办法。
+               ［有空我来update怎么做，马上要上课了，有兴趣的同学可以想一下］
+
+写完聊天：问他最近做了什么Project，他说让我搜索polar bear，右边的卡片里面又个Did You Know 部分，就是他做的。
+                我问他怎么选择这个fact的，什么算法，他说不告诉你，很复杂，而且保密。我就好吧哈哈哈
+                之后还给我安利了一下Google很棒，有很多大神，你想知道什么都可以问。
+
+希望能帮到大家，给自己攒一点人品，拿到onsite...
+
+
+经典的PlusOne，然后是二叉搜索树确定插入位置。水过。. From 
+
+
+昨天发的面经貌似没发上来…… 再来发一遍吧，希望没发重复什么的- - 攒攒人品Orz 
+面的狗家店面。 上来一听是三姐面的，心凉了一截。 上来先问学校和工作在哪（LZ五月份毕业现在在一个公司做intern），说的有点磕磕绊绊（还沉浸在遇到三姐的悲伤中，话说面之前拜了好久只求不要遇到三哥三姐） 
+题目是给一段程序，返回里面所有comments …… 
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+问了半天才确定意思是输入一段String返回list of comments List 两种类型的comments：//  和  /* */ 
+楼主就说遍历一遍里面字符，找  //...\n 和 /*...*/ 中间的所有char加入list, 复杂度O(n) 
+三姐说好，直接先问有哪些test case.... 给了几个开始写code 三姐全程不发话。。。
+写完以后问我 如果有// 在 " " 里面算不算comment。发现自己没有考虑到，赶紧加上。 
+然后开始口头过test case, 三姐依然全程不说话 （紧张*N） 过完test case后问如何优化。。。楼主蒙蔽，只好说时间上应该不好优化了，只遍历一遍已经最快O(n) 了 
+三姐评价了两句（没听懂）然后也就没继续问 最后问用了什么数据结构 ………… 这还能有什么数据结构啊。。。 战战兢兢的说了用了 linked list ..... 然后勉强说还有pointer （楼主用的是java），解释说两个指针一个遍历，另一个指着前一个comment 符号 (// 或 /*) 一旦遍历到的和前面的匹配就加入list of answer 
+综合感觉题目并不难，应该是看楼主本科放水了吧。写起来没有什么不顺，就是少考虑了字符串的情况，点了一下就补上了。
+求攒人品！！！！
+求Onsite!!!!!
+
+
+电面：Number of Islands II. from: 1p
+
+
+
+一个小时前的面经，就问了一个问题，回头想想很简单，不过答得不咋好。 :-(
+
+面试官小哥特别好，很轻松，前面瞎扯扯，让我先问问题，说后面写算法的时候会耽误点时间，所以先问问题，（满善解人意的）。
+
+废话不多说，上题：
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+Give you an array of integers: A
+Goal is to find three indexes (i,j,k) such that
+   A + A[j] == A[k]
+
+For Example:
+   A = [ -5, 10, 1, 8, -2 ]
+
+10 + -2 == 8
+    Good answer: i=1, j=4, k=3
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+也不知道那时候脑子怎么抽了，一直在回想刷过的题目，搞复杂了，好可惜。
+
+希望将来面试的人好好审题。. 1point3acres.com/bbs
+
+Good Luck Everyone!
+
+
+
+面試官準時到, 口音聽起來像白男說總共時間45mins, 最後留5mins 問問題
+
+稍微介紹一下自己就開始了 (5 mins past)
+
+You are given a binary tree of N nodes. While it is mostly alright, . 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+there is one extra edge that violates the tree property. Your job is to find it and eliminate it.
+
+
+一開始慌了, 根本沒想過tree 還有連錯的; 問了下不是invalid btree
+於是花了兩分鐘搞清楚
+
+      p
+     / \  
+   a     b
+  /  \ /   \
+k    c     d  
+
+
+這樣一畫就很清楚了;  錯的edge 會有兩個parent, 所以只要建一個hashmap, key child, value parent. 鍥磋鎴戜滑@1point 3 acres
+然後treverse tree, 中間一直maintain map,  contains key 就找到了
+
+public Map <Node, Node> m = new HashMap<>();. 1point 3acres 璁哄潧
+
+Void findWrong(Node n) {
+        if (n == null) return;
+        if (n.left != null) {
+           Node tmp = m.get(n.left); 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+        if (tmp == null) {        
+           m.put(n.left, n);
+        } else {
+           n.left = null;. more info on 1point3acres.com
+        return;
+        }
+
+        if (n.right != null) {.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+           Node tmp = m.get(n. right);. 1point3acres.com/bbs
+        if (tmp == null) {        
+           m.put(n. right, n);
+        } else {
+           n. right = null;
+        return;
+        }
+   findWrong(n.left);
+   findWrong(n.right);}
+}. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+
+中間我找wrong edge 找的太高興了, 以為是找到return 就好, 提醒一下說是要delete, 也就把找到的node = null
+
+每隔個3-5 mins 我就會刺探一下問說我這樣對不對啊 回答都是可以啊
+
+面官也沒說什麼, 就說要問follow up, 到現在時間過 20 mins
+
+follow up:
+Given the same problem, 1 edge is wrong, which left one node isolated, how do you fix it?. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+我又聽不懂了 又花了兩分鐘畫了這個
+      p. visit 1point3acres.com for more.
+     / \  
+   a     b
+  /  \ /   \
+k    c     d    y
+
+
+要把 ac 或 bc delete 掉, 然後連 ay or by . more info on 1point3acres.com
+
+一個node isolated 你tree 裡根本看不到啊,  一個看不到的node 你怎麼連啊
+面官說你可以改 input, 我就說那我的input 改成hash map key child, value parent
+我的algo 基本沒錯, 只要先找到落單的node 就好了 (find map node without parent)
+然後用之前的algo 去treverse, 找到不設null 改聯到落單node 
+
+我好激動啊, 批哩啪拉的把整個流程講了一遍, 面官說 fine 然後我開始寫
+寫到最後時間不夠我就把該改的地方又講了一遍 面官也沒說啥
+
+問問題我問:
+g家近年上go, angular, swift, 倒是jvm 沒怎麼新動作, 現在外面 cotlin, scala, clojure 好火熱啊
+你說g怎麼沒動作啊 
+
+面官吱吱嗚嗚地說go 不錯啊 根本沒回答我
+然後就結束了
+
+我以為我第一道做出來了 第二道題目出得有點怪 面官也沒搞清楚 應該會算我過吧. more info on 1point3acres.com
+隔兩天打電話來拒了我 也沒說原因
+
+可以幫我看看我哪裡做不好嗎, 搞不好我第一部分錯了也不知道
+.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+謝謝!
+
+
+
+一星期前recruiter 电话告知被HC 刷了。 震惊！ 因基本意料之外。下面讲讲我的经历。
+
+Phone screen 的题是 Flatten Linked List. 写完之后， walk through code， 又回答 follow up questions，
+才花了25分钟。
+
+然后又问了个如何找两个BST Node 的共同parent， 不用写code，只说idea 。最后对方都没问题了。一个劲说“good”。
+还剩了十来分钟， 东拉西扯的瞎聊。
+
+
+
+刚才刚电面完，首先感谢一下 @yzl232的给力内推。听口音像是个美国小哥，话不多。
+问了三道题，都挺水的。
+
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+第一道是给两个interval，查是不是overlap的，
+看见上一道，我感觉follow up 应该会是merge 多个interval什么的，
+结果第二道就变成了查找最长递增连续序列。
+用dp解决后，第三道是在一个树结构里查找最长递增连续序列，我用DFS找的。. From 1point 3acres bbs
+. 涓€浜�-涓夊垎-鍦帮紝鐙鍙戝竷
+三道题做完才半小时，结果他没题问了，我让他再出一道，他也不出， 又谈了谈简历就挂了。
+
+答这三道水题，不知道到底算过还是不过，但是还是攒人品，求on site。
+
+
+
+input一个string str，方法要求split str into elements，return符合要求的最大elements数量。。这题有点怪我来写几个例子：
+eg1. input: abab －》 return 2. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+         可以被分成 ab ｜ ab， 这样子[ab][ab]是对称的；. From 1point 3acres bbs
+         但是不能分成 a | b | a | b, 因为[a][a]不对称。
+eg2.input: teammate －》 return 6
+        可以被分成 te | a | m | m | a | te, [te][a][m][m][a][te]是对称的. 1point 3acres 璁哄潧
+eg3: input: ab －》 return 1
+        [ab], 这直接是1
+eg4: input: aaa -> reurn 3
+       这个可以分成 a｜a｜a 或者直接不分： aaa。 但题目要求返回最大可能值，所以是3
+eg5: 空字符串返回0
+
+
+第一题
+就是lc里面的303，给了一个接口Sum，里面有set和sum两function，还有一个存数据的数据结构。他咸用一个数组来存放数据，然后问我用这个的好处是什么。我说了可以直接用index获取其中的数据，也可以快速获取头和尾，搜索的话如果是顺序的可以用BS来快速搜索。然后他问sum这个function的时间复杂度呢？我说你这里只给了声明，没有implementation，我不知道；他说就一个一个加，我说那worse case就是O(n)。他说好，那如果sum要被经常调用的话O(n)肯定不行，你要怎么弄好。问道这心理暗喜，因为在lc做过了，但是还是平静一下先询问一下条件，比如是用数组寸数据吗，固定长度吗之类之类的。然后确认好就说了当前单元存放之前所有元素之和，他说可以，然后就开始写。因为他给的是一个接口，然后需要自己定义个一数组来存放数据，另外一个来存放加和的sum的数据，然后再写接口里面的函数，写的时候没注意，当前单元格里面的值还包含了苯单元格的值，经他指出来我修改了。然后他问时间复杂度？我说O(1)，他说你再写一下set函数，我就直接对index的单元格里面更新值，然后重新再计算一次加和的sum（后来想想可以不用从头开始算，从更新的index算就行了，不过他也没有说什么）
+
+第二题
+lc的304，从一维数组审计到二维数组，问我怎么generalize刚才的solution。我想了一下，可以对每一行进行刚才的求和，然后根据坐标求对应行subSum的总和就行了，我就写了一下。写完了他问我求二维的时间复杂度，我说之前求每个单元格之前的部分Sum的这里因为便利了所有元素，所以是O(n), n = row*col，然后说sum坐标范围的时候二了一下，因为他给的例子坐标是只求了两行的，然后我就说是O(1)，然后他说你这个好像不太对，有这么多航。我立马意识到求全部的行当然不是O(1)，立马改成O(row)，他说好。
+
+面试问题基本就是这样，一共40分钟这样。他问我有没有什么问题问他，我就问这些面试题目是在工作中遇到的吗？他笑笑说不是。然后就介绍了一下工作。他说我还做的不错，我心里挺开心，想想碰到的题目不难真是运气好。全称他挺supportive的，但是一直在说比较好的话，不知道最终反馈给HR那边怎么样。所以在地里面发发面经攒人品，求过求Onsite！
+
+
+刚刚结束的Google电面，一个做前端的女码农，在G家工作了六年半，上来先问了一个behavior question。然后问了如果在1000个数里面找重复，有多少种方法，我脑子抽掉了，只答了hash，相加和位运算，每答一种方法，她都不停push问还有什么方法，问得我巨紧张。
+然后让我分析一下，什么情况用哪一种，复杂度什么的。. visit 1point3acres.com for more.
+
+接下来就是做题，楼主刷题真的有点少，之前也听说g的电面完全没有套路都是新题也没什么准备，所以没见过这题。
+有一个robot，在一个屋子里面打扫房间，房间是一个二维grid，给了四个方法，大概就是
+1）判断当前格子是不是clean，返回boolean
+2）往前走，这个方法可以让robot往前走，同时返回一个boolean值代表能不能往前走
+3）rotate，可以向左转可以向右转，void
+4）clean方法，打扫当前格子，void
+
+不知道房间的大小或者格子的数量，也不知道robot的初始点，只能调用这四个方法，要求是打扫完所有的格子。
+. 鍥磋鎴戜滑@1point 3 acres
+楼主当时也是有点懵，一直和面试官讨论，最后就给了一个最简单方法遍历整个屋子保证不漏下格子。本来还想讨论一下怎么优化减少repeat work，结果时间就到了。
+然后聊了一下，本来想问问这道题到底怎么做才好，她说这我不能告诉你，我：。。。
+然后听她聊在google工作有多么开心，最近刚生了第三个孩子多开心。。。。
+
+我感觉从behavior question开始答得就不好，导致她印象很差，后面也是磕磕绊绊，第一次电面，还是有点紧张了。
+算了，楼主已经move on了，只做了一道题，还是自己不够熟练，挂的也服气了，继续努力吧。

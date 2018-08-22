@@ -8,7 +8,7 @@ class Solution {
 public:
     vector<string> summaryRanges(vector<int>& nums) {
         if(!nums.size()) return {};
-        nums.push_back(nums.back()+2);
+        nums.push_back(nums.back()+2);  //可能会溢出，但不影响结果，
         
         int pre = nums[0];
         

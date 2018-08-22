@@ -37,4 +37,31 @@ public:
         return H->next;
         
     }
+    
+    ListNode* swapPairs(ListNode* head) {
+        
+        ListNode *H = new ListNode(0), *p = H;
+        H->next = head;
+        
+        while(head&&head->next) {
+            p->next = head->next;
+            head->next = head->next->next;
+            p->next->next = head;
+            p = head;
+            head = head->next;
+        }
+        
+        p = H->next;
+        delete H;
+        return p;
+    }
+    
+    ListNode* swapPairs(ListNode* head) {
+        if(!head || !head->next) return head;
+        
+        ListNode* t = head->next;
+        head->next = swapPairs(t->next);
+        t->next = head;
+        return t;
+    }
 };

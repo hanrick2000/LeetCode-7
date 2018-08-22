@@ -69,6 +69,34 @@ public:
         
         return generateTreesHelper(n,res);
     }
+    
+    注意，这道题就用一般的做做就可以了。
+        
+    vector<TreeNode*> generateTrees(int p, int q) {
+        if(p > q) return {NULL};
+        if(p == q) return {new TreeNode(p)};
+        
+        vector<TreeNode*> res;
+        for(int i = p; i <= q; ++i) {
+            vector<TreeNode*> l = generateTrees(p, i-1);
+            vector<TreeNode*> r = generateTrees(i+1, q);
+            
+            for(auto x: l) {
+                for(auto y: r) {
+                    TreeNode* root = new TreeNode(i);
+                    root->left = x;
+                    root->right = y;
+                    res.push_back(root);
+                }
+            }
+        }
+        return res;
+    }
+
+    vector<TreeNode*> generateTrees(int n) {
+        if(!n) return {};
+        return generateTrees(1,n);
+    }
 };
     
     

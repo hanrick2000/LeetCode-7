@@ -26,7 +26,7 @@ public:
 
     int ladderLength(string beginWord, string endWord, unordered_set<string>& wordList) {
     
-        wordList.insert(beginWord);
+        //wordList.insert(beginWord);   这句话是不用的。
         wordList.insert(endWord);
 
         queue<string> myque;
@@ -63,6 +63,99 @@ public:
         
         return 0;
     }
+    
 
+    int ladderLength(string beginWord, string endWord, unordered_set<string>& wordList) {
+        
+        int res = 1, len = beginWord.size();
+        wordList.insert(endWord);
+        queue<string> myque;
+        myque.push(beginWord);
+        
+        while(myque.size())  {
+            
+            int l = myque.size();
+            for(int k = 0; k < l; ++k) {
+                string tmp = myque.front();
+                myque.pop();
+                if(tmp == endWord) return res;
+                
+                for(int i = 0; i < len; ++i) {
+                    char d = tmp[i];
+                    for(char c = 'a'; c <= 'z'; ++c) {
+                        if(c == d) continue;
+                        tmp[i] = c;
+                        if(wordList.count(tmp)) {
+                            myque.push(tmp);
+                            wordList.erase(tmp);
+                        }
+                        tmp[i] = d;
+                    }
+                }
+            }
+            ++res;
+        }
+        return 0;
+        
+    }
+    
+    非常拙劣的双向BFS：记住，两个BFS 搜索判断焦点是其中一个队列展开的点在另一个队列中访问到，所以两个BFS各自维护一个队列， WordList(wordList被删掉的单词可以表示哪些单词被本BFS访问过)。
+    int ladderLength(string beginWord, string endWord, unordered_set<string>& wordList) {
+
+    int res = 1, len = beginWord.size();
+    // wordList.insert(endWord);
+    queue<string> myque;
+    queue<string> myque2;
+    myque.push(beginWord);
+    myque2.push(endWord);
+    unordered_set<string> wordList2 = wordList;
+    wordList.insert(endWord);
+    wordList2.insert(beginWord);
+    
+    while(myque.size()||myque2.size())  {
+        int l = myque.size();
+        for(int k = 0; k < l; ++k) {
+            string tmp = myque.front();
+            myque.pop();
+            if(!wordList2.count(tmp)) return res;
+            
+            for(int i = 0; i < len; ++i) {
+                char d = tmp[i];
+                for(char c = 'a'; c <= 'z'; ++c) {
+                    if(c == d) continue;
+                    tmp[i] = c;
+                    if(wordList.count(tmp)) {
+                        myque.push(tmp);
+                        wordList.erase(tmp);
+                    }
+                    tmp[i] = d;
+                }
+            }
+        }
+        ++res;
+        int l2 = myque2.size();
+        for(int k = 0; k < l2; ++k) {
+            string tmp = myque2.front();
+            myque2.pop();
+            if(!wordList.count(tmp)) return res;
+            
+            for(int i = 0; i < len; ++i) {
+                char d = tmp[i];
+                for(char c = 'a'; c <= 'z'; ++c) {
+                    if(c == d) continue;
+                    tmp[i] = c;
+                    if(wordList2.count(tmp)) {
+                        myque2.push(tmp);
+                        wordList2.erase(tmp);
+                    }
+                    tmp[i] = d;
+                }
+            }
+        }
+        ++res;
+    }
+    return 0;
+    
+}
 
 };

@@ -75,13 +75,13 @@ public:
     
         for(int i = 0; i < grid.size(); ++i) {   //union find 
             for(int j = 0; j < grid[0].size(); ++j) {
-                if(grid[i][j]=='1') {
+                if(grid[i][j]=='1') {    //只有grid[i][j] = 1才合并
                     ++total;
                     int index = i*grid[0].size() + j;
-                    if(i + 1 < grid.size() && grid[i+1][j] == '1')  {
+                    if(i + 1 < grid.size() && grid[i+1][j] == '1')  {    //看清楚到什么情况下再合并
                         Union(father, size, index, index+grid[0].size(),total);
                     }
-                    if(j + 1 < grid[0].size() && grid[i][j+1] == '1') {
+                    if(j + 1 < grid[0].size() && grid[i][j+1] == '1') {  
                         Union(father, size, index, index+1, total);
                     }
                 }
@@ -90,4 +90,14 @@ public:
         
         return total;
     }
+    
+    
+    或者计数也可以用过最后来一个循环：
+        
+        for(int i = 0; i < grid.size(); ++i) {
+            for(int j = 0; j < grid[0].size(); ++j) {
+                int tmp = i * grid[0].size() + j;
+                if(grid[i][j] == '1' && tmp == parent[tmp]) ++res;  //不仅要是1，还要是每一块1的祖先才行。
+            }
+        }
 };

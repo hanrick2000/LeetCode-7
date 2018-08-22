@@ -42,5 +42,36 @@ public:
         
         
     }
+    
+    
+    这题按照思路来很容易一开始写出以for循环下代码：
+        for(int i = 0; i < heights.size(); ++i) {
+                
+            if(mystack.empty() || heights[i] >= heights[mystack.top()]) mystack.push(i);
+            else {
+                while(mystack.size() && heights[i] < heights[mystack.top()]) {
+
+                    int index = mystack.top();
+                    mystack.pop();
+
+                    res = max(res, heights[index] * (i - (mystack.size()? mystack.top()+1:0)));
+                }
+                
+                //这里极容易忘记mystack.push(i); 因为这个i下一次也要处理。这个循环里是在计算i之前的最大矩形。
+
+            }
+        }
+    同时  我们栈里面维护的递增序列是不严格的（其实严格的也是对的，只不过写成不严格的更容易理解。）  
+    如栈里面的高度是1,2,3,3， 我们现在出现了一个2， 最后一个3 面积只算了3 第二个3的面积算了6. 其实思想就是遇到相同的让最前面的一个算进去就可以了。
+        
+        
+        
+    这题还有一个更加复杂的divide conquer做法。
+        求出数组中最小index,  解肯定属于这三种之一：
+        1） [0,index) 之间的最大值
+        2)  [index+1, end) 之间的最大值
+        3） 以index的值为高度的以数组长度为长的矩形面积。
+    问题是如何快速的找到每一个数组区域内的最小值？RMQ问题，你值得拥有，呵呵。
+        
 };
 

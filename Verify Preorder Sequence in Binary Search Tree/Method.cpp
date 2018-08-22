@@ -50,7 +50,7 @@ public:
             while(k>=0&&preorder[i] > preorder[k] ) {
                 lowerBound = preorder[k--];
             }
-            preorder[++k] = preorder[i];
+            preorder[++k] = preorder[i];   //这句话真难搞。。
         }
         return true;
         

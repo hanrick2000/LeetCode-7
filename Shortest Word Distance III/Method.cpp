@@ -58,3 +58,30 @@ public:
         
     }
 };
+    
+    上述代码丑陋了一点，不妨改成这样
+    int shortestWordDistance(vector<string>& words, string word1, string word2) {
+        bool same = word1 == word2;
+        
+        int p1 = -1, p2 = -1, res = words.size()+1;
+        
+        for(int i = 0; i < words.size(); ++i) {
+
+            if(words[i] == word1) {
+                if(same) {
+                    if(p1!=-1) res = min(res, i - p1);
+                    p1 = i;
+                    continue;
+                }
+                p1 = i;
+                if(p2!=-1) res = min(res, p1 - p2);
+            }
+            if(words[i] == word2) {
+                p2 = i;
+                if(p1!=-1) res = min(res, p2 - p1);
+            }
+
+        }
+        
+        return res;
+    }

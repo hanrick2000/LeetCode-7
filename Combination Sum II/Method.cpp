@@ -48,4 +48,28 @@ public:
         
         return res;
     }
+    
+    注意这题防止重复，（数字有可能有重复，所以即使选取的下标不同也算重复），我们只能选择排序，然后展开时，略过所有那些相同的数。记住剪枝还是依靠candidates[i] > target剪枝。
+    void dfs(vector<int> &candidates, int depth, vector<int> &cur, vector<vector<int>> &res, int target) {
+        if(target == 0) {
+            res.push_back(cur);
+            return;
+        }
+        
+        for(int i = depth; i < candidates.size(); ++i) {
+            if(candidates[i] > target) break;
+            if(i > depth&&candidates[i] == candidates[i-1]) continue;
+            cur.push_back(candidates[i]);
+            dfs(candidates, i+1, cur, res, target - candidates[i]);
+            cur.pop_back();
+        }
+    }
+
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        sort(candidates.begin(), candidates.end());
+        vector<int> cur;
+        vector<vector<int>> res;
+        dfs(candidates, 0, cur, res, target);
+        return res;
+    }
 };

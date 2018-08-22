@@ -9,25 +9,22 @@
     
 class Solution {
 public:
-int maxProduct(vector<int>& nums) {
-    
-    int maxProduct = nums[0], global_max = nums[0], global_min = nums[0];
-    
-    for(int i = 1; i < nums.size(); ++i) {
+    int maxProduct(vector<int>& nums) {
         
-        int a = nums[i]*global_max;
-        int b = nums[i]*global_min;
+        if(nums.size() < 1) return 0;
         
+        int global_max = nums[0], local_max = nums[0], local_min = nums[0];
         
-        global_max = max(nums[i],max(a,b));
-        global_min = min(nums[i],min(a,b));
+        for(int i = 1; i < nums.size(); ++i) {
+            
+            int a = local_max*nums[i], b = local_min*nums[i];
+            
+            local_max = max(nums[i], max(a,b));
+            local_min = min(nums[i], min(a,b));
+            
+            global_max = max(global_max, local_max);
+        }
         
-        maxProduct = max(global_max,maxProduct);
-        
+        return global_max;
     }
-    
-    return maxProduct;
-
-    
-}
 };

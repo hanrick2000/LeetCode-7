@@ -27,4 +27,37 @@ public:
             node = node->next;
         }
     }
+    
+    
+    void deleteNode(ListNode* node) {
+        
+        while(node->next) {
+            
+            node->val = node->next->val;
+            
+            if(!node->next->next) {
+                delete node->next;
+                node->next = NULL;
+                break;
+            }
+            
+            node = node->next;
+        }
+        
+        
+    }
+    
+    void deleteNode(ListNode* node) {
+        
+        ListNode* p = node->next;
+
+        node->val = p->val;
+        node->next = p->next;
+        
+        delete p;
+        p = NULL;
+        
+    }
 };
+
+Some things to consider. This method could pose potential problems. For instance, let’s consider we have a linked list A -> B -> C -> D and we are given a pointer to B to delete it. Theoretically, you would expect B to be deleted and all pointers which were pointing to B to become invalid. However, if we use this function to delete B, all pointers which were pointing to B will still be valid. Furthermore, node B now will contain the value C and node C will be invalid. Any previous pointers to C will become invalid, which may not be expected behavior in general. This is not a problem if there are no external links to any of the items in the linked list. But this would definitely be something you should consider asking your interviewer to show your thinking process.

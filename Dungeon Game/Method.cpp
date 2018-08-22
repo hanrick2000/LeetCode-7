@@ -45,4 +45,23 @@ public:
         return  dp[0][0];
         
     }
+    
+    
+    
+    有点解释的不清楚， 设到达dp[i][j]后发生的过程是这样的，选择一条路，然后减掉下一个格子的HP，然后离开   设dp[i][j]为从i,j到达右下角所需要的最少HP（可以理解为离开dp[i][j]后能到达右下角的最少HP）， 那么我们有以下状态方程： dp[i][j] = max(1, min(dp[i + 1][j], dp[i][j+1]) - dungeon[i][j]);  那么右下角就是1， 因为它没有地方需要离开了，然而题目要求的不是 dp[i][j], 而是进入左上角至少要多少HP?相当于离开[-1][0]的最小HP 即 dp[-1][0]. 所以再一次套用公式max(dp[0][0] - dungeon[0][0], 1);
+
+    int calculateMinimumHP(vector<vector<int>>& dungeon) {
+        
+        vector<vector<int>> dp(dungeon.size(), vector<int> (dungeon[0].size()));
+        for(int i = dungeon.size()-1; i >=0; --i) {
+            for(int j = dungeon[0].size()-1; j >= 0; --j) {
+                if(i == dungeon.size()-1 && j == dungeon[0].size()-1) dp[i][j] = 1;
+                else if(i == dungeon.size()-1) dp[i][j] = max(1, -dungeon[i][j+1] + dp[i][j+1]);
+                else if(j == dungeon[0].size()-1) dp[i][j] = max(1, -dungeon[i+1][j] + dp[i+1][j]);
+                else dp[i][j] = max(1, min(-dungeon[i+1][j] + dp[i+1][j], -dungeon[i][j+1] + dp[i][j+1]));
+            }
+        }
+        
+        return max(dp[0][0] - dungeon[0][0], 1);
+    }
 };

@@ -22,13 +22,13 @@ public:
 
         ListNode* fast = head, *slow = head;
         
-        while(slow&&fast){
+        while(fast){
             slow = slow->next;
             fast = fast->next;
             if(fast) fast = fast->next;
             else return false;
             
-            if(slow == fast) return true;
+            if(slow == fast) return true; //到了这点slow 和 fast不可能为空
             
         }
         

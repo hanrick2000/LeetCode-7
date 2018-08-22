@@ -1,0 +1,280 @@
+
+之前刷了不少面经，受益匪浅。在此也把个人经历发上，希望能帮到大家。
+
+早上9点半开始，配置环境，弄明白如何读input花了很多时间。楼主JAVA选手，import下载的东西一定要在你自己的session的目录下。楼主犯了个错误，因为import的时候没找到下载的目录，把下载的东西拷贝到桌面导入，导致没法RUN。浪费了很多时间。看完小册子，同组的白人男生先挑了第一题，然后一个说中文的女生挑了第二题，只剩第三题给我了。根据之前帖子的经验，楼主下定决心打死也不用brute force做，临时设计了一个方案。因为是第一组，3个面试官很快就围过来。然后我刚开始有些紧张，没有把思路讲清楚，一个白人面试官表示质疑，三哥面试官表示属于面试者里比较少见的解法，说也许能行的通。后来自己看了一遍要求，发现与自己的理解有些出入，又逐一向面试官问清楚才开始动手码。
+. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+11点第一轮，俄罗斯人面试官。楼主又是第一个被拉出去的，还没有码多少。半个小时基本上主要力气用在把思路给面试官讲清楚。感觉这不是一件容易的事。讲完后面试官对这方法表示肯定，然后问我要看结果。我说还没码多少，把初步的结果给他看了看。根据之前面经的剧本，面试官第一轮是要提优化意见的，但是对楼主却一个字没提。楼主主动问了，才给了点提示。
+
+之后因为INPUT有一些问题导致楼主的算法崩溃，DEBUG了N久才发现是INPUT的问题，拿去和俄罗斯面试官提意见。他坚决表示INPUT没有问题，肯定是我自己代码的问题。欲哭无泪，无奈之下，只能另写一段代码，把冲突的信息打出来，在INPUT文件里用TXT用查找，一个个搜，简直大海捞针。后来把冲突的东西找出来拿给面试官看，他们没话说了，检查了一遍承认是有问题。浪费将近一小时。以后应该不会有这种问题了。
+.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+差不多2点才完工，又写了第二种解法。2点半第二轮又是第一个被叫出去，三哥面试官。这次因为有结果了，理直气壮得过了一遍解法。然后这里高能预警，面试官提了一连串刁钻的问题，关于数据结构优化的。感觉答好面试官的问题非常重要。最后面试官建议写comment，并且写上算法的优点。又花了近一个小时结束。
+. 1point 3acres 璁哄潧
+第二天转机的时候收到OFFER。感觉运气成分很大。总结下来和面试官的交流感觉是最重要的，把自己的思路和别人讲清楚并不容易，再者就是面试官问的关于数据结构的问题要重点准备。. visit 1point3acres.com for more.
+
+祝大家早日拿到OFFER
+
+
+
+
+
+今天收到群面offer 11.16号去的群面
+
+首先先是每人一个代码然后分析优劣排序 代码有可能有问题
+我拿到的是一个array里面的数字比大小 但是不是transitive的 就是说a大于b b大于c 那么不能证明a大于c 三种implement一个是一个for循环 这个代码是错误的 因为没有回头再check当前这个临时最大值和他之前的值的比对 所以不能确定他是最大的 另外一个代码是改正了这个错误 第一个for之后又来一个for loop用这个element和其余所有element比对 从头开始  runtime是O(n) 但是他第一个for loop写的太麻烦 可以用我拿的这个错误代码来简化（这里是面试官问到的 就是一个改善的办法） 第三个代码是个0(n^2)的 具体忘了 但是排序是213（我发现好像每个人拿的代码排序都是213 大家可以记一下这个顺序 到时候假如看不出来的话可以拿来用着验证一下）就是runtime 0(n) -> 0(n^2) -> 错误代码
+
+第二轮就是开始写代码 第一题没什么好说的了 我用的是两个for loop解决的 就是判断一个我记着是product.fromRegion() == shippingcost.toRegion()
+第二题我选的是满足更多的订单 但是我的implement同时也满足了使更少订单late 所以等于是两个要求都满足了
+我大概就是先写了一个comparator来排序shippingcost里面的shipdays 然后用pq存shippingcost 同时建一个map存key是shippingcost和value是productinventoryshippingcost 这样之后可以通过shippingcost来调出来productinventoryshippingcost 从而得到inventory的信息
+然后我排序了一下order从小quantity开始到大的 因为考虑一种情况： order1需要7个product1 order2 需要4个product1 order3需要5个product1 然而inventory1只有10个product1 而且inventory1是唯一一个有product1的inventory 那么如果不排序只能满足一个订单 排序可以满足两个 所以排序以后用greedy来做 然后可以拼inventory发货 也就是可以拆开订单分几个inventory发货 加上之前那个comparator的trick 每次决定要走到判断发不发货之前 先check pq里的东西 按照shipday的需要来从小到大发 这样可以减少late订单 也算是greedy
+第二题最后的比例是 用milestone2的data是完成85% ontime 75% cost也很小， 用milestone3的数据测这道题是98.xx%完成 然后89.xx% ontime. 鐣欏鐢宠璁哄潧-涓€浜╀笁鍒嗗湴
+第三题我是建立在第二题的implement上只改了comparator来比较shippingcost这个class里的cost 其它全部没变 最后比例milestone3的数据也是98.xx%完成 然90.xx% ontime 然后cost很小 具体忘了 说明如果考虑完全了的话 第二题和第三题等于没区别
+最后大概12:20第一个interview回来然后12:45-12:50写完第三题和大概注释 然后就是补全其他所有注释 大概写了好久 像写essay一样 越详细越好
+
+有几个点需要注意:
+1. comments. 我因为写的比较快 10:30开始写的 11:50第一题第二题以及大概的comments全部写完了 并且每道题signature开始之前还列出来了1 2 3 4... 包括thought process然后第二题包括为什么选择满足更多订单但是同时也减少late(里面写了ABC 套了三了leadership principle 注意 这个挺关键的我觉得 大家当毛概背一下吧hhh) 然后每道题都写了pseudocode大概的每个loop都是干嘛的 没用太具体 但是框架要写出来 然后大概分析了一下time complexity以及选择的数据结构还有优劣
+2. leadership principle很重要 背三条 然后记几条interview问问题的时候可以套着问问. more info on 1point3acres.com
+3. comments again. 代码每一行最好都要有解释这行是干嘛的
+4. 代码格式 有个小建议 没写一行代码空一行 然后comments写在当前代码上面和对应的代码行之间不空行 这样看起来很clean 这个挺重要的。 我开始的1 2 3 4 comments也这样做了 看起来很干净
+5. 主要是前两道题其实 写好comments（最重要的） 还有clean code就好了 第三题无所谓 玩玩就好 如果第二题没写好但是写了第三题也没用其实 鏉ユ簮涓€浜�.涓夊垎鍦拌鍧�. 
+6. test的时候 那个文件你需要comment掉milestone1_data然后uncomment milestone2_data才能用milestone2的data来测 虽然3个milestone的data都能测每一题 但是milestone1的data测出来比例很低好像 没参考价值 虽然本身这个比例也不太重要 
+
+大概暂时就能想到这么多 再有的话会加的
+
+.1point3acres缃�
+补充内容 (2016-11-24 15:38):
+补充一个主意的点 每个自己写的map呀 pq呀什么的名字一定要直接可以看懂是什么 就算名字特别长也必须要这样做 比如我的map叫MapShippingCostToProductInventoryShippingCost 类似这样
+
+补充内容 (2016-11-26 01:57):
+各位要群面资料的找找那个群面微信群吧 里面大家都会分享. Waral 鍗氬鏈夋洿澶氭枃绔�,
+
+补充内容 (2016-11-27 17:04):
+各位不好意思啊 我微信人快满了 大家找一下那个群主加一下群吧
+
+
+
+
+近期参加Ama卡卡卡zon的群面，地里面经验不多，有先驱整理过一份信息，因为怕题目泄露换题目所以没太传播，近期有需要的留邮箱哈。个人的一些tips：
+sche卡卡卡dule可以用greedy. Waral 鍗氬鏈夋洿澶氭枃绔�,
+selec卡卡卡tion自己得想清楚greedy和brute force的优缺点然后自行选择，面试官会问
+optimi卡卡卡zation可以用priority queue自己修改comparator（Java）. From 1point 3acres bbs
+我做的是optimization，自己建立class把读入的数据存好，然后用hashmap寻找empty block，最后放进priority queue中peek
+有想法的同学可以自己修改comparator，写一个utility function，然后就可以给面试官装逼了。。。
+我自己是习惯C++刷题，后来听说Java的IDE比较好用，突击用的Java，确实比较平滑没啥问题，不清楚C++的IDE
+
+behavior大概会问到你们是怎么分配题目的，有没有share一些信息，你知道另外两个组员具体在做的问题么
+sche卡卡卡dule的输入格式大概是   【id,value】  【id, 开始时间，结束时间】
+第一问是让validate
+第二问让在一个valid schedule中选择最好的
+第三问是有一个新东西要插入已有schedule
+
+祝大家早日收获offer！
+
+
+
+
+
+12.6面的，12.8给的offer。
+
+第一题是top k。有quick sort, nested loop, 和 heap第二题主要看面经，用python的同学注意有些变量是A.attribue(), 有些是B.something。我就是region的class觉得比较难调用。后来想了一下，好像是B.something 不用加（）。其实最主要的建议就是，不要紧张，花10-20分钟看一下具体的每个变量怎么call是非常值得的。我就是因为（）。，花了好久去搞，每个变量要不要加（）。
+
+我是用greedy sort的基本思路。我知道大部分人都是这样做拿到offer的。我也是。
+. Waral 鍗氬鏈夋洿澶氭枃绔�,
+一下有一点点进阶思维，和大家分享一下。看不到的也不要紧，去写个OA的帖子，积分就够了。我不单独发email
+
+
+以下内容需要积分高于 50 才可浏览
+
+思路是除了sort，还有什么可以。BST， heap，等等。大家做过top K还有merge multiple list吧。runtime在最优的情况下会不会比NlogN好？
+我不想说的太具体，因为肯定有朋友自己也想到了，直接说出来对那些自己想过的朋友不太公平，就像之前的面经，写的太具体，有很多人自己想出来的反而没看面经死记硬背的人少拿offer。这里只做一下点拨。
+1. multi-threading？. Waral 鍗氬鏈夋洿澶氭枃绔�,
+2. best runtime？
+3. order预处理上是否可以按product_id先分一下组？
+4. 第三问，大部分用一个heap去装shippingCost，然后priority是cost。 有没有办法坚固on time和cost，比如2个heap。. visit 1point3acres.com for more.
+
+我觉得我就靠着4点，很快的拿到了offer。当然我可能也没有想的很完全。但是我2.3可以做到在保证max fulfill rate的基础上，保持尽可能多的order ontime，且cost最小。
+具体方法，按照以上四点想一想。
+
+
+
+
+
+补充内容 (2016-12-9 22:36):
+哦。。。好吧。竟然写的东西都不见了。
+主要思路是：
+1. 能不能用2个heap保持ontime和cost都很小。对于shippingCost. 1point3acres.com/bbs
+2. order能不能按某种方法预处理一下。
+3. 对于order，除了sorting，还有没有别的办法拿到排序
+
+补充内容 (2017-1-8 23:32):
+给评分不是从你账户里扣，而是系统直接allocate给我3个extra。不会影响自己账户的积分，但是可以帮助我。多谢大家。
+
+
+
+
+楼主也是从对群面内容什么都不懂到最后拿了offer，相信大家一开始也是都是蒙比的状态，这是很正常的，别慌，只要有做project的基础，大概看了code以后都能有思路。
+关于群面，想和大家分享几点：
+1. 不要尝试在去onsite之前死背一套答案，因为面试官可能随时颠覆或者反驳你的想法而且不管你对网上的资料有多么细致的想法，你看了code以后都会发现有不一样的地方。如果你的想法被反驳或者置疑导致你无法按照自己想的方法继续写下去，那么一定会给你心里造成不必要的影响。（但是有一点自己的大概思路，框架是好的）。
+2. 遇到自己疑惑或者想不懂的问题一定要找面试官沟通，clearify！！！ （我当时被一个面试官误导然后入一个非常复杂的implement，结果发现根本在有限时间内无法实现，所以找了其他面试官沟通才得知实现简单逻辑就可以）。
+3. 大家都知道群面是两部分，第一部分不要光想着分析时间复杂度，想一想corner case(应该知道最基本的有哪些corner case，比如dup, NPE, OVERFLOW之类的），想一想在你用的语言中会出现什么异常（绝对有加分）。
+4. 群面不是要你给出最优解，实际上也给不出。要做的是 理清自己的思路（当然思路不能是错的），言之有理，最好是每一步都知道自己在干嘛，复杂度是多少，如果考虑大量数据，多线程，分布式该如何处理，每一个自己做的assumption都是基于什么的，因为这些都是可能被问到的。. Waral 鍗氬鏈夋洿澶氭枃绔�,
+5. 对自己使用的数据结构要敏感。知道所有操作的时间空间复杂度pros and cons是什么。
+6. 不要把那个%当做评判的标准，没什么用。
+7. 不是做出三题才有offer，当然三题更好了。
+8. 注意code style(变量和方法的命名), 写好document 和 必要的注释。
+9. 如果面试官反驳你，你一定要讲明白你为什么这么想，不要被面试官牵着走，每一次面试是交流思想，如果真的是自己错了，虚心接受，然后改正，别因为面试官否决你的想法就觉得完了，他们是在帮你。
+10. 保持清醒，多吃点。
+11. 补充一点，很多东西skeleton code都提供给你了，不要自己再写一个（也最好不要修改现有的method）但是加全局变量是没事的。helper function必要的话可以写，很有用。
+12. done is better than perfect :). visit 1point3acres.com for more.
+
+群面过去好久了，各种面试也基本告一段落，有时间写一些自己的想法，希望能帮助到以后去群面的小伙伴们，加油！
+
+
+
+补充内容 (2016-12-8 05:51):
+楼主最近在准备final,好久没来地里了,我手里还有一些OA1,OA2的资料，有需要的留下邮箱，我这两天抽空发给你们。祝大家找工作顺利，final顺利！
+
+
+
+
+
+题目还是产品库存运输那道，个人感觉前两个milestone可以在第一次interview前做出来，谈完后可以改进下，写写注释然后看看第三个milestone，不过我的时间也不是很够所以第三个就随便写了下。
+第二次interview的时候也只让解释了第二个milestone，不过感觉答得不如第一次好，而且答得过程中发现还可以做一点小优化orz……不知最终结果如何
+
+
+
+
+
+
+再写面经之前，先说句题外话-- You will obtain your goal if you maintain your course.
+这也是这段时间一直激励我的话。
+请大家只在群内流传该面经。团结起来。感激不尽
+=============================
+进入正题
+1. 住的地方距离onsite地方步行可到，但最好还是uber，很方便。
+2. 早饭在酒店门口的吃的，收费，一定要吃好！一定要吃好！一定要吃好！
+8：30 到了Doppler，签了NDA, 领一个vistor的牌子，坐在lobby等。9点左右，会有人过来把队伍带过去。
+Bla,Bla介绍一通之后,开始第一部分 group discussion。
+part 1
+先说说我是怎么准备group discussion的。onsite前就在leetcode上找medium的题目，看完题目之后直接去
+看别人的答案，以此来训练自己理解别人代码的能力。然后联系着把别人的思路说出来。
+onsite时候遇到了 find celebrity 的变形，具体题目真的记不清楚了。我们组的排序是213, 我拿到的是1，
+方法是nested loops，最后的是方法2，时间是O(n),方法3是错误的。
+在group discussion部分，我觉得最重要的一点-- 一定不要紧张，保持兴奋。如果组里面只有你一个中国人，一定
+不要怂，我的组就是两个三哥和我，按照平时练习说就好。
+part 2
+milestone 1
+先说说skeleton, 和几个重要的类
+class ProductInventoryExplorer{
+    里面有个方法可以得到inventory, given productId
+}
+class ShippingCostExporer{
+    里面有方法能得到 list of shipping cost, given a destination
+}
+skeleton：
+class Milestone1{
+    public List<ProductShippingCost> milestone1(String productId, Region shipTo){
+    
+    }
+}
+我的思路是用到map。 先得到两个 list 通过call 上面的方法。map 所有的shippingcost, key 是 shipFrom
+，value 是list of ShippingCost. 第三步是遍历第一步得到的inventory, check region == shipFrom(key).
+milestone 2
+Strategy: greedy
+Data structure: ArrayList 还有 Colletions.sort （这里用min-heap也能实现相同功能
+1. sort orders by request quantity
+2. call milestone1,得到 list of ProductShippingCost, given an order. 根据order里面的request
+quantity, 选择不同的inventory发货。 此时 我还把ProductShippingCost 按照每个item 的最小shipping day
+给排序了, 这样是想fulfill as many orders as possible的同时，减少送货时间。
+skeleton:
+class FulfillShipment{
+    public void milestone2(List<OrderEntry> orderList){
+        
+        FulfillShipment fulfillShipment = new FulfillShipment();
+        
+        for(OrderEntry order : orderList){
+            ShippingBuilder shippingBuilder = fulfillShipment.createShippingBuilder(order);
+            
+            // 几个我用到的built-in function
+            ship();                 // 当安排好策略以后，call ship 把product运走
+            cancel();               // 如果判断order不能被fulfill，把之前做的策略取消，库存归到最初
+            getQuantitySofar();     // 返回现在还差多少个能够完成这个订单
+            unableToShip();         // 如果不能fulfill 这个order，把这个order放进一个list好像
+        }
+    }
+}
+milestone3 思路和milestone2类似，面试官说不作要求
+==========================================
+最后还有一点想要提醒大家，不管当天你有多累，一定一定要保持兴奋和自信，直到onsite结束。另外还一点，一定多些
+注释和编程一定要规范（变量名+把function分开写）
+============================================
+祝大家好运。
+
+
+
+
+
+
+
+Hello, World!
+仓库和运送方式：
+1
+3
+3
+4
+~~~~~
+3
+10
+3
+0
+1
+0
+3
+===========
+仓库和运送方式：
+1
+3
+4
+0
+~~~~~
+2
+20
+3
+1
+1
+1
+4
+===========
+仓库和运送方式：
+3
+3
+70
+0
+~~~~~
+2
+5
+3
+2
+仓库和运送方式：
+3
+3
+20
+0
+~~~~~
+2
+5
+3
+2
+仓库和运送方式：
+3
+3
+10
+20
+~~~~~
+2
+5
+3
+2
+3
+2
+100
+===========

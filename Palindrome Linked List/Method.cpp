@@ -74,4 +74,42 @@ public:
         return true;
         
     }
+    
+    简介版
+    ListNode* reverse(ListNode* head) {
+        
+        if(!head) return head;
+        
+        ListNode* H = head;
+        
+        while(head->next) {
+            swap(head->next, H);  
+            swap(H->next,head->next);   //
+        }
+        
+        return H;
+    }
+
+    bool isPalindrome(ListNode* head) {
+    
+        ListNode* p = head, *q = head;
+        
+        while(q) {
+            p = p->next;
+            q = q->next;
+            if(!q) break;
+            q = q->next;
+        }
+        
+        q = reverse(p);
+        p = head;
+        
+        while(q) {
+            if(p->val != q->val)  return false;
+            q = q->next;
+            p = p->next;
+        }
+        
+        return true;
+    }
 };

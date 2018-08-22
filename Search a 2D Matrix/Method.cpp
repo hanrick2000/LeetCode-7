@@ -45,3 +45,33 @@ public:
         
     }
 };
+
+又被洗脑了，，，这题还是先按列二分查询，然后按行二分查询。这样复杂度也是log(m) + log(n) == log(mn).而且不会有乘法溢出，除法和模之类的耗时操作。
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        if(matrix.empty() || matrix[0].empty()) return false;
+        int p = 0, q = matrix.size()-1;
+        
+        while(p<q) {
+            int c = (p+q+1)/2;
+            if(matrix[c][0] == target) return true;
+            if(matrix[c][0] > target) q = c-1;
+            else p = c;
+        }
+        
+        if(matrix[p][0] > target) return false;
+        
+        int p2 = 0;
+        q = matrix[p].size()-1;
+        
+        while(p2<=q) {
+            int c = (p2+q)/2;
+            if(matrix[p][c] == target) return true;
+            if(matrix[p][c] > target) q = c-1;
+            else p2 = c+1;
+        }
+        
+        return false;
+    }
+};

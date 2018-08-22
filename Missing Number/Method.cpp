@@ -69,4 +69,17 @@ public:
         return res;
         
     }
+    
+    和single number很像
+    
+    int missingNumber(vector<int>& nums) {
+        
+        int res = 0;
+        
+        for(int i = 0; i <= nums.size(); ++i) res^=i;
+        for(int &num: nums) res^=num;
+        
+        return res;
+
+    }
 };

@@ -34,3 +34,19 @@ public:
         return true;
     }
 };
+
+
+更新一下，基于上述思路，最优代码应该是这个：只要算出i之前可以跳到的最大index，即可。
+
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+
+        int canArrive = 0;
+        for(int i = 0; i < nums.size(); ++i) {
+            if(i > canArrive) return false;
+            canArrive = max(canArrive, i+nums[i]);
+        }
+        return true;
+    }
+};

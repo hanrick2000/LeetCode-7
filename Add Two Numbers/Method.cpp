@@ -72,4 +72,38 @@ public:
         return l1;
         
     }
+    
+    版本类似。
+    
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        
+        int carry = 0;
+        ListNode* H = l1, *pre = l1;
+        
+        while(l1&&l2) {
+            l1->val += carry + l2->val;
+            carry = l1->val/10;
+            l1->val%=10;
+            l2 = l2->next;
+            pre = l1;
+            l1 = l1->next;
+        }
+        
+        if(l2) {
+            pre->next = l2;
+            l1 = l2;
+        }
+        
+        while(l1&&carry) {
+            l1->val += carry;
+            carry = l1->val/10;
+            l1->val%=10;
+            pre = l1;
+            l1 = l1->next;
+        }
+        
+        if(carry) pre->next = new ListNode(carry);
+        return H;
+        
+    }
 };

@@ -66,4 +66,22 @@ public:
         return min(nums[a],nums[b]);
         
     }
+    
+    更简单的版本。。
+        
+    int findMin(vector<int>& nums) {
+    
+        int p = 0, q = nums.size() - 1;
+        
+        while(p < q) {
+            
+            int c = (q-p)/2 + p;
+            
+            if(nums[c] < nums[q]) q = c;
+            else p = c+1;
+        }
+    
+        return nums[p];    
+    }
+    
 };

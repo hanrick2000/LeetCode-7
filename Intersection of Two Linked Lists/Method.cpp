@@ -52,4 +52,17 @@ public:
         return NULL;
         
     }
+    
+    这个写法最简洁，我们可以不用管a,b第几次走到NULL，因为第二次走动NULL时while就跳出了，因为a,b同时走了两个链表的长度。
+        
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode* a = headA, *b = headB;
+        
+        while(a!=b) {
+            a = a?a->next:headB;
+            b = b?b->next:headA;
+        }
+        
+        return a;
+    }
 };

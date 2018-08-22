@@ -1,0 +1,168 @@
+
+再说一遍！！！！！！！
+
+bfs visited  一定要写在进队列的时候！！！！！不是访问的时候。。。。。
+while(que.size()) {
+
+    访问;
+    if() {进队列； visited};
+    if() {进队列；visited};
+
+}
+
+
+背包问题：
+            //if nums[i] > w: 
+            //    dp[i+1][w] = dp[i][w];
+            //else:
+            //    dp[i+1][w] = max(dp[i][w-nums[i]] + nums[i], dp[i][w])
+    
+    bool subsetSum(int bound, vector<int> &nums)  {
+        vector<vector<int>> dp(nums.size()+1, vector<int>(bound+1));
+        for(int i = 1; i < dp.size(); ++i) {
+            for(int j = 1; j < dp[0].size(); ++j) {
+                if(nums[i-1] > j) dp[i][j] = dp[i-1][j];
+                else {
+                    dp[i][j] = max(dp[i-1][j-nums[i-1]] + nums[i-1], dp[i-1][j]);
+                }
+            }
+        }
+        return dp.back().back() == bound;
+    }
+
+并查集代码：
+    class Uf {
+    vector<int> parent;
+    vector<int> size;
+    int n;
+public:
+    Uf(int n): parent(n), size(n,1), n(n) {
+        for(int i = 0; i < n; ++i) {
+            parent[i] = i;
+        }
+    }
+
+    int findSet(int x) {
+        if(x != parent[x]) {
+            parent[x] = findSet(parent[x]);
+        }
+        return parent[x];
+    }
+    
+    void Union(int a, int b) {
+        int x = findSet(a), y = findSet(b);
+        if(x == y) return;
+        
+        if(size[x] > size[y]) {
+            parent[y] = x;
+            size[x] += size[y];
+        } else {
+            parent[x] = y;
+            size[y] += size[x];
+        }
+        --n;
+        return;
+    }
+    
+    int component() {
+        return n;
+    }
+};
+
+
+以下是易错点以及需要熟记的代码以及之前写的不简洁的代码现在简介过的版本。
+
+
+2sum, 3sum之类的
+2sum， 求所有不重复的解。
+vector<vector<int>> twoSum(vector<int>& nums, int target) {
+        
+    sort(nums.begin(), nums.end());
+    vector<vector<int>> res;
+    int p = 0, q = nums.size()-1;
+    while(p < q) {
+        int tmp = nums[p] +  nums[q];
+        if(tmp == target) {
+            res.push_back({-target,nums[p],nums[q]});
+            do{++p;} while(nums[p] == nums[p-1] && p < q);   //仅当得到不重复的解才使用。
+            do{--q;} while(nums[q] == nums[q+1 ]&& p < q);   //想要求出所有不重复的index是不行的，这里++p,--q都得尝试。
+        }
+        else if(tmp > target) --q;
+        else ++p;
+    }
+}
+
+
+ListNode* reverseList(ListNode* head) {
+        
+    if(!head) return head;
+        
+    ListNode *H = head;
+        
+    while(head->next) {
+        swap(H, head->next);
+        swap(head->next, H->next);   //这一句太容易错。
+    }
+        
+    return H;
+}
+
+
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode* H = new ListNode(0), *cur = H;
+        
+        while(l1&&l2) {
+            ListNode*& small = l1->val < l2->val? l1 : l2;
+            cur->next = small;
+            small = small->next;
+            cur = cur->next;
+        }
+        
+        cur -> next = l1?l1:l2;
+        
+        cur = H->next;
+        delete H;   // 防止内存泄漏
+        H = NULL;   // 防止double delete
+        
+        return cur;
+    }
+    
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode* a = headA, *b = headB;
+        
+        while(a!=b) {
+            a = a?a->next:headB;
+            b = b?b->next:headA;
+        }
+        
+        return a;
+    }
+    
+        填写ispalindrome 的矩阵
+        
+        for(int i = 0; i < s.size(); ++i) {
+            mymap[i][i] = true;
+        }
+        
+        for(int i = 0; i < int(s.size())-1; ++i) {
+            mymap[i][i+1] = s[i]==s[i+1];
+        }
+        
+        for(int i = 1; i < int(s.size())-1; ++i) {
+            for(int k = 0; i+k+1 < s.size(); ++k) {
+                if(!mymap[1+k][i+k]) continue;
+                mymap[k][i+k+1] = s[k]==s[i+k+1];
+            }
+        }
+    
+易错题LC 
+2	Add Two Numbers  
+138	Copy List with Random Pointer  
+82  Remove Duplicates from Sorted List II
+25  Reverse Nodes in k-Group
+205 Isomorphic Strings
+8   String to Integer (atoi)
+41. First Missing Positive (注意case[1]和[1,1]能不能跑过)
+73. Set Matrix Zeroes (第一行的0和第一列的0得最后处理)
+45. Jump Game II (到底如何贪心？)
+380. Insert Delete GetRandom O(1)

@@ -33,4 +33,16 @@ public:
         
         return true;
     }
+    
+    bool canPermutePalindrome(string s) {
+        
+        vector<int> mymap(128,0);
+        int odd = 0;
+        for(char &c: s) {
+            if((++mymap[c])&1) ++odd;
+            else --odd;
+        }
+        
+        return odd <=1;
+    }
 };

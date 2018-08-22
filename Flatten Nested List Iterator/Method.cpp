@@ -55,7 +55,7 @@ public:
 
     int next() {
         int res = mystack.top().getInteger();
-        mystack.pop();
+        mystack.pop();  // 很容易忘记的
         
         while(mystack.size()&&!mystack.top().isInteger()) {
             vector<NestedInteger> level = mystack.top().getList();
